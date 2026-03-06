@@ -1241,6 +1241,15 @@ const tools = {
   }
 };
 
+// Pre-resolve photo srcs from hidden img elements
+document.addEventListener('DOMContentLoaded', () => {
+  Object.values(tools).forEach(t => {
+    if (t.photos) t.photos.forEach(p => {
+      if (p.id) { const el = document.getElementById(p.id); if (el) p.src = el.src; }
+    });
+  });
+});
+
 function openLightbox(id) {
   const t = tools[id];
   if (!t) return;
