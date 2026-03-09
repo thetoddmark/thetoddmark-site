@@ -11,7 +11,7 @@
   gtag("js", new Date());
   gtag("config", "G-WF1PP02KM3");
 </script>
-<title>The Todd·Mark — About</title>
+<title>The Todd·Mark — Contact</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -840,32 +840,68 @@
     <li><a href="wishlist.html">Wishlist</a></li>
     <li><a href="listening.html">Listening</a></li>
     <li><a href="products.html">The Shop</a></li>
-    <li><a href="about.html" class="nav-active">About</a></li>
+    <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
 
   </ul>
 </nav>
-<section style="padding-top:8rem;" id="about">
-    </div>
-  <div class="about-text">
-    <div class="section-header">
-      <span class="section-num">06</span>
-      <h2 class="section-title">About</h2>
-    </div>
-    <p class="about-body">
-      I'm <strong>Mark Todd</strong> — yes, two first names. I work in technology by day, and apparently spend my evenings and weekends on eBay arguing with myself about whether a rusty screwdriver counts as a "good deal."
-    </p>
-    <p class="about-body">
-      I'm genuinely new to this. I don't have a workshop full of heirloom chisels passed down through generations. I have a garage, some sandpaper, a bottle of Fiebing's leather dye I bought on a whim, and a growing conviction that <strong>old tools deserve better than a landfill</strong>.
-    </p>
-    <p class="about-body">
-      The Todd·Mark is where I document what I'm learning — the techniques that worked, the ones that didn't, and the occasional tool that turns out to be worth far more time than it cost. If you're also just starting out, or you've been doing this for decades and want to cringe at my methods, <strong>you're equally welcome here</strong>.
-    </p>
-    <p class="about-body">
-      My current obsessions are Stanley Bailey hand planes and vintage wooden-handled mechanic's tools. Ask me about oxalic acid at your own risk.
-    </p>
-    <div class="about-signature">Mark Todd</div>
+<section style="padding-top:8rem;padding-bottom:6rem;max-width:720px;margin:0 auto;padding-left:2rem;padding-right:2rem;">
+  <div class="section-header">
+    <span class="section-num" style="font-size:0.85rem;">—</span>
+    <h2 class="section-title">Get in <em>Touch</em></h2>
   </div>
+
+  <p style="font-size:0.95rem;line-height:1.9;color:var(--ink-soft);max-width:560px;margin-bottom:3rem;">I&rsquo;m just a person with some old tools and a small shed — but I&rsquo;m always happy to hear from fellow enthusiasts, people with tools on the wishlist, or anyone who just wants to say hello. No agents, no assistants. Just me.</p>
+
+  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact-success.html" style="display:flex;flex-direction:column;gap:1.5rem;">
+
+    <input type="hidden" name="form-name" value="contact" />
+    <p style="display:none;"><label>Don&rsquo;t fill this out: <input name="bot-field" /></label></p>
+
+    <!-- Name row -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+      <div>
+        <label style="display:block;font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.5rem;">First Name <span style="color:var(--amber);">*</span></label>
+        <input type="text" name="first-name" required style="width:100%;padding:0.75rem 1rem;background:var(--cream);border:1px solid var(--border);font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:300;color:var(--ink);outline:none;transition:border-color 0.2s;box-sizing:border-box;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='var(--border)'" />
+      </div>
+      <div>
+        <label style="display:block;font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.5rem;">Last Name</label>
+        <input type="text" name="last-name" style="width:100%;padding:0.75rem 1rem;background:var(--cream);border:1px solid var(--border);font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:300;color:var(--ink);outline:none;transition:border-color 0.2s;box-sizing:border-box;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='var(--border)'" />
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div>
+      <label style="display:block;font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.5rem;">Email <span style="color:var(--amber);">*</span></label>
+      <input type="email" name="email" required style="width:100%;padding:0.75rem 1rem;background:var(--cream);border:1px solid var(--border);font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:300;color:var(--ink);outline:none;transition:border-color 0.2s;box-sizing:border-box;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='var(--border)'" />
+    </div>
+
+    <!-- Subject -->
+    <div>
+      <label style="display:block;font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.5rem;">Subject <span style="color:var(--amber);">*</span></label>
+      <select name="subject" required style="width:100%;padding:0.75rem 1rem;background:var(--cream);border:1px solid var(--border);font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:300;color:var(--ink);outline:none;transition:border-color 0.2s;box-sizing:border-box;appearance:none;cursor:pointer;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='var(--border)'">
+        <option value="" disabled selected>Select a topic</option>
+        <option value="general">General / Just saying hello</option>
+        <option value="wishlist">Tool from the wishlist</option>
+        <option value="restoration">Question about a restoration</option>
+        <option value="collaboration">Collaboration or feature</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <!-- Message -->
+    <div>
+      <label style="display:block;font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.5rem;">Message <span style="color:var(--amber);">*</span></label>
+      <textarea name="message" required rows="6" style="width:100%;padding:0.75rem 1rem;background:var(--cream);border:1px solid var(--border);font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:300;color:var(--ink);outline:none;transition:border-color 0.2s;box-sizing:border-box;resize:vertical;line-height:1.7;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='var(--border)'"></textarea>
+    </div>
+
+    <!-- Submit -->
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+      <p style="font-size:0.78rem;color:var(--ink-faint);font-family:'DM Mono',monospace;letter-spacing:0.04em;margin:0;">* Required fields</p>
+      <button type="submit" style="display:inline-block;padding:0.9rem 2.5rem;background:var(--ink);color:var(--cream);font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;border:none;cursor:pointer;transition:background 0.2s,transform 0.2s;" onmouseover="this.style.background='var(--amber)';this.style.transform='translateY(-1px)'" onmouseout="this.style.background='var(--ink)';this.style.transform='translateY(0)'">Send Message</button>
+    </div>
+
+  </form>
 </section>
 <footer style="display:flex;align-items:center;justify-content:space-between;">
   <div class="footer-copy" style="text-align:left;">© 2026 · TheToddMark.com · Two first names. One workshop.</div>
@@ -1073,4 +1109,5 @@ document.addEventListener('keydown', e => {
 </div>
 
 </body>
+
 </html>

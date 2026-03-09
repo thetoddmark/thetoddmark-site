@@ -11,7 +11,7 @@
   gtag("js", new Date());
   gtag("config", "G-WF1PP02KM3");
 </script>
-<title>The Todd·Mark — About</title>
+<title>The Todd·Mark — Listening</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -828,6 +828,83 @@
   }
 
   .nav-active { color: var(--amber) !important; }
+  .podcast-card {
+    display:flex;
+    align-items:flex-start;
+    gap:1.2rem;
+    padding:1.4rem;
+    background:var(--cream);
+    border:1px solid var(--border);
+    text-decoration:none;
+    transition:border-color 0.2s, transform 0.2s;
+  }
+  .podcast-card:hover {
+    border-color:var(--amber);
+    transform:translateY(-2px);
+  }
+  .podcast-icon {
+    flex-shrink:0;
+    width:52px;
+    height:52px;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'DM Mono',monospace;
+    font-size:0.65rem;
+    font-weight:400;
+    color:rgba(255,255,255,0.92);
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+  }
+  .podcast-meta { flex:1; min-width:0; }
+  .podcast-name {
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.1rem;
+    font-weight:600;
+    color:var(--ink);
+    margin-bottom:0.25rem;
+    line-height:1.3;
+  }
+  .podcast-network {
+    font-family:'DM Mono',monospace;
+    font-size:0.6rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--amber);
+    margin-bottom:0.4rem;
+  }
+  .podcast-desc {
+    font-size:0.8rem;
+    line-height:1.65;
+    color:var(--ink-soft);
+  }
+  .resource-card {
+    display:flex;
+    align-items:flex-start;
+    gap:0.75rem;
+    padding:1.5rem;
+    background:var(--cream);
+    border:1px solid var(--border);
+    text-decoration:none;
+    transition:border-color 0.2s, transform 0.2s;
+  }
+  .resource-card:hover {
+    border-color:var(--amber);
+    transform:translateY(-2px);
+  }
+  .resource-name {
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.2rem;
+    font-weight:600;
+    color:var(--ink);
+    margin-bottom:0.5rem;
+  }
+  .resource-desc {
+    font-size:0.82rem;
+    line-height:1.7;
+    color:var(--ink-soft);
+  }
 </style>
 </head>
 <body>
@@ -838,34 +915,313 @@
     <li><a href="work.html">The Work</a></li>
     <li><a href="resources.html">Resources</a></li>
     <li><a href="wishlist.html">Wishlist</a></li>
-    <li><a href="listening.html">Listening</a></li>
+    <li><a href="listening.html" class="nav-active">Listening</a></li>
     <li><a href="products.html">The Shop</a></li>
-    <li><a href="about.html" class="nav-active">About</a></li>
+    <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
 
   </ul>
 </nav>
-<section style="padding-top:8rem;" id="about">
-    </div>
-  <div class="about-text">
-    <div class="section-header">
-      <span class="section-num">06</span>
-      <h2 class="section-title">About</h2>
-    </div>
-    <p class="about-body">
-      I'm <strong>Mark Todd</strong> — yes, two first names. I work in technology by day, and apparently spend my evenings and weekends on eBay arguing with myself about whether a rusty screwdriver counts as a "good deal."
-    </p>
-    <p class="about-body">
-      I'm genuinely new to this. I don't have a workshop full of heirloom chisels passed down through generations. I have a garage, some sandpaper, a bottle of Fiebing's leather dye I bought on a whim, and a growing conviction that <strong>old tools deserve better than a landfill</strong>.
-    </p>
-    <p class="about-body">
-      The Todd·Mark is where I document what I'm learning — the techniques that worked, the ones that didn't, and the occasional tool that turns out to be worth far more time than it cost. If you're also just starting out, or you've been doing this for decades and want to cringe at my methods, <strong>you're equally welcome here</strong>.
-    </p>
-    <p class="about-body">
-      My current obsessions are Stanley Bailey hand planes and vintage wooden-handled mechanic's tools. Ask me about oxalic acid at your own risk.
-    </p>
-    <div class="about-signature">Mark Todd</div>
+<section style="padding-top:8rem;padding-bottom:6rem;max-width:1100px;margin:0 auto;padding-left:2rem;padding-right:2rem;">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <h2 class="section-title">What I'm <em>Listening To</em></h2>
   </div>
+  <p style="font-size:0.95rem;line-height:1.8;color:var(--ink-soft);max-width:640px;margin-bottom:3rem;">The podcasts that keep me company in the workshop — usually while sanding through four grits or waiting for glue to cure. Good for the hands-busy, mind-free hours. Ordered by personal favorites first, then alphabetical.</p>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.2rem;">
+
+    <a href="https://heathercoxrichardson.substack.com" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#1a3d1a,#2d6b2d);">LFA</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">Letters from an American</div>
+        <div class="podcast-network">Heather Cox Richardson</div>
+        <div class="podcast-desc">History professor Heather Cox Richardson puts today's news in historical context. Essential, grounding, and quietly reassuring that we've been here before.</div>
+      </div>
+    </a>
+    <a href="https://99percentinvisible.org" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#2c2c3e,#4a4a6a);">99i</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">99% Invisible</div>
+        <div class="podcast-network">Radiotopia / PRX</div>
+        <div class="podcast-desc">Roman Mars on the unnoticed design and architecture that shapes the world. Every episode makes you see something ordinary in a completely new way.</div>
+      </div>
+    </a>
+    <a href="https://www.radiolab.org" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#1a3a5c,#2d6a9f);">RL</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">Radiolab</div>
+        <div class="podcast-network">WNYC Studios</div>
+        <div class="podcast-desc">Science, philosophy, and human experience told through layered, immersive sound. One of the best-produced shows in podcasting.</div>
+      </div>
+    </a>
+    <a href="https://www.thisamericanlife.org" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#2c2c2c,#555);">TAL</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">This American Life</div>
+        <div class="podcast-network">PRX / WBEZ Chicago</div>
+        <div class="podcast-desc">The original long-form radio storytelling show. Theme-driven episodes, unforgettable characters. Still essential after 30 years.</div>
+      </div>
+    </a>
+    <a href="https://www.wnycstudios.org/podcasts/anthropocene-reviewed" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#2d4a1e,#5a8a3a);">AR</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">The Anthropocene Reviewed</div>
+        <div class="podcast-network">Complexly</div>
+        <div class="podcast-desc">John Green reviews facets of the human-centered planet on a five-star scale. Tender, funny, and unexpectedly moving.</div>
+      </div>
+    </a>
+    <a href="https://theoryofeverythingpodcast.com/" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#3d1a5c,#6b2d9f);">TOE</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">Benjamen Walker's Theory of Everything</div>
+        <div class="podcast-network">Radiotopia / PRX</div>
+        <div class="podcast-desc">Strange, digressive, and deeply intelligent. Walker follows ideas wherever they lead — often somewhere you didn't expect.</div>
+      </div>
+    </a>
+    <a href="https://timharford.com/articles/cautionarytales/" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#5c1a1a,#9f2d2d);">CT</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">Cautionary Tales with Tim Harford</div>
+        <div class="podcast-network">Pushkin Industries</div>
+        <div class="podcast-desc">Tim Harford excavates historical disasters to find the lessons we keep failing to learn. Rigorous and compulsively listenable.</div>
+      </div>
+    </a>
+    <a href="https://thisiscriminal.com" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#1a1a2e,#2d2d5c);">CR</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">Criminal</div>
+        <div class="podcast-network">Radiotopia / PRX</div>
+        <div class="podcast-desc">Stories about people who've done wrong, been wronged, or gotten caught somewhere in between. Phoebe Judge's voice alone is worth the subscription.</div>
+      </div>
+    </a>
+    <a href="https://www.nytimes.com/column/the-daily" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#111,#333);">TD</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">The Daily</div>
+        <div class="podcast-network">The New York Times</div>
+        <div class="podcast-desc">Twenty minutes of news every morning from the NYT. The gold standard for daily news podcasts — reported, not just read.</div>
+      </div>
+    </a>
+    <a href="https://www.earhustlesq.com" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#7b3a00,#c8600a);">EH</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">Ear Hustle</div>
+        <div class="podcast-network">Radiotopia / PRX</div>
+        <div class="podcast-desc">Stories of life inside and outside prison, made by incarcerated and formerly incarcerated people. Honest, human, and unlike anything else in podcasting.</div>
+      </div>
+    </a>
+    <a href="https://freakonomics.com/series/eoe/" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#0a4a3a,#0a8a6a);">EE</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">The Economics of Everyday Things</div>
+        <div class="podcast-network">Freakonomics Radio Network</div>
+        <div class="podcast-desc">Short episodes on the hidden economics behind ordinary objects and systems. Why does a banana cost what it costs? Now you'll know.</div>
+      </div>
+    </a>
+    <a href="https://www.everythingisalive.com" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#1a4a4a,#2d8a8a);">EA</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">Everything is Alive</div>
+        <div class="podcast-network">Radiotopia</div>
+        <div class="podcast-desc">Unscripted interviews with inanimate objects — a can of cola, a grain of sand, a bar of soap. Stranger and more profound than it sounds.</div>
+      </div>
+    </a>
+    <a href="https://freakonomics.com" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#1a3a6a,#2d6aaa);">FR</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">Freakonomics Radio</div>
+        <div class="podcast-network">Freakonomics Radio Network</div>
+        <div class="podcast-desc">Stephen Dubner applies economic thinking to things economists don't usually touch. Wide-ranging, counterintuitive, reliably interesting.</div>
+      </div>
+    </a>
+    <a href="https://www.npr.org/programs/fresh-air/" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#1a5a7a,#2d9aaa);">FA</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">Fresh Air</div>
+        <div class="podcast-network">NPR / WHYY</div>
+        <div class="podcast-desc">Terry Gross in conversation with writers, musicians, actors, and thinkers. Forty-plus years of the best interviews in public radio.</div>
+      </div>
+    </a>
+    <a href="https://gimletmedia.com/shows/heavyweight" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#4a3a00,#8a6a00);">HW</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">Heavyweight</div>
+        <div class="podcast-network">Gimlet / Spotify</div>
+        <div class="podcast-desc">Jonathan Goldstein helps people go back and deal with things left unresolved. Funny and devastating in equal measure.</div>
+      </div>
+    </a>
+    <a href="https://www.hyperfixedpod.com/" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#3d005c,#7a00b8);">HF</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">Hyperfixed</div>
+        <div class="podcast-network">Radiotopia / PRX</div>
+        <div class="podcast-desc">Alex Goldman (co-creator of Reply All) investigates dilemmas submitted by listeners — from minor annoyances to life decisions. Rigorous, warm, and genuinely useful.</div>
+      </div>
+    </a>
+    <a href="https://www.bbc.co.uk/programmes/b00snr0w" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#5c1a00,#aa3300);">IMC</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">The Infinite Monkey Cage</div>
+        <div class="podcast-network">BBC Radio 4</div>
+        <div class="podcast-desc">Brian Cox and Robin Ince explore science with comedians and scientists. Proof that rigor and levity aren't mutually exclusive.</div>
+      </div>
+    </a>
+    <a href="https://www.wsj.com/podcasts/the-journal" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#0a2a5c,#1a4a9a);">TJ</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">The Journal</div>
+        <div class="podcast-network">WSJ / Spotify</div>
+        <div class="podcast-desc">Wall Street Journal reporters on the biggest stories in business and tech. Concise, well-sourced, and a good counterweight to longer-form listening.</div>
+      </div>
+    </a>
+    <a href="https://loveandradio.org" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#5c1a3a,#9a2d6a);">L&R</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">Love and Radio</div>
+        <div class="podcast-network">Luminary</div>
+        <div class="podcast-desc">Intimate audio portraits of people on the fringes — told with great care and unusual restraint. Nothing else sounds quite like it.</div>
+      </div>
+    </a>
+    <a href="https://thememorypalace.us" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#3a2a1a,#7a5a3a);">MP</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">The Memory Palace</div>
+        <div class="podcast-network">Radiotopia / PRX</div>
+        <div class="podcast-desc">Nate DiMeo tells small, forgotten stories from history with extraordinary care. Some of the finest writing in podcasting, period.</div>
+      </div>
+    </a>
+    <a href="https://themoth.org" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#1a1a2e,#4a4a8a);">M</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">The Moth</div>
+        <div class="podcast-network">The Moth</div>
+        <div class="podcast-desc">True personal stories told live, without notes. Funny, devastating, surprising — sometimes all three in ten minutes.</div>
+      </div>
+    </a>
+    <a href="https://www.wnycstudios.org/podcasts/otm" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#2a2a2a,#5a5a5a);">OTM</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">On the Media</div>
+        <div class="podcast-network">WNYC Studios</div>
+        <div class="podcast-desc">Brooke Gladstone and Bob Garfield examine how the press covers the news — and how the news shapes the culture. Essential media literacy.</div>
+      </div>
+    </a>
+    <a href="https://www.npr.org/podcasts/510289/planet-money" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#7b2d00,#c8490a);">PM</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">Planet Money</div>
+        <div class="podcast-network">NPR</div>
+        <div class="podcast-desc">Economics made genuinely entertaining. They find the weird, human story inside every financial system. Consistently surprising.</div>
+      </div>
+    </a>
+    <a href="https://www.radiodiaries.org" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#5c2a1a,#9a4a2d);">RD</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">Radio Diaries</div>
+        <div class="podcast-network">Radiotopia / PRX</div>
+        <div class="podcast-desc">Ordinary people document their own extraordinary lives. One of the oldest forms of narrative radio, still done better here than anywhere.</div>
+      </div>
+    </a>
+    <a href="https://www.pushkin.fm/podcasts/revisionist-history" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#1a2a4a,#2d4a8a);">RH</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">Revisionist History</div>
+        <div class="podcast-network">Pushkin Industries</div>
+        <div class="podcast-desc">Malcolm Gladwell reexamines overlooked or misunderstood events in the past. Not always right, but always worth arguing with.</div>
+      </div>
+    </a>
+    <a href="https://www.sciencefriday.com" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#003a2a,#006a4a);">SciFri</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">Science Friday</div>
+        <div class="podcast-network">PRX</div>
+        <div class="podcast-desc">Ira Flatow on science news, research, and discovery. Friday afternoons in the workshop just got smarter.</div>
+      </div>
+    </a>
+    <a href="https://gimletmedia.com/shows/science-vs" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#0a3a4a,#0a6a8a);">SV</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">Science Vs</div>
+        <div class="podcast-network">Spotify</div>
+        <div class="podcast-desc">Wendy Zukerman puts popular health and science claims against the evidence. Smart, funny, and genuinely useful.</div>
+      </div>
+    </a>
+    <a href="https://searchengine.show" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#4a2a00,#8a4a00);">SE</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">Search Engine</div>
+        <div class="podcast-network">PJ Vogt</div>
+        <div class="podcast-desc">PJ Vogt investigates questions about how the modern world actually works. The kind of reporting that makes you feel smarter and more confused at the same time.</div>
+      </div>
+    </a>
+    <a href="https://serialpodcast.org" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#1c1c1c,#3a3a3a);">S</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">Serial</div>
+        <div class="podcast-network">Serial Productions / NYT</div>
+        <div class="podcast-desc">The podcast that proved the format could sustain a long story. Season one remains a benchmark for narrative nonfiction audio.</div>
+      </div>
+    </a>
+    <a href="https://www.theskepticsguide.org" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#1a2a1a,#2d4a2d);">SGU</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">The Skeptics Guide to the Universe</div>
+        <div class="podcast-network">SGU Productions</div>
+        <div class="podcast-desc">Steven Novella and panel on science, critical thinking, and pseudoscience. A weekly inoculation against bad reasoning.</div>
+      </div>
+    </a>
+    <a href="https://www.smartless.com" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#1a4a1a,#2d8a2d);">SL</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">SmartLess</div>
+        <div class="podcast-network">WonderyMedia / Amazon Music</div>
+        <div class="podcast-desc">Jason Bateman, Sean Hayes, and Will Arnett interview guests who don't know who they're talking to until they show up. Genuinely fun.</div>
+      </div>
+    </a>
+    <a href="https://www.readtangle.com" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#2a2a3a,#4a4a6a);">T</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">Tangle</div>
+        <div class="podcast-network">Tangle</div>
+        <div class="podcast-desc">Isaac Saul summarizes the best left and right arguments on a political issue, then gives his own take. Rare good-faith journalism in a polarized world.</div>
+      </div>
+    </a>
+    <a href="https://www.npr.org/podcasts/510318/up-first" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#5c0a0a,#aa1a1a);">UF</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">Up First from NPR</div>
+        <div class="podcast-network">NPR</div>
+        <div class="podcast-desc">Three big stories, ten minutes, every morning. The fastest way to know what's happening before you pick up a tool.</div>
+      </div>
+    </a>
+    <a href="https://www.npr.org/programs/wait-wait-dont-tell-me/" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#0a3a6a,#1a6aaa);">WW</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">Wait Wait... Don't Tell Me!</div>
+        <div class="podcast-network">NPR / WBEZ</div>
+        <div class="podcast-desc">NPR's weekly news quiz with Peter Sagal. The best argument that news and comedy belong together.</div>
+      </div>
+    </a>
+    <a href="https://www.whatitsliketobe.com/" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#3a1a00,#7a3a00);">WLB</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">What It's Like To Be... with Dan Heath</div>
+        <div class="podcast-network">Pushkin Industries</div>
+        <div class="podcast-desc">Dan Heath asks people with unusual jobs or experiences to describe what it's actually like. Quietly fascinating.</div>
+      </div>
+    </a>
+    <a href="https://www.pushkin.fm/podcasts/whats-your-problem" target="_blank" class="podcast-card">
+      <div class="podcast-icon" style="background:linear-gradient(135deg,#003a5c,#006a9a);">WYP</div>
+      <div class="podcast-meta">
+        <div class="podcast-name">What's Your Problem?</div>
+        <div class="podcast-network">Pushkin Industries</div>
+        <div class="podcast-desc">Jacob Goldstein talks to entrepreneurs and inventors about the hard problems they're trying to solve. Optimistic without being naive.</div>
+      </div>
+    </a>
+  </div>
+
+  <p style="font-size:0.78rem;color:var(--ink-faint);margin-top:3rem;font-family:'DM Mono',monospace;letter-spacing:0.06em;">36 shows · updated as the playlist grows</p>
 </section>
 <footer style="display:flex;align-items:center;justify-content:space-between;">
   <div class="footer-copy" style="text-align:left;">© 2026 · TheToddMark.com · Two first names. One workshop.</div>
@@ -1073,4 +1429,5 @@ document.addEventListener('keydown', e => {
 </div>
 
 </body>
+
 </html>
