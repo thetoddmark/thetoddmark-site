@@ -677,7 +677,7 @@
   /* ── FOOTER ── */
   footer {
     background: var(--ink);
-    padding: 3rem 5rem;
+    padding: 0.65rem 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -824,10 +824,74 @@
     #about, #contact { grid-template-columns: 1fr; gap: 3rem; }
     .process-strip { grid-template-columns: 1fr 1fr; padding: 3rem 2.5rem; }
     nav { padding: 0 1.5rem; }
-    footer { padding: 2rem 2.5rem; }
+    footer { padding: 1rem 2.5rem; }
   }
 
   .nav-active { color: var(--amber) !important; }
+
+  /* ═══ MOBILE RESPONSIVE (≤640px) ═══ */
+  @media (max-width: 640px) {
+    nav {
+      padding: 0 1rem;
+      height: auto;
+      min-height: 56px;
+      flex-wrap: wrap;
+    }
+    nav ul {
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      padding: 0.35rem 0;
+    }
+    nav a { font-size: 0.62rem; }
+    .nav-logo img { height: 32px !important; width: 32px !important; }
+
+    section {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+      padding-top: 5rem !important;
+    }
+
+    /* Gallery grid */
+    .gallery-grid {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 0.75rem !important;
+    }
+    .gallery-card.featured,
+    .gallery-card.medium,
+    .gallery-card.small {
+      grid-column: span 1 !important;
+      grid-row: span 1 !important;
+    }
+    .gallery-card.featured .card-img-placeholder { height: 200px !important; }
+
+    /* Tool/product grids — target by class we'll add */
+    .mobile-stack { grid-template-columns: 1fr !important; }
+    .product-card { grid-template-columns: 64px 1fr !important; gap: 0.9rem !important; }
+
+    /* Lightbox */
+    .lightbox-inner {
+      flex-direction: column !important;
+      max-height: 95vh;
+      overflow-y: auto;
+    }
+    .lightbox-img { max-height: 45vh !important; }
+    #lbImgPanel { max-height: 45vh !important; }
+
+    /* Section heading sizes */
+    .section-title { font-size: 2rem !important; }
+    h3 { font-size: 1.3rem !important; }
+  }
+
+  @media (max-width: 400px) {
+    .gallery-grid { grid-template-columns: 1fr !important; }
+    .product-card {
+      grid-template-columns: 1fr !important;
+    }
+    .product-card > div:first-child,
+    .product-card > svg:first-child { margin: 0 auto; }
+  }
+
 </style>
 </head>
 <body>

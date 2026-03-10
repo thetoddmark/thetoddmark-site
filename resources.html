@@ -677,7 +677,7 @@
   /* ── FOOTER ── */
   footer {
     background: var(--ink);
-    padding: 3rem 5rem;
+    padding: 0.65rem 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -824,19 +824,18 @@
     #about, #contact { grid-template-columns: 1fr; gap: 3rem; }
     .process-strip { grid-template-columns: 1fr 1fr; padding: 3rem 2.5rem; }
     nav { padding: 0 1.5rem; }
-    footer { padding: 2rem 2.5rem; }
+    footer { padding: 1rem 2.5rem; }
   }
 
   .nav-active { color: var(--amber) !important; }
   .resource-card {
     display:flex;
-    align-items:flex-start;
-    gap:0.75rem;
-    padding:1.5rem;
+    flex-direction:column;
     background:var(--cream);
     border:1px solid var(--border);
     text-decoration:none;
     transition:border-color 0.2s, transform 0.2s;
+    overflow:hidden;
   }
   .resource-card:hover {
     border-color:var(--amber);
@@ -854,6 +853,70 @@
     line-height:1.7;
     color:var(--ink-soft);
   }
+
+  /* ═══ MOBILE RESPONSIVE (≤640px) ═══ */
+  @media (max-width: 640px) {
+    nav {
+      padding: 0 1rem;
+      height: auto;
+      min-height: 56px;
+      flex-wrap: wrap;
+    }
+    nav ul {
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      padding: 0.35rem 0;
+    }
+    nav a { font-size: 0.62rem; }
+    .nav-logo img { height: 32px !important; width: 32px !important; }
+
+    section {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+      padding-top: 5rem !important;
+    }
+
+    /* Gallery grid */
+    .gallery-grid {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 0.75rem !important;
+    }
+    .gallery-card.featured,
+    .gallery-card.medium,
+    .gallery-card.small {
+      grid-column: span 1 !important;
+      grid-row: span 1 !important;
+    }
+    .gallery-card.featured .card-img-placeholder { height: 200px !important; }
+
+    /* Tool/product grids — target by class we'll add */
+    .mobile-stack { grid-template-columns: 1fr !important; }
+    .product-card { grid-template-columns: 64px 1fr !important; gap: 0.9rem !important; }
+
+    /* Lightbox */
+    .lightbox-inner {
+      flex-direction: column !important;
+      max-height: 95vh;
+      overflow-y: auto;
+    }
+    .lightbox-img { max-height: 45vh !important; }
+    #lbImgPanel { max-height: 45vh !important; }
+
+    /* Section heading sizes */
+    .section-title { font-size: 2rem !important; }
+    h3 { font-size: 1.3rem !important; }
+  }
+
+  @media (max-width: 400px) {
+    .gallery-grid { grid-template-columns: 1fr !important; }
+    .product-card {
+      grid-template-columns: 1fr !important;
+    }
+    .product-card > div:first-child,
+    .product-card > svg:first-child { margin: 0 auto; }
+  }
+
 </style>
 </head>
 <body>
@@ -881,58 +944,161 @@
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5rem;">
 
     <a href="https://www.youtube.com/@StumpyNubs" target="_blank" class="resource-card">
-      <div class="resource-name" style="display:flex;align-items:center;gap:0.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FF0000" style="flex-shrink:0;margin-top:2px;"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>Stumpy Nubs</div>
-      <div class="resource-desc">Woodworking J&S — practical, approachable, wide-ranging. Great starting point for hand tool and power tool crossover.</div>
+      <div style="width:100%;height:120px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
+        <img src="data:image/jpeg;base64,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" alt="Stumpy Nubs" style="width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(255,255,255,0.2);">
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">Stumpy Nubs</div>
+          <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · @StumpyNubs</div>
+        </div>
+      </div>
+      <div style="padding:1rem 1.25rem;">
+        <div class="resource-desc">Woodworking J&amp;S — practical, approachable, wide-ranging. Great starting point for hand tool and power tool crossover.</div>
+      </div>
     </a>
 
     <a href="https://www.youtube.com/@RexKrueger" target="_blank" class="resource-card">
-      <div class="resource-name" style="display:flex;align-items:center;gap:0.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FF0000" style="flex-shrink:0;margin-top:2px;"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>Rex Krueger</div>
-      <div class="resource-desc">Low-cost, high-skill woodworking. Rex makes the case that you don't need expensive tools to do excellent work.</div>
+      <div style="width:100%;height:120px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
+        <img src="data:image/jpeg;base64,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" alt="Rex Krueger" style="width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(255,255,255,0.2);">
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">Rex Krueger</div>
+          <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · @RexKrueger</div>
+        </div>
+      </div>
+      <div style="padding:1rem 1.25rem;">
+        <div class="resource-desc">Low-cost, high-skill woodworking. Rex makes the case that you don't need expensive tools to do excellent work.</div>
+      </div>
     </a>
 
     <a href="https://www.youtube.com/@WoodbyWright" target="_blank" class="resource-card">
-      <div class="resource-name" style="display:flex;align-items:center;gap:0.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FF0000" style="flex-shrink:0;margin-top:2px;"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>Wood By Wright</div>
-      <div class="resource-desc">Hand tool focused, deeply knowledgeable. One of the best channels for understanding how and why hand tools work.</div>
+      <div style="width:100%;height:120px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
+        <img src="data:image/jpeg;base64,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" alt="Wood By Wright" style="width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(255,255,255,0.2);">
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">Wood By Wright</div>
+          <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · @WoodbyWright</div>
+        </div>
+      </div>
+      <div style="padding:1rem 1.25rem;">
+        <div class="resource-desc">Hand tool focused, deeply knowledgeable. One of the best channels for understanding how and why hand tools work.</div>
+      </div>
     </a>
 
     <a href="https://www.youtube.com/@JustPlaneFun" target="_blank" class="resource-card">
-      <div class="resource-name" style="display:flex;align-items:center;gap:0.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FF0000" style="flex-shrink:0;margin-top:2px;"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>Just Plane Fun</div>
-      <div class="resource-desc">Vintage tool restoration and hand plane deep dives. Exactly the kind of content that got me started on this path.</div>
+      <div style="width:100%;height:120px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
+        <img src="data:image/jpeg;base64,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" alt="Just Plane Fun" style="width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(255,255,255,0.2);">
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">Just Plane Fun</div>
+          <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · @JustPlaneFun</div>
+        </div>
+      </div>
+      <div style="padding:1rem 1.25rem;">
+        <div class="resource-desc">Vintage tool restoration and hand plane deep dives. Exactly the kind of content that got me started on this path.</div>
+      </div>
     </a>
 
-    <a href="https://www.youtube.com/@PSWoodworking" target="_blank" class="resource-card">
-      <div class="resource-name" style="display:flex;align-items:center;gap:0.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FF0000" style="flex-shrink:0;margin-top:2px;"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>PS Woodworking</div>
-      <div class="resource-desc">Clean, precise hand tool work. Excellent technique videos and thoughtful approach to the craft.</div>
+    <a href="https://www.youtube.com/@Paoson_Woodworking" target="_blank" class="resource-card">
+      <div style="width:100%;height:120px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
+        <img src="data:image/jpeg;base64,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" alt="Paoson Woodworking" style="width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(255,255,255,0.2);">
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">Paoson Woodworking</div>
+          <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · @Paoson_Woodworking</div>
+        </div>
+      </div>
+      <div style="padding:1rem 1.25rem;">
+        <div class="resource-desc">Spanish woodworker known for building his own shop tools and jigs from scratch. Creative, ingenious builds.</div>
+      </div>
     </a>
 
     <a href="https://www.youtube.com/@APlaneLife" target="_blank" class="resource-card">
-      <div class="resource-name" style="display:flex;align-items:center;gap:0.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FF0000" style="flex-shrink:0;margin-top:2px;"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>A Plane Life</div>
-      <div class="resource-desc">Hand plane focused content — type studies, restoration, and honest user reviews of vintage tools.</div>
+      <div style="width:100%;height:120px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAoHCAkIBgoJCAkMCwoMDxoRDw4ODx8WGBMaJSEnJiQhJCMpLjsyKSw4LCMkM0Y0OD0/QkNCKDFITUhATTtBQj//2wBDAQsMDA8NDx4RER4/KiQqPz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz//wAARCAA4ADgDASIAAhEBAxEB/8QAGwAAAgIDAQAAAAAAAAAAAAAAAAYEBwEDBQL/xAAxEAABBAEDAwMDAwIHAAAAAAABAgMEEQAFEiEGMUETUXEHImEUFZEWgSMyobHB0eH/xAAZAQADAQEBAAAAAAAAAAAAAAAAAQMCBQT/xAAiEQACAQMEAwEBAAAAAAAAAAABAgADESEEEhMxFDJRI0H/2gAMAwEAAhEDEQA/AKdwyZE06TMiS5MZv1EREhbwB+5KTxuryAas+LGRBhaUhWBGegMmMwnt7hW3Smkby2r/ADHtX29/IPxeMKSbCM2AzIGFZkgjuMwcCpGDMzGGbGmluuBttJUs9gMMaozdCEc9B0HqLQtZZ1OFFamst8OhhwOIcbIpSTXex+D4xk0v6fdO63ImyYcvUERkP0ltDdbQRYAKkk8ducqthUmM+l5hTrLqDaXEEpKf7+MtbpT6mBf6KFrCXP1Nek5K3javvtJ9j2B/nNXW3Ukyve4M7ULoHpuATtjz3XNpSHVupChfkdgD7GuPnnFzWOg48aQ9I0lyQsuJIDchbdpKuCd4VzwTxXeucZnvqXDivliXp01DhNI+wUvmvtN8/wDmTGOpZerlxrR4CAttG5a5K6CPYUkGzz7jNBlTLSP63lUO9LagwVBcMrG3ghy+eK8n85AmaI7X+FEcaWDzarHb/vLI17qrWNMUhiRpcV1wmt+9W1R+BVYryOt56mZBOk6a040pKSlTalqs32Cib7ZZKqMLASw5B7RURpkhKwksEEqAsKB4+MM6p676hspZlNRhVU1HbRX8C8MfMowBNbWlrH6a6R6O0K3Lu923n47/APGRW/prEi2uMwzIJSU7X3nEV+Qdp/2xnGoOuGi8a/Ar/XNqXVLFKLh+Tec0anb6zymsxwcxSR0RDiyV/uDcaykFsMqWpQ73alc/xWaWovoaurfuYiMRCywUrJKiFA3Q5I/scldZu6gVxIWmH03JYVudKqKQnuB+TffwL81iNoeoftfUToUFvPvMFO/ze4fdz37HjjN1KnKt+zLUAdwdupjWZAl6ghrTpDr6d6Gk77JKieaChedd7pyeyy8y8xHZdUm2pC2Q5RHjclKiBXjFWQzPTqaJsaUr1WHCtvcnmx781Z9ssrpLXX9ZWllwKZmNtlTyARQN1x83eNTxqSDkQrs1938iH/Qc59Tikz4RUo3W5SDz+FgYZcTkd1wkrIcFd1ICsMj5H0SXkn5NLMYA2qx7XktEcAjaoih4OGGcoVWMbIomrUYSpcNaWyhL4QoNLUL2EiryskdE66qW8t0lnfyp1p1BUr4JNgdz4PPnwYZRNQ6dQDFRYSQjpXVIcdPpx3JL6rWfUlJIQSftHJ7DyR7H3xy6Y0VvR4ai48l2Y9Sn3ttAnwkfgc/ycMMH1VRhaTZy+DOyTSaSQeOecMMMiazRbBP/2Q==" alt="A Plane Life" style="width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(255,255,255,0.2);">
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">A Plane Life</div>
+          <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · @APlaneLife</div>
+        </div>
+      </div>
+      <div style="padding:1rem 1.25rem;">
+        <div class="resource-desc">Hand plane focused content — type studies, restoration, and honest user reviews of vintage tools.</div>
+      </div>
     </a>
 
     <a href="https://www.youtube.com/@GordonAddison" target="_blank" class="resource-card">
-      <div class="resource-name" style="display:flex;align-items:center;gap:0.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FF0000" style="flex-shrink:0;margin-top:2px;"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>Gordon Addison</div>
-      <div class="resource-desc">Thoughtful hand tool woodworking with a calm, methodical approach. Worth watching for the joinery work alone.</div>
+      <div style="width:100%;height:120px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAoHCAkIBgoJCAkMCwoMDxoRDw4ODx8WGBMaJSEnJiQhJCMpLjsyKSw4LCMkM0Y0OD0/QkNCKDFITUhATTtBQj//2wBDAQsMDA8NDx4RER4/KiQqPz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz//wAARCAA4ADgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAUEBgL/xAArEAABAwMCBQEJAAAAAAAAAAAAAQIEAwURBhITFCExURUyQWFyobHR4fD/xAAYAQEBAQEBAAAAAAAAAAAAAAAAAQIEA//EABkRAQEBAQEBAAAAAAAAAAAAAAABETEhAv/aAAwDAQACEQMRAD8AzgA53YAAAAAAAAAAC3pi00rnMqvlKqRI7d9THTPhPoptfqaFTr8OPZYixEXCI9ibnJ57fk9aTz6DftvtcuuMfK8h2mJElyHsmzUhsRuUerd2Vz2Ncnjz7bqjqWFAp04s+2KjaMluXUt2di9+3u/RAL17sNG222hMjzeZp1n7Wrs2pjCrnv8AAgkvWvngACNAAAtaZu7LXNqJJar4shuyqiJlU8L/AHk3VNNwJD+LBvUVIz+qJUdhzU8L1++DlwXWbPdjpdST4XpUK0wq3McsuXVU6NXpjp57nNAC3VkwABFAAAAAAAAAAB//2Q==" alt="Gordon Addison" style="width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(255,255,255,0.2);">
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">Gordon Addison</div>
+          <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · @GordonAddison</div>
+        </div>
+      </div>
+      <div style="padding:1rem 1.25rem;">
+        <div class="resource-desc">Thoughtful hand tool woodworking with a calm, methodical approach. Worth watching for the joinery work alone.</div>
+      </div>
     </a>
 
     <a href="https://www.youtube.com/@StartMaking" target="_blank" class="resource-card">
-      <div class="resource-name" style="display:flex;align-items:center;gap:0.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FF0000" style="flex-shrink:0;margin-top:2px;"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>Start Making</div>
-      <div class="resource-desc">Accessible, encouraging content for people just getting into making things. Good energy, solid fundamentals.</div>
+      <div style="width:100%;height:120px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAoHCAkIBgoJCAkMCwoMDxoRDw4ODx8WGBMaJSEnJiQhJCMpLjsyKSw4LCMkM0Y0OD0/QkNCKDFITUhATTtBQj//2wBDAQsMDA8NDx4RER4/KiQqPz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz//wAARCAA4ADgDASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAAYCBQcEA//EADAQAAIBAwIEBAQGAwAAAAAAAAECAwAEEQUhBhIxQRMiUXEUMmGRByOBobHBFUJi/8QAGAEAAwEBAAAAAAAAAAAAAAAAAgMEAQD/xAAfEQADAAICAwEBAAAAAAAAAAAAAQIRIQMSBCIxURP/2gAMAwEAAhEDEQA/ANV0eBYdPjwN2Ga7v0qEC8sCL6Cp0MrCSNbyyEkSvvXnNAjJy5Ark1fUVsouVW/NboO9Ioa91DUC7yNKT/qXwqr9SOpPoKXdyg4h0N91pcgGVIYemK8rfTWZvzFxXJYXd/pc0ZuZI5NPZgjAKQY87A+2abeUegoZmb2gq7cbwxffTTznHSir/kX0oov5Ad2eT3McUHO2cY6AV42upW9yG5WKkHGGGDUiFMYBqu1QxWto02BlRkYFE6a2YknoUNX1H4/iO8LsRbWi+du2PT9gPYmo6RNfiYXEsPgRySfISrBge/QYpRu70tFBErcq3t00s7evKQAPvv8AamyJ5JTChuDGgAKvnb2Iwajp72X8M5RaXZvruO+tPCIjdCEbAA6Zp6HQd6VbBJZrsRklo3xnmxuMbn2prp3jbTYnylikgoo7UVUSFSrk4GaoOMrkwaNORj5MHzY2PU/bNc3EGvTaTYFraDxrltl5mCpH/wBMT2+nU9qxrUb+4v7+S4uZvGmY7vg/tnfFLU9p2Hnqztvpw1jpc5wVjd1lVe3MxP8AGKftJs5bREkgvPEt5BzIWAcVlrI4QsjkjYuPXeryDiKay0R7N0YxlWWORGw0ZP8AWd6k5+K2vRlXDyTL9jRODdQvNV4qmuXkb4W3V1iVRhcbDPufr6mtDjmLt12rGuA+IUW7XT0t2jVhmOUP82OxGK1qCTKLJF5o3XmVh0INN4W5XVi+ZZfbP0NSvDCAq9SaKrrhzPdb9ForKqm8oFSkjHOMOLZNUc21rzw26khlB3Yj1I/ilRXVBknzGiiqr/BK/SMVx5ZcnZthVkiLc27xZxzjr6Giigeg1sqWMkEuAzIe4Brf/wAK9a/yfC/w8jDxbJhHk91Iyv8AY/Siiu+YYJf3nh/EsUx0396KKKmr6On4f//Z" alt="Start Making" style="width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(255,255,255,0.2);">
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">Start Making</div>
+          <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · @StartMaking</div>
+        </div>
+      </div>
+      <div style="padding:1rem 1.25rem;">
+        <div class="resource-desc">Accessible, encouraging content for people just getting into making things. Good energy, solid fundamentals.</div>
+      </div>
     </a>
 
-    <a href="https://www.youtube.com/@3x3Custom" target="_blank" class="resource-card">
-      <div class="resource-name" style="display:flex;align-items:center;gap:0.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FF0000" style="flex-shrink:0;margin-top:2px;"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>3×3 Custom</div>
-      <div class="resource-desc">Tamar Hannah — jigs, fixtures, and smart shop solutions. Brings a fresh perspective to woodworking content.</div>
+    <a href="https://www.youtube.com/@3x3CustomTamar" target="_blank" class="resource-card">
+      <div style="width:100%;height:120px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
+        <img src="data:image/jpeg;base64,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" alt="3×3 Custom" style="width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(255,255,255,0.2);">
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">3×3 Custom</div>
+          <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · @3x3CustomTamar</div>
+        </div>
+      </div>
+      <div style="padding:1rem 1.25rem;">
+        <div class="resource-desc">Tamar Hannah — jigs, fixtures, and smart shop solutions. Brings a fresh perspective to woodworking content.</div>
+      </div>
     </a>
 
     <a href="https://www.youtube.com/@PedullaStudio" target="_blank" class="resource-card">
-      <div class="resource-name" style="display:flex;align-items:center;gap:0.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FF0000" style="flex-shrink:0;margin-top:2px;"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>Pedulla Studio</div>
-      <div class="resource-desc">Fine furniture and hand tool work at a high level. Inspiring if you want to see where this craft can go.</div>
+      <div style="width:100%;height:120px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
+        <img src="data:image/jpeg;base64,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" alt="Pedulla Studio" style="width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(255,255,255,0.2);">
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">Pedulla Studio</div>
+          <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · @PedullaStudio</div>
+        </div>
+      </div>
+      <div style="padding:1rem 1.25rem;">
+        <div class="resource-desc">Fine furniture and hand tool work at a high level. Inspiring if you want to see where this craft can go.</div>
+      </div>
     </a>
 
     <a href="https://lostartpress.com" target="_blank" class="resource-card">
-      <div class="resource-name" style="display:flex;align-items:center;gap:0.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Lost Art Press</div>
-      <div class="resource-desc">Publisher of some of the best hand tool woodworking books in print. Chris Schwarz and company — serious scholarship on craft, tools, and technique. The bookshelf standard.</div>
+      <div style="width:100%;height:120px;background:linear-gradient(135deg,#0A1828 0%,#1A3858 100%);display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
+        <div style="width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,0.14);border:1.5px solid rgba(255,255,255,0.28);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <span style="font-family:'DM Mono',monospace;font-size:0.65rem;font-weight:400;color:rgba(255,255,255,0.88);letter-spacing:0.06em;">LAP</span>
+        </div>
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">Lost Art Press</div>
+          <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">WEB · lostartpress.com</div>
+        </div>
+      </div>
+      <div style="padding:1rem 1.25rem;">
+        <div class="resource-desc">Publisher of some of the best hand tool woodworking books in print. Chris Schwarz and company — serious scholarship on craft, tools, and technique. The bookshelf standard.</div>
+      </div>
+    </a>
+
+    <a href="https://www.youtube.com/@Paul.Sellers" target="_blank" class="resource-card">
+      <div style="width:100%;height:120px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
+        <img src="data:image/jpeg;base64,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" alt="Paul Sellers" style="width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(255,255,255,0.2);">
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">Paul Sellers</div>
+          <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · @Paul.Sellers</div>
+        </div>
+      </div>
+      <div style="padding:1rem 1.25rem;">
+        <div class="resource-desc">Master craftsman and educator. Clean, precise hand tool work with a thoughtful, philosophical approach to the craft.</div>
+      </div>
     </a>
 
   </div>
