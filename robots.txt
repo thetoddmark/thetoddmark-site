@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block the success redirect page from indexing
+Disallow: /contact-success.html
+
+# Sitemap location
+Sitemap: https://thetoddmark.com/sitemap.xml
