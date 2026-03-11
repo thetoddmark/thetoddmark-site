@@ -21,6 +21,12 @@
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://thetoddmark.com/restoration-mac-tools-screwdrivers">
   <meta property="og:site_name" content="The Todd·Mark">
+  <meta property="og:image" content="https://thetoddmark.com/images/mac-after-full.jpg">
+  <meta property="og:image:width" content="900">
+  <meta property="og:image:height" content="1200">
+  <meta property="og:image:alt" content="Tool restoration — The Todd·Mark">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://thetoddmark.com/images/mac-after-full.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -34,7 +40,7 @@
       --serif:'Cormorant Garamond',Georgia,serif;
       --mono:'DM Mono',monospace;
     }
-    body { background:var(--warm-white); color:var(--ink); font-family:var(--body-font); font-size:1rem; line-height:1.7; -webkit-font-smoothing:antialiased; }
+    body { background:var(--warm-white); color:var(--ink); font-family:var(--body-font); font-size:1rem; line-height:1.7; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
 
     nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:0.85rem 2.5rem; background:rgba(28,26,23,0.92); -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px); border-bottom:1px solid rgba(245,240,232,0.08); }
     nav ul { list-style:none; display:flex; gap:2rem; }
@@ -75,7 +81,7 @@
     .dye-name { font-family:var(--mono); font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--amber); margin-bottom:0.3rem; }
     .dye-detail { font-size:1rem; line-height:1.7; }
 
-    .photo-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.5rem; margin:2rem 0; align-items:start; }
+    .photo-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr)); gap:1.5rem; margin:2rem 0; align-items:start; }
     figure { margin:0; }
     figcaption { font-family:var(--mono); font-size:0.62rem; letter-spacing:0.09em; text-transform:uppercase; color:var(--ink-faint); margin-top:0.5rem; }
     figure img { width:100%; border-radius:4px; display:block; }
@@ -126,6 +132,32 @@
       .supplies-list li { flex-direction:column; gap:0.25rem; }
       .dye-step { flex-direction:column; }
     }
+
+    @media print {
+      nav, .newsletter-section, footer, .back-link, [class*="share"], .notice-box ~ *:not(.notice-box) { display:none !important; }
+      nav, footer, .newsletter-section { display:none !important; }
+      body { background:#fff; color:#000; font-size:11pt; line-height:1.6; }
+      .article-hero { background:#fff !important; color:#000 !important; padding:1rem 0 1.5rem; text-align:left; }
+      .article-title { color:#000 !important; font-size:22pt !important; }
+      .article-subtitle { color:#444 !important; }
+      .article-eyebrow { color:#c8853a !important; }
+      .article-meta span { color:#666 !important; }
+      .stats-bar { display:none; }
+      .article-body { padding:0; max-width:100%; }
+      .section-label { color:#c8853a !important; border-left-color:#c8853a !important; }
+      h2.section-title { font-size:16pt !important; }
+      p { font-size:11pt; orphans:3; widows:3; }
+      figure img { max-width:100%; page-break-inside:avoid; }
+      .photo-row { grid-template-columns:1fr 1fr !important; }
+      .article-section { page-break-inside:avoid; border-bottom:1px solid #ccc !important; }
+      .pull-quote { border-left:3px solid #c8853a !important; background:#f9f6f0 !important; }
+      .verdict-box { background:#f0ece4 !important; color:#000 !important; border:1px solid #ccc; }
+      .verdict-box h3 { color:#c8853a !important; }
+      .verdict-box p { color:#333 !important; }
+      .supplies-list a { color:#000 !important; text-decoration:none !important; }
+      a[href]::after { content:" (" attr(href) ")"; font-size:8pt; color:#666; }
+      a[href^="#"]::after, a[href^="javascript"]::after { content:""; }
+    }
     @media (prefers-reduced-motion:no-preference) { html { scroll-behavior:smooth; } }
   </style>
   <link rel="canonical" href="https://thetoddmark.com/restoration-mac-tools-screwdrivers">
@@ -159,6 +191,7 @@
     }
   }
   </script>
+  <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
 
@@ -185,6 +218,7 @@
     <li><a href="products.html">The Shop</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
+    <li><a href="partner.html" style="color:var(--amber);">Partner</a></li>
   </ul>
 </nav>
 
@@ -211,6 +245,16 @@
 <div class="article-body">
 
   <a href="work.html" class="back-link" aria-label="Back to all restorations">← All Restorations</a>
+
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--border);margin-bottom:2rem;">
+    <span style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);">⏱ 10 min read</span>
+    <div style="display:flex;align-items:center;gap:0.75rem;">
+      <span style="font-family:var(--mono);font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);">Share:</span>
+      <a href="https://twitter.com/intent/tweet?url=https://thetoddmark.com/restoration-mac-tools-screwdrivers&text=Just+read+this+restoration+write-up+%E2%80%94+Mac+Tools+7-Piece+Wooden-Handle+Set&via=thetoddmark" target="_blank" rel="noopener noreferrer" style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.3);padding-bottom:1px;" aria-label="Share on X / Twitter">X&nbsp;/&nbsp;Twitter</a>
+      <a href="https://www.reddit.com/submit?url=https://thetoddmark.com/restoration-mac-tools-screwdrivers&title=Mac+Tools+7-Piece+Wooden-Handle+Set" target="_blank" rel="noopener noreferrer" style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.3);padding-bottom:1px;" aria-label="Share on Reddit">Reddit</a>
+      <button onclick="navigator.clipboard.writeText('https://thetoddmark.com/restoration-mac-tools-screwdrivers').then(()=>{this.textContent='Copied!';setTimeout(()=>{this.textContent='Copy Link'},1800)})" style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);background:none;border:none;border-bottom:1px solid rgba(200,133,58,0.3);padding:0 0 1px;cursor:pointer;" aria-label="Copy link to clipboard">Copy Link</button>
+    </div>
+  </div>
 
   <!-- 01 THE FIND -->
   <section class="article-section" aria-labelledby="s1-title">
@@ -244,11 +288,7 @@
     <div class="photo-row">
       <figure>
         <img src="images/mac-before-set.jpg" alt="Mac Tools 7-piece screwdriver set before restoration — oil-saturated wooden handles with surface grime and staining" loading="lazy">
-        <figcaption>Full set as received — decades of shop oil, grime, and surface staining on the beech handles.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/mac-before-angle.jpg" alt="Mac Tools screwdriver set angle view before restoration — flat lifeless wood grain, surface rust on ferrules" loading="lazy">
-        <figcaption>Angle view — flat, lifeless wood. The ferrules had dulled but were structurally intact.</figcaption>
+        <figcaption>Full set as received — decades of shop oil, grime, and surface staining on the beech handles. Flat, lifeless wood. The ferrules had dulled but were structurally intact.</figcaption>
       </figure>
     </div>
   </section>
@@ -387,19 +427,20 @@
   <section class="article-section" aria-labelledby="s9-title">
     <span class="section-label"><span class="section-num">09 /</span> Supplies Used</span>
     <h2 class="section-title" id="s9-title">Everything that touched these handles.</h2>
+    <p style="font-family:var(--mono);font-size:0.65rem;letter-spacing:0.06em;color:var(--ink-faint);margin-bottom:1.5rem;">Some links below are affiliate links — I earn a small commission if you buy through them, at no extra cost to you. I only list what I actually used.</p>
     <ul class="supplies-list">
-      <li><span class="supply-name">Mineral Spirits</span><span class="supply-note">Two passes: rag wipe-down then a soft brass brush into the grooves. Gets the surface grime before sanding.</span></li>
+      <li><span class="supply-name"><a href="https://www.amazon.com/s?k=mineral+spirits&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(28,26,23,0.2);">Mineral Spirits</a></span><span class="supply-note">Two passes: rag wipe-down then a soft brass brush into the grooves. Gets the surface grime before sanding.</span></li>
       <li><span class="supply-name">Sandpaper — 60, 80, 120, 180, 220 grit</span><span class="supply-note">Full progression back to bare wood. The 60 cuts through hardened oil; 220 refines before dyeing.</span></li>
-      <li><span class="supply-name">Oxalic Acid</span><span class="supply-note">Multiple baths and scrubbings for stubborn tannin staining. Surprisingly effective — will use on every future restoration with staining issues.</span></li>
-      <li><span class="supply-name">Fiebing's Black Leather Dye</span><span class="supply-note">Phase 1: 1:4 dye to denatured alcohol. Applied and wiped after 2 minutes. Creates the shadow base that lives in the pores and grooves.</span></li>
-      <li><span class="supply-name">Fiebing's Dark Brown Leather Dye</span><span class="supply-note">Phase 2: 1:3 dilution. Softens the black and builds warmth. 300 grit scuff between phases.</span></li>
-      <li><span class="supply-name">Fiebing's Mahogany Leather Dye</span><span class="supply-note">Phase 3: 1:2 dilution, 5–10 minutes before wiping. The final color layer. Full 24-hour dry after this.</span></li>
-      <li><span class="supply-name">Denatured Alcohol</span><span class="supply-note">The carrier for all three dye dilutions. Adjust ratio to control intensity.</span></li>
+      <li><span class="supply-name"><a href="https://www.amazon.com/s?k=oxalic+acid+wood+bleach&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(28,26,23,0.2);">Oxalic Acid</a></span><span class="supply-note">Multiple baths and scrubbings for stubborn tannin staining. Surprisingly effective — will use on every future restoration with staining issues.</span></li>
+      <li><span class="supply-name"><a href="https://www.amazon.com/s?k=fiebing%27s+black+leather+dye&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(28,26,23,0.2);">Fiebing's Black Leather Dye</a></span><span class="supply-note">Phase 1: 1:4 dye to denatured alcohol. Applied and wiped after 2 minutes. Creates the shadow base that lives in the pores and grooves.</span></li>
+      <li><span class="supply-name"><a href="https://www.amazon.com/s?k=fiebing%27s+dark+brown+leather+dye&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(28,26,23,0.2);">Fiebing's Dark Brown Leather Dye</a></span><span class="supply-note">Phase 2: 1:3 dilution. Softens the black and builds warmth. 300 grit scuff between phases.</span></li>
+      <li><span class="supply-name"><a href="https://www.amazon.com/s?k=fiebing%27s+mahogany+leather+dye&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(28,26,23,0.2);">Fiebing's Mahogany Leather Dye</a></span><span class="supply-note">Phase 3: 1:2 dilution, 5–10 minutes before wiping. The final color layer. Full 24-hour dry after this.</span></li>
+      <li><span class="supply-name"><a href="https://www.amazon.com/s?k=denatured+alcohol&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(28,26,23,0.2);">Denatured Alcohol</a></span><span class="supply-note">The carrier for all three dye dilutions. Adjust ratio to control intensity.</span></li>
       <li><span class="supply-name">300 Grit Sandpaper</span><span class="supply-note">Light scuff between dye phases to prevent muddy buildup and help each layer adhere cleanly.</span></li>
-      <li><span class="supply-name">0000 Steel Wool</span><span class="supply-note">Aggressive rub after 24-hour dye cure, and again lightly after final Walrus Oil coat. Levels grain and creates an even surface for the finish.</span></li>
-      <li><span class="supply-name">Walrus Oil (Polymerized Tung Oil)</span><span class="supply-note">Three coats, 24 hours between each. Thin application, 10–15 min absorption, wiped with lint-free cloth.</span></li>
-      <li><span class="supply-name">Dewaxed Shellac</span><span class="supply-note">One wash coat between Walrus Oil and Renaissance Wax. Seals the oil so the wax bonds evenly and doesn't go soft over time.</span></li>
-      <li><span class="supply-name">Renaissance Wax</span><span class="supply-note">Two light coats to finish. Hazes over in 10 minutes, buffed with clean cotton rag. Soft, period-appropriate sheen.</span></li>
+      <li><span class="supply-name"><a href="https://www.amazon.com/s?k=0000+steel+wool&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(28,26,23,0.2);">0000 Steel Wool</a></span><span class="supply-note">Aggressive rub after 24-hour dye cure, and again lightly after final Walrus Oil coat. Levels grain and creates an even surface for the finish.</span></li>
+      <li><span class="supply-name"><a href="https://www.amazon.com/s?k=walrus+oil+wood+finish&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(28,26,23,0.2);">Walrus Oil (Polymerized Tung Oil)</a></span><span class="supply-note">Three coats, 24 hours between each. Thin application, 10–15 min absorption, wiped with lint-free cloth.</span></li>
+      <li><span class="supply-name"><a href="https://www.amazon.com/s?k=dewaxed+shellac&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(28,26,23,0.2);">Dewaxed Shellac</a></span><span class="supply-note">One wash coat between Walrus Oil and Renaissance Wax. Seals the oil so the wax bonds evenly and doesn't go soft over time.</span></li>
+      <li><span class="supply-name"><a href="https://www.amazon.com/s?k=renaissance+wax&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(28,26,23,0.2);">Renaissance Wax</a></span><span class="supply-note">Two light coats to finish. Hazes over in 10 minutes, buffed with clean cotton rag. Soft, period-appropriate sheen.</span></li>
     </ul>
   </section>
 

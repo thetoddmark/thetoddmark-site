@@ -1,0 +1,21 @@
+{
+  "name": "The Todd·Mark",
+  "short_name": "Todd·Mark",
+  "description": "Vintage hand tool restoration documented in detail — screwdrivers, hand planes, and workshop finds given a second life.",
+  "start_url": "/",
+  "display": "minimal-ui",
+  "background_color": "#f5f0e8",
+  "theme_color": "#1c1a17",
+  "icons": [
+    {
+      "src": "/favicon.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/favicon.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}

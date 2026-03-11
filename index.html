@@ -1486,6 +1486,11 @@
     .back-to-top { transition: none; }
   }
 
+
+    @media (max-width: 640px) {
+      .featured-inline-grid { grid-template-columns: 1fr !important; }
+      .featured-inline-border { border-left: none !important; padding-left: 0 !important; border-top: 1px solid rgba(245,240,232,0.1); padding-top: 1.5rem; }
+    }
 </style>
 
   <meta name="description" content="A tech worker in a Seattle shed documenting vintage hand tool restorations — honestly. Every screwdriver, plane, and brace gets the full treatment: the find, the process, and the verdict.">
@@ -1514,7 +1519,15 @@
     "@type": "WebSite",
     "name": "The Todd·Mark",
     "url": "https://thetoddmark.com",
-    "description": "Vintage hand tool restorations documented in detail."
+    "description": "Vintage hand tool restorations documented in detail — screwdrivers, hand planes, and workshop finds given a second life.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://thetoddmark.com/work.html?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
 }
   </script>
   <script type="application/ld+json">
@@ -1535,11 +1548,13 @@
     ],
     "sameAs": [
         "https://ko-fi.com/thetoddmark",
-        "https://www.amazon.com/shop/thetoddmark"
+        "https://www.amazon.com/shop/thetoddmark",
+        "https://buttondown.com/TheToddMark"
     ]
 }
   </script>
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+  <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
   <style>
@@ -1594,6 +1609,7 @@
     <li><a href="products.html">The Shop</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
+    <li><a href="partner.html" style="color:var(--amber);">Partner</a></li>
   </ul>
 </nav>
 <main id="main-content">
@@ -1634,11 +1650,11 @@
       <div class="section-line" aria-hidden="true"></div>
     </div>
     <div class="recent-work-grid">
-      <a href="work.html#marking" class="recent-work-item reveal">
+      <a href="restoration-awl-marking-knife.html" class="recent-work-item reveal">
         <div class="work-item-category">Marking · Conversion</div>
         <h3 class="work-item-title">Vintage Awl — Repurposed Marking Knife</h3>
         <p class="work-item-desc">A $10 Facebook Marketplace find converted into a precision marking knife. Rosewood handle, brass ferrules, flat bevel reground on diamond stones.</p>
-        <span class="work-item-arrow">View restoration →</span>
+        <span class="work-item-arrow">Read the full write-up →</span>
       </a>
       <a href="work.html#chipbreaker" class="recent-work-item reveal">
         <div class="work-item-category">Build · Screwdriver</div>
@@ -1652,11 +1668,11 @@
         <p class="work-item-desc">Four graduating German screwdrivers with turned handles. Stripped, sanded, dyed, and finished with tung oil and Renaissance Wax.</p>
         <span class="work-item-arrow">View restoration →</span>
       </a>
-      <a href="work.html#mactools" class="recent-work-item reveal">
+      <a href="restoration-mac-tools-screwdrivers.html" class="recent-work-item reveal">
         <div class="work-item-category">Screwdrivers · Mac Tools</div>
         <h3 class="work-item-title">Mac Tools Wooden-Handled Set</h3>
         <p class="work-item-desc">Post-WWII American 7-piece set. Fiebing's leather dye, polymerized tung oil, shellac, and Renaissance Wax — richer than new.</p>
-        <span class="work-item-arrow">View restoration →</span>
+        <span class="work-item-arrow">Read the full write-up →</span>
       </a>
     </div>
   </div>
@@ -1739,6 +1755,48 @@
   </div>
 
 </div>
+
+  <!-- Featured Article -->
+  <div style="background:var(--ink);padding:4rem 2rem;margin-top:0;">
+    <div style="max-width:860px;margin:0 auto;">
+      <div style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--amber);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.8rem;">
+        <span style="display:block;height:1px;width:2rem;background:var(--amber);opacity:0.5;"></span>
+        Latest Write-Up
+        <span style="display:block;height:1px;width:2rem;background:var(--amber);opacity:0.5;"></span>
+      </div>
+      <div class="featured-inline-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start;">
+        <div>
+          <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(200,133,58,0.6);margin-bottom:0.75rem;">Restoration No. 04 · Screwdrivers</div>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:600;color:var(--warm-white);line-height:1.2;margin-bottom:1rem;">Mac Tools 7-Piece Wooden-Handle Set</h2>
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;color:rgba(245,240,232,0.55);line-height:1.65;margin-bottom:1.5rem;">A $40 eBay gamble, a 3-phase Fiebing's dye process, and the Phillips head screwdrivers that don't exist — until they do.</p>
+          <div style="display:flex;gap:1.5rem;flex-wrap:wrap;margin-bottom:2rem;">
+            <div style="text-align:center;">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:var(--amber);display:block;line-height:1;">7</span>
+              <span style="font-family:'DM Mono',monospace;font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,240,232,0.35);display:block;margin-top:0.25rem;">Screwdrivers</span>
+            </div>
+            <div style="text-align:center;">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:var(--amber);display:block;line-height:1;">3</span>
+              <span style="font-family:'DM Mono',monospace;font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,240,232,0.35);display:block;margin-top:0.25rem;">Dye Phases</span>
+            </div>
+            <div style="text-align:center;">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:var(--amber);display:block;line-height:1;">~$40</span>
+              <span style="font-family:'DM Mono',monospace;font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,240,232,0.35);display:block;margin-top:0.25rem;">Purchase Price</span>
+            </div>
+          </div>
+          <a href="restoration-mac-tools-screwdrivers.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--amber);color:#1a1409;font-family:'DM Mono',monospace;font-size:0.68rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;padding:0.85rem 1.75rem;border-radius:2px;">Read the full write-up →</a>
+        </div>
+        <div class="featured-inline-border" style="border-left:1px solid rgba(245,240,232,0.08);padding-left:2.5rem;">
+          <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(200,133,58,0.6);margin-bottom:0.75rem;">Also Published</div>
+          <a href="restoration-awl-marking-knife.html" style="display:block;text-decoration:none;padding:1.25rem;background:rgba(245,240,232,0.04);border:1px solid rgba(245,240,232,0.08);border-radius:4px;transition:border-color 0.2s;margin-bottom:1rem;" onmouseover="this.style.borderColor='rgba(200,133,58,0.4)'" onmouseout="this.style.borderColor='rgba(245,240,232,0.08)'">
+            <div style="font-family:'DM Mono',monospace;font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--amber);margin-bottom:0.4rem;">Restoration No. 03 · Marking Tools</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--warm-white);line-height:1.3;margin-bottom:0.4rem;">Vintage Awl — Repurposed Marking Knife</div>
+            <div style="font-size:0.88rem;color:rgba(245,240,232,0.4);line-height:1.6;">$10 find → precision marking knife. Full write-up.</div>
+          </a>
+          <a href="work.html" style="display:flex;align-items:center;gap:0.4rem;font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,240,232,0.35);text-decoration:none;margin-top:0.5rem;transition:color 0.2s;" onmouseover="this.style.color='var(--amber)'" onmouseout="this.style.color='rgba(245,240,232,0.35)'">View all restorations →</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <!-- NEWSLETTER SIGNUP -->
 <div style="background:var(--ink);padding:4rem 2rem;">
