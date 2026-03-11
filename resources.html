@@ -7,7 +7,7 @@
 
 <meta charset="UTF-8">
 <meta name="color-scheme" content="light">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WF1PP02KM3"></script>
 <script>
@@ -21,6 +21,247 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
+
+  /* ══════════════════════════════════════════
+     CROSS-BROWSER COMPATIBILITY LAYER
+     Added for: Chrome, Safari, Firefox, Edge,
+     iOS Safari, Android Chrome, Samsung Internet
+     ══════════════════════════════════════════ */
+
+  /* 1 — Mobile font inflation (iOS Safari) */
+  html {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  /* 2 — Tap highlight colour (remove orange flash on mobile) */
+  * {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+
+  /* 3 — Box-sizing already set via * rule; belt-and-suspenders */
+  *, *::before, *::after { box-sizing: inherit; }
+  html { box-sizing: border-box; }
+
+  /* 4 — Smooth scroll with prefers-reduced-motion guard
+         Safari 12.1 added support; use @supports for older */
+  @media (prefers-reduced-motion: no-preference) {
+  }
+
+  /* 5 — position: -webkit-sticky; position: sticky vendor prefix (older WebKit) */
+  .lightbox-content::after {
+    position: -webkit-sticky; position: sticky;
+  }
+
+  /* 6 — -webkit-overflow-scrolling for iOS momentum scroll */
+  .lightbox-content,
+  [style*="overflow-y: auto"],
+  [style*="overflow: auto"] {
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+  }
+
+  /* 7 — appearance:none for form inputs (iOS / Android) */
+  input,
+  textarea,
+  select,
+  button,
+  .form-input,
+  .form-textarea,
+  .form-submit {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  /* Restore type=checkbox / type=radio which need appearance */
+  input[type="checkbox"],
+  input[type="radio"] {
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    appearance: auto;
+  }
+
+  /* 8 — will-change for animated elements (GPU compositing) */
+  .reveal,
+  .gallery-card,
+  .back-to-top,
+  .btn-primary,
+  .nav-hamburger span,
+  .hero-eyebrow,
+  .hero-title,
+  .hero-subtitle,
+  .hero-cta,
+  .hero-plane-svg {
+    will-change: transform, opacity;
+  }
+  /* Clean up will-change once animation completes */
+  .reveal.revealed,
+  .hero-eyebrow,
+  .hero-title,
+  .hero-subtitle,
+  .hero-cta {
+    will-change: auto;
+  }
+
+  /* 9 — Touch-action: allow vertical scroll, prevent x-scroll lag */
+  body { touch-action: pan-y; }
+  nav, footer { touch-action: manipulation; }
+  a, button, [role="button"], [tabindex] { touch-action: manipulation; }
+
+  /* 10 — Flexbox gap fallback for Safari < 14.1
+          (Safari 14.0 and below treats gap as row-gap only in flex)
+          We replicate the gap via margin on children as a safe override */
+  @supports not (gap: 1rem) {
+    nav ul > li + li { margin-left: 2.5rem; }
+    .hero-cta > * + * { margin-left: 1.5rem; }
+    .social-links > * + * { margin-top: 1rem; }
+    .contact-form-area > * + * { margin-top: 1.25rem; }
+    .form-field > * + * { margin-top: 0.4rem; }
+    .stats-strip > * + * { border-left: 1px solid var(--border); }
+    .journal-grid > * + * { margin-left: 2rem; }
+    .recent-work-grid > * + * { margin-left: 1.5rem; }
+  }
+
+  /* 11 — clamp() fallback: provide font-size fallback before clamp() */
+  .hero-title {
+    font-size: 4rem;           /* fallback */
+    font-size: clamp(3rem, 5vw, 5rem);
+  }
+  .section-title {
+    font-size: 2.2rem;         /* fallback */
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+  }
+  .contact-text .section-title {
+    font-size: 2.8rem;         /* fallback */
+    font-size: clamp(2rem, 3.5vw, 3.5rem);
+  }
+
+  /* 12 — 100vh fix: modern browsers use dvh; older fall back to 100vh */
+  .hero {
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);                       /* baseline */
+    min-height: 100dvh;                      /* dynamic viewport height (Chrome 108+, Safari 15.4+, FF 101+) */
+  }
+  .lightbox {
+    inset: 0;                                /* already uses inset — see below */
+  }
+
+  /* 13 — inset shorthand fallback (Safari < 14.1, Firefox < 87) */
+  /* inset:0 = top:0;right:0;bottom:0;left:0 */
+  /* We add explicit fallbacks for the two main usages: body::before and lightbox */
+  body::before {
+    top: 0; right: 0; bottom: 0; left: 0;   /* fallback */
+    inset: 0;                                /* modern */
+  }
+  .lightbox {
+    top: 0; right: 0; bottom: 0; left: 0;   /* fallback */
+    inset: 0;                                /* modern */
+  }
+  .card-overlay {
+    top: 0; right: 0; bottom: 0; left: 0;   /* fallback */
+    inset: 0;                                /* modern */
+  }
+  .tool-illustration {
+    top: 0; right: 0; bottom: 0; left: 0;   /* fallback */
+    inset: 0;                                /* modern */
+  }
+
+  /* 14 — aspect-ratio fallback (Safari < 15, Chrome < 88, Firefox < 89)
+          Use padding-top trick as fallback via @supports not */
+  @supports not (aspect-ratio: 4/3) {
+    .card-img-placeholder {
+      height: 0;
+      padding-top: 75%;   /* 4/3 ratio */
+      overflow: hidden;
+      position: relative;
+    }
+    .card-img-placeholder > * {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+    }
+    .about-img-frame {
+      height: 0;
+      padding-top: 133%;  /* 3/4 ratio */
+    }
+  }
+
+  /* 15 — Image rendering: crisp on all browsers */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    image-rendering: -webkit-optimize-contrast; /* Safari */
+    image-rendering: crisp-edges;
+  }
+
+  /* 16 — Prevent layout shift from images without explicit dimensions */
+  img[loading="lazy"] {
+    content-visibility: auto;
+  }
+
+  /* 17 — overflow-x: hidden + transform interaction fix (Safari) */
+  /* Using contain on major sections to scope stacking contexts */
+  section { contain: layout; }
+
+  /* 18 — -webkit-font-smoothing for macOS/iOS */
+  body, input, textarea, button, select {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* 19 — Prevent text selection on interactive elements (Samsung Internet / older Android) */
+  button,
+  [role="button"],
+  .nav-hamburger,
+  .gallery-card,
+  .back-to-top,
+  .lightbox-close {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  /* 20 — focus-visible polyfill fallback: if :focus-visible not supported, 
+          use :focus but hide it for pointer users via a .js-focus-visible check */
+  @supports not selector(:focus-visible) {
+    :focus { outline: 2px solid var(--amber); outline-offset: 3px; }
+  }
+
+  /* 21 — Ensure consistent line-height inheritance across all browsers */
+  input, textarea, select, button { line-height: inherit; }
+
+  /* 22 — -webkit-backface-visibility for smoother CSS transforms */
+  .gallery-card,
+  .btn-primary,
+  .recent-work-item,
+  .explore-card {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  /* 23 — Prevent iOS button styling override on type=submit */
+  [type="submit"] {
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+
+  /* 24 — Samsung Internet / older Android: ensure border-radius on overflow */
+  .hero-visual,
+  .about-img-frame,
+  .lightbox-inner {
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    isolation: isolate;
+  }
+
+  /* 25 — Ensure consistent colour-scheme rendering */
+  :root { color-scheme: light; }
+
+
   :root {
     --cream: #f5f0e8;
     --warm-white: #faf8f4;
@@ -36,8 +277,6 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  html { scroll-behavior: smooth; }
 
   body {
     background: var(--warm-white);
@@ -132,6 +371,7 @@
   /* ── HERO ── */
   .hero {
     min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-top: 64px;
@@ -731,8 +971,8 @@
 
   .footer-copy {
     font-family: 'DM Mono', monospace;
-    font-size: 1.16rem;
-    letter-spacing: 0.12em;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
     color: rgba(245,240,232,0.6);
   }
 
@@ -780,7 +1020,7 @@
 
 .lightbox-content::after {
     content: '';
-    position: sticky;
+    position: -webkit-sticky; position: sticky;
     bottom: 0;
     left: 0;
     right: 0;
@@ -1234,13 +1474,13 @@
   </style>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 <nav aria-label="Main navigation">
-  <a href="index.html" class="nav-logo" style="display:flex;align-items:center;text-decoration:none;"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="height:36px;width:36px;flex-shrink:0;border-radius:50%;background:rgba(245,240,232,0.92);padding:4px;box-sizing:border-box;" aria-label="The Todd Mark logo" role="img">
-  <circle cx="50" cy="50" r="47" fill="none" stroke="#1a1816" stroke-width="3.5"/>
-  <circle cx="50" cy="50" r="41" fill="none" stroke="#1a1816" stroke-width="1.5"/>
-  <circle cx="50" cy="50" r="38" fill="none" stroke="#1a1816" stroke-width="1"/>
-  <text x="50" y="36" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" fill="#1a1816" text-anchor="middle" letter-spacing="2">THETODD</text>
-  <text x="50" y="57" font-family="Arial Black,Arial,sans-serif" font-size="27" font-weight="900" fill="#1a1816" text-anchor="middle" letter-spacing="-1">TM</text>
-  <text x="50" y="73" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" fill="#1a1816" text-anchor="middle" letter-spacing="3">MARK</text>
+  <a href="index.html" class="nav-logo" style="display:flex;align-items:center;text-decoration:none;"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="height:38px;width:38px;flex-shrink:0;" aria-label="The Todd Mark logo" role="img">
+  <circle cx="50" cy="50" r="47" fill="none" stroke="rgba(245,240,232,0.95)" stroke-width="3.5"/>
+  <circle cx="50" cy="50" r="41" fill="none" stroke="rgba(245,240,232,0.45)" stroke-width="1.5"/>
+  <circle cx="50" cy="50" r="38" fill="none" stroke="rgba(245,240,232,0.2)" stroke-width="1"/>
+  <text x="50" y="36" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" fill="rgba(245,240,232,0.95)" text-anchor="middle" letter-spacing="2">THETODD</text>
+  <text x="50" y="57" font-family="Arial Black,Arial,sans-serif" font-size="27" font-weight="900" fill="rgba(245,240,232,0.95)" text-anchor="middle" letter-spacing="-1">TM</text>
+  <text x="50" y="73" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" fill="rgba(245,240,232,0.95)" text-anchor="middle" letter-spacing="3">MARK</text>
 </svg><span style="font-family:'DM Mono',monospace;font-size:0.68rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:rgba(245,240,232,0.88);margin-left:0.75rem;white-space:nowrap;">The Todd<span style="color:#c8853a;margin:0 0.15em;">·</span>Mark</span></a>
   <button class="nav-hamburger" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
     <span></span>
@@ -1429,36 +1669,23 @@
   </div>
 </section>
 </main>
-<footer style="display:flex;flex-direction:column;align-items:center;padding:2.5rem 3rem 1.5rem;">
-  <div class="footer-divider"></div>
-  <nav class="footer-nav" aria-label="Footer navigation">
-    <a href="index.html">Home</a>
-    <a href="work.html">The Work</a>
-    <a href="resources.html">Resources</a>
-    <a href="wishlist.html">Wishlist</a>
-    <a href="listening.html">Listening</a>
-    <a href="products.html">The Shop</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <div style="display:flex;align-items:center;justify-content:space-between;width:100%;margin-top:1.5rem;flex-wrap:wrap;gap:1rem;">
-    <div class="footer-copy" style="text-align:left;">© 2026 · TheToddMark.com · Two first names. One workshop.</div>
-    <a href="https://ko-fi.com/thetoddmark" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.4rem;background:var(--amber);color:#1a1409;font-family:inherit;font-size:0.78rem;font-weight:500;padding:0.45rem 1.1rem;border-radius:2rem;text-decoration:none;letter-spacing:0.05em;white-space:nowrap;">🪚 Want to support the shed upgrade?</a>
-    <div class="footer-logo"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="height:36px;width:36px;flex-shrink:0;border-radius:50%;background:rgba(245,240,232,0.92);padding:4px;box-sizing:border-box;" aria-label="The Todd Mark logo" role="img">
-  <circle cx="50" cy="50" r="47" fill="none" stroke="#1a1816" stroke-width="3.5"/>
-  <circle cx="50" cy="50" r="41" fill="none" stroke="#1a1816" stroke-width="1.5"/>
-  <circle cx="50" cy="50" r="38" fill="none" stroke="#1a1816" stroke-width="1"/>
-  <text x="50" y="36" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" fill="#1a1816" text-anchor="middle" letter-spacing="2">THETODD</text>
-  <text x="50" y="57" font-family="Arial Black,Arial,sans-serif" font-size="27" font-weight="900" fill="#1a1816" text-anchor="middle" letter-spacing="-1">TM</text>
-  <text x="50" y="73" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" fill="#1a1816" text-anchor="middle" letter-spacing="3">MARK</text>
+<footer>
+  <div class="footer-copy">© 2026 · TheToddMark.com · Two first names. One workshop.</div>
+  <a href="https://ko-fi.com/thetoddmark" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.4rem;background:var(--amber);color:#1a1409;font-family:inherit;font-size:0.78rem;font-weight:500;padding:0.45rem 1.1rem;border-radius:2rem;text-decoration:none;letter-spacing:0.05em;white-space:nowrap;">🪚 Want to support the shed upgrade?</a>
+  <div class="footer-logo"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="height:60px;width:60px;flex-shrink:0;" aria-label="The Todd Mark logo" role="img">
+  <circle cx="50" cy="50" r="47" fill="none" stroke="rgba(245,240,232,0.95)" stroke-width="3.5"/>
+  <circle cx="50" cy="50" r="41" fill="none" stroke="rgba(245,240,232,0.45)" stroke-width="1.5"/>
+  <circle cx="50" cy="50" r="38" fill="none" stroke="rgba(245,240,232,0.2)" stroke-width="1"/>
+  <text x="50" y="36" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" fill="rgba(245,240,232,0.95)" text-anchor="middle" letter-spacing="2">THETODD</text>
+  <text x="50" y="57" font-family="Arial Black,Arial,sans-serif" font-size="27" font-weight="900" fill="rgba(245,240,232,0.95)" text-anchor="middle" letter-spacing="-1">TM</text>
+  <text x="50" y="73" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" fill="rgba(245,240,232,0.95)" text-anchor="middle" letter-spacing="3">MARK</text>
 </svg></div>
-  </div>
 </footer>
 <div class="lightbox" id="lightbox" onclick="closeLightbox(event)" role="dialog" aria-modal="true" aria-labelledby="lb-title" aria-label="Photo lightbox">
-  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close lightbox">✕</button>
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close lightbox" aria-controls="lightbox">✕</button>
   <div class="lightbox-inner">
     <div class="lightbox-img" id="lightbox-img" style="position:relative;">
-      <img id="lb-main-img" src="" alt="" style="width:100%;height:100%;object-fit:cover;" />
+      <img id="lb-main-img" src="" alt="" style="width:100%;height:100%;object-fit:cover;" / loading="lazy" width="auto" height="auto">
       <button onclick="lbNav(-1)" aria-label="Previous photo" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(28,26,23,0.5);border:none;color:#f5f0e8;font-size:1.4rem;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;" onmouseover="this.style.background='rgba(28,26,23,0.85)'" onmouseout="this.style.background='rgba(28,26,23,0.5)'">‹</button>
       <button onclick="lbNav(1)" aria-label="Next photo" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(28,26,23,0.5);border:none;color:#f5f0e8;font-size:1.4rem;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;" onmouseover="this.style.background='rgba(28,26,23,0.85)'" onmouseout="this.style.background='rgba(28,26,23,0.5)'">›</button>
     </div>
@@ -1680,9 +1907,7 @@ document.addEventListener('keydown', e => {
   (function() {
     var btn = document.getElementById('back-to-top');
     if (!btn) return;
-    window.addEventListener('scroll', function() {
-      btn.classList.toggle('visible', window.scrollY > 400);
-    }, { passive: true });
+    // scroll listener handled by compat block below
   })();
 
   // Scroll reveal
@@ -1702,6 +1927,136 @@ document.addEventListener('keydown', e => {
     document.querySelectorAll('.reveal').forEach(function(el) { obs.observe(el); });
   })();
 
+
+  /* ── Cross-browser JS compatibility layer ── */
+  (function() {
+
+    // 1. Passive event listener feature detection
+    var supportsPassive = false;
+    try {
+      var opts = Object.defineProperty({}, 'passive', {
+        get: function() { supportsPassive = true; }
+      });
+      window.addEventListener('testPassive', null, opts);
+      window.removeEventListener('testPassive', null, opts);
+    } catch(e) {}
+    var passiveOpt = supportsPassive ? { passive: true } : false;
+
+    // 2. Re-attach scroll listener with passive flag (performance on iOS)
+    var btn = document.getElementById('back-to-top');
+    if (btn) {
+      window.addEventListener('scroll', function() {
+        btn.classList.toggle('visible', window.scrollY > 400);
+      }, passiveOpt);
+    }
+
+    // 3. Touch event passive listeners (prevent scroll jank on mobile)
+    document.addEventListener('touchstart', function(){}, passiveOpt);
+    document.addEventListener('touchmove', function(){}, passiveOpt);
+
+    // 4. Smooth scroll polyfill for Safari < 15.4 and any browser
+    //    where CSS scroll-behavior isn't supported
+    if (!('scrollBehavior' in document.documentElement.style)) {
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          var id = this.getAttribute('href').slice(1);
+          if (!id) return;
+          var target = document.getElementById(id);
+          if (!target) return;
+          e.preventDefault();
+          var start = window.pageYOffset;
+          var dest   = target.getBoundingClientRect().top + start;
+          var startTime = null;
+          var duration = 600;
+          function step(timestamp) {
+            if (!startTime) startTime = timestamp;
+            var progress = Math.min((timestamp - startTime) / duration, 1);
+            var ease = progress < 0.5
+              ? 2 * progress * progress
+              : -1 + (4 - 2 * progress) * progress; // easeInOut
+            window.scrollTo(0, start + (dest - start) * ease);
+            if (progress < 1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+        });
+      });
+    }
+
+    // 5. IntersectionObserver polyfill guard (already handled in reveal code,
+    //    this ensures it's applied even if script order changes)
+    if (!('IntersectionObserver' in window)) {
+      document.querySelectorAll('.reveal').forEach(function(el) {
+        el.classList.add('revealed');
+      });
+    }
+
+    // 6. CSS custom property (var()) support check — warn in console only
+    //    (IE11 is out of scope per spec, but this logs a warning gracefully)
+    if (window.CSS && !window.CSS.supports('color', 'var(--test)')) {
+      console.warn('[TheToddMark] CSS custom properties not supported. ' +
+                   'Visual styles may degrade.');
+    }
+
+    // 7. 100dvh / dynamic viewport fix for iOS Safari
+    //    Sets a --vh custom property that reflects the true visible viewport height
+    function setVh() {
+      var vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', vh + 'px');
+    }
+    setVh();
+    window.addEventListener('resize', setVh, passiveOpt);
+    // Also update on orientation change (iOS)
+    window.addEventListener('orientationchange', function() {
+      setTimeout(setVh, 100);
+    }, passiveOpt);
+
+    // 8. Prevent body scroll when mobile nav is open
+    var navToggle = document.getElementById('nav-toggle');
+    if (navToggle) {
+      navToggle.addEventListener('click', function() {
+        var isOpen = document.querySelector('nav ul.nav-open');
+        document.body.style.overflow = isOpen ? '' : 'hidden';
+      });
+      // Restore scroll if menu closes via any nav link
+      var navLinks = document.querySelectorAll('nav ul a');
+      navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          document.body.style.overflow = '';
+        });
+      });
+    }
+
+    // 9. Lightbox: trap focus inside when open (accessibility + all browsers)
+    var lightbox = document.getElementById('lightbox');
+    if (lightbox) {
+      lightbox.addEventListener('keydown', function(e) {
+        if (!lightbox.classList.contains('open')) return;
+        if (e.key === 'Escape' || e.keyCode === 27) {
+          if (typeof closeLightbox === 'function') closeLightbox();
+        }
+        // Focus trap
+        var focusable = lightbox.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        var first = focusable[0];
+        var last  = focusable[focusable.length - 1];
+        if (e.key === 'Tab' || e.keyCode === 9) {
+          if (e.shiftKey) {
+            if (document.activeElement === first) {
+              e.preventDefault();
+              last.focus();
+            }
+          } else {
+            if (document.activeElement === last) {
+              e.preventDefault();
+              first.focus();
+            }
+          }
+        }
+      });
+    }
+
+  })();
 </script>
 </body>
 </html>
