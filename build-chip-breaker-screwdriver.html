@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="theme-color" content="#1c1a17">
+  <link rel="icon" href="/favicon.jpg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="/favicon.jpg">
+  <meta charset="UTF-8">
+  <meta name="color-scheme" content="light">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WF1PP02KM3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-WF1PP02KM3");
+  </script>
+  <title>Dave Corinth's Chip Breaker Screwdriver — The Todd·Mark Build</title>
+  <meta name="description" content="A $24.95 eBay kit from Dave Corinth Toolworks, assembled with a salvaged Brazilian Rosewood knob. Built for one job: adjusting the chip breaker screw on Stanley hand planes. Full build documented.">
+  <meta property="og:title" content="Dave Corinth's Chip Breaker Screwdriver | The Todd·Mark">
+  <meta property="og:description" content="A $24.95 eBay kit, a salvaged Brazilian Rosewood knob, and the screwdriver built for exactly one job. Full build documented.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://thetoddmark.com/build-chip-breaker-screwdriver">
+  <meta property="og:site_name" content="The Todd·Mark">
+  <meta property="og:image" content="https://thetoddmark.com/cbd-hero.jpg">
+  <meta property="og:image:width" content="900">
+  <meta property="og:image:height" content="1200">
+  <meta property="og:image:alt" content="Dave Corinth's chip breaker screwdriver — Brazilian Rosewood knob, brass ferrule, O1 steel blade">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://thetoddmark.com/cbd-hero.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    html { -webkit-text-size-adjust:100%; text-size-adjust:100%; box-sizing:border-box; scroll-behavior:smooth; }
+    *, *::before, *::after { box-sizing:inherit; -webkit-tap-highlight-color:transparent; margin:0; padding:0; }
+
+    :root {
+      --ink:       #1c1a17;
+      --warm-white:#f5f0e8;
+      --cream:     #f0e8d8;
+      --amber:     #c8853a;
+      --border:    rgba(28,26,23,0.12);
+      --ink-faint: rgba(28,26,23,0.5);
+      --body-font: 'Jost', system-ui, sans-serif;
+      --serif:     'Cormorant Garamond', Georgia, serif;
+      --mono:      'DM Mono', monospace;
+    }
+
+    body {
+      background: var(--warm-white);
+      color: var(--ink);
+      font-family: var(--body-font);
+      font-size: 1rem;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.85rem 2.5rem;
+      background: rgba(28,26,23,0.92);
+      -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(245,240,232,0.08);
+    }
+    nav ul { list-style:none; display:flex; gap:2rem; }
+    nav ul a {
+      font-family: var(--mono); font-size:0.62rem; font-weight:400;
+      letter-spacing:0.12em; text-transform:uppercase;
+      color:rgba(245,240,232,0.72); text-decoration:none;
+      transition: color 0.2s;
+    }
+    nav ul a:hover, nav ul a.nav-active { color: var(--amber); }
+    .nav-hamburger { display:none; }
+
+    /* ── ARTICLE HERO ── */
+    .article-hero {
+      padding: 7rem 2rem 3rem;
+      background: var(--ink);
+      text-align: center;
+    }
+    .article-eyebrow {
+      font-family: var(--mono); font-size:0.68rem; letter-spacing:0.18em;
+      text-transform:uppercase; color:var(--amber); margin-bottom:1.2rem;
+      display:flex; align-items:center; justify-content:center; gap:0.8rem;
+    }
+    .article-eyebrow::before, .article-eyebrow::after {
+      content:''; display:block; height:1px; width:2rem; background:var(--amber); opacity:0.5;
+    }
+    .article-title {
+      font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 600; color: var(--warm-white);
+      line-height: 1.15; margin-bottom: 1rem;
+    }
+    .article-subtitle {
+      font-family: var(--serif); font-size:1.25rem; font-weight:300;
+      font-style:italic; color:rgba(245,240,232,0.65);
+      margin-bottom: 2rem;
+    }
+    .article-meta {
+      display:flex; align-items:center; justify-content:center;
+      gap:1.5rem; flex-wrap:wrap;
+      font-family: var(--mono); font-size:0.65rem; letter-spacing:0.1em;
+      text-transform:uppercase; color:rgba(245,240,232,0.45);
+    }
+    .article-meta span { display:flex; align-items:center; gap:0.4rem; }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      background: #141210;
+      display:flex; justify-content:center; gap:0; flex-wrap:wrap;
+    }
+    .stat-item {
+      padding:1rem 2.5rem; text-align:center;
+      border-right:1px solid rgba(245,240,232,0.08);
+    }
+    .stat-item:last-child { border-right:none; }
+    .stat-value {
+      font-family: var(--serif); font-size:1.8rem; font-weight:600;
+      color:var(--amber); line-height:1; display:block;
+    }
+    .stat-label {
+      font-family:var(--mono); font-size:0.58rem; letter-spacing:0.12em;
+      text-transform:uppercase; color:rgba(245,240,232,0.4);
+      display:block; margin-top:0.3rem;
+    }
+
+    /* ── ARTICLE BODY ── */
+    .article-body {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: var(--mono); font-size:0.62rem; letter-spacing:0.2em;
+      text-transform:uppercase; color:var(--amber);
+      border-left: 3px solid var(--amber); padding-left:0.8rem;
+      margin-bottom:0.75rem; display:block;
+    }
+    .section-num {
+      color:rgba(200,133,58,0.45); margin-right:0.5em;
+    }
+
+    h2.section-title {
+      font-family: var(--serif); font-size:1.9rem; font-weight:600;
+      color:var(--ink); line-height:1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    .article-section {
+      margin-bottom: 4rem;
+      padding-bottom: 4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .article-section:last-of-type { border-bottom: none; }
+
+    p { margin-bottom: 1.25rem; font-size:1.05rem; line-height:1.8; }
+    p:last-child { margin-bottom:0; }
+
+    /* Pull quote */
+    .pull-quote {
+      margin: 2.5rem 0;
+      padding: 1.5rem 2rem;
+      border-left: 4px solid var(--amber);
+      background: rgba(200,133,58,0.06);
+      border-radius: 0 4px 4px 0;
+    }
+    .pull-quote p {
+      font-family: var(--serif); font-size:1.25rem; font-style:italic;
+      font-weight:400; color:var(--ink); margin-bottom:0; line-height:1.6;
+    }
+
+    /* Process steps */
+    .process-steps { list-style:none; margin:1.5rem 0; }
+    .process-steps li {
+      display:flex; gap:1.2rem; margin-bottom:1.2rem;
+      font-size:1.0rem; line-height:1.7;
+    }
+    .step-num {
+      flex-shrink:0;
+      width:1.8rem; height:1.8rem;
+      background: var(--ink); color:var(--amber);
+      border-radius:50%; display:flex; align-items:center; justify-content:center;
+      font-family:var(--mono); font-size:0.65rem; font-weight:400;
+      margin-top:0.15rem;
+    }
+    strong { font-weight:600; color:var(--ink); }
+
+    /* Photo placeholder */
+    .photo-block {
+      margin:2.5rem 0;
+      background:rgba(28,26,23,0.04);
+      border:1px dashed rgba(28,26,23,0.15);
+      border-radius:4px; padding:3rem 2rem; text-align:center;
+    }
+    .photo-block-label {
+      font-family:var(--mono); font-size:0.65rem; letter-spacing:0.12em;
+      text-transform:uppercase; color:var(--ink-faint); margin-bottom:0.5rem;
+    }
+    .photo-block-desc { font-size:0.88rem; color:var(--ink-faint); }
+    .photo-grid {
+      display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
+      gap:1rem; margin:2.5rem 0;
+    }
+    .photo-grid .photo-block { margin:0; }
+
+    /* Supplies list */
+    .supplies-list { list-style:none; margin:1.5rem 0; }
+    .supplies-list li {
+      padding:0.9rem 0;
+      border-bottom:1px solid var(--border);
+      display:flex; gap:1rem; align-items:baseline;
+      font-size:1rem;
+    }
+    .supplies-list li:last-child { border-bottom:none; }
+    .supply-name { font-weight:600; min-width:220px; flex-shrink:0; }
+    .supply-note { color:var(--ink-faint); font-size:0.92rem; }
+
+    /* Verdict box */
+    .verdict-box {
+      background:var(--ink); color:var(--warm-white);
+      border-radius:4px; padding:2.5rem;
+      margin:2.5rem 0;
+    }
+    .verdict-box h3 {
+      font-family:var(--serif); font-size:1.5rem; font-weight:600;
+      color:var(--amber); margin-bottom:1.2rem;
+    }
+    .verdict-box p { color:rgba(245,240,232,0.82); font-size:1rem; }
+    .verdict-row {
+      display:flex; gap:2rem; flex-wrap:wrap;
+      margin-top:1.5rem; padding-top:1.5rem;
+      border-top:1px solid rgba(245,240,232,0.1);
+    }
+    .verdict-stat { text-align:center; flex:1; min-width:100px; }
+    .verdict-stat-value {
+      font-family:var(--serif); font-size:2rem; font-weight:600;
+      color:var(--amber); display:block; line-height:1;
+    }
+    .verdict-stat-label {
+      font-family:var(--mono); font-size:0.58rem; letter-spacing:0.1em;
+      text-transform:uppercase; color:rgba(245,240,232,0.4);
+      display:block; margin-top:0.4rem;
+    }
+
+    /* Back link */
+    .back-link {
+      display:inline-flex; align-items:center; gap:0.5rem;
+      font-family:var(--mono); font-size:0.65rem; letter-spacing:0.12em;
+      text-transform:uppercase; color:var(--amber); text-decoration:none;
+      margin-bottom:3rem; transition:gap 0.2s;
+    }
+    .back-link:hover { gap:0.8rem; }
+
+    /* Newsletter */
+    .newsletter-section {
+      background:var(--ink); padding:4rem 2rem; text-align:center;
+    }
+    .newsletter-section .nl-eyebrow {
+      font-family:var(--serif); font-size:0.75rem; font-weight:700;
+      letter-spacing:0.15em; color:var(--amber); text-transform:uppercase;
+      margin-bottom:1rem;
+    }
+    .newsletter-section h2 {
+      font-family:var(--serif); font-size:1.75rem; font-weight:700;
+      color:var(--warm-white); margin:0 0 1rem; line-height:1.3;
+    }
+    .newsletter-section p {
+      font-size:0.95rem; color:#a09080; line-height:1.7;
+      max-width:500px; margin:0 auto 2rem; font-family:var(--body-font);
+    }
+    .nl-form {
+      display:flex; gap:0.6rem; flex-wrap:wrap; justify-content:center;
+      max-width:500px; margin:0 auto;
+    }
+    .nl-form input[type=email] {
+      flex:1; min-width:220px; padding:0.7rem 1rem; border-radius:2rem;
+      border:1px solid rgba(245,240,232,0.15);
+      background:rgba(245,240,232,0.07); color:var(--warm-white);
+      font-family:var(--body-font); font-size:0.9rem; outline:none;
+    }
+    .nl-form button {
+      padding:0.7rem 1.6rem; border-radius:2rem; border:none;
+      background:var(--amber); color:#1a1409;
+      font-family:var(--body-font); font-size:0.9rem; font-weight:600;
+      cursor:pointer; letter-spacing:0.03em;
+    }
+    .nl-fine {
+      font-size:0.72rem; color:#6a6058; margin-top:1rem;
+      font-family:var(--body-font);
+    }
+    .nl-fine a { color:#6a6058; }
+
+    /* Footer */
+    footer {
+      background: var(--ink);
+      padding: 0.65rem 3rem;
+      display:flex; justify-content:space-between; align-items:center;
+      border-top:1px solid rgba(245,240,232,0.08);
+    }
+    .footer-copy {
+      font-family:var(--mono); font-size:0.68rem; letter-spacing:0.1em;
+      text-transform:uppercase; color:rgba(245,240,232,0.35);
+    }
+
+    /* Responsive */
+    @media (max-width:640px) {
+      nav { padding:0.75rem 1.25rem; }
+      nav ul { display:none; }
+      .nav-hamburger {
+        display:flex; flex-direction:column; gap:4px;
+        background:none; border:none; cursor:pointer; padding:4px;
+      }
+      .nav-hamburger span {
+        display:block; width:22px; height:2px;
+        background:rgba(245,240,232,0.8); border-radius:1px;
+      }
+      .article-hero { padding:5.5rem 1.25rem 2.5rem; }
+      .article-body { padding:2.5rem 1.25rem; }
+      .stats-bar { gap:0; }
+      .stat-item { padding:0.8rem 1.2rem; flex:1 0 45%; }
+      footer { padding:0.65rem 1.25rem; flex-wrap:wrap; gap:0.5rem; }
+      .verdict-row { flex-direction:column; align-items:center; }
+      .supply-name { min-width:unset; }
+      .supplies-list li { flex-direction:column; gap:0.25rem; }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      html { scroll-behavior: smooth; }
+    }
+  </style>
+  <link rel="canonical" href="https://thetoddmark.com/build-chip-breaker-screwdriver">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Dave Corinth's Chip Breaker Screwdriver",
+    "description": "A $24.95 eBay kit from Dave Corinth Toolworks, assembled with a salvaged Brazilian Rosewood knob. Built for one job: the chip breaker screw on a Stanley hand plane.",
+    "image": "https://thetoddmark.com/cbd-hero.jpg",
+    "datePublished": "2026-03-11",
+    "dateModified": "2026-03-11",
+    "author": {
+      "@type": "Person",
+      "name": "Mark Todd",
+      "url": "https://thetoddmark.com/about"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "The Todd·Mark",
+      "url": "https://thetoddmark.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://thetoddmark.com/favicon.jpg"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://thetoddmark.com/build-chip-breaker-screwdriver"
+    }
+  }
+  </script>
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:0;z-index:999;padding:0.5rem 1rem;background:var(--amber);color:var(--ink);font-family:var(--mono);font-size:0.75rem;">Skip to main content</a>
+
+<nav aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" style="display:flex;align-items:center;text-decoration:none;"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="height:38px;width:38px;flex-shrink:0;" aria-label="The Todd Mark logo" role="img">
+  <circle cx="50" cy="50" r="47" fill="none" stroke="rgba(245,240,232,0.95)" stroke-width="3.5"/>
+  <circle cx="50" cy="50" r="41" fill="none" stroke="rgba(245,240,232,0.45)" stroke-width="1.5"/>
+  <circle cx="50" cy="50" r="38" fill="none" stroke="rgba(245,240,232,0.2)" stroke-width="1"/>
+  <text x="50" y="36" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" fill="rgba(245,240,232,0.95)" text-anchor="middle" letter-spacing="2">THETODD</text>
+  <text x="50" y="57" font-family="Arial Black,Arial,sans-serif" font-size="27" font-weight="900" fill="rgba(245,240,232,0.95)" text-anchor="middle" letter-spacing="-1">TM</text>
+  <text x="50" y="73" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" fill="rgba(245,240,232,0.95)" text-anchor="middle" letter-spacing="3">MARK</text>
+</svg><span style="font-family:'DM Mono',monospace;font-size:0.68rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:rgba(245,240,232,0.88);margin-left:0.75rem;white-space:nowrap;">The Todd<span style="color:#c8853a;margin:0 0.15em;">·</span>Mark</span></a>
+  <button class="nav-hamburger" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul id="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="work.html" class="nav-active">The Work</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="wishlist.html">Wishlist</a></li>
+    <li><a href="listening.html">Listening</a></li>
+    <li><a href="products.html">The Shop</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="partner.html" style="color:var(--amber);">Partner</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="article-hero">
+  <div class="article-eyebrow">Build No. 03</div>
+  <h1 class="article-title">Dave Corinth's Chip<br>Breaker Screwdriver</h1>
+  <p class="article-subtitle">A $24.95 eBay kit, a salvaged Brazilian Rosewood knob, and the screwdriver built for exactly one job</p>
+  <div class="article-meta">
+    <span>📍 Seattle, WA</span>
+    <span>📅 March 2026</span>
+    <span>⏱ ~2 hours</span>
+    <span>💰 $24.95 kit</span>
+  </div>
+</header>
+
+<!-- STATS BAR -->
+<div class="stats-bar" role="region" aria-label="Project at a glance">
+  <div class="stat-item">
+    <span class="stat-value">$24.95</span>
+    <span class="stat-label">Kit Price</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-value">4</span>
+    <span class="stat-label">Sandpaper Grits</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-value">3</span>
+    <span class="stat-label">Finish Coats</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-value">1</span>
+    <span class="stat-label">Job It Was Built For</span>
+  </div>
+</div>
+
+<main id="main-content">
+<div class="article-body">
+
+  <a href="work.html" class="back-link" aria-label="Back to all restorations">← All Restorations</a>
+
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--border);margin-bottom:2rem;">
+    <span style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);">⏱ 7 min read</span>
+    <div style="display:flex;align-items:center;gap:0.75rem;">
+      <span style="font-family:var(--mono);font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);">Share:</span>
+      <a href="https://twitter.com/intent/tweet?url=https://thetoddmark.com/build-chip-breaker-screwdriver&text=Dave+Corinth%27s+Chip+Breaker+Screwdriver+%7C+The+Todd%C2%B7Mark&via=thetoddmark" target="_blank" rel="noopener noreferrer" style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.3);padding-bottom:1px;" aria-label="Share on X / Twitter">X&nbsp;/&nbsp;Twitter</a>
+      <a href="https://www.reddit.com/submit?url=https://thetoddmark.com/build-chip-breaker-screwdriver&title=Dave+Corinth%27s+Chip+Breaker+Screwdriver+%E2%80%94+The+Todd%C2%B7Mark" target="_blank" rel="noopener noreferrer" style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.3);padding-bottom:1px;" aria-label="Share on Reddit">Reddit</a>
+      <button onclick="navigator.clipboard.writeText('https://thetoddmark.com/build-chip-breaker-screwdriver').then(()=>{this.textContent='Copied!';setTimeout(()=>{this.textContent='Copy Link'},1800)})" style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);background:none;border:none;border-bottom:1px solid rgba(200,133,58,0.3);padding:0 0 1px;cursor:pointer;" aria-label="Copy link to clipboard">Copy Link</button>
+    </div>
+  </div>
+
+  <!-- ── SECTION 1: THE PROBLEM ── -->
+  <section class="article-section" aria-labelledby="s1-title">
+    <span class="section-label"><span class="section-num">01 /</span> The Problem</span>
+    <h2 class="section-title" id="s1-title">The chip breaker screw.</h2>
+    <p>Every Stanley hand plane has one. That flat-head screw sitting in the middle of the chip breaker — the one that clamps it tight to the blade — is also one of the most reliably frustrating screws in woodworking. It sits recessed in the plane body. It needs to be loosened and retightened frequently enough that you want to be careful to avoid stripping out the screw head.</p>
+    <p>For a long time I dealt with it the way most people do: a standard flathead, the wrong size, seated imperfectly in the slot, applying lateral force I didn't want to apply. Workable. Not good. The kind of small annoyance that you stop noticing because you've accepted it as part of the process.</p>
+    <p>Then I found Dave Corinth's YouTube video and understood that the problem was solved — I just didn't have the tool yet.</p>
+
+    <div class="pull-quote">
+      <p>"Once you know a chip breaker screwdriver exists, you can't imagine not having one. The right tool for the job is the right tool for the job."</p>
+    </div>
+  </section>
+
+  <!-- ── SECTION 2: DAVE CORINTH & THE KIT ── -->
+  <section class="article-section" aria-labelledby="s2-title">
+    <span class="section-label"><span class="section-num">02 /</span> Dave Corinth &amp; the Kit</span>
+    <h2 class="section-title" id="s2-title">The right person solving the right problem.</h2>
+    <p>Dave Corinth is a woodworker, tool creator, teacher, and restorer. His <a href="https://www.youtube.com/watch?v=hdyZ9hNGfMY" target="_blank" rel="noopener noreferrer" style="color:var(--amber);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.3);">chip breaker screwdriver video</a> is exactly what his channel does at its best: a methodical walk-through of a problem worth solving, a design that addresses that problem precisely, and enough detail about the why that you actually understand the tool you're building. Worth your time even if you never build one.</p>
+    <p>The design is straightforward and elegant: a blade cut from O1 tool steel, ground to a precise flat tip sized for the chip breaker slot, fitted through a turned brass ferrule into a handle shaped for real downward pressure and torque. Nothing unnecessary. Everything intentional.</p>
+    <p>Dave sells <a href="https://www.ebay.com/itm/226820669048" target="_blank" rel="noopener noreferrer" style="color:var(--amber);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.3);">a kit on eBay</a> — the machined O1 blade, the brass ferrule, and a cherry dowel for the handle — for $24.95. It's a good deal. The hard parts, the parts that require tooling most people don't have, are already done. You supply a handle and the time to put it together properly.</p>
+    <p>Before I built it, I reached out to Dave directly via Facebook Messenger with a couple of questions. He responded quickly and generously: confirmed his preference for the tall knob style over the shorter version (better leverage and more comfortable in the palm), and gave me the exact drill bit size needed to seat the cherry dowel correctly. That kind of maker-to-user generosity isn't something you take for granted.</p>
+
+    <div class="pull-quote">
+      <p>"He confirmed his preference for the tall knob style and gave me the exact drill bit size. That kind of maker-to-user generosity isn't something you take for granted."</p>
+    </div>
+  </section>
+
+  <!-- ── SECTION 3: THE COMPONENTS ── -->
+  <section class="article-section" aria-labelledby="s3-title">
+    <span class="section-label"><span class="section-num">03 /</span> The Components</span>
+    <h2 class="section-title" id="s3-title">Three kit parts. One very good donor knob.</h2>
+    <p>The kit arrives as three separate pieces: the O1 steel blade, the brass ferrule, and the cherry dowel. The blade is already ground — a precise, flat tip that seats cleanly in a chip breaker slot without camming out. The ferrule is turned to exact dimensions. The cherry dowel is pre-sized to fit inside the ferrule and accept the blade slot.</p>
+    <p>Rather than use the cherry dowel from the kit as the exterior handle, I took Dave's advice about the tall knob profile and reached for something I'd been holding onto in the shop — a salvaged tall knob pulled from a plane too far gone to save. When I cleaned it up, it turned out to be Brazilian Rosewood.</p>
+    <p>Not exactly a common salvage find. The figure on it is extraordinary.</p>
+    <p>The cherry dowel from the kit still plays a role: it's the sub-component that does the mechanical work — accepting the blade slot, fitting inside the ferrule. The Brazilian Rosewood knob goes around it, becoming the exterior you actually hold. Two-part handle construction: structural integrity from the kit design, aesthetics from whatever wood you choose to put around it.</p>
+  </section>
+
+  <!-- ── SECTION 4: BEFORE PHOTOS ── -->
+  <section class="article-section" aria-labelledby="s4-title">
+    <span class="section-label"><span class="section-num">04 /</span> Kit Components</span>
+    <h2 class="section-title" id="s4-title">Everything Dave machines, you assemble.</h2>
+    <p>The three kit components as they arrive from <a href="https://www.ebay.com/itm/226820669048" target="_blank" rel="noopener noreferrer" style="color:var(--amber);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.3);">Dave's eBay listing</a>. The machining precision is immediately obvious — the blade tip is ground exactly right, the ferrule dimensions are tight, and the dowel slot is centered and clean.</p>
+    <figure style="margin:2rem 0;">
+      <img src="images/cbd-kit-tip.jpg" alt="Dave Corinth chip breaker screwdriver kit — all three components: cherry dowel (slotted), brass ferrule ring, and O1 steel blade laid out together" loading="lazy" style="width:100%;border-radius:4px;display:block;" width="1200">
+      <figcaption style="font-family:'DM Mono',monospace;font-size:0.63rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);margin-top:0.6rem;">The full kit — cherry dowel (slotted), brass ferrule ring, and O1 steel blade.</figcaption>
+    </figure>
+    <div class="photo-grid" style="grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:1.5rem;margin:2rem 0;align-items:start;">
+      <figure style="margin:0;">
+        <img src="images/cbd-kit-ferrule.jpg" alt="O1 steel blade from the kit — full profile showing the wider shoulders and flat screwdriver tip ground to fit chip breaker slots" loading="lazy" style="width:100%;border-radius:4px;display:block;" width="600">
+        <figcaption style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--ink-faint);margin-top:0.5rem;">O1 blade — pre-ground to the correct chip breaker tip profile.</figcaption>
+      </figure>
+      <figure style="margin:0;">
+        <img src="images/cbd-kit-blade.jpg" alt="Brass ferrule from the kit — top-down view of the hollow ring, turned to exact dimensions" loading="lazy" style="width:100%;border-radius:4px;display:block;" width="600">
+        <figcaption style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--ink-faint);margin-top:0.5rem;">Brass ferrule — turned to exact dimensions.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ── SECTION 5: THE BUILD ── -->
+  <section class="article-section" aria-labelledby="s5-title">
+    <span class="section-label"><span class="section-num">05 /</span> The Build</span>
+    <h2 class="section-title" id="s5-title">The kit does the hard work. You do the assembly.</h2>
+
+    <p><strong>Drilling and fitting.</strong> Using the drill bit size Dave confirmed in our exchange, I drilled the Brazilian Rosewood knob to accept the cherry dowel. The dowel from the kit fits inside the ferrule; the knob fits around the dowel. Dave's specified dimensions are right — everything seats as it should without forcing.</p>
+
+    <p><strong>Assembly.</strong> The blade slots into the pre-cut groove in the cherry dowel. The ferrule collar slides over the dowel and seats flush against the face of the rosewood knob. The result is a single unified tool: blade seated in the dowel, dowel inside the ferrule, ferrule flush against the knob face. Marine epoxy at the mechanical joints makes it permanent.</p>
+
+    <p><strong>Sanding the knob.</strong> Before finishing, I sanded the rosewood through the standard progression — 80, 120, 180, 220 — to smooth out any marks from the salvage and bring up the grain. Rosewood at 220 grit is something. The tight figure and reddish-brown tones that emerge after sanding make every other handle wood feel like a consolation prize.</p>
+
+    <p><strong>Boiled Linseed Oil — three coats.</strong> Applied over a few days, letting each coat absorb fully before the next. BLO is slower than polymerized tung oil — longer dry times, more patience required — but it penetrates deeply and builds real warmth in the wood. The rosewood responded well. Each coat deepened the color and brought more of the figure forward.</p>
+
+    <p><strong>Dewaxed shellac — one coat.</strong> A thin wash coat over the cured BLO to seal the oil and give the wax a clean surface to bond to. Without it, wax over straight oil can go soft or uneven over time. Apply thin, let flash off fully.</p>
+
+    <p><strong>Paste wax — finish.</strong> Applied thin, allowed to haze, buffed with a clean cotton rag. The result is a soft, warm sheen — nothing plastic or high-gloss. The kind of finish that feels right in the hand because it is right.</p>
+
+    <div class="pull-quote">
+      <p>"The rosewood at 220 grit, with BLO on it, is something. If I built another one, I'd swap the BLO for Walrus Oil — I know how it behaves now — but this one came out beautifully and I have no complaints."</p>
+    </div>
+  </section>
+
+  <!-- ── SECTION 6: BUILD PHOTOS ── -->
+  <section class="article-section" aria-labelledby="s6-title">
+    <span class="section-label"><span class="section-num">06 /</span> Build Photos</span>
+    <h2 class="section-title" id="s6-title">Coming together.</h2>
+    <div class="photo-grid" style="grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:1.5rem;margin:2rem 0;align-items:start;">
+      <figure style="margin:0;">
+        <img src="images/cbd-kit-assembly.jpg" alt="Slotted cherrywood dowel" loading="lazy" style="width:100%;border-radius:4px;display:block;" width="600">
+        <figcaption style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--ink-faint);margin-top:0.5rem;">Slotted Cherrywood Dowel.</figcaption>
+      </figure>
+      <figure style="margin:0;">
+        <img src="images/cbd-kit-dowel.jpg" alt="Assembled — blade and ferrule in the wood dowel" loading="lazy" style="width:100%;border-radius:4px;display:block;" width="600">
+        <figcaption style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--ink-faint);margin-top:0.5rem;">Assembled — Blade and Ferrule in the wood dowel.</figcaption>
+      </figure>
+      <figure style="margin:0;">
+        <img src="images/cbd-kit-overview.jpg" alt="Assembled tip top-down — brass ferrule ring, cherry dowel face, and O1 blade seated in the slot" loading="lazy" style="width:100%;border-radius:4px;display:block;" width="600">
+        <figcaption style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--ink-faint);margin-top:0.5rem;">Assembled tip — blade seated cleanly in the ferrule and dowel.</figcaption>
+      </figure>
+    </div>
+    <figure style="margin:2rem 0;">
+      <img src="cbd-grain.jpg" alt="Brazilian Rosewood donor knob close-up — tight grain and figure after BLO finish" loading="lazy" style="width:100%;border-radius:4px;display:block;" width="1200">
+      <figcaption style="font-family:'DM Mono',monospace;font-size:0.63rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);margin-top:0.6rem;">The figure in this donor knob is something!</figcaption>
+    </figure>
+  </section>
+
+  <!-- ── SECTION 7: AFTER PHOTOS ── -->
+  <section class="article-section" aria-labelledby="s7-title">
+    <span class="section-label"><span class="section-num">07 /</span> After Photos</span>
+    <h2 class="section-title" id="s7-title">If you squint, it's mint.</h2>
+    <figure style="margin:2rem 0;">
+      <img src="cbd-hero.jpg" alt="Dave Corinth chip breaker screwdriver completed — Brazilian Rosewood knob, brass ferrule collar, O1 steel blade" loading="lazy" style="width:100%;border-radius:4px;display:block;" width="1200">
+      <figcaption style="font-family:'DM Mono',monospace;font-size:0.63rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);margin-top:0.6rem;">The finished screwdriver — Brazilian Rosewood donor knob, brass ferrule, O1 steel blade.</figcaption>
+    </figure>
+    <div class="photo-grid" style="grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:1.5rem;margin:2rem 0;align-items:start;">
+      <figure style="margin:0;">
+        <img src="cbd-inuse.jpg" alt="Chip breaker screwdriver in use — blade seated on a Stanley cap iron screw" loading="lazy" style="width:100%;border-radius:4px;display:block;" width="600">
+        <figcaption style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--ink-faint);margin-top:0.5rem;">In use — seated on a Stanley cap iron. Exactly what it was designed for.</figcaption>
+      </figure>
+      <figure style="margin:0;">
+        <img src="cbd-planes.jpg" alt="Chip breaker screwdriver on the bench with the Stanley hand plane collection it was built to serve" loading="lazy" style="width:100%;border-radius:4px;display:block;" width="600">
+        <figcaption style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--ink-faint);margin-top:0.5rem;">At home on the bench with the Stanley collection it was built to serve.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ── SECTION 8: THE VERDICT ── -->
+  <section class="article-section" aria-labelledby="s8-title">
+    <span class="section-label"><span class="section-num">08 /</span> The Verdict</span>
+    <h2 class="section-title" id="s8-title">Worth every minute.</h2>
+
+    <div class="verdict-box">
+      <h3>The Honest Take</h3>
+      <p>It works perfectly. Every time I need to adjust a chip breaker, this is what I reach for. The blade seats cleanly in the slot — no slipping, no cam-out, no lateral pressure I don't want to apply. The tall knob puts you directly over the screw with real downward force. It just works, and nothing else comes close.</p>
+      <p style="margin-top:1rem;">The Brazilian Rosewood knob was a happy accident of salvage. The figure on it is extraordinary, and the BLO brings it out well. If I built another one, I'd swap the BLO for Walrus Oil — I know how polymerized tung oil behaves now and it would get there faster and more predictably. But this one came out beautifully. No complaints.</p>
+      <p style="margin-top:1rem;">One more thing worth saying: Dave Corinth's generosity in responding to my questions — specific, practical, exactly what I needed — made this project better. Buy his kit. Watch his video. Tell him I sent you.</p>
+      <div class="verdict-row">
+        <div class="verdict-stat">
+          <span class="verdict-stat-value">$24.95</span>
+          <span class="verdict-stat-label">Kit Price</span>
+        </div>
+        <div class="verdict-stat">
+          <span class="verdict-stat-value">~2 hrs</span>
+          <span class="verdict-stat-label">Build Time</span>
+        </div>
+        <div class="verdict-stat">
+          <span class="verdict-stat-value">Yes</span>
+          <span class="verdict-stat-label">Would Do Again</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SECTION 9: SUPPLIES ── -->
+  <section class="article-section" aria-labelledby="s9-title">
+    <span class="section-label"><span class="section-num">09 /</span> Supplies Used</span>
+    <h2 class="section-title" id="s9-title">Everything that touched this build.</h2>
+    <p style="font-family:var(--mono);font-size:0.65rem;letter-spacing:0.06em;color:var(--ink-faint);margin-bottom:1.5rem;">Some links below are affiliate links — I earn a small commission if you buy through them, at no extra cost to you. I only list what I actually used.</p>
+    <ul class="supplies-list" aria-label="Supplies used in this build">
+      <li>
+        <span class="supply-name"><a href="https://www.ebay.com/itm/226820669048" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(28,26,23,0.2);">Dave Corinth's Chip Breaker Screwdriver Kit</a></span>
+        <span class="supply-note">Available on eBay. Includes the O1 steel blade (pre-ground to the correct chip breaker tip profile), brass ferrule, and cherry dowel. The hard parts are already done. $24.95 and worth every cent.</span>
+      </li>
+      <li>
+        <span class="supply-name">Sandpaper — 80, 120, 180, 220 grit</span>
+        <span class="supply-note">Full progression on the rosewood knob. The 80 opens the surface and removes tool marks; 220 finishes before oil. The grain that emerges at 220 on Brazilian Rosewood is the moment you understand why this wood is worth finding.</span>
+      </li>
+      <li>
+        <span class="supply-name"><a href="https://www.amazon.com/s?k=boiled+linseed+oil&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(28,26,23,0.2);">Boiled Linseed Oil</a></span>
+        <span class="supply-note">Three coats over a few days, letting each absorb fully. BLO is slower than polymerized tung oil — longer dry times — but penetrates deeply. Next build I'd use Walrus Oil for more predictable cure and comparable results. This one still came out beautifully.</span>
+      </li>
+      <li>
+        <span class="supply-name">Lint-Free Cotton Cloths</span>
+        <span class="supply-note">For applying and wiping BLO. Essential — leaving excess oil on the surface leads to a sticky, gummy finish that takes forever to cure properly.</span>
+      </li>
+      <li>
+        <span class="supply-name"><a href="https://www.amazon.com/s?k=dewaxed+shellac&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(28,26,23,0.2);">Dewaxed Shellac</a></span>
+        <span class="supply-note">One thin wash coat between the cured BLO and the paste wax. Seals the oil and gives the wax a stable surface to bond to — without this, wax over bare oil can go soft over time. Apply thin, let flash off fully before waxing.</span>
+      </li>
+      <li>
+        <span class="supply-name"><a href="https://www.amazon.com/dp/B000LNOZAW?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_3&th=1" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(28,26,23,0.2);">Paste Wax</a></span>
+        <span class="supply-note">Final finish coat — applied thin, allowed to haze, buffed with clean cotton rag. Soft, warm sheen. Nothing plastic. The right finish for a tool that goes in the hand.</span>
+      </li>
+      <li>
+        <span class="supply-name">Marine Epoxy</span>
+        <span class="supply-note">For permanently seating the blade in the cherry dowel and securing the assembly in the rosewood knob. A mechanical joint this small needs a strong, permanent adhesive. Marine epoxy is the right call.</span>
+      </li>
+    </ul>
+  </section>
+
+</div><!-- /article-body -->
+</main>
+
+<!-- MORE RESTORATIONS -->
+<div style="background:var(--cream);padding:3rem 2rem;border-top:1px solid var(--border);">
+  <div style="max-width:740px;margin:0 auto;">
+    <div style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--amber);margin-bottom:1.5rem;">More Restorations &amp; Builds</div>
+    <div style="display:flex;flex-direction:column;gap:1rem;">
+      <a href="restoration-mac-tools-screwdrivers.html" style="display:flex;gap:1.5rem;align-items:flex-start;text-decoration:none;padding:1.5rem;background:var(--warm-white);border:1px solid var(--border);border-radius:4px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--amber)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="flex:1;">
+          <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--amber);margin-bottom:0.4rem;">Restoration No. 04 · Screwdrivers</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--ink);line-height:1.25;margin-bottom:0.5rem;">Mac Tools 7-Piece Wooden-Handle Set</div>
+          <div style="font-size:0.9rem;color:var(--ink-faint);line-height:1.6;">A $40 eBay gamble, a 3-phase Fiebing's dye process, and the Phillips head screwdrivers that don't exist — until they do.</div>
+        </div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;color:var(--amber);white-space:nowrap;margin-top:0.25rem;">Read →</div>
+      </a>
+      <a href="restoration-awl-marking-knife.html" style="display:flex;gap:1.5rem;align-items:flex-start;text-decoration:none;padding:1.5rem;background:var(--warm-white);border:1px solid var(--border);border-radius:4px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--amber)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="flex:1;">
+          <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--amber);margin-bottom:0.4rem;">Restoration No. 05 · Marking Knife</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--ink);line-height:1.25;margin-bottom:0.5rem;">Vintage Awl — Repurposed Marking Knife</div>
+          <div style="font-size:0.9rem;color:var(--ink-faint);line-height:1.6;">A $16 Facebook Marketplace gamble becomes a shop-made marking tool. Diamond stones, Walrus Oil, and a rosewood handle that earned its place.</div>
+        </div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;color:var(--amber);white-space:nowrap;margin-top:0.25rem;">Read →</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="newsletter-section">
+  <div class="nl-eyebrow">The Newsletter</div>
+  <h2>When a tool is done, I write it up.</h2>
+  <p>No cadence, no schedule — just the occasional restoration story when I have something worth saying.</p>
+  <form action="https://buttondown.com/api/emails/embed-subscribe/TheToddMark" method="post" class="embeddable-buttondown-form nl-form">
+    <label for="bd-email-article" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Email address</label>
+    <input type="email" name="email" id="bd-email-article" placeholder="your@email.com" required />
+    <button type="submit">Subscribe →</button>
+  </form>
+  <p class="nl-fine"><a href="https://buttondown.com/TheToddMark" target="_blank" rel="noopener noreferrer">View past issues</a> · Powered by Buttondown</p>
+</div>
+
+<footer>
+  <div class="footer-copy">© 2026 · TheToddMark.com · Two first names. One workshop.</div>
+  <a href="https://ko-fi.com/thetoddmark" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.4rem;background:var(--amber);color:#1a1409;font-family:inherit;font-size:0.78rem;font-weight:500;padding:0.45rem 1.1rem;border-radius:2rem;text-decoration:none;letter-spacing:0.05em;white-space:nowrap;">🪚 Want to support the shed upgrade?</a>
+  <div class="footer-logo"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="height:60px;width:60px;flex-shrink:0;" aria-label="The Todd Mark logo" role="img">
+  <circle cx="50" cy="50" r="47" fill="none" stroke="rgba(245,240,232,0.95)" stroke-width="3.5"/>
+  <circle cx="50" cy="50" r="41" fill="none" stroke="rgba(245,240,232,0.45)" stroke-width="1.5"/>
+  <circle cx="50" cy="50" r="38" fill="none" stroke="rgba(245,240,232,0.2)" stroke-width="1"/>
+  <text x="50" y="36" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" fill="rgba(245,240,232,0.95)" text-anchor="middle" letter-spacing="2">THETODD</text>
+  <text x="50" y="57" font-family="Arial Black,Arial,sans-serif" font-size="27" font-weight="900" fill="rgba(245,240,232,0.95)" text-anchor="middle" letter-spacing="-1">TM</text>
+  <text x="50" y="73" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" fill="rgba(245,240,232,0.95)" text-anchor="middle" letter-spacing="3">MARK</text>
+</svg></div>
+</footer>
+
+<script>
+  // Mobile nav toggle
+  const toggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('nav-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      menu.style.display = open ? '' : 'flex';
+      if (!open) {
+        menu.style.flexDirection = 'column';
+        menu.style.position = 'absolute';
+        menu.style.top = '100%';
+        menu.style.left = '0'; menu.style.right = '0';
+        menu.style.background = 'rgba(28,26,23,0.97)';
+        menu.style.padding = '1.5rem 2rem';
+        menu.style.gap = '1.25rem';
+      }
+    });
+  }
+</script>
+</body>
+</html>
