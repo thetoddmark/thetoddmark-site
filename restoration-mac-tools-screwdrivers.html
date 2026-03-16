@@ -120,7 +120,7 @@
     .footer-copy { font-family:var(--mono); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(245,240,232,0.35); }
 
     @media (max-width:640px) {
-      nav { padding:0.75rem 1.25rem; }
+      nav { padding:0.75rem 1.25rem; -webkit-backdrop-filter:none !important; backdrop-filter:none !important; background:rgba(28,26,23,0.97) !important; }
       nav ul { display:none; }
       .nav-hamburger { display:flex; flex-direction:column; gap:4px; background:none; border:none; cursor:pointer; padding:4px; }
       .nav-hamburger span { display:block; width:22px; height:2px; background:rgba(245,240,232,0.8); border-radius:1px; }
@@ -131,6 +131,30 @@
       .supply-name { min-width:unset; }
       .supplies-list li { flex-direction:column; gap:0.25rem; }
       .dye-step { flex-direction:column; }
+      nav ul.nav-open {
+        display: flex;
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(28,26,23,1);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+        z-index: 300;
+      }
+      nav ul.nav-open a {
+        font-size: 1.3rem;
+        letter-spacing: 0.14em;
+        color: rgba(245,240,232,1);
+        font-family: var(--mono, 'DM Mono', monospace);
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .nav-hamburger.is-open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+      .nav-hamburger.is-open span:nth-child(2) { opacity: 0; }
+      .nav-hamburger.is-open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+      .nav-hamburger span { transition: all 0.25s ease; }
     }
 
     @media print {
@@ -494,8 +518,17 @@
     toggle.addEventListener('click', () => {
       const open = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!open));
-      menu.style.display = open ? '' : 'flex';
-      if (!open) { Object.assign(menu.style, { flexDirection:'column', position:'absolute', top:'100%', left:'0', right:'0', background:'rgba(28,26,23,0.97)', padding:'1.5rem 2rem', gap:'1.25rem' }); }
+      toggle.setAttribute('aria-label', !open ? 'Close menu' : 'Open menu');
+      toggle.classList.toggle('is-open');
+      menu.classList.toggle('nav-open');
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menu.classList.contains('nav-open')) {
+        menu.classList.remove('nav-open');
+        toggle.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+      }
     });
   }
 </script>
