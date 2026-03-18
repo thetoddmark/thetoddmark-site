@@ -22,12 +22,12 @@
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://thetoddmark.com/restoration-german-perfect-handle">
   <meta property="og:site_name" content="The Todd·Mark">
-  <meta property="og:image" content="https://thetoddmark.com/perfect-handle-hero.jpg">
-  <meta property="og:image:width" content="900">
-  <meta property="og:image:height" content="1200">
+  <meta property="og:image" content="https://thetoddmark.com/images/ph-finished-all.jpg">
+  <meta property="og:image:width" content="3893">
+  <meta property="og:image:height" content="1619">
   <meta property="og:image:alt" content="Four vintage German "Perfect Handle" screwdrivers after restoration">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://thetoddmark.com/perfect-handle-hero.jpg">
+  <meta name="twitter:image" content="https://thetoddmark.com/images/ph-finished-all.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -315,7 +315,23 @@
     @media (prefers-reduced-motion: no-preference) {
       html { scroll-behavior: smooth; }
     }
-  </style>
+  
+  /* ── FOCUS VISIBLE (keyboard navigation) ── */
+  :focus-visible {
+    outline: 2px solid var(--amber);
+    outline-offset: 3px;
+  }
+  a:focus-visible {
+    outline: 2px solid var(--amber);
+    outline-offset: 2px;
+    border-radius: 1px;
+  }
+  .nav-hamburger:focus-visible {
+    outline: 2px solid var(--amber);
+    outline-offset: 3px;
+  }
+
+</style>
   <link rel="canonical" href="https://thetoddmark.com/restoration-german-perfect-handle">
 
   <script type="application/ld+json">
@@ -324,7 +340,7 @@
     "@type": "Article",
     "headline": "German "Perfect Handle" Set — Four Graduating Sizes",
     "description": "Four vintage German cabinet screwdrivers with the classic "Perfect Handle" design restored from decades of honest use.",
-    "image": "https://thetoddmark.com/perfect-handle-hero.jpg",
+    "image": "https://thetoddmark.com/images/ph-finished-all.jpg",
     "datePublished": "2026-03-12",
     "dateModified": "2026-03-12",
     "author": {
@@ -829,7 +845,8 @@
     z-index: 1001;
     font-family: sans-serif;
   }
-  .lb-close:hover, .lb-close:focus-visible { color: #c8853a; outline: none; }
+  .lb-close:hover { color: #c8853a; outline: none; }
+  .lb-close:focus-visible { color: #c8853a; outline: 2px solid rgba(200,133,58,0.8); outline-offset: 4px; }
 
   /* Prev / Next */
   .lb-prev, .lb-next {
@@ -850,8 +867,8 @@
   }
   .lb-prev { left: 0.75rem; }
   .lb-next { right: 0.75rem; }
-  .lb-prev:hover, .lb-next:hover,
-  .lb-prev:focus-visible, .lb-next:focus-visible { color: #c8853a; outline: none; }
+  .lb-prev:hover, .lb-next:hover { color: #c8853a; outline: none; }
+  .lb-prev:focus-visible, .lb-next:focus-visible { color: #c8853a; outline: 2px solid rgba(200,133,58,0.8); outline-offset: 4px; }
   .lb-nav-hidden { visibility: hidden; pointer-events: none; }
 
   /* Zoom cursor on article images */

@@ -357,7 +357,23 @@
     @media (prefers-reduced-motion: no-preference) {
       html { scroll-behavior: smooth; }
     }
-  </style>
+  
+  /* ── FOCUS VISIBLE (keyboard navigation) ── */
+  :focus-visible {
+    outline: 2px solid var(--amber);
+    outline-offset: 3px;
+  }
+  a:focus-visible {
+    outline: 2px solid var(--amber);
+    outline-offset: 2px;
+    border-radius: 1px;
+  }
+  .nav-hamburger:focus-visible {
+    outline: 2px solid var(--amber);
+    outline-offset: 3px;
+  }
+
+</style>
   <link rel="canonical" href="https://thetoddmark.com/restoration-awl-marking-knife">
 
   <script type="application/ld+json">
@@ -817,7 +833,8 @@
     z-index: 1001;
     font-family: sans-serif;
   }
-  .lb-close:hover, .lb-close:focus-visible { color: #c8853a; outline: none; }
+  .lb-close:hover { color: #c8853a; outline: none; }
+  .lb-close:focus-visible { color: #c8853a; outline: 2px solid rgba(200,133,58,0.8); outline-offset: 4px; }
 
   /* Prev / Next */
   .lb-prev, .lb-next {
@@ -838,8 +855,8 @@
   }
   .lb-prev { left: 0.75rem; }
   .lb-next { right: 0.75rem; }
-  .lb-prev:hover, .lb-next:hover,
-  .lb-prev:focus-visible, .lb-next:focus-visible { color: #c8853a; outline: none; }
+  .lb-prev:hover, .lb-next:hover { color: #c8853a; outline: none; }
+  .lb-prev:focus-visible, .lb-next:focus-visible { color: #c8853a; outline: 2px solid rgba(200,133,58,0.8); outline-offset: 4px; }
   .lb-nav-hidden { visibility: hidden; pointer-events: none; }
 
   /* Zoom cursor on article images */

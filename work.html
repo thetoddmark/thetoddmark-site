@@ -1466,7 +1466,7 @@
     "name": "Vintage Hand Tool Restorations — thetoddmark.com",
     "description": "A complete gallery of vintage hand tool restorations by Mark Todd, including Stanley hand planes, German screwdrivers, eggbeater drills, and the rare Bridgeport Hardware No. 99 Tomahawk crate hammer.",
     "url": "https://thetoddmark.com/work.html",
-    "numberOfItems": 9,
+    "numberOfItems": 10,
     "itemListElement": [
             {
                 "@type": "ListItem",
@@ -1502,6 +1502,13 @@
                 "name": "Bridgeport Hardware No. 99 Tomahawk Crate Hammer",
                 "description": "Vintage crate hammer restoration — Bridgeport Hardware No. 99 Tomahawk Crate Hammer",
                 "url": "https://thetoddmark.com/work.html#tomahawk"
+            },
+            {
+                "@type": "ListItem",
+                "position": 10,
+                "name": "Imperial Steak Knife Handle Refresh",
+                "description": "Knife restoration — Seven Imperial steak knives, beech handles refreshed with CA glue fills and Walrus Oil.",
+                "url": "https://thetoddmark.com/restoration-imperial-steak-knives"
             }
     ]
 }
@@ -1661,6 +1668,27 @@
         <div class="card-title">Mac Tools Wooden-Handled Set</div>
         <div class="card-meta">Fiebing's dye · polymerized tung oil · shellac · Renaissance Wax</div>
         <p style="margin-top:1.25rem;"><a href="restoration-mac-tools-screwdrivers.html" style="color:var(--amber);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>
+      </div>
+    </div>
+
+        <!-- Imperial Steak Knives -->
+        <div role="button" tabindex="0" id="steak" class="gallery-card small reveal" onclick="openLightbox('steak', this)">
+      <div class="card-img-placeholder" style="position:relative;overflow:hidden;aspect-ratio:3/2;">
+        <img id="sk-gallery-img" style="pointer-events:none;width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" src="images/sk-after-six.jpg" alt="Imperial steak knives after handle restoration — six matched knives on a dark surface" loading="lazy" width="auto" height="auto">
+        <div class="card-overlay"><span class="card-overlay-label">View Restoration</span></div>
+      </div>
+      <img id="skphoto-hero"    src="images/sk-hero.jpg"        style="display:none;" alt="">
+      <img id="skphoto-before"  src="images/sk-before-set.jpg"  style="display:none;" alt="">
+      <img id="skphoto-handles" src="images/sk-before-handles.jpg" style="display:none;" alt="">
+      <img id="skphoto-sanded"  src="images/sk-sanded-2.jpg"    style="display:none;" alt="">
+      <img id="skphoto-oil"     src="images/sk-oil-3.jpg"       style="display:none;" alt="">
+      <img id="skphoto-after6"  src="images/sk-after-six.jpg"   style="display:none;" alt="">
+      <img id="skphoto-after7"  src="images/sk-after-seven.jpg" style="display:none;" alt="">
+      <div class="card-body">
+        <div class="card-category">Knives</div>
+        <div class="card-title">Imperial Steak Knife Handle Refresh</div>
+        <div class="card-meta">CA glue fill · 80–220 grit sanding · three coats Walrus Oil · matched set of six</div>
+        <p style="margin-top:1.25rem;"><a href="restoration-imperial-steak-knives.html" style="color:var(--amber);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>
       </div>
     </div>
 
@@ -1851,6 +1879,24 @@ const tools = {
 <p><strong>The Conversion</strong><br>Reshaping an awl point into a marking knife edge is a different kind of challenge than sharpening an existing blade — the geometry has to be worked out from scratch. I used diamond stones at 400, 1200, and 2000 grits: slow, methodical, and still very much a learning process. The result is a blade that's sharp and does its job well.</p>
 <br>
 <p><strong>The Result</strong><br>What makes this knife especially satisfying is the cap. The threaded brass sheath screws on to protect the cutting edge, and the whole thing slips neatly into a pocket of my work apron — instantly accessible when I need it, fully protected when I don't. A $10 find that earned a permanent spot in daily rotation.</p><p style="margin-top:1.25rem;"><a href="restoration-awl-marking-knife.html" style="color:var(--amber);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>`
+  },
+  steak: {
+    category: 'Knives',
+    title: 'Imperial Steak Knife Handle Refresh',
+    photos: [
+      { id: 'skphoto-hero',    caption: 'All seven knives after restoration — matched grain, polished rivets, Walrus Oil finish.' },
+      { id: 'skphoto-before',  caption: 'As found — bone-dry beech, surface checks, and a patina built up over decades.' },
+      { id: 'skphoto-handles', caption: 'Handle condition before work — checks, dryness, and a little grime in the grooves.' },
+      { id: 'skphoto-sanded',  caption: 'After 80→220 grit sanding — clean wood ready to drink up the oil.' },
+      { id: 'skphoto-oil',     caption: 'Three coats of Walrus Oil, wiped back at 10 minutes each.' },
+      { id: 'skphoto-after6',  caption: 'The matched set of six — consistent grain and color across the table.' },
+      { id: 'skphoto-after7',  caption: 'All seven together — the eBay addition blends in perfectly.' }
+    ],
+    body: `<p><strong>The Find</strong><br>Six Imperial steak knives from an estate sale — beech handles, brass rivets, serrated stainless blades. The handles were bone-dry and checking, but structurally sound. A $10 eBay knife rounded out the set to seven; it matched well enough to restore alongside the originals.</p>
+<br>
+<p><strong>The Work</strong><br>CA glue wicked into the surface checks and locked them closed. Once cured, the handles were sanded through 80, 120, 180, and 220 grit — the grain came up clean and tight. Three coats of Walrus Oil (polymerized tung oil), wiped on and back at 10 minutes each, with 24 hours between coats.</p>
+<br>
+<p><strong>The Result</strong><br>Handles that feel and look the way beech should. The grain is warm and readable, the brass rivets were polished bright, and the seventh knife blends in as if it came with the set. These go on the table now.</p><p style="margin-top:1.25rem;"><a href="restoration-imperial-steak-knives.html" style="color:var(--amber);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>`
   }
 };
 

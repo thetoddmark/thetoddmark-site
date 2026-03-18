@@ -22,12 +22,12 @@
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://thetoddmark.com/build-chip-breaker-screwdriver">
   <meta property="og:site_name" content="The Todd·Mark">
-  <meta property="og:image" content="https://thetoddmark.com/cbd-hero.jpg">
-  <meta property="og:image:width" content="900">
-  <meta property="og:image:height" content="1200">
-  <meta property="og:image:alt" content="Dave Corinth's chip breaker screwdriver — Brazilian Rosewood knob, brass ferrule, O1 steel blade">
+  <meta property="og:image" content="https://thetoddmark.com/cbd-planes.jpg">
+  <meta property="og:image:width" content="4920">
+  <meta property="og:image:height" content="3579">
+  <meta property="og:image:alt" content="Dave Corinth's chip breaker screwdriver alongside a row of Stanley hand planes">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://thetoddmark.com/cbd-hero.jpg">
+  <meta name="twitter:image" content="https://thetoddmark.com/cbd-planes.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -357,7 +357,23 @@
     @media (prefers-reduced-motion: no-preference) {
       html { scroll-behavior: smooth; }
     }
-  </style>
+  
+  /* ── FOCUS VISIBLE (keyboard navigation) ── */
+  :focus-visible {
+    outline: 2px solid var(--amber);
+    outline-offset: 3px;
+  }
+  a:focus-visible {
+    outline: 2px solid var(--amber);
+    outline-offset: 2px;
+    border-radius: 1px;
+  }
+  .nav-hamburger:focus-visible {
+    outline: 2px solid var(--amber);
+    outline-offset: 3px;
+  }
+
+</style>
   <link rel="canonical" href="https://thetoddmark.com/build-chip-breaker-screwdriver">
 
   <script type="application/ld+json">
@@ -366,7 +382,7 @@
     "@type": "Article",
     "headline": "Dave Corinth's Chip Breaker Screwdriver",
     "description": "A $24.95 eBay kit from Dave Corinth Toolworks, assembled with a salvaged Brazilian Rosewood knob. Built for one job: the chip breaker screw on a Stanley hand plane.",
-    "image": "https://thetoddmark.com/cbd-hero.jpg",
+    "image": "https://thetoddmark.com/cbd-planes.jpg",
     "datePublished": "2026-03-11",
     "dateModified": "2026-03-11",
     "author": {
@@ -811,7 +827,8 @@
     z-index: 1001;
     font-family: sans-serif;
   }
-  .lb-close:hover, .lb-close:focus-visible { color: #c8853a; outline: none; }
+  .lb-close:hover { color: #c8853a; outline: none; }
+  .lb-close:focus-visible { color: #c8853a; outline: 2px solid rgba(200,133,58,0.8); outline-offset: 4px; }
 
   /* Prev / Next */
   .lb-prev, .lb-next {
@@ -832,8 +849,8 @@
   }
   .lb-prev { left: 0.75rem; }
   .lb-next { right: 0.75rem; }
-  .lb-prev:hover, .lb-next:hover,
-  .lb-prev:focus-visible, .lb-next:focus-visible { color: #c8853a; outline: none; }
+  .lb-prev:hover, .lb-next:hover { color: #c8853a; outline: none; }
+  .lb-prev:focus-visible, .lb-next:focus-visible { color: #c8853a; outline: 2px solid rgba(200,133,58,0.8); outline-offset: 4px; }
   .lb-nav-hidden { visibility: hidden; pointer-events: none; }
 
   /* Zoom cursor on article images */
