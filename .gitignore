@@ -1,0 +1,11 @@
+# Internal project notes — keep local, don't deploy to live site
+PROJECT-NOTES.md
+
+# macOS
+.DS_Store
+.DS_Store?
+
+# Editor files
+.vscode/
+*.swp
+*.swo
