@@ -808,5 +808,224 @@
     });
   }
 </script>
+
+<!-- ── ARTICLE LIGHTBOX ── -->
+<style>
+  /* Backdrop */
+  .lb-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(28,26,23,0.96);
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    cursor: zoom-out;
+  }
+  .lb-backdrop.lb-open { display: flex; }
+
+  /* Inner container — sizes itself to the image */
+  .lb-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: default;
+    max-width: min(90vw, 1200px);
+  }
+
+  /* Image — fills available space, never distorts */
+  .lb-inner img {
+    display: block;
+    max-width: min(90vw, 1200px);
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 2px;
+    cursor: default;
+    user-select: none;
+    box-shadow: 0 8px 48px rgba(0,0,0,0.6);
+  }
+
+  /* Caption */
+  .lb-caption {
+    margin-top: 0.75rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.55);
+    text-align: center;
+    max-width: 640px;
+    line-height: 1.6;
+    min-height: 1.2em;
+  }
+
+  /* Counter */
+  .lb-counter {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.15em;
+    color: rgba(200,133,58,0.65);
+    margin-top: 0.35rem;
+    text-align: center;
+  }
+
+  /* Close button */
+  .lb-close {
+    position: fixed;
+    top: 1.25rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    color: rgba(245,240,232,0.5);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0.35rem 0.6rem;
+    transition: color 0.2s;
+    z-index: 1001;
+    font-family: sans-serif;
+  }
+  .lb-close:hover, .lb-close:focus-visible { color: #c8853a; outline: none; }
+
+  /* Prev / Next */
+  .lb-prev, .lb-next {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: rgba(245,240,232,0.45);
+    font-size: 2.5rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 1rem 0.9rem;
+    transition: color 0.2s;
+    z-index: 1001;
+    user-select: none;
+    font-family: sans-serif;
+  }
+  .lb-prev { left: 0.75rem; }
+  .lb-next { right: 0.75rem; }
+  .lb-prev:hover, .lb-next:hover,
+  .lb-prev:focus-visible, .lb-next:focus-visible { color: #c8853a; outline: none; }
+  .lb-nav-hidden { visibility: hidden; pointer-events: none; }
+
+  /* Zoom cursor on article images */
+  .article-body img { cursor: zoom-in; }
+
+  @media (max-width: 640px) {
+    .lb-prev { left: 0.15rem; font-size: 1.8rem; }
+    .lb-next { right: 0.15rem; font-size: 1.8rem; }
+    .lb-close { top: 0.6rem; right: 0.6rem; }
+    .lb-inner img { max-height: 70vh; }
+  }
+</style>
+
+<div class="lb-backdrop" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lb-close" id="lb-close" aria-label="Close image viewer">&#x2715;</button>
+  <button class="lb-prev" id="lb-prev" aria-label="Previous image">&#x2039;</button>
+  <div class="lb-inner" id="lb-inner">
+    <img id="lb-img" src="" alt="" tabindex="0" />
+    <div class="lb-caption" id="lb-caption" aria-live="polite"></div>
+    <div class="lb-counter" id="lb-counter" aria-live="polite"></div>
+  </div>
+  <button class="lb-next" id="lb-next" aria-label="Next image">&#x203a;</button>
+</div>
+
+<script>
+(function () {
+  var imgs = [];
+  var cur = 0;
+
+  function init() {
+    var body = document.querySelector('.article-body');
+    if (!body) return;
+    imgs = Array.from(body.querySelectorAll('img'));
+    if (!imgs.length) return;
+
+    imgs.forEach(function (img, i) {
+      img.setAttribute('tabindex', '0');
+      img.setAttribute('role', 'button');
+      img.setAttribute('aria-label', 'View larger: ' + (img.alt || 'photo'));
+      img.addEventListener('click', function (e) { e.stopPropagation(); open(i); });
+      img.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(i); }
+      });
+    });
+
+    document.getElementById('lb-close').addEventListener('click', close);
+    document.getElementById('lb').addEventListener('click', function (e) {
+      if (e.target === this) close();
+    });
+    document.getElementById('lb-prev').addEventListener('click', function (e) {
+      e.stopPropagation(); nav(-1);
+    });
+    document.getElementById('lb-next').addEventListener('click', function (e) {
+      e.stopPropagation(); nav(1);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (!document.getElementById('lb').classList.contains('lb-open')) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); nav(-1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); nav(1); }
+    });
+  }
+
+  function open(i) {
+    cur = i;
+    render();
+    document.getElementById('lb').classList.add('lb-open');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('lb-img').focus();
+  }
+
+  function close() {
+    document.getElementById('lb').classList.remove('lb-open');
+    document.body.style.overflow = '';
+    imgs[cur] && imgs[cur].focus();
+  }
+
+  function nav(dir) {
+    var next = cur + dir;
+    if (next < 0 || next >= imgs.length) return;
+    cur = next;
+    render();
+  }
+
+  function render() {
+    var img = imgs[cur];
+    var lbImg = document.getElementById('lb-img');
+    lbImg.src = img.src;
+    lbImg.alt = img.alt || '';
+
+    // Caption: prefer adjacent figcaption, fall back to alt text
+    var fig = img.closest('figure');
+    var caption = '';
+    if (fig) {
+      var fc = fig.querySelector('figcaption');
+      if (fc) caption = fc.textContent.trim();
+    }
+    document.getElementById('lb-caption').textContent = caption;
+    document.getElementById('lb-counter').textContent =
+      imgs.length > 1 ? (cur + 1) + ' – ' + imgs.length : '';
+
+    var prevBtn = document.getElementById('lb-prev');
+    var nextBtn = document.getElementById('lb-next');
+    prevBtn.classList.toggle('lb-nav-hidden', cur === 0);
+    nextBtn.classList.toggle('lb-nav-hidden', cur === imgs.length - 1);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+}());
+</script>
+
 </body>
 </html>
