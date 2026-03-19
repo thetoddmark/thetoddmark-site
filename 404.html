@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' www.googletagmanager.com www.google-analytics.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: https:; frame-src ko-fi.com; connect-src 'self' formspree.io www.google-analytics.com buttondown.com buttondown.email; form-action 'self' formspree.io buttondown.com buttondown.email;">
   <meta property="og:title" content="404 — Page Not Found | thetoddmark.com">
   <meta property="og:description" content="This page doesn't exist — but the tools do. Return to thetoddmark.com.">
   <meta property="og:type" content="website">
@@ -591,21 +592,7 @@
       setTimeout(setVh, 100);
     }, passiveOpt);
 
-    // 8. Prevent body scroll when mobile nav is open
-    var navToggle = document.getElementById('nav-toggle');
-    if (navToggle) {
-      navToggle.addEventListener('click', function() {
-        var isOpen = document.querySelector('nav ul.nav-open');
-        document.body.style.overflow = isOpen ? '' : 'hidden';
-      });
-      // Restore scroll if menu closes via any nav link
-      var navLinks = document.querySelectorAll('nav ul a');
-      navLinks.forEach(function(link) {
-        link.addEventListener('click', function() {
-          document.body.style.overflow = '';
-        });
-      });
-    }
+    // 8. Body scroll: managed by nav open/close functions above
 
     // 9. Lightbox: trap focus inside when open (accessibility + all browsers)
     var lightbox = document.getElementById('lightbox');
@@ -655,14 +642,14 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="work.html">The Work</a></li>
+      <li><a href="shed-upgrade.html">Shed Upgrade</a></li>
+      <li><a href="products.html">My Kit</a></li>
       <li><a href="resources.html">Resources</a></li>
-      <li><a href="wishlist.html">Wishlist</a></li>
-      <li><a href="listening.html">Listening</a></li>
-      <li><a href="products.html">The Shop</a></li>
-    <li><a href="shed-upgrade.html">Shed Upgrade</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
-    <li><a href="partner.html" style="color:var(--amber);">Partner</a></li>
+      <li><a href="wishlist.html">Wishlist</a></li>
+      <li><a href="listening.html">Listening</a></li>
+      <li><a href="partner.html" style="color:var(--amber);">Partner</a></li>
     </ul>
   </nav>
 
@@ -683,7 +670,7 @@
       <a href="about.html">About</a>
       <a href="wishlist.html">Wishlist</a>
       <a href="resources.html">Resources</a>
-      <a href="products.html">The Shop</a>
+      <a href="products.html">My Kit</a>
       <a href="listening.html">Listening</a>
       <a href="contact.html">Contact</a>
       <a href="partner.html">Partner</a>

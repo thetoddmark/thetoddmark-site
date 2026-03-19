@@ -5,6 +5,7 @@
   <link rel="icon" href="/favicon.jpg" type="image/jpeg">
   <link rel="apple-touch-icon" href="/favicon.jpg">
   <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' www.googletagmanager.com www.google-analytics.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: https:; frame-src ko-fi.com; connect-src 'self' formspree.io www.google-analytics.com buttondown.com buttondown.email; form-action 'self' formspree.io buttondown.com buttondown.email;">
   <meta name="color-scheme" content="light">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <!-- Google tag (gtag.js) -->
@@ -340,34 +341,28 @@
   <link rel="canonical" href="https://thetoddmark.com/restoration-german-perfect-handle">
 
   <script type="application/ld+json">
+[
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "German "Perfect Handle" Set — Four Graduating Sizes",
-    "description": "Four vintage German cabinet screwdrivers with the classic "Perfect Handle" design restored from decades of honest use.",
-    "image": "https://thetoddmark.com/images/ph-belt-ferrules.jpg",
-    "datePublished": "2026-03-12",
-    "dateModified": "2026-03-12",
-    "author": {
-      "@type": "Person",
-      "name": "Mark Todd",
-      "url": "https://thetoddmark.com/about"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "The Todd·Mark",
-      "url": "https://thetoddmark.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://thetoddmark.com/favicon.jpg"
-      }
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://thetoddmark.com/restoration-german-perfect-handle"
-    }
+    "headline": "German "Perfect Handle" Set",
+    "description": "Four vintage German cabinet screwdrivers with the classic ",
+    "author": {"@type": "Person", "name": "Mark Todd", "url": "https://thetoddmark.com/about"},
+    "publisher": {"@type": "Organization", "name": "The Todd·Mark", "url": "https://thetoddmark.com"},
+    "url": "https://thetoddmark.com/restoration-german-perfect-handle",
+    "mainEntityOfPage": "https://thetoddmark.com/restoration-german-perfect-handle"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thetoddmark.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Restorations", "item": "https://thetoddmark.com/work"},
+      {"@type": "ListItem", "position": 3, "name": "German Screwdrivers", "item": "https://thetoddmark.com/restoration-german-perfect-handle"}
+    ]
   }
-  </script>
+]
+</script>
   <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
@@ -386,16 +381,16 @@
   <button class="nav-hamburger" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
     <span></span><span></span><span></span>
   </button>
-  <ul id="nav-menu">
+    <ul id="nav-menu">
     <li><a href="index.html">Home</a></li>
-    <li><a href="work.html" class="nav-active">The Work</a></li>
-    <li><a href="resources.html">Resources</a></li>
-    <li><a href="wishlist.html">Wishlist</a></li>
-    <li><a href="listening.html">Listening</a></li>
-    <li><a href="products.html">The Shop</a></li>
+    <li><a href="work.html" class="nav-active" aria-current="page">The Work</a></li>
     <li><a href="shed-upgrade.html">Shed Upgrade</a></li>
+    <li><a href="products.html">My Kit</a></li>
+    <li><a href="resources.html">Resources</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
+    <li><a href="wishlist.html">Wishlist</a></li>
+    <li><a href="listening.html">Listening</a></li>
     <li><a href="partner.html" style="color:var(--amber);">Partner</a></li>
   </ul>
 </nav>
@@ -885,7 +880,7 @@
   <p>No cadence, no schedule — just the occasional restoration story when I have something worth saying.</p>
   <form action="https://buttondown.com/api/emails/embed-subscribe/TheToddMark" method="post" class="embeddable-buttondown-form nl-form">
     <label for="bd-email-article" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Email address</label>
-    <input type="email" name="email" id="bd-email-article" placeholder="your@email.com" required />
+    <input type="email" name="email" id="bd-email-article" placeholder="your@email.com" required  aria-required="true" />
     <button type="submit">Subscribe →</button>
   </form>
   <p class="nl-fine"><a href="https://buttondown.com/TheToddMark" target="_blank" rel="noopener noreferrer">View past issues</a> · Powered by Buttondown</p>
@@ -908,19 +903,44 @@
   const toggle = document.getElementById('nav-toggle');
   const menu = document.getElementById('nav-menu');
   if (toggle && menu) {
+    function openNavMenu() {
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', 'Close menu');
+      toggle.classList.add('is-open');
+      menu.classList.add('nav-open');
+      document.body.style.overflow = 'hidden';
+      const firstLink = menu.querySelector('a');
+      if (firstLink) firstLink.focus();
+    }
+    function closeNavMenu() {
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open menu');
+      toggle.classList.remove('is-open');
+      menu.classList.remove('nav-open');
+      document.body.style.overflow = '';
+    }
     toggle.addEventListener('click', () => {
-      const open = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!open));
-      toggle.setAttribute('aria-label', !open ? 'Close menu' : 'Open menu');
-      toggle.classList.toggle('is-open');
-      menu.classList.toggle('nav-open');
+      toggle.getAttribute('aria-expanded') === 'true' ? closeNavMenu() : openNavMenu();
+    });
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => closeNavMenu());
     });
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && menu.classList.contains('nav-open')) {
-        menu.classList.remove('nav-open');
-        toggle.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.setAttribute('aria-label', 'Open menu');
+        closeNavMenu();
+        toggle.focus();
+      }
+    });
+    menu.addEventListener('keydown', (e) => {
+      if (!menu.classList.contains('nav-open')) return;
+      if (e.key !== 'Tab') return;
+      const links = menu.querySelectorAll('a');
+      const first = links[0];
+      const last = links[links.length - 1];
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); toggle.focus(); }
+      } else {
+        if (document.activeElement === last) { e.preventDefault(); first.focus(); }
       }
     });
   }

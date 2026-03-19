@@ -5,6 +5,7 @@
   <link rel="icon" href="/favicon.jpg" type="image/jpeg">
   <link rel="apple-touch-icon" href="/favicon.jpg">
   <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' www.googletagmanager.com www.google-analytics.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: https:; frame-src ko-fi.com; connect-src 'self' formspree.io www.google-analytics.com buttondown.com buttondown.email; form-action 'self' formspree.io buttondown.com buttondown.email;">
   <meta name="color-scheme" content="light">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WF1PP02KM3"></script>
@@ -158,17 +159,17 @@
   <button class="nav-hamburger" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
     <span></span><span></span><span></span>
   </button>
-  <ul id="nav-menu">
+    <ul id="nav-menu">
     <li><a href="index.html">Home</a></li>
     <li><a href="work.html">The Work</a></li>
-    <li><a href="resources.html">Resources</a></li>
-    <li><a href="wishlist.html">Wishlist</a></li>
-    <li><a href="listening.html">Listening</a></li>
-    <li><a href="products.html">The Shop</a></li>
     <li><a href="shed-upgrade.html">Shed Upgrade</a></li>
+    <li><a href="products.html">My Kit</a></li>
+    <li><a href="resources.html">Resources</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
-    <li><a href="partner.html" style="color:var(--amber);">Partner</a></li>
+    <li><a href="wishlist.html">Wishlist</a></li>
+    <li><a href="listening.html">Listening</a></li>
+    <li><a href="partner.html" class="nav-active" aria-current="page" style="color:var(--amber);">Partner</a></li>
   </ul>
 </nav>
 
@@ -181,7 +182,7 @@
 </section>
 
 <div class="pitch-strip" role="region" aria-label="Site at a glance">
-  <div class="pitch-stat"><span class="pitch-val">5</span><span class="pitch-label">Published Restorations</span></div>
+  <div class="pitch-stat"><span class="pitch-val">6</span><span class="pitch-label">Published Restorations</span></div>
   <div class="pitch-stat"><span class="pitch-val">9</span><span class="pitch-label">Sections Per Article</span></div>
   <div class="pitch-stat"><span class="pitch-val">100%</span><span class="pitch-label">Hands-On Coverage</span></div>
   <div class="pitch-stat"><span class="pitch-val">Pacific NW</span><span class="pitch-label">Based in Seattle</span></div>
@@ -326,19 +327,44 @@
   const toggle = document.getElementById('nav-toggle');
   const menu = document.getElementById('nav-menu');
   if (toggle && menu) {
+    function openNavMenu() {
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', 'Close menu');
+      toggle.classList.add('is-open');
+      menu.classList.add('nav-open');
+      document.body.style.overflow = 'hidden';
+      const firstLink = menu.querySelector('a');
+      if (firstLink) firstLink.focus();
+    }
+    function closeNavMenu() {
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open menu');
+      toggle.classList.remove('is-open');
+      menu.classList.remove('nav-open');
+      document.body.style.overflow = '';
+    }
     toggle.addEventListener('click', () => {
-      const open = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!open));
-      toggle.setAttribute('aria-label', !open ? 'Close menu' : 'Open menu');
-      toggle.classList.toggle('is-open');
-      menu.classList.toggle('nav-open');
+      toggle.getAttribute('aria-expanded') === 'true' ? closeNavMenu() : openNavMenu();
+    });
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => closeNavMenu());
     });
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && menu.classList.contains('nav-open')) {
-        menu.classList.remove('nav-open');
-        toggle.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.setAttribute('aria-label', 'Open menu');
+        closeNavMenu();
+        toggle.focus();
+      }
+    });
+    menu.addEventListener('keydown', (e) => {
+      if (!menu.classList.contains('nav-open')) return;
+      if (e.key !== 'Tab') return;
+      const links = menu.querySelectorAll('a');
+      const first = links[0];
+      const last = links[links.length - 1];
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); toggle.focus(); }
+      } else {
+        if (document.activeElement === last) { e.preventDefault(); first.focus(); }
       }
     });
   }

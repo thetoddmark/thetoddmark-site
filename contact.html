@@ -6,6 +6,7 @@
   <link rel="apple-touch-icon" href="/favicon.jpg">
 
 <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' www.googletagmanager.com www.google-analytics.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: https:; frame-src ko-fi.com; connect-src 'self' formspree.io www.google-analytics.com buttondown.com buttondown.email; form-action 'self' formspree.io buttondown.com buttondown.email;">
 <meta name="color-scheme" content="light">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <!-- Google tag (gtag.js) -->
@@ -1329,16 +1330,16 @@
     <span></span>
     <span></span>
   </button>
-  <ul id="nav-menu">
+    <ul id="nav-menu">
     <li><a href="index.html">Home</a></li>
     <li><a href="work.html">The Work</a></li>
+    <li><a href="shed-upgrade.html">Shed Upgrade</a></li>
+    <li><a href="products.html">My Kit</a></li>
     <li><a href="resources.html">Resources</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" class="nav-active" aria-current="page">Contact</a></li>
     <li><a href="wishlist.html">Wishlist</a></li>
     <li><a href="listening.html">Listening</a></li>
-    <li><a href="products.html">The Shop</a></li>
-    <li><a href="shed-upgrade.html">Shed Upgrade</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html" class="nav-active">Contact</a></li>
     <li><a href="partner.html" style="color:var(--amber);">Partner</a></li>
   </ul>
 </nav>
@@ -1358,7 +1359,7 @@
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
       <div>
         <label for="first-name" style="display:block;font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.5rem;">First Name <span style="color:var(--amber);">*</span></label>
-        <input id="first-name" type="text" name="first-name" required autocomplete="given-name" placeholder="First name" style="width:100%;padding:0.75rem 1rem;background:var(--cream);border:1px solid var(--border);font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:300;color:var(--ink);outline:none;transition:border-color 0.2s;box-sizing:border-box;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='var(--border)'" />
+        <input id="first-name" type="text" name="first-name" required autocomplete="given-name" placeholder="First name" style="width:100%;padding:0.75rem 1rem;background:var(--cream);border:1px solid var(--border);font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:300;color:var(--ink);outline:none;transition:border-color 0.2s;box-sizing:border-box;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='var(--border)'"  aria-required="true" />
       </div>
       <div>
         <label for="first-name" style="display:block;font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.5rem;">Last Name</label>
@@ -1369,13 +1370,13 @@
     <!-- Email -->
     <div>
       <label for="first-name" style="display:block;font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.5rem;">Email <span style="color:var(--amber);">*</span></label>
-      <input id="email-field" type="email" name="email" required autocomplete="email" placeholder="your@email.com" style="width:100%;padding:0.75rem 1rem;background:var(--cream);border:1px solid var(--border);font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:300;color:var(--ink);outline:none;transition:border-color 0.2s;box-sizing:border-box;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='var(--border)'" />
+      <input id="email-field" type="email" name="email" required autocomplete="email" placeholder="your@email.com" style="width:100%;padding:0.75rem 1rem;background:var(--cream);border:1px solid var(--border);font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:300;color:var(--ink);outline:none;transition:border-color 0.2s;box-sizing:border-box;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='var(--border)'"  aria-required="true" />
     </div>
 
     <!-- Subject -->
     <div>
       <label for="first-name" style="display:block;font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.5rem;">Subject <span style="color:var(--amber);">*</span></label>
-      <select id="subject" name="subject" required style="width:100%;padding:0.75rem 1rem;background:var(--cream);border:1px solid var(--border);font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:300;color:var(--ink);outline:none;transition:border-color 0.2s;box-sizing:border-box;appearance:none;cursor:pointer;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='var(--border)'">
+      <select id="subject" name="subject" required style="width:100%;padding:0.75rem 1rem;background:var(--cream);border:1px solid var(--border);font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:300;color:var(--ink);outline:none;transition:border-color 0.2s;box-sizing:border-box;appearance:none;cursor:pointer;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='var(--border)'" aria-required="true">
         <option value="" disabled selected>Select a topic</option>
         <option value="general">General / Just saying hello</option>
         <option value="wishlist">Tool from the wishlist</option>
@@ -1389,7 +1390,7 @@
     <!-- Message -->
     <div>
       <label for="first-name" style="display:block;font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.5rem;">Message <span style="color:var(--amber);">*</span></label>
-      <textarea id="message" name="message" required rows="6" style="width:100%;padding:0.75rem 1rem;background:var(--cream);border:1px solid var(--border);font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:300;color:var(--ink);outline:none;transition:border-color 0.2s;box-sizing:border-box;resize:vertical;line-height:1.7;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='var(--border)'"></textarea>
+      <textarea id="message" name="message" required rows="6" style="width:100%;padding:0.75rem 1rem;background:var(--cream);border:1px solid var(--border);font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:300;color:var(--ink);outline:none;transition:border-color 0.2s;box-sizing:border-box;resize:vertical;line-height:1.7;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='var(--border)'" aria-required="true"></textarea>
     </div>
 
     <!-- Submit -->
@@ -1644,17 +1645,45 @@ document.addEventListener('keydown', e => {
   var toggle = document.getElementById('nav-toggle');
   var navUl = document.querySelector('nav ul');
   if (!toggle || !navUl) return;
+  function openMenu() {
+    navUl.classList.add('nav-open');
+    toggle.classList.add('is-open');
+    toggle.setAttribute('aria-label', 'Close menu');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    var firstLink = navUl.querySelector('a');
+    if (firstLink) firstLink.focus();
+  }
+  function closeMenu() {
+    navUl.classList.remove('nav-open');
+    toggle.classList.remove('is-open');
+    toggle.setAttribute('aria-label', 'Open menu');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
   toggle.addEventListener('click', function() {
-    navUl.classList.toggle('nav-open');
-    toggle.classList.toggle('is-open');
-    toggle.setAttribute('aria-label', toggle.classList.contains('is-open') ? 'Close menu' : 'Open menu');
+    navUl.classList.contains('nav-open') ? closeMenu() : openMenu();
   });
   navUl.querySelectorAll('a').forEach(function(link) {
-    link.addEventListener('click', function() {
-      navUl.classList.remove('nav-open');
-      toggle.classList.remove('is-open');
-      toggle.setAttribute('aria-label', 'Open menu');
-    });
+    link.addEventListener('click', function() { closeMenu(); });
+  });
+  document.addEventListener('keydown', function(e) {
+    if ((e.key === 'Escape' || e.keyCode === 27) && navUl.classList.contains('nav-open')) {
+      closeMenu();
+      toggle.focus();
+    }
+  });
+  navUl.addEventListener('keydown', function(e) {
+    if (!navUl.classList.contains('nav-open')) return;
+    if (e.key !== 'Tab' && e.keyCode !== 9) return;
+    var links = navUl.querySelectorAll('a');
+    var first = links[0];
+    var last = links[links.length - 1];
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); toggle.focus(); }
+    } else {
+      if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
   });
 })();
 </script>
@@ -1767,21 +1796,7 @@ document.addEventListener('keydown', e => {
       setTimeout(setVh, 100);
     }, passiveOpt);
 
-    // 8. Prevent body scroll when mobile nav is open
-    var navToggle = document.getElementById('nav-toggle');
-    if (navToggle) {
-      navToggle.addEventListener('click', function() {
-        var isOpen = document.querySelector('nav ul.nav-open');
-        document.body.style.overflow = isOpen ? '' : 'hidden';
-      });
-      // Restore scroll if menu closes via any nav link
-      var navLinks = document.querySelectorAll('nav ul a');
-      navLinks.forEach(function(link) {
-        link.addEventListener('click', function() {
-          document.body.style.overflow = '';
-        });
-      });
-    }
+    // 8. Body scroll: managed by nav open/close functions above
 
     // 9. Lightbox: trap focus inside when open (accessibility + all browsers)
     var lightbox = document.getElementById('lightbox');

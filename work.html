@@ -6,6 +6,7 @@
   <link rel="apple-touch-icon" href="/favicon.jpg">
 
 <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' www.googletagmanager.com www.google-analytics.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: https:; frame-src ko-fi.com; connect-src 'self' formspree.io www.google-analytics.com buttondown.com buttondown.email; form-action 'self' formspree.io buttondown.com buttondown.email;">
 <meta name="color-scheme" content="light">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <!-- Google tag (gtag.js) -->
@@ -1561,16 +1562,16 @@
     <span></span>
     <span></span>
   </button>
-  <ul id="nav-menu">
+    <ul id="nav-menu">
     <li><a href="index.html">Home</a></li>
-    <li><a href="work.html" class="nav-active">The Work</a></li>
-    <li><a href="resources.html">Resources</a></li>
-    <li><a href="wishlist.html">Wishlist</a></li>
-    <li><a href="listening.html">Listening</a></li>
-    <li><a href="products.html">The Shop</a></li>
+    <li><a href="work.html" class="nav-active" aria-current="page">The Work</a></li>
     <li><a href="shed-upgrade.html">Shed Upgrade</a></li>
+    <li><a href="products.html">My Kit</a></li>
+    <li><a href="resources.html">Resources</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
+    <li><a href="wishlist.html">Wishlist</a></li>
+    <li><a href="listening.html">Listening</a></li>
     <li><a href="partner.html" style="color:var(--amber);">Partner</a></li>
   </ul>
 </nav>
@@ -1592,14 +1593,14 @@
 </picture>
         <div class="card-overlay"><span class="card-overlay-label">View Restoration</span></div>
       </div>
-      <img id="bpmtphoto-hero" src="images/bpmt-hero.webp" style="display:none;" alt="">
-      <img id="bpmtphoto-before" src="images/bpmt-before-2.webp" style="display:none;" alt="">
-      <img id="bpmtphoto-steel" src="images/bpmt-steel-1.webp" style="display:none;" alt="">
-      <img id="bpmtphoto-oiled" src="images/bpmt-oiled.webp" style="display:none;" alt="">
-      <img id="bpmtphoto-after" src="images/bpmt-after-2.webp" style="display:none;" alt="">
+      <img id="bpmtphoto-hero" src="images/bpmt-hero.webp" style="display:none;" loading="lazy" alt="Bridgeport H.M. Corp multitool hero image">
+      <img id="bpmtphoto-before" src="images/bpmt-before-2.webp" style="display:none;" loading="lazy" alt="Bridgeport multitool before restoration">
+      <img id="bpmtphoto-steel" src="images/bpmt-steel-1.webp" style="display:none;" loading="lazy" alt="Bridgeport multitool during steel work">
+      <img id="bpmtphoto-oiled" src="images/bpmt-oiled.webp" style="display:none;" loading="lazy" alt="Bridgeport multitool during oiling process">
+      <img id="bpmtphoto-after" src="images/bpmt-after-2.webp" style="display:none;" loading="lazy" alt="Bridgeport multitool after restoration">
       <div class="card-body">
         <div class="card-category">Multi-Tool</div>
-        <div class="card-title">Bridgeport H.M. Corp Interchangeable Tool Handle</div>
+        <h3 class="card-title">Bridgeport H.M. Corp Interchangeable Tool Handle</h3>
         <div class="card-meta">A $34.95 eBay find — vintage American multi-tool with eight interchangeable bits and a rosewood handle.</div>
         <p style="margin-top:1.25rem;"><a href="restoration-bridgeport-multitool.html" style="color:var(--amber);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>
       </div>
@@ -1610,14 +1611,14 @@
         <img id="mk-gallery-img" style="pointer-events:none;width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" src="" alt="Vintage Awl Repurposed as Marking Knife" loading="lazy" width="auto" height="auto">
         <div class="card-overlay"><span class="card-overlay-label">View Restoration</span></div>
       </div>
-      <img id="mkphoto-mk-hero" src="images/ph-mk-hero.webp" style="display:none;" alt="">
-      <img id="mkphoto-mk-before" src="images/work-mk-before.webp" style="display:none;" alt="">
-      <img id="mkphoto-mk-blade" src="images/work-mk-blade.webp" style="display:none;" alt="">
-      <img id="mkphoto-mk-disassembled" src="images/work-mk-disassembled.webp" style="display:none;" alt="">
-      <img id="mkphoto-mk-handle" src="images/work-mk-handle.webp" style="display:none;" alt="">
+      <img id="mkphoto-mk-hero" src="images/ph-mk-hero.webp" style="display:none;" loading="lazy" alt="Vintage awl marking knife hero image">
+      <img id="mkphoto-mk-before" src="images/work-mk-before.webp" style="display:none;" loading="lazy" alt="Vintage awl before restoration">
+      <img id="mkphoto-mk-blade" src="images/work-mk-blade.webp" style="display:none;" loading="lazy" alt="Marking knife blade during restoration">
+      <img id="mkphoto-mk-disassembled" src="images/work-mk-disassembled.webp" style="display:none;" loading="lazy" alt="Marking knife disassembled components">
+      <img id="mkphoto-mk-handle" src="images/work-mk-handle.webp" style="display:none;" loading="lazy" alt="Marking knife handle after restoration">
       <div class="card-body">
         <div class="card-category">Marking</div>
-        <div class="card-title">Vintage Awl — Repurposed Marking Knife</div>
+        <h3 class="card-title">Vintage Awl — Repurposed Marking Knife</h3>
         <div class="card-meta">A $10 Facebook Marketplace find, given new purpose with diamond stones and patience.</div>
         <p style="margin-top:1.25rem;"><a href="restoration-awl-marking-knife.html" style="color:var(--amber);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>
       </div>
@@ -1639,8 +1640,9 @@
       </script>
       <div class="card-body">
         <div class="card-category">Build</div>
-        <div class="card-title">Dave Corinth's Chip Breaker Screwdriver</div>
+        <h3 class="card-title">Dave Corinth's Chip Breaker Screwdriver</h3>
         <div class="card-meta">O1 steel blade, brass ferrule, Brazilian Rosewood donor knob. Built for one job — and it does it perfectly.</div>
+        <p style="margin-top:1.25rem;"><a href="build-chip-breaker-screwdriver.html" style="color:var(--amber);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>
       </div>
     </div>
 
@@ -1664,7 +1666,7 @@
       </script>
       <div class="card-body">
         <div class="card-category">Screwdrivers</div>
-        <div class="card-title">German "Perfect Handle" Set — Four Graduating Sizes</div>
+        <h3 class="card-title">German "Perfect Handle" Set — Four Graduating Sizes</h3>
         <div class="card-meta">Vintage German cabinet screwdrivers restored from heavy oxidation. Walrus Oil finish in progress — Renaissance Wax topcoat to follow. First of many.</div>
         <p style="margin-top:1.25rem;"><a href="restoration-german-perfect-handle.html" style="color:var(--amber);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>
       </div>
@@ -1683,7 +1685,7 @@
       </div>
       <div class="card-body">
         <div class="card-category">Screwdrivers</div>
-        <div class="card-title">Mac Tools Wooden-Handled Set</div>
+        <h3 class="card-title">Mac Tools Wooden-Handled Set</h3>
         <div class="card-meta">Fiebing's dye · polymerized tung oil · shellac · Renaissance Wax</div>
         <p style="margin-top:1.25rem;"><a href="restoration-mac-tools-screwdrivers.html" style="color:var(--amber);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>
       </div>
@@ -1698,16 +1700,16 @@
 </picture>
         <div class="card-overlay"><span class="card-overlay-label">View Restoration</span></div>
       </div>
-      <img id="skphoto-hero"    src="images/sk-hero.webp"        style="display:none;" alt="">
-      <img id="skphoto-before"  src="images/sk-before-set.webp"  style="display:none;" alt="">
-      <img id="skphoto-handles" src="images/sk-before-handles.webp" style="display:none;" alt="">
-      <img id="skphoto-sanded"  src="images/sk-sanded-2.webp"    style="display:none;" alt="">
-      <img id="skphoto-oil"     src="images/sk-oil-3.webp"       style="display:none;" alt="">
-      <img id="skphoto-after6"  src="images/sk-after-six.webp"   style="display:none;" alt="">
-      <img id="skphoto-after7"  src="images/sk-after-seven.webp" style="display:none;" alt="">
+      <img id="skphoto-hero"    src="images/sk-hero.webp"        style="display:none;" loading="lazy" alt="Imperial steak knives hero image">
+      <img id="skphoto-before"  src="images/sk-before-set.webp"  style="display:none;" loading="lazy" alt="Imperial steak knife set before restoration">
+      <img id="skphoto-handles" src="images/sk-before-handles.webp" style="display:none;" loading="lazy" alt="Imperial steak knife handles detail before restoration">
+      <img id="skphoto-sanded"  src="images/sk-sanded-2.webp"    style="display:none;" loading="lazy" alt="Imperial steak knives during sanding process">
+      <img id="skphoto-oil"     src="images/sk-oil-3.webp"       style="display:none;" loading="lazy" alt="Imperial steak knives during oiling process">
+      <img id="skphoto-after6"  src="images/sk-after-six.webp"   style="display:none;" loading="lazy" alt="Imperial steak knives after restoration - six knives">
+      <img id="skphoto-after7"  src="images/sk-after-seven.webp" style="display:none;" loading="lazy" alt="Imperial steak knives after restoration - seven knives">
       <div class="card-body">
         <div class="card-category">Knives</div>
-        <div class="card-title">Imperial Steak Knife Handle Refresh</div>
+        <h3 class="card-title">Imperial Steak Knife Handle Refresh</h3>
         <div class="card-meta">CA glue fill · 80–220 grit sanding · three coats Walrus Oil · matched set of six</div>
         <p style="margin-top:1.25rem;"><a href="restoration-imperial-steak-knives.html" style="color:var(--amber);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>
       </div>
@@ -1722,15 +1724,15 @@
 </picture>
         <div class="card-overlay"><span class="card-overlay-label">View Restoration</span></div>
       </div>
-      <img id="bulatphoto-hero"        src="images/bulat-hero.webp"            style="display:none;" alt="">
-      <img id="bulatphoto-handle-side" src="images/bulat-handle-side.webp"     style="display:none;" alt="">
-      <img id="bulatphoto-brand"       src="images/bulat-brand-handle.webp"    style="display:none;" alt="">
-      <img id="bulatphoto-spine"       src="images/bulat-handle-spine.webp"    style="display:none;" alt="">
-      <img id="bulatphoto-bolster"     src="images/bulat-damascus-bolster.webp" style="display:none;" alt="">
-      <img id="bulatphoto-blade-tip"   src="images/bulat-blade-tip.webp"       style="display:none;" alt="">
+      <img id="bulatphoto-hero"        src="images/bulat-hero.webp"            style="display:none;" loading="lazy" alt="Bulat Damascus chef knife hero image">
+      <img id="bulatphoto-handle-side" src="images/bulat-handle-side.webp"     style="display:none;" loading="lazy" alt="Bulat Damascus chef knife handle side detail">
+      <img id="bulatphoto-brand"       src="images/bulat-brand-handle.webp"    style="display:none;" loading="lazy" alt="Bulat Damascus chef knife brand marking">
+      <img id="bulatphoto-spine"       src="images/bulat-handle-spine.webp"    style="display:none;" loading="lazy" alt="Bulat Damascus chef knife spine detail">
+      <img id="bulatphoto-bolster"     src="images/bulat-damascus-bolster.webp" style="display:none;" loading="lazy" alt="Bulat Damascus chef knife damascus bolster">
+      <img id="bulatphoto-blade-tip"   src="images/bulat-blade-tip.webp"       style="display:none;" loading="lazy" alt="Bulat Damascus chef knife blade tip detail">
       <div class="card-body">
         <div class="card-category">Knives</div>
-        <div class="card-title">Bulat Damascus Chef's Knife Handle Refresh</div>
+        <h3 class="card-title">Bulat Damascus Chef's Knife Handle Refresh</h3>
         <div class="card-meta">180–220 grit sanding · three coats Walrus Oil · Renaissance Wax topcoat</div>
         <p style="margin-top:1.25rem;"><a href="restoration-bulat-chefs-knife.html" style="color:var(--amber);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>
       </div>
@@ -1790,16 +1792,16 @@ const tools = {
     category: 'Build',
     title: 'Dave Corinth’s Chip Breaker Screwdriver',
     photos: [
+      { id: "cbdphoto-cbd-hero",   caption: "The finished screwdriver — Brazilian Rosewood donor knob, brass ferrule, O1 steel blade." },
+      { id: "cbdphoto-cbd-grain",  caption: "The figure in this donor knob is something!" },
+      { id: "cbdphoto-cbd-planes", caption: "At home on the bench with the Stanley collection it was built to serve." },
+      { id: "cbdphoto-cbd-inuse",  caption: "In use — seated on a Stanley cap iron. Exactly what it was designed for." },
       { src: "images/cbd-kit-overview.jpg",  caption: "The full kit — cherry dowel (slotted), brass ferrule ring, and O1 steel blade." },
       { src: "images/cbd-kit-dowel.jpg",    caption: "Slotted Cherrywood Dowel." },
       { src: "images/cbd-kit-ferrule.jpg",  caption: "O1 blade — pre-ground to the correct chip breaker tip profile." },
       { src: "images/cbd-kit-blade.jpg",    caption: "Brass ferrule — turned to exact dimensions." },
       { src: "images/cbd-kit-assembly.jpg", caption: "Assembled — Blade and Ferrule in the wood dowel." },
       { src: "images/cbd-kit-tip.jpg",      caption: "Assembled tip — blade seated cleanly in the ferrule and dowel." },
-      { id: "cbdphoto-cbd-hero",   caption: "The finished screwdriver — Brazilian Rosewood donor knob, brass ferrule, O1 steel blade." },
-      { id: "cbdphoto-cbd-planes", caption: "At home on the bench with the Stanley collection it was built to serve." },
-      { id: "cbdphoto-cbd-grain",  caption: "The figure in this donor knob is something!" },
-      { id: "cbdphoto-cbd-inuse",  caption: "In use — seated on a Stanley cap iron. Exactly what it was designed for." },
     ],
     body: `<p>Here's a tool that solves a very specific problem — and once you know it exists, you can't imagine not having one. The chip breaker screw on a Stanley hand plane sits too deep for a standard screwdriver and is too important to strip. Dave Corinth designed his chip breaker screwdriver specifically for this job: a blade cut from O1 tool steel, fitted to a turned brass ferrule and a handle shaped for real torque. Small tool, very clear purpose.</p>
 <br>
@@ -2117,70 +2119,98 @@ document.addEventListener('keydown', e => {
 <div style="display:none">
   <picture>
   <source type="image/webp" srcset="images/products-restoration-before1.webp">
-  <img id="photo-before1" src="images/products-restoration-before1.jpg" />
+  <img id="photo-before1" src="images/products-restoration-before1.jpg"  loading="lazy"/>
 </picture>
   <picture>
   <source type="image/webp" srcset="images/products-restoration-before2.webp">
-  <img id="photo-before2" src="images/products-restoration-before2.jpg" />
+  <img id="photo-before2" src="images/products-restoration-before2.jpg"  loading="lazy"/>
 </picture>
   <picture>
   <source type="image/webp" srcset="images/products-restoration-mid1.webp">
-  <img id="photo-mid1" src="images/products-restoration-mid1.jpg" />
+  <img id="photo-mid1" src="images/products-restoration-mid1.jpg"  loading="lazy"/>
 </picture>
   <picture>
   <source type="image/webp" srcset="images/products-restoration-mid2.webp">
-  <img id="photo-mid2" src="images/products-restoration-mid2.jpg" />
+  <img id="photo-mid2" src="images/products-restoration-mid2.jpg"  loading="lazy"/>
 </picture>
   <picture>
   <source type="image/webp" srcset="images/products-restoration-after1.webp">
-  <img id="photo-after1" src="images/products-restoration-after1.jpg" />
+  <img id="photo-after1" src="images/products-restoration-after1.jpg"  loading="lazy"/>
 </picture>
   <picture>
   <source type="image/webp" srcset="images/products-restoration-after2.webp">
-  <img id="photo-after2" src="images/products-restoration-after2.jpg" />
+  <img id="photo-after2" src="images/products-restoration-after2.jpg"  loading="lazy"/>
 </picture>
   <picture>
   <source type="image/webp" srcset="images/products-restoration-after3.webp">
-  <img id="photo-after3" src="images/products-restoration-after3.jpg" />
+  <img id="photo-after3" src="images/products-restoration-after3.jpg"  loading="lazy"/>
 </picture>
 </div>
 
 
 <!-- Screwdriver restoration photos -->
-<img id="sdphoto-sd-hero" src="images/ph-oil-set-1.webp" style="display:none;">
-<img id="sdphoto-sd-before-set" src="images/work-sd-before-set.webp" style="display:none;" />
-<img id="sdphoto-sd-before-handles" src="images/work-sd-before-handles.webp" style="display:none;" />
-<img id="sdphoto-sd-during-clean" src="images/work-sd-during-clean.webp" style="display:none;" />
-<img id="sdphoto-sd-stamp" src="images/work-sd-stamp.webp" style="display:none;" />
-<img id="sdphoto-sd-during-sand" src="images/work-sd-during-sand.webp" style="display:none;" />
+<img id="sdphoto-sd-hero" src="images/ph-oil-set-1.webp" style="display:none" loading="lazy">
+<img id="sdphoto-sd-before-set" src="images/work-sd-before-set.webp" style="display:none" loading="lazy" />
+<img id="sdphoto-sd-before-handles" src="images/work-sd-before-handles.webp" style="display:none" loading="lazy" />
+<img id="sdphoto-sd-during-clean" src="images/work-sd-during-clean.webp" style="display:none" loading="lazy" />
+<img id="sdphoto-sd-stamp" src="images/work-sd-stamp.webp" style="display:none" loading="lazy" />
+<img id="sdphoto-sd-during-sand" src="images/work-sd-during-sand.webp" style="display:none" loading="lazy" />
 
-<img id="sdphoto-ph-ferrules"   src="images/ph-belt-ferrules.webp"  style="display:none;">
-<img id="sdphoto-ph-full-set"   src="images/ph-belt-full-set.webp"  style="display:none;">
-<img id="sdphoto-ph-handles"    src="images/ph-belt-handles.webp"   style="display:none;">
-<img id="sdphoto-ph-blades"     src="images/ph-belt-blades.webp"    style="display:none;">
-<img id="sdphoto-ph-horizontal" src="images/ph-belt-horizontal.webp" style="display:none;">
+<img id="sdphoto-ph-ferrules"   src="images/ph-belt-ferrules.webp"  style="display:none" loading="lazy">
+<img id="sdphoto-ph-full-set"   src="images/ph-belt-full-set.webp"  style="display:none" loading="lazy">
+<img id="sdphoto-ph-handles"    src="images/ph-belt-handles.webp"   style="display:none" loading="lazy">
+<img id="sdphoto-ph-blades"     src="images/ph-belt-blades.webp"    style="display:none" loading="lazy">
+<img id="sdphoto-ph-horizontal" src="images/ph-belt-horizontal.webp" style="display:none" loading="lazy">
 <!-- Chip breaker screwdriver photos -->
-<img id="cbdphoto-cbd-hero" src="images/work-cbd-hero.webp" style="display:none;" />
-<img id="cbdphoto-cbd-planes" src="images/work-cbd-planes.webp" style="display:none;" />
-<img id="cbdphoto-cbd-grain" src="images/work-cbd-grain.webp" style="display:none;" />
-<img id="cbdphoto-cbd-inuse" src="images/work-cbd-inuse.webp" style="display:none;" />
+<img id="cbdphoto-cbd-hero" src="images/work-cbd-hero.webp" style="display:none" loading="lazy" />
+<img id="cbdphoto-cbd-planes" src="images/work-cbd-planes.webp" style="display:none" loading="lazy" />
+<img id="cbdphoto-cbd-grain" src="images/work-cbd-grain.webp" style="display:none" loading="lazy" />
+<img id="cbdphoto-cbd-inuse" src="images/work-cbd-inuse.webp" style="display:none" loading="lazy" />
 
 <script>
 (function() {
   var toggle = document.getElementById('nav-toggle');
   var navUl = document.querySelector('nav ul');
   if (!toggle || !navUl) return;
+  function openMenu() {
+    navUl.classList.add('nav-open');
+    toggle.classList.add('is-open');
+    toggle.setAttribute('aria-label', 'Close menu');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    var firstLink = navUl.querySelector('a');
+    if (firstLink) firstLink.focus();
+  }
+  function closeMenu() {
+    navUl.classList.remove('nav-open');
+    toggle.classList.remove('is-open');
+    toggle.setAttribute('aria-label', 'Open menu');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
   toggle.addEventListener('click', function() {
-    navUl.classList.toggle('nav-open');
-    toggle.classList.toggle('is-open');
-    toggle.setAttribute('aria-label', toggle.classList.contains('is-open') ? 'Close menu' : 'Open menu');
+    navUl.classList.contains('nav-open') ? closeMenu() : openMenu();
   });
   navUl.querySelectorAll('a').forEach(function(link) {
-    link.addEventListener('click', function() {
-      navUl.classList.remove('nav-open');
-      toggle.classList.remove('is-open');
-      toggle.setAttribute('aria-label', 'Open menu');
-    });
+    link.addEventListener('click', function() { closeMenu(); });
+  });
+  document.addEventListener('keydown', function(e) {
+    if ((e.key === 'Escape' || e.keyCode === 27) && navUl.classList.contains('nav-open')) {
+      closeMenu();
+      toggle.focus();
+    }
+  });
+  navUl.addEventListener('keydown', function(e) {
+    if (!navUl.classList.contains('nav-open')) return;
+    if (e.key !== 'Tab' && e.keyCode !== 9) return;
+    var links = navUl.querySelectorAll('a');
+    var first = links[0];
+    var last = links[links.length - 1];
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); toggle.focus(); }
+    } else {
+      if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
   });
 })();
 </script>
@@ -2293,21 +2323,7 @@ document.addEventListener('keydown', e => {
       setTimeout(setVh, 100);
     }, passiveOpt);
 
-    // 8. Prevent body scroll when mobile nav is open
-    var navToggle = document.getElementById('nav-toggle');
-    if (navToggle) {
-      navToggle.addEventListener('click', function() {
-        var isOpen = document.querySelector('nav ul.nav-open');
-        document.body.style.overflow = isOpen ? '' : 'hidden';
-      });
-      // Restore scroll if menu closes via any nav link
-      var navLinks = document.querySelectorAll('nav ul a');
-      navLinks.forEach(function(link) {
-        link.addEventListener('click', function() {
-          document.body.style.overflow = '';
-        });
-      });
-    }
+    // 8. Body scroll: managed by nav open/close functions above
 
     // 9. Lightbox: trap focus inside when open (accessibility + all browsers)
     var lightbox = document.getElementById('lightbox');

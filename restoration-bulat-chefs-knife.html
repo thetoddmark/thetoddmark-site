@@ -5,6 +5,7 @@
   <link rel="icon" href="/favicon.jpg" type="image/jpeg">
   <link rel="apple-touch-icon" href="/favicon.jpg">
   <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' www.googletagmanager.com www.google-analytics.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: https:; frame-src ko-fi.com; connect-src 'self' formspree.io www.google-analytics.com buttondown.com buttondown.email; form-action 'self' formspree.io buttondown.com buttondown.email;">
   <meta name="color-scheme" content="light">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,18 +26,28 @@
   <meta name="twitter:title" content="Bulat Damascus Chef's Knife Handle Refresh | The Todd·Mark">
   <meta name="twitter:description" content="A Bulat Damascus chef's knife, Kickstarter-era. Beautiful blade, dry wood scales. 180 and 220 grit, three coats of Walrus Oil, Renaissance Wax.">
   <script type="application/ld+json">
+[
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Bulat Damascus Chef's Knife Handle Refresh",
-    "description": "A Bulat Damascus chef's knife — Kickstarter-era, beautiful blade, dry wood scales. 180 and 220 grit, three coats of Walrus Oil, Renaissance Wax.",
-    "image": "https://thetoddmark.com/images/bulat-hero.jpg",
-    "author": { "@type": "Person", "name": "Mark Todd", "url": "https://thetoddmark.com/about" },
-    "publisher": { "@type": "Organization", "name": "The Todd·Mark", "url": "https://thetoddmark.com" },
-    "datePublished": "2026-03-18",
-    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://thetoddmark.com/restoration-bulat-chefs-knife" }
+    "headline": "Bulat Damascus Chef's Knife Handle Refresh | The Todd·Mark",
+    "description": "A Bulat Damascus chef's knife — Kickstarter-era, beautiful blade, dry wood scales. 180 and 220 grit, three coats of Walrus Oil, Renaissance Wax. Quick work, good result.",
+    "author": {"@type": "Person", "name": "Mark Todd", "url": "https://thetoddmark.com/about"},
+    "publisher": {"@type": "Organization", "name": "The Todd·Mark", "url": "https://thetoddmark.com"},
+    "url": "https://thetoddmark.com/restoration-bulat-chefs-knife",
+    "mainEntityOfPage": "https://thetoddmark.com/restoration-bulat-chefs-knife"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thetoddmark.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Restorations", "item": "https://thetoddmark.com/work"},
+      {"@type": "ListItem", "position": 3, "name": "Bulat Damascus Chef Knife", "item": "https://thetoddmark.com/restoration-bulat-chefs-knife"}
+    ]
   }
-  </script>
+]
+</script>
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="canonical" href="https://thetoddmark.com/restoration-bulat-chefs-knife">
@@ -246,18 +257,18 @@
       <text x="50" y="73" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" fill="rgba(245,240,232,0.95)" text-anchor="middle" letter-spacing="3">MARK</text>
     </svg><span style="font-family:'DM Mono',monospace;font-size:0.68rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:rgba(245,240,232,0.88);margin-left:0.75rem;white-space:nowrap;">The Todd<span style="color:#c8853a;margin:0 0.15em;">·</span>Mark</span></a>
     <button class="nav-hamburger" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
-    <ul id="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="work.html" class="nav-active">The Work</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="wishlist.html">Wishlist</a></li>
-      <li><a href="listening.html">Listening</a></li>
-      <li><a href="products.html">The Shop</a></li>
+      <ul id="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="work.html" class="nav-active" aria-current="page">The Work</a></li>
     <li><a href="shed-upgrade.html">Shed Upgrade</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="partner.html" style="color:var(--amber);">Partner</a></li>
-    </ul>
+    <li><a href="products.html">My Kit</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="wishlist.html">Wishlist</a></li>
+    <li><a href="listening.html">Listening</a></li>
+    <li><a href="partner.html" style="color:var(--amber);">Partner</a></li>
+  </ul>
   </nav>
 
   <main id="main-content">
@@ -456,19 +467,50 @@
     const toggle = document.getElementById('nav-toggle');
     const menu = document.getElementById('nav-menu');
     if (toggle && menu) {
+      function openMenu() {
+        toggle.setAttribute('aria-expanded', 'true');
+        toggle.setAttribute('aria-label', 'Close menu');
+        menu.style.display = 'flex';
+        menu.style.flexDirection = 'column';
+        menu.style.position = 'absolute';
+        menu.style.top = '100%';
+        menu.style.left = '0';
+        menu.style.right = '0';
+        menu.style.background = 'rgba(28,26,23,0.98)';
+        menu.style.padding = '1rem 2rem';
+        menu.style.gap = '1rem';
+        document.body.style.overflow = 'hidden';
+        const firstLink = menu.querySelector('a');
+        if (firstLink) firstLink.focus();
+      }
+      function closeMenu() {
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+        menu.style.display = '';
+        document.body.style.overflow = '';
+      }
       toggle.addEventListener('click', () => {
-        const expanded = toggle.getAttribute('aria-expanded') === 'true';
-        toggle.setAttribute('aria-expanded', String(!expanded));
-        menu.style.display = expanded ? '' : 'flex';
-        if (!expanded) {
-          menu.style.flexDirection = 'column';
-          menu.style.position = 'absolute';
-          menu.style.top = '100%';
-          menu.style.left = '0';
-          menu.style.right = '0';
-          menu.style.background = 'rgba(28,26,23,0.98)';
-          menu.style.padding = '1rem 2rem';
-          menu.style.gap = '1rem';
+        toggle.getAttribute('aria-expanded') === 'true' ? closeMenu() : openMenu();
+      });
+      menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => closeMenu());
+      });
+      document.addEventListener('keydown', function(navKeyHandler) {
+        if ((navKeyHandler.key === 'Escape' || navKeyHandler.keyCode === 27) && toggle.getAttribute('aria-expanded') === 'true') {
+          closeMenu();
+          toggle.focus();
+        }
+      });
+      menu.addEventListener('keydown', function(e) {
+        if (toggle.getAttribute('aria-expanded') !== 'true') return;
+        if (e.key !== 'Tab' && e.keyCode !== 9) return;
+        const links = menu.querySelectorAll('a');
+        const first = links[0];
+        const last = links[links.length - 1];
+        if (e.shiftKey) {
+          if (document.activeElement === first) { e.preventDefault(); toggle.focus(); }
+        } else {
+          if (document.activeElement === last) { e.preventDefault(); first.focus(); }
         }
       });
     }
