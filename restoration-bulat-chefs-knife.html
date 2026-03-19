@@ -100,6 +100,24 @@
       margin: 0 auto;
       padding: 0 1.5rem;
     }
+    .stats-bar {
+      background: #141210;
+      display:flex; justify-content:center; gap:0; flex-wrap:wrap;
+    }
+    .stat-item {
+      padding:1rem 2.5rem; text-align:center;
+      border-right:1px solid rgba(245,240,232,0.08);
+    }
+    .stat-item:last-child { border-right:none; }
+    .stat-value {
+      font-family: var(--serif); font-size:1.8rem; font-weight:600;
+      color:var(--amber); line-height:1; display:block;
+    }
+    .stat-label {
+      font-family:var(--mono); font-size:0.58rem; letter-spacing:0.12em;
+      text-transform:uppercase; color:rgba(245,240,232,0.4);
+      display:block; margin-top:0.3rem;
+    }
     .article-section {
       margin-bottom: 3.5rem;
     }
@@ -245,8 +263,30 @@
       </div>
     </div>
 
+
+<div class="stats-bar" role="region" aria-label="Project at a glance">
+  <div class="stat-item">
+    <span class="stat-value">~1 hr</span>
+    <span class="stat-label">Time</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-value">180→220</span>
+    <span class="stat-label">Grit</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-value">3</span>
+    <span class="stat-label">Oil Coats</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-value">Walrus + Wax</span>
+    <span class="stat-label">Finish</span>
+  </div>
+</div>
     <div class="article-body" style="padding-top:0;">
-      <img src="images/bulat-hero.jpg" class="article-hero-img" alt="Bulat Damascus chef's knife on white marble — refreshed walnut scales, beautiful Damascus blade pattern" style="width:100%;aspect-ratio:3/2;object-fit:cover;display:block;margin-bottom:3rem;">
+      <picture>
+  <source type="image/webp" srcset="images/bulat-hero.webp">
+  <img src="images/bulat-hero.jpg" class="article-hero-img" alt="Bulat Damascus chef's knife on white marble — refreshed walnut scales, beautiful Damascus blade pattern" style="width:100%;aspect-ratio:3/2;object-fit:cover;display:block;margin-bottom:3rem;">
+</picture>
 
       <!-- ── SECTION 1: THE KNIFE ── -->
       <section class="article-section" aria-labelledby="s1-title">
@@ -258,11 +298,17 @@
 
         <div class="img-row-2">
           <figure>
-            <img src="images/bulat-handle-side.jpg" alt="Bulat chef's knife handle close-up after refresh — warm walnut scales, three polished steel rivets" loading="lazy">
+            <picture>
+  <source type="image/webp" srcset="images/bulat-handle-side.webp">
+  <img src="images/bulat-handle-side.jpg" alt="Bulat chef's knife handle close-up after refresh — warm walnut scales, three polished steel rivets" loading="lazy">
+</picture>
             <figcaption>After three coats of Walrus Oil — the grain came back to life.</figcaption>
           </figure>
           <figure>
-            <img src="images/bulat-brand-handle.jpg" alt="Bulat brand stamp etched on blade near bolster, with refreshed walnut handle visible" loading="lazy">
+            <picture>
+  <source type="image/webp" srcset="images/bulat-brand-handle.webp">
+  <img src="images/bulat-brand-handle.jpg" alt="Bulat brand stamp etched on blade near bolster, with refreshed walnut handle visible" loading="lazy">
+</picture>
             <figcaption>The "Bulat" brand stamp etched near the bolster — a nice detail.</figcaption>
           </figure>
         </div>
@@ -278,7 +324,10 @@
         <p><strong>Step 3 — Renaissance Wax.</strong> A light coat of <a href="https://www.amazon.com/s?k=renaissance+wax&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color:var(--amber);text-decoration:none;border-bottom:1px solid var(--amber-light);">Renaissance Wax</a> buffed out with a lint-free cloth. This seals everything in, adds a subtle sheen, and gives the handle a hand feel that oiled wood alone doesn't quite achieve.</p>
 
         <figure>
-          <img src="images/bulat-handle-spine.jpg" alt="Bulat chef's knife spine view — showing both scales of the handle after Walrus Oil refresh" loading="lazy">
+          <picture>
+  <source type="image/webp" srcset="images/bulat-handle-spine.webp">
+  <img src="images/bulat-handle-spine.jpg" alt="Bulat chef's knife spine view — showing both scales of the handle after Walrus Oil refresh" loading="lazy">
+</picture>
           <figcaption>Spine view showing both scales — the walnut color and grain depth came up beautifully.</figcaption>
         </figure>
 
@@ -310,17 +359,26 @@
         <p>This is the kind of steel that reminds you why Damascus commands a premium. It's not decoration layered on top of functional steel — the pattern is the steel.</p>
 
         <figure>
-          <img src="images/bulat-damascus-bolster.jpg" alt="Bulat Damascus chef's knife blade close-up near bolster — scrollwork and flowing layers" loading="lazy">
+          <picture>
+  <source type="image/webp" srcset="images/bulat-damascus-bolster.webp">
+  <img src="images/bulat-damascus-bolster.jpg" alt="Bulat Damascus chef's knife blade close-up near bolster — scrollwork and flowing layers" loading="lazy">
+</picture>
           <figcaption>The Damascus pattern near the bolster — tight scrollwork transitioning into flowing lines. The "Bulat" etch is just off-frame to the right.</figcaption>
         </figure>
 
         <div class="img-row-2">
           <figure>
-            <img src="images/bulat-blade-tip.jpg" alt="Bulat Damascus blade tip area — wide flowing layers and teardrop pattern" loading="lazy">
+            <picture>
+  <source type="image/webp" srcset="images/bulat-blade-tip.webp">
+  <img src="images/bulat-blade-tip.jpg" alt="Bulat Damascus blade tip area — wide flowing layers and teardrop pattern" loading="lazy">
+</picture>
             <figcaption>The tip area — the pattern opens into wider, more dramatic flowing layers.</figcaption>
           </figure>
           <figure>
-            <img src="images/bulat-hero.jpg" alt="Full Bulat chef's knife on white marble — Damascus blade and walnut handle after refresh" loading="lazy">
+            <picture>
+  <source type="image/webp" srcset="images/bulat-hero.webp">
+  <img src="images/bulat-hero.jpg" alt="Full Bulat chef's knife on white marble — Damascus blade and walnut handle after refresh" loading="lazy">
+</picture>
             <figcaption>The complete knife. Damascus blade, refreshed walnut scales, steel pin rivets.</figcaption>
           </figure>
         </div>
