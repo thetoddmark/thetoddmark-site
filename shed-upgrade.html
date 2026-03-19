@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="theme-color" content="#1c1a17">
+  <link rel="icon" href="/favicon.jpg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="/favicon.jpg">
+  <meta charset="UTF-8">
+  <meta name="color-scheme" content="light">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WF1PP02KM3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-WF1PP02KM3");
+  </script>
+  <title>The Shed Upgrade — Tearing It Down, Building It Right | The Todd·Mark</title>
+  <meta name="description" content="A roughly 7.5&times;8&prime; shed with no power, no windows, and no insulation. The plan: tear it down and build a proper workshop. Follow the process.">
+  <meta name="keywords" content="backyard workshop build, shed upgrade Seattle, DIY workshop, workshop design, small shop layout, workshop electrical, dust collection, tool storage, workshop build log">
+  <meta property="og:title" content="The Shed Upgrade — Tearing It Down, Building It Right | The Todd·Mark">
+  <meta property="og:description" content="60 square feet of potential — and a plan to finally do something about it. Follow the full build from teardown to finished workshop.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://thetoddmark.com/shed-upgrade">
+  <meta property="og:site_name" content="The Todd·Mark">
+  <meta property="og:image" content="https://thetoddmark.com/images/shed-current-4.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://thetoddmark.com/images/shed-current-4.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    html { -webkit-text-size-adjust:100%; text-size-adjust:100%; box-sizing:border-box; scroll-behavior:smooth; }
+    *, *::before, *::after { box-sizing:inherit; -webkit-tap-highlight-color:transparent; margin:0; padding:0; }
+
+    :root {
+      --ink:       #1c1a17;
+      --warm-white:#f5f0e8;
+      --cream:     #f0e8d8;
+      --amber:     #c8853a;
+      --border:    rgba(28,26,23,0.12);
+      --ink-faint: rgba(28,26,23,0.5);
+      --body-font: 'Jost', system-ui, sans-serif;
+      --serif:     'Cormorant Garamond', Georgia, serif;
+      --mono:      'DM Mono', monospace;
+    }
+
+    body {
+      background: var(--warm-white);
+      color: var(--ink);
+      font-family: var(--body-font);
+      font-size: 1rem;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.85rem 2.5rem;
+      background: rgba(28,26,23,0.92);
+      -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(245,240,232,0.08);
+    }
+    nav ul { list-style:none; display:flex; gap:2rem; }
+    nav ul a {
+      font-family: var(--mono); font-size:0.62rem; font-weight:400;
+      letter-spacing:0.12em; text-transform:uppercase;
+      color:rgba(245,240,232,0.72); text-decoration:none;
+      transition: color 0.2s;
+    }
+    nav ul a:hover, nav ul a.nav-active { color: var(--amber); }
+    .nav-hamburger { display:none; }
+
+    /* ── ARTICLE HERO ── */
+    .article-hero {
+      padding: 5rem 2rem 2rem;
+      background: var(--ink);
+      text-align: center;
+    }
+    .article-eyebrow {
+      font-family: var(--mono); font-size:0.68rem; letter-spacing:0.18em;
+      text-transform:uppercase; color:var(--amber); margin-bottom:1.2rem;
+      display:flex; align-items:center; justify-content:center; gap:0.8rem;
+    }
+    .article-eyebrow::before, .article-eyebrow::after {
+      content:''; display:block; height:1px; width:2rem; background:var(--amber); opacity:0.5;
+    }
+    .article-title {
+      font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 600; color: var(--warm-white);
+      line-height: 1.15; margin-bottom: 1rem;
+    }
+    .article-subtitle {
+      font-family: var(--serif); font-size:1.25rem; font-weight:300;
+      font-style:italic; color:rgba(245,240,232,0.65);
+      margin-bottom: 2rem;
+    }
+    .article-meta {
+      display:flex; align-items:center; justify-content:center;
+      gap:1.5rem; flex-wrap:wrap;
+      font-family: var(--mono); font-size:0.65rem; letter-spacing:0.1em;
+      text-transform:uppercase; color:rgba(245,240,232,0.45);
+    }
+    .article-meta span { display:flex; align-items:center; gap:0.4rem; }
+
+    /* ── LIVE BADGE ── */
+    .live-badge {
+      display:inline-flex; align-items:center; gap:0.45rem;
+      background:rgba(200,133,58,0.15); border:1px solid rgba(200,133,58,0.35);
+      border-radius:2rem; padding:0.3rem 0.85rem;
+      font-family:var(--mono); font-size:0.6rem; letter-spacing:0.12em;
+      text-transform:uppercase; color:var(--amber);
+      margin-bottom:1.5rem; display:inline-flex;
+    }
+    .live-dot {
+      width:7px; height:7px; border-radius:50%;
+      background:var(--amber);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity:1; transform:scale(1); }
+      50% { opacity:0.4; transform:scale(0.8); }
+    }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      background: #141210;
+      display:flex; justify-content:center; gap:0; flex-wrap:wrap;
+    }
+    .stat-item {
+      padding:1rem 2.5rem; text-align:center;
+      border-right:1px solid rgba(245,240,232,0.08);
+    }
+    .stat-item:last-child { border-right:none; }
+    .stat-value {
+      font-family: var(--serif); font-size:1.8rem; font-weight:600;
+      color:var(--amber); line-height:1; display:block;
+    }
+    .stat-label {
+      font-family:var(--mono); font-size:0.58rem; letter-spacing:0.12em;
+      text-transform:uppercase; color:rgba(245,240,232,0.4);
+      display:block; margin-top:0.3rem;
+    }
+
+    /* ── ARTICLE BODY ── */
+    .article-body {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .section-label {
+      font-family: var(--mono); font-size:0.62rem; letter-spacing:0.2em;
+      text-transform:uppercase; color:var(--amber);
+      border-left: 3px solid var(--amber); padding-left:0.8rem;
+      margin-bottom:0.75rem; display:block;
+    }
+    .section-num {
+      color:rgba(200,133,58,0.45); margin-right:0.5em;
+    }
+
+    h2.section-title {
+      font-family: var(--serif); font-size:1.9rem; font-weight:600;
+      color:var(--ink); line-height:1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    .article-section {
+      margin-bottom: 4rem;
+      padding-bottom: 4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .article-section:last-of-type { border-bottom: none; }
+
+    p { margin-bottom: 1.25rem; font-size:1.05rem; line-height:1.8; }
+    p:last-child { margin-bottom:0; }
+
+    /* Pull quote */
+    .pull-quote {
+      margin: 2.5rem 0;
+      padding: 1.5rem 2rem;
+      border-left: 4px solid var(--amber);
+      background: rgba(200,133,58,0.06);
+      border-radius: 0 4px 4px 0;
+    }
+    .pull-quote p {
+      font-family: var(--serif); font-size:1.25rem; font-style:italic;
+      font-weight:400; color:var(--ink); margin-bottom:0; line-height:1.6;
+    }
+
+    strong { font-weight:600; color:var(--ink); }
+
+    /* Feature list */
+    .feature-list { list-style:none; margin:1.5rem 0; }
+    .feature-list li {
+      padding:0.9rem 0;
+      border-bottom:1px solid var(--border);
+      display:flex; gap:1rem; align-items:baseline;
+      font-size:1rem;
+    }
+    .feature-list li:last-child { border-bottom:none; }
+    .feature-name { font-weight:600; min-width:200px; flex-shrink:0; }
+    .feature-note { color:var(--ink-faint); font-size:0.92rem; line-height:1.6; }
+
+    /* Update log */
+    .update-entry {
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .update-entry:last-child { border-bottom:none; }
+    .update-date {
+      font-family:var(--mono); font-size:0.62rem; letter-spacing:0.12em;
+      text-transform:uppercase; color:var(--amber); margin-bottom:0.6rem;
+      display:block;
+    }
+    .update-entry p { font-size:1rem; margin-bottom:0.75rem; }
+
+    /* Ko-fi CTA block */
+    .kofi-block {
+      background: var(--ink);
+      border-radius: 6px;
+      padding: 3rem 2.5rem;
+      text-align: center;
+      margin: 3rem 0;
+    }
+    .kofi-block .k-eyebrow {
+      font-family: var(--mono); font-size:0.65rem; letter-spacing:0.18em;
+      text-transform:uppercase; color:rgba(200,133,58,0.7);
+      margin-bottom:1rem;
+    }
+    .kofi-block h3 {
+      font-family: var(--serif); font-size:1.7rem; font-weight:600;
+      color:var(--warm-white); line-height:1.2; margin-bottom:0.85rem;
+    }
+    .kofi-block p {
+      font-size:0.95rem; color:rgba(245,240,232,0.6);
+      max-width:480px; margin:0 auto 1.75rem;
+    }
+    .kofi-btn {
+      display:inline-flex; align-items:center; gap:0.5rem;
+      background:var(--amber); color:#1a1409;
+      font-family:var(--body-font); font-size:0.92rem; font-weight:600;
+      padding:0.8rem 2rem; border-radius:2px; text-decoration:none;
+      letter-spacing:0.04em; transition:opacity 0.2s;
+    }
+    .kofi-btn:hover { opacity:0.88; }
+
+    /* Comments wrapper */
+    .comments-section {
+      max-width:740px; margin:0 auto; padding:3rem 2rem 4rem;
+    }
+    .comments-section .c-eyebrow {
+      font-family:var(--mono); font-size:0.65rem; letter-spacing:0.18em;
+      text-transform:uppercase; color:var(--amber); margin-bottom:0.75rem;
+    }
+    .comments-section h2 {
+      font-family:var(--serif); font-size:1.8rem; font-weight:600;
+      color:var(--ink); margin-bottom:0.75rem;
+    }
+    .comments-section > p {
+      font-size:1rem; color:var(--ink-faint); margin-bottom:2rem;
+    }
+
+    /* ── Comment form (Formspree) ── */
+    .sc-label {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+
+    .sc-input {
+      display: block;
+      width: 100%;
+      font-family: var(--body-font);
+      font-size: 0.95rem;
+      color: var(--ink);
+      background: #ffffff;
+      border: 1px solid rgba(28,26,23,0.2);
+      border-radius: 2px;
+      padding: 0.65rem 0.9rem;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .sc-input:focus {
+      outline: none;
+      border-color: var(--amber);
+      box-shadow: 0 0 0 3px rgba(200,133,58,0.1);
+    }
+    .sc-input::placeholder { color: rgba(28,26,23,0.35); }
+
+    .sc-btn {
+      font-family: var(--body-font);
+      font-size: 0.92rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      background: var(--amber);
+      color: #1a1409;
+      border: none;
+      border-radius: 2px;
+      padding: 0.7rem 1.75rem;
+      cursor: pointer;
+      transition: opacity 0.2s;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .sc-btn:hover { opacity: 0.85; }
+    .sc-btn:active { opacity: 0.75; }
+
+    /* Back link */
+    .back-link {
+      display:inline-flex; align-items:center; gap:0.5rem;
+      font-family:var(--mono); font-size:0.65rem; letter-spacing:0.12em;
+      text-transform:uppercase; color:var(--amber); text-decoration:none;
+      margin-bottom:3rem; transition:gap 0.2s;
+    }
+    .back-link:hover { gap:0.8rem; }
+
+    /* Newsletter */
+    .newsletter-section {
+      background:var(--ink); padding:4rem 2rem; text-align:center;
+    }
+    .newsletter-section .nl-eyebrow {
+      font-family:var(--serif); font-size:0.75rem; font-weight:700;
+      letter-spacing:0.15em; color:var(--amber); text-transform:uppercase;
+      margin-bottom:1rem;
+    }
+    .newsletter-section h2 {
+      font-family:var(--serif); font-size:1.75rem; font-weight:700;
+      color:var(--warm-white); margin:0 0 1rem; line-height:1.3;
+    }
+    .newsletter-section p {
+      font-size:0.95rem; color:#a09080; line-height:1.7;
+      max-width:500px; margin:0 auto 2rem; font-family:var(--body-font);
+    }
+    .nl-form {
+      display:flex; gap:0.6rem; flex-wrap:wrap; justify-content:center;
+      max-width:500px; margin:0 auto;
+    }
+    .nl-form input[type=email] {
+      flex:1; min-width:220px; padding:0.7rem 1rem; border-radius:2rem;
+      border:1px solid rgba(245,240,232,0.15);
+      background:rgba(245,240,232,0.07); color:var(--warm-white);
+      font-family:var(--body-font); font-size:0.9rem; outline:none;
+      -webkit-appearance:none; appearance:none;
+    }
+    .nl-form button {
+      padding:0.7rem 1.6rem; border-radius:2rem; border:none;
+      background:var(--amber); color:#1a1409;
+      font-family:var(--body-font); font-size:0.9rem; font-weight:600;
+      cursor:pointer; letter-spacing:0.03em;
+      -webkit-appearance:none; appearance:none;
+    }
+    .nl-fine {
+      font-size:0.72rem; color:#6a6058; margin-top:1rem;
+      font-family:var(--body-font);
+    }
+    .nl-fine a { color:#6a6058; }
+
+    /* Footer */
+    footer {
+      background: var(--ink);
+      padding: 0.65rem 3rem;
+      display:flex; justify-content:space-between; align-items:center;
+      border-top:1px solid rgba(245,240,232,0.08);
+    }
+    .footer-copy {
+      font-family:var(--mono); font-size:0.68rem; letter-spacing:0.1em;
+      text-transform:uppercase; color:rgba(245,240,232,0.35);
+    }
+
+    /* Figcaption */
+    figcaption {
+      font-family:var(--mono); font-size:0.6rem; letter-spacing:0.09em;
+      text-transform:uppercase; color:var(--ink-faint); margin-top:0.5rem;
+    }
+
+    /* Focus visible */
+    :focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+    a:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; border-radius: 1px; }
+
+    /* Responsive */
+    @media (max-width:640px) {
+      nav { padding:0.75rem 1.25rem; -webkit-backdrop-filter:none !important; backdrop-filter:none !important; background:rgba(28,26,23,0.97) !important; }
+      nav ul { display:none; }
+      .nav-hamburger {
+        display:flex; flex-direction:column; gap:4px;
+        background:none; border:none; cursor:pointer; padding:4px;
+      }
+      nav ul.nav-open {
+        display: flex;
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(28,26,23,1);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+        z-index: 300;
+      }
+      nav ul.nav-open a {
+        font-size: 1.3rem; letter-spacing: 0.14em;
+        color: rgba(245,240,232,1); font-family: var(--mono);
+        text-transform: uppercase; text-decoration: none; font-weight: 500;
+      }
+      .nav-hamburger.is-open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+      .nav-hamburger.is-open span:nth-child(2) { opacity: 0; }
+      .nav-hamburger.is-open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+      .nav-hamburger span { transition: all 0.25s ease; display:block; width:22px; height:2px; background:rgba(245,240,232,0.8); border-radius:1px; }
+      .article-hero { padding:4rem 1.25rem 1.5rem; }
+      .article-body { padding:2.5rem 1.25rem; }
+      .stats-bar { gap:0; }
+      .stat-item { padding:0.8rem 1.2rem; flex:1 0 45%; }
+      .feature-name { min-width:unset; }
+      .feature-list li { flex-direction:column; gap:0.25rem; }
+      footer { padding:0.65rem 1.25rem; flex-wrap:wrap; gap:0.5rem; }
+      .kofi-block { padding:2rem 1.25rem; }
+      .comments-section { padding:2rem 1.25rem 3rem; }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      html { scroll-behavior: smooth; }
+    }
+  </style>
+  <link rel="canonical" href="https://thetoddmark.com/shed-upgrade">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Shed Upgrade — Tearing It Down, Building It Right",
+    "description": "A roughly 7.5×8 foot shed with no power, no windows, and no insulation. The plan: tear it down and build a proper workshop. Follow the process.",
+    "datePublished": "2026-03-19",
+    "dateModified": "2026-03-19",
+    "author": {
+      "@type": "Person",
+      "name": "Mark Todd",
+      "url": "https://thetoddmark.com/about"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "The Todd·Mark",
+      "url": "https://thetoddmark.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://thetoddmark.com/favicon.jpg"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://thetoddmark.com/shed-upgrade"
+    }
+  }
+  </script>
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:0;z-index:999;padding:0.5rem 1rem;background:var(--amber);color:var(--ink);font-family:var(--mono);font-size:0.75rem;">Skip to main content</a>
+
+<nav aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" style="display:flex;align-items:center;text-decoration:none;"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="height:38px;width:38px;flex-shrink:0;" aria-label="The Todd Mark logo" role="img">
+  <circle cx="50" cy="50" r="47" fill="none" stroke="rgba(245,240,232,0.95)" stroke-width="3.5"/>
+  <circle cx="50" cy="50" r="41" fill="none" stroke="rgba(245,240,232,0.45)" stroke-width="1.5"/>
+  <circle cx="50" cy="50" r="38" fill="none" stroke="rgba(245,240,232,0.2)" stroke-width="1"/>
+  <text x="50" y="36" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" fill="rgba(245,240,232,0.95)" text-anchor="middle" letter-spacing="2">THETODD</text>
+  <text x="50" y="57" font-family="Arial Black,Arial,sans-serif" font-size="27" font-weight="900" fill="rgba(245,240,232,0.95)" text-anchor="middle" letter-spacing="-1">TM</text>
+  <text x="50" y="73" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" fill="rgba(245,240,232,0.95)" text-anchor="middle" letter-spacing="3">MARK</text>
+</svg><span style="font-family:'DM Mono',monospace;font-size:0.68rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:rgba(245,240,232,0.88);margin-left:0.75rem;white-space:nowrap;">The Todd<span style="color:#c8853a;margin:0 0.15em;">·</span>Mark</span></a>
+  <button class="nav-hamburger" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul id="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="work.html">The Work</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="wishlist.html">Wishlist</a></li>
+    <li><a href="listening.html">Listening</a></li>
+    <li><a href="products.html">The Shop</a></li>
+    <li><a href="shed-upgrade.html" class="nav-active">Shed Upgrade</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="partner.html" style="color:var(--amber);">Partner</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="article-hero" id="main-content">
+  <div class="live-badge"><span class="live-dot"></span> In Progress · Spring 2026</div>
+  <div class="article-eyebrow">The Workshop</div>
+  <h1 class="article-title">Tearing It Down,<br>Building It Right</h1>
+  <p class="article-subtitle">An honest look at 60 square feet of potential — and what it might become</p>
+  <div class="article-meta">
+    <span>📍 Seattle, WA</span>
+    <span>📅 Spring 2026</span>
+    <span>📐 7.5&prime; × 8&prime; → ???</span>
+    <span>🪚 Build in progress</span>
+  </div>
+</header>
+
+<!-- STATS BAR -->
+<div class="stats-bar" role="region" aria-label="Current shed at a glance">
+  <div class="stat-item">
+    <span class="stat-value">~60</span>
+    <span class="stat-label">Current Sq Ft</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-value">0</span>
+    <span class="stat-label">Windows</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-value">None</span>
+    <span class="stat-label">Installed Power</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-value">None</span>
+    <span class="stat-label">Insulation</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-value">TBD</span>
+    <span class="stat-label">New Footprint</span>
+  </div>
+</div>
+
+<!-- ARTICLE BODY -->
+<main>
+<div class="article-body">
+
+  <a href="products.html" class="back-link">← The Shop</a>
+
+  <!-- SECTION 01: THE CURRENT STATE -->
+  <section class="article-section" aria-labelledby="s1-title">
+    <span class="section-label"><span class="section-num">01 /</span> The Current State</span>
+    <h2 class="section-title" id="s1-title">What I'm working with. It's not great. I'm going to be honest about that.</h2>
+
+    <p>The shed was here when we bought the house. I have no idea exactly how old it is, but based on its construction and general vibe it has been around for a while — long enough that nobody involved in its original build is likely to feel any particular attachment to it. It measures roughly 7.5 feet by 8 feet, with a ceiling height that starts at just over 6 feet on the low side and climbs to about 7 feet at the peak. On a generous day, that's about 60 square feet of floor space.</p>
+
+    <p>Currently, the shed contains: the lawn mower, the smoker, a fair amount of leftover wood from earlier projects, and — this is real — a door of unknown origin. I genuinely cannot tell you where that door came from or what it was once attached to. It has simply always been in there, and it will continue to be in there until demolition day, at which point I will figure out what to do with it.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:2rem 0;">
+      <figure style="margin:0;">
+        <img src="images/shed-current-1.jpg" alt="Side of current shed — dark wood fence, climbing plants" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;">
+        <figcaption>The side of the shed. Lush greenery is doing its best to compensate.</figcaption>
+      </figure>
+      <figure style="margin:0;">
+        <img src="images/shed-current-2.jpg" alt="Corner of the shed exterior and fence" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;">
+        <figcaption>The corner — where the fence meets the shed. Tight quarters.</figcaption>
+      </figure>
+    </div>
+
+    <p>The shed has no installed power — I run an extension cord. It has no windows, meaning the only light inside is whatever a work lamp can manage. It has no insulation. And it has enough gaps in the structure that it provides meaningful shelter to insects, rodents, and — on one memorable occasion — something that I have chosen to not think too hard about. What it does not provide, in any meaningful sense, is a comfortable or practical working environment.</p>
+
+    <p>In Seattle, where it rains approximately forever, the outdoor-adjacent nature of the current setup means I frequently find myself sitting in the backyard hoping the weather cooperates while I try to work on something. This is not ideal. To be clear: I have gotten genuinely good work done out there. But I have also lost evenings to rain, gotten tools damp that I shouldn't have, and spent more time managing the environment than actually working in it.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:2rem 0;">
+      <figure style="margin:0;">
+        <img src="images/shed-current-3.jpg" alt="Shed exterior with door visible" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;">
+        <figcaption>The roofline overhang — where the shed meets the fence. The lean-to pitch is visible here, as is just how tight everything is.</figcaption>
+      </figure>
+      <figure style="margin:0;">
+        <img src="images/shed-current-4.jpg" alt="Full shed front with potted hydrangeas" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;">
+        <figcaption>Looking along the gap between the shed wall and the fence. The climbing plants are doing their best to make it feel intentional.</figcaption>
+      </figure>
+    </div>
+
+    <div class="pull-quote">
+      <p>"179 degrees away from an ideal workshop" might be overselling it. The structure stands. The door latches. Beyond that, we're working on a canvas that truly has nowhere to go but up.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 02: WHY NOW -->
+  <section class="article-section" aria-labelledby="s2-title">
+    <span class="section-label"><span class="section-num">02 /</span> Why Now</span>
+    <h2 class="section-title" id="s2-title">At some point "I'll deal with it eventually" becomes "okay, now."</h2>
+
+    <p>I've been doing tool restoration work — and increasingly, other woodworking projects — out of that shed for long enough that the limitations have stopped being inconveniences and started being a genuine barrier. When you're doing metalwork that produces fine particles and dust, ventilation isn't optional. When you're refinishing tool handles and applying oils and finishes, temperature matters. When you're using power tools at 9pm, not having installed lights is a real problem.</p>
+
+    <p>The neighbors have been consulted — important step, given the close quarters of Seattle backyards — and they're supportive. I've been mentally sketching layouts for a while. The question isn't whether to do it anymore. The question is how to do it well, and what "well" looks like given the constraints.</p>
+
+    <p>So I'm doing this in public. Partly because I think the process is interesting, partly because I have no idea what I'm doing on the construction side and genuinely welcome input, and partly because the Ko-fi button in the corner of this site exists for exactly this purpose — if you've gotten value from these write-ups and want to put a board or a nail toward the new shop, I'm grateful for it.</p>
+  </section>
+
+  <!-- SECTION 03: THE SPACE CONSTRAINTS -->
+  <section class="article-section" aria-labelledby="s3-title">
+    <span class="section-label"><span class="section-num">03 /</span> The Space Constraints</span>
+    <h2 class="section-title" id="s3-title">Maximum footprint. Hard limits. Non-negotiable geometry.</h2>
+
+    <p>This is a Seattle backyard, not a farm. The space I'm working with is constrained on all sides — by the fence line, by the neighbor's property, by the house itself, and by the other things that need to live in the backyard (the patio, the garden beds, a functional path from the gate to the back door). After measuring carefully and being honest about what can realistically go where, here's what I'm looking at:</p>
+
+    <ul class="feature-list" aria-label="Space constraints">
+      <li>
+        <span class="feature-name">Depth</span>
+        <span class="feature-note">9 feet is realistic. 10 feet is the absolute maximum — a true stretch that requires everything to align perfectly. There is no scenario where it's 11 feet.</span>
+      </li>
+      <li>
+        <span class="feature-name">Width</span>
+        <span class="feature-note">10 feet is comfortable. 14 feet is the theoretical ceiling — that number requires me to reconsider how some other parts of the yard are organized, which is possible but not without tradeoffs.</span>
+      </li>
+      <li>
+        <span class="feature-name">Height</span>
+        <span class="feature-note">The current shed is low. The new build can go higher — full standing height throughout, plus enough headroom for storage loft potential if the design supports it.</span>
+      </li>
+      <li>
+        <span class="feature-name">Permitting</span>
+        <span class="feature-note">Seattle has clear rules on accessory structures — size, setbacks, and whether a permit is required. I'm looking into this carefully before a single board goes up.</span>
+      </li>
+    </ul>
+
+    <p>The working assumption for planning purposes is a 9' × 10' build — approximately 90 square feet, which is a 50% increase over what exists now. That's enough to change the game meaningfully. If the 10' × 14' scenario becomes viable, it changes the layout options significantly, but 9' × 10' is what I'm planning around.</p>
+  </section>
+
+  <!-- SECTION 04: THE WISHLIST -->
+  <section class="article-section" aria-labelledby="s4-title">
+    <span class="section-label"><span class="section-num">04 /</span> The Wishlist</span>
+    <h2 class="section-title" id="s4-title">What a real workshop actually needs. No compromises this time.</h2>
+
+    <p>I've spent enough time in the current shed to know exactly what I want the new one to do. Some of these are non-negotiable. Some are ambitious. All of them are on the list.</p>
+
+    <ul class="feature-list" aria-label="Workshop wishlist">
+      <li>
+        <span class="feature-name">Electrical — 110/120V</span>
+        <span class="feature-note">Standard power for lighting, chargers, the bench grinder, the random orbital sander, and basically everything else. A real circuit, not an extension cord run through the door gap.</span>
+      </li>
+      <li>
+        <span class="feature-name">Electrical — 220/240V</span>
+        <span class="feature-note">Future-proofing for a table saw, bandsaw, or other stationary machines that warrant it. Running 220V now costs nearly the same as running it later, plus you don't have to tear into the walls twice.</span>
+      </li>
+      <li>
+        <span class="feature-name">Air Filtration</span>
+        <span class="feature-note">A ceiling-mounted ambient air filter running during and after work sessions. Metalwork and woodworking both produce fine particles that you really do not want to be breathing for years.</span>
+      </li>
+      <li>
+        <span class="feature-name">Dust Collection</span>
+        <span class="feature-note">A shop vac handles incidental cleanup, but a dedicated dust collector — even a compact one — makes a real difference when you're running sanders, a planer, or a router for extended periods.</span>
+      </li>
+      <li>
+        <span class="feature-name">Natural Light</span>
+        <span class="feature-note">At minimum, one window — ideally two. Natural light is better for color accuracy when finishing work, and it makes a small space feel dramatically less like a closet.</span>
+      </li>
+      <li>
+        <span class="feature-name">Critter-Proof Construction</span>
+        <span class="feature-note">Proper framing, no gap-prone boards, metal flashing at the base, hardware cloth over any vents. The current shed has been kind to its wildlife tenants. The new one will not be.</span>
+      </li>
+      <li>
+        <span class="feature-name">Security</span>
+        <span class="feature-note">A quality deadbolt, reinforced door jamb, and probably a hasp for an additional padlock. The tools in that shed represent a meaningful investment. I'd like them to stay put.</span>
+      </li>
+      <li>
+        <span class="feature-name">Proper Tool Storage</span>
+        <span class="feature-note">Wall-mounted tool holders, French cleats, dedicated cabinet space for hand tools. Not just "a shelf" — an actual layout that makes every tool findable in under 10 seconds.</span>
+      </li>
+      <li>
+        <span class="feature-name">Workbench</span>
+        <span class="feature-note">A real, heavy, properly-mounted bench — ideally built into the design rather than sitting in the middle of the floor. Leg vise or end vise. Probably both, eventually.</span>
+      </li>
+      <li>
+        <span class="feature-name">Insulation &amp; Climate</span>
+        <span class="feature-note">Seattle winters are mild but damp. Even basic wall insulation keeps the space usable year-round and protects against humidity damage to tools. A small electric heater becomes significantly more effective in an insulated box.</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- SECTION 05: OPTIONS ON PAPER -->
+  <section class="article-section" aria-labelledby="s5-title">
+    <span class="section-label"><span class="section-num">05 /</span> Options on Paper</span>
+    <h2 class="section-title" id="s5-title">Three roof designs. Two floor plans. One wide door. Working it out with a Kindle Scribe.</h2>
+
+    <p>These are rough sketches — emphasis on rough — done on a Kindle Scribe while thinking out loud. They're not architectural drawings. They're an attempt to get the options out of my head and into a visible form, which is a useful thing to do before committing to anything. I'm sharing them here because this is a public project and honest process documentation matters more than polished presentation.</p>
+
+    <h3 style="font-family:var(--serif);font-size:1.35rem;font-weight:600;color:var(--ink);margin:2.5rem 0 1rem;">Roof Design Options</h3>
+
+    <p>Three approaches, all working within the same basic footprint. The roof geometry affects headroom, drainage, neighbor sightlines, gutter viability, and how the structure reads from the backyard — so it's worth thinking through before framing begins.</p>
+
+    <figure style="margin:1.5rem 0;">
+      <img src="images/shed-sketch-roof-4.jpeg" alt="Overview sketch comparing two roof options — lean-to and gable side by side" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;">
+      <figcaption style="margin-top:0.6rem;">The two leading options sketched side by side — lean-to on the left (matching the current roofline), gable/peaked on the right.</figcaption>
+    </figure>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;margin:2rem 0;">
+
+      <figure style="margin:0;">
+        <img src="images/shed-sketch-roof-1.jpg" alt="Sketch Option 1 — mono-pitch lean-to roof, door side and backyard views labeled" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;">
+        <figcaption style="margin-top:0.6rem;"><strong style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;">Option 1 — Lean-To / Mono-Pitch</strong><br>Flat roof like it is currently, with the high side at either end lengthwise — just taller, wider, and better-built.</figcaption>
+      </figure>
+
+      <figure style="margin:0;">
+        <img src="images/shed-sketch-roof-2.jpg" alt="Sketch Option 2 — gable/peaked roof, slopes toward house, allows gutters" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;">
+        <figcaption style="margin-top:0.6rem;"><strong style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;">Option 2 — Lean-To / Mono-Pitch (Narrow Axis)</strong><br>Flat roof but angled on the narrower dimension, with the high side either close to the main house or up on the fence line.</figcaption>
+      </figure>
+
+      <figure style="margin:0;">
+        <img src="images/shed-sketch-roof-3.jpg" alt="Sketch Option 3 — reverse pitch, slopes away from house, hides height from neighbors" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;">
+        <figcaption style="margin-top:0.6rem;"><strong style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;">Option 3 — Reverse Pitch</strong><br>Same as Option 2 but with the roof angled in the other direction — high side on the opposite end.</figcaption>
+      </figure>
+
+    </div>
+
+    <h3 style="font-family:var(--serif);font-size:1.35rem;font-weight:600;color:var(--ink);margin:3rem 0 1rem;">Expansion Concept</h3>
+
+    <p>One option that came up early: rather than a complete teardown and rebuild, expand and upgrade the existing structure — push it out to 10 feet, raise the roofline, add HardiBoard siding for low-maintenance durability, and potentially extend the footprint slightly toward the house. Less dramatic than a full rebuild, but would preserve whatever is still structurally sound in the current shed.</p>
+
+    <figure style="margin:1.5rem 0;">
+      <img src="images/shed-sketch-expansion.jpg" alt="Sketch of expansion concept — expand to 10', raise roof, HardiBoard exterior, possibly extend toward house" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;">
+      <figcaption style="margin-top:0.6rem;">Expand rather than replace — push out to 10', raise the roof, HardiBoard siding. A less disruptive path, if the existing framing is worth keeping.</figcaption>
+    </figure>
+
+    <h3 style="font-family:var(--serif);font-size:1.35rem;font-weight:600;color:var(--ink);margin:3rem 0 1rem;">Floor Plan Options</h3>
+
+    <p>Two floor plan sketches — one aspirational, one pragmatic. The honest answer is probably somewhere between them, shaped by whatever dimensions the final build ends up being.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin:1.5rem 0 2rem;">
+      <figure style="margin:0;">
+        <img src="images/shed-sketch-layout-workshop.jpg" alt="Floor plan — ambitious workshop layout with lathe, bench, grinders, drill press, table saw, miter saw, band saw, dust extraction" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;">
+        <figcaption style="margin-top:0.6rem;"><strong style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;">The Aspirational Layout</strong><br>Workbench on the left wall. Lathe along the back. Grinders and drill press in the back-right corner. Table saw and miter saw (both on rollers) in the center — movable for big cuts. Band saw and dust extraction at bottom-left. Storage wall runs the bottom. Door on the right.</figcaption>
+      </figure>
+
+      <figure style="margin:0;">
+        <img src="images/shed-sketch-layout-simple.jpg" alt="Floor plan — simple transitional layout, workbench along back wall, table saw, miter saw, lawn mower zone" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;">
+        <figcaption style="margin-top:0.6rem;"><strong style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;">The Realistic Starting Point</strong><br>Workbench along the back wall. The lawn mower, smoker, and rakes still have a dedicated zone on the left — because they need to live somewhere. Table saw and miter saw in the center. This is closer to what day one actually looks like.</figcaption>
+      </figure>
+    </div>
+
+    <h3 style="font-family:var(--serif);font-size:1.35rem;font-weight:600;color:var(--ink);margin:3rem 0 1rem;">The Wide Door Question</h3>
+
+    <p>One specific feature worth calling out: the idea of a wide double door on the backyard-facing side specifically to allow long boards and full-sheet cuts. A standard 32" or 36" door limits your ability to bring 8-foot stock or 4×8 sheet goods through without a fight. A wider opening — or a pair of doors — solves that. It's not complicated; it just has to be designed in from the start rather than retrofitted.</p>
+
+    <figure style="margin:1.5rem 0 0;">
+      <img src="images/shed-sketch-wide-door.jpeg" alt="Sketch of wide double-door option on backyard-facing side, to allow long boards and full cuts" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;max-width:420px;">
+      <figcaption style="margin-top:0.6rem;">Wide double door on the backyard side — designed in from the start so 8-foot stock doesn't require a wrestling match to get through.</figcaption>
+    </figure>
+
+  </section>
+
+  <!-- SECTION 06: DESIGN CONSIDERATIONS -->
+  <section class="article-section" aria-labelledby="s6-title">
+    <span class="section-label"><span class="section-num">06 /</span> Design Considerations</span>
+    <h2 class="section-title" id="s5-title">Maximizing 90 square feet is an interesting problem. Let's talk about it.</h2>
+
+    <p>The single most important principle in a small shop layout is that every inch has to earn its place. In a 9' × 10' space, furniture placement, workflow direction, and storage strategy are all interconnected — you can't just put things where they fit and hope for the best.</p>
+
+    <p>Some of the things I'm working through: whether a linear layout (bench along one long wall, machines along the other) makes more sense than a U-shape. How to handle the floor — concrete for easy cleanup, or wood for comfort during long sessions? Where the door goes, since its swing direction determines how much usable wall space I have on either side. Whether a small loft for material storage is worth the headroom sacrifice.</p>
+
+    <div class="pull-quote">
+      <p>In a space this size, the difference between a good layout and a frustrating one isn't measured in feet — it's measured in inches. The door swing, the bench height, where the power outlets are: all of it compounds over thousands of hours of use.</p>
+    </div>
+
+    <p>I'm also thinking about the exterior. The current shed is painted white with a dark door — a combination that actually looks pretty good against the dark fence. Whatever replaces it should be at least as considered in terms of how it fits the yard. This isn't just a utilitarian structure; it's something I'll be looking at every day for years.</p>
+
+    <p>This is genuinely an area where I'd love input from people who've done it. If you've built or designed a small shop, or have opinions on layout, flooring, the 110 vs. 220 question, or anything else — the comments are open below. I mean it.</p>
+  </section>
+
+  <!-- SECTION 07: THE BUDGET REALITY -->
+  <section class="article-section" aria-labelledby="s7-title">
+    <span class="section-label"><span class="section-num">07 /</span> The Budget Reality</span>
+    <h2 class="section-title" id="s7-title">Not unlimited. Definitely not zero. Somewhere in between, trying to be smart about it.</h2>
+
+    <p>I'm not going to pretend this is a cheap project. A well-built 9' × 10' structure with proper framing, decent siding, a real roof, insulation, electrical (including 220V service), windows, and a finished interior is a meaningful investment — especially in Seattle, where materials costs tend to run high and licensed electrical work isn't inexpensive.</p>
+
+    <p>The goal is to spend the money where it matters most and cut corners only where it genuinely doesn't. Electrical isn't a place to cut corners — both for safety reasons and because you only want to run conduit once. Framing isn't a place to cut corners. The workbench surface, on the other hand? A torsion box benchtop can be built for very little and will outlast a cheap purchased alternative by decades.</p>
+
+    <p>The Ko-fi link on this page is real. If the write-ups here have been useful to you and you want to contribute something toward the build — a box of screws, a two-by-four, an afternoon of electrical labor — I'm grateful for it. Every contribution is noted, and I'll keep the progress log below updated as things move forward.</p>
+
+    <!-- KO-FI CTA INLINE -->
+    <div class="kofi-block">
+      <div class="k-eyebrow">Support the Build</div>
+      <h3>Want to put a board toward the new shop?</h3>
+      <p>Ko-fi contributions go directly toward materials, electrical work, and the other real costs of turning a decrepit shed into a functioning workshop. No subscription, no pressure — just a button if you want to use it.</p>
+      <a href="https://ko-fi.com/thetoddmark" target="_blank" rel="noopener noreferrer" class="kofi-btn">🪚 Support the Shed Upgrade</a>
+    </div>
+  </section>
+
+  <!-- SECTION 08: PROGRESS LOG -->
+  <section class="article-section" aria-labelledby="s8-title">
+    <span class="section-label"><span class="section-num">08 /</span> Progress Log</span>
+    <h2 class="section-title" id="s8-title">Updates as they happen. In order. With dates.</h2>
+
+    <p>This section will grow as the project moves forward. I'll note meaningful milestones — design decisions made, materials acquired, work completed — along with anything that didn't go as planned. The honest version, not the cleaned-up version.</p>
+
+    <div class="update-entry">
+      <span class="update-date">March 2026 — Initial Post</span>
+      <p>The project is officially in the planning stage. The neighbors have signed off. The current shed has been documented in photos (see above). The wishlist is written. The budget is being scoped. Nothing has been built yet, nothing has been torn down yet, but the intention is now public — which has a way of making things feel more real.</p>
+      <p>If you have thoughts on layout, materials, electrical approach, or anything else — the comments section below is open. I'm particularly interested in hearing from people who've done something similar in a tight urban lot.</p>
+    </div>
+
+    <!-- Future entries will be added here as the project progresses:
+    <div class="update-entry">
+      <span class="update-date">Month Year — Milestone</span>
+      <p>Description of what happened.</p>
+    </div>
+    -->
+
+  </section>
+
+</div><!-- /article-body -->
+</main>
+
+<!-- COMMENTS -->
+<div style="background:var(--cream);border-top:1px solid var(--border);">
+  <div class="comments-section">
+    <div class="c-eyebrow">Community Input</div>
+    <h2>Have thoughts? I want to hear them.</h2>
+    <p>Layout ideas, electrical opinions, things you'd do differently, mistakes I'm about to make — all welcome. No account needed.</p>
+
+    <form
+      id="shed-comment-form"
+      action="https://formspree.io/f/mwvrywan"
+      method="POST"
+      style="margin-top:1.75rem;"
+    >
+      <!-- Honeypot spam trap — hidden from real users -->
+      <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+        <div>
+          <label for="sc-name" class="sc-label">Name <span style="color:var(--amber);">*</span></label>
+          <input
+            type="text" id="sc-name" name="name"
+            placeholder="Your name"
+            required autocomplete="name"
+            class="sc-input"
+          >
+        </div>
+        <div>
+          <label for="sc-email" class="sc-label">Email <span style="color:var(--amber);">*</span></label>
+          <input
+            type="email" id="sc-email" name="email"
+            placeholder="your@email.com"
+            required autocomplete="email"
+            class="sc-input"
+          >
+        </div>
+      </div>
+
+      <div style="margin-bottom:1.25rem;">
+        <label for="sc-message" class="sc-label">Your thoughts <span style="color:var(--amber);">*</span></label>
+        <textarea
+          id="sc-message" name="message"
+          placeholder="Share your thoughts — layout ideas, electrical opinions, mistakes I'm about to make…"
+          required rows="5"
+          class="sc-input"
+          style="resize:vertical;"
+        ></textarea>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;">
+        <button type="submit" class="sc-btn">Send it →</button>
+        <span style="font-family:var(--mono);font-size:0.6rem;letter-spacing:0.08em;color:var(--ink-faint);">Your email won't be published.</span>
+      </div>
+
+      <!-- Success message (hidden until form submits) -->
+      <div id="sc-success" style="display:none;margin-top:1.5rem;padding:1.25rem 1.5rem;background:rgba(200,133,58,0.08);border:1px solid rgba(200,133,58,0.3);border-radius:2px;">
+        <p style="font-family:var(--mono);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--amber);margin-bottom:0.4rem;">Received</p>
+        <p style="font-size:0.95rem;color:var(--ink);margin:0;">Thanks — I read every one of these. I'll follow up if I have questions.</p>
+      </div>
+    </form>
+
+    <script>
+      (function() {
+        var form = document.getElementById('shed-comment-form');
+        var success = document.getElementById('sc-success');
+        if (!form) return;
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var data = new FormData(form);
+          fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          }).then(function(res) {
+            if (res.ok) {
+              form.style.display = 'none';
+              success.style.display = 'block';
+            } else {
+              alert('Something went wrong — please try again or reach out via the contact page.');
+            }
+          }).catch(function() {
+            alert('Something went wrong — please try again or reach out via the contact page.');
+          });
+        });
+      })();
+    </script>
+  </div>
+</div>
+
+<!-- NEWSLETTER -->
+<div class="newsletter-section">
+  <div class="nl-eyebrow">The Newsletter</div>
+  <h2>Follow the build as it happens.</h2>
+  <p>Restoration write-ups and shed upgrade updates — when there's something worth saying. No schedule, no noise.</p>
+  <form action="https://buttondown.com/api/emails/embed-subscribe/TheToddMark" method="post" class="embeddable-buttondown-form nl-form">
+    <label for="bd-email-shed" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Email address</label>
+    <input type="email" name="email" id="bd-email-shed" placeholder="your@email.com" required />
+    <button type="submit">Subscribe →</button>
+  </form>
+  <p class="nl-fine"><a href="https://buttondown.com/TheToddMark" target="_blank" rel="noopener noreferrer">View past issues</a> · Powered by Buttondown</p>
+</div>
+
+<footer>
+  <div class="footer-copy">© 2026 · TheToddMark.com · Two first names. One workshop.</div>
+  <a href="https://ko-fi.com/thetoddmark" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.4rem;background:var(--amber);color:#1a1409;font-family:inherit;font-size:0.78rem;font-weight:500;padding:0.45rem 1.1rem;border-radius:2rem;text-decoration:none;letter-spacing:0.05em;white-space:nowrap;">🪚 Want to support the shed upgrade?</a>
+  <div class="footer-logo"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="height:60px;width:60px;flex-shrink:0;" aria-label="The Todd Mark logo" role="img">
+  <circle cx="50" cy="50" r="47" fill="none" stroke="rgba(245,240,232,0.95)" stroke-width="3.5"/>
+  <circle cx="50" cy="50" r="41" fill="none" stroke="rgba(245,240,232,0.45)" stroke-width="1.5"/>
+  <circle cx="50" cy="50" r="38" fill="none" stroke="rgba(245,240,232,0.2)" stroke-width="1"/>
+  <text x="50" y="36" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" fill="rgba(245,240,232,0.95)" text-anchor="middle" letter-spacing="2">THETODD</text>
+  <text x="50" y="57" font-family="Arial Black,Arial,sans-serif" font-size="27" font-weight="900" fill="rgba(245,240,232,0.95)" text-anchor="middle" letter-spacing="-1">TM</text>
+  <text x="50" y="73" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" fill="rgba(245,240,232,0.95)" text-anchor="middle" letter-spacing="3">MARK</text>
+</svg></div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('nav-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', function() {
+      const isOpen = menu.classList.toggle('nav-open');
+      toggle.classList.toggle('is-open', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen);
+      toggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    menu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        menu.classList.remove('nav-open');
+        toggle.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+        document.body.style.overflow = '';
+      });
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && menu.classList.contains('nav-open')) {
+        menu.classList.remove('nav-open');
+        toggle.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+        document.body.style.overflow = '';
+        toggle.focus();
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
