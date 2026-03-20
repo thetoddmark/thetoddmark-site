@@ -5,26 +5,6 @@ _Last updated: March 20, 2026_
 
 ## 🔲 Open Tasks
 
-### 🔴 High Priority
-
-#### 1. Migrate from Netlify to GitHub Pages
-Steps (in order):
-- [ ] Add a `CNAME` file to the repo root containing: `thetoddmark.com`
-- [ ] On GitHub.com: go to repo **Settings → Pages → Source → Deploy from branch → main → / (root)**
-- [ ] Set custom domain to `thetoddmark.com` in GitHub Pages settings
-- [ ] Update DNS at your registrar/host:
-  - Add 4 A records pointing to GitHub Pages IPs:
-    `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-  - Add a CNAME record: `www` → `<yourgithubusername>.github.io`
-- [ ] Wait for GitHub to issue SSL cert (up to 24 hours; usually under 1 hour)
-- [ ] Verify site loads correctly at https://thetoddmark.com
-- [ ] Verify www.thetoddmark.com redirects to thetoddmark.com
-- [ ] Delete or archive the Netlify project (gleeful-lily-f39b5c)
-- [ ] Update PROJECT-NOTES.md to reflect new deploy method
-- [ ] Note: `_redirects` is a Netlify-specific file — it does nothing on GitHub Pages (safe to leave, harmless)
-
----
-
 ### 🟠 Medium Priority
 
 #### 2. Fix products.html base64 images
@@ -72,6 +52,14 @@ Steps (in order):
 ## ✅ Completed Tasks
 
 ### Session: March 20, 2026
+- [x] **Migrated hosting from Netlify to GitHub Pages**
+  - CNAME file already present in repo (`thetoddmark.com`)
+  - GitHub Pages enabled: Deploy from branch → main → / (root)
+  - DNS updated at Namecheap: 4 GitHub A records + www CNAME → thetoddmark.github.io
+  - SSL cert issued, Enforce HTTPS enabled
+  - Site confirmed live at https://thetoddmark.com
+  - Netlify project (gleeful-lily-f39b5c) deleted
+  - PROJECT-NOTES.md updated to reflect GitHub Pages as deploy method
 - [x] **Fixed nav bar height inconsistency** on `partner.html` and `shed-upgrade.html`
   - Both pages used `padding: 0.85rem 2.5rem` without an explicit height
   - All other pages use `height: 64px; padding: 0 3rem` — applied same to both affected pages
