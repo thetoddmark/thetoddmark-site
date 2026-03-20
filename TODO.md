@@ -7,11 +7,8 @@ _Last updated: March 20, 2026_
 
 ### 🟠 Medium Priority
 
-#### 2. Fix products.html base64 images
-- [ ] Audit all base64-encoded images in `products.html` (currently 87 KB file)
-- [ ] Export each base64 image as an external `.jpg` + `.webp` file into `images/`
-- [ ] Replace inline base64 `<img src="data:...">` with `<picture>` elements using WebP + JPEG fallback
-- [ ] Verify all product images render correctly after replacement
+#### 2. ~~Fix products.html base64 images~~ — Already clean
+- products.html only contains one tiny SVG noise texture (intentional); no JPEG base64 found
 
 #### 3. Organise stray root-level images
 - [ ] Move chip-breaker-screwdriver images from repo root into `images/`:
@@ -22,11 +19,6 @@ _Last updated: March 20, 2026_
 - [ ] Move `mark-portrait.png` (3.7 MB) into `images/` if not already referenced from there
 - [ ] Update all `src` references in `build-chip-breaker-screwdriver.html` and `about.html` accordingly
 - [ ] Confirm `og-image.jpg`, `favicon.jpg`, and `tm-logo.jpg` in root are intentionally there (some root placement may be required)
-
-#### 4. Replace base64 YouTube avatars in yt-avatars.json
-- [ ] Audit `yt-avatars.json` — currently contains base64 avatar data for 8 creators
-- [ ] Replace each base64 blob with a direct YouTube CDN avatar URL (pattern already established for A Plane Life and Gordon Addison)
-- [ ] Verify avatars still load on `resources.html`
 
 ---
 
@@ -52,6 +44,10 @@ _Last updated: March 20, 2026_
 ## ✅ Completed Tasks
 
 ### Session: March 20, 2026
+- [x] **Replaced base64 images in resources.html** — 1.2 MB → 97 KB (92% reduction)
+  - 15 YouTube creator avatars replaced with YouTube CDN URLs (`yt3.googleusercontent.com`)
+  - 7 lightbox restoration photos extracted as real `.jpg` files in `images/`
+  - `yt-avatars.json` identified as unused file (not referenced anywhere)
 - [x] **Migrated hosting from Netlify to GitHub Pages**
   - CNAME file already present in repo (`thetoddmark.com`)
   - GitHub Pages enabled: Deploy from branch → main → / (root)
