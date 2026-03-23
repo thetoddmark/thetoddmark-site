@@ -6,13 +6,6 @@ _Last updated: March 23, 2026_
 ## 🔲 Open Tasks
 
 ### Lighthouse — Remaining Performance Wins
-- [ ] **Resize restoration article images** — resize to ~2× their displayed width (currently full-camera-res); biggest gains on german-perfect-handle (ph-tools-arrival, ph-before-wood, ph-before-blade, ph-before-closeup) — ~4,600 KiB potential savings
-- [ ] **Resize product thumbnail images** — scotchbrite-pads.webp and many others served at 600–700px but displayed at 32–64px; regenerate at correct sizes
-- [ ] **Resize `shed-current-1.jpg` for index.html** — served at 2400×1800px but displayed at ~283×212px on mobile; needs a ~600px-wide variant specifically for index.html
-- [ ] **Fix color contrast** — `--amber` (#c8853a) fails WCAG AA (2.69:1 ratio, needs 4.5:1); affects ~60+ elements across site; needs design decision on new text color for small amber text
-- [ ] **Fix heading hierarchy** — audit and correct skipped heading levels across pages
-- [ ] **Add `height` attributes** to unsized `<img>` tags (work.html has 38; others TBD)
-- [ ] **Resize `shed-current-1.jpg` for index.html** — served at 2400×1800px but displayed at ~283×212px on mobile; needs a ~600px-wide variant specifically for index.html
 - [ ] **Fix color contrast** — `--amber` (#c8853a) fails WCAG AA (2.69:1 ratio, needs 4.5:1); affects ~60+ elements across site; needs design decision on new text color for small amber text
 - [ ] **Fix heading hierarchy** — audit and correct skipped heading levels across pages
 - [ ] **Add `height` attributes** to unsized `<img>` tags (work.html has 38; others TBD)
@@ -20,6 +13,16 @@ _Last updated: March 23, 2026_
 ---
 
 ## ✅ Completed Tasks
+
+### Session: March 23, 2026 (continued — image resizing pass)
+- [x] **Resized 60 restoration article images** across 7 pages — all images >1600px wide shrunk to 1600px max; WebP regenerated in-place; **~84 MB total freed**
+  - German Perfect Handle: ph-tools-arrival, ph-before-wood, ph-before-blade, ph-before-closeup + all 40 other ph-* images
+  - Awl/Marking Knife: 5 finished photos (4032→1600px)
+  - Bulat chef's knife: 6 images (2048–3086px → 1600px)
+  - Chip Breaker Screwdriver build: 8 cbd-* images including cbd-inuse (4284px), cbd-kit-* (4157–3675KB → 200–400KB)
+  - Bridgeport Multitool: 2 images (1908→1600px)
+- [x] **Resized 9 product thumbnail images** in products.html — 400–748px → 160px (2× retina for 80px display); scotchbrite-pads alone 257KB → 7KB
+- [x] **Resized shed-current-1.jpg for index.html** — created `shed-current-1-sm.jpg` at 600×450px (2400px original); updated index.html to use `<picture>` with small variant
 
 ### Session: March 23, 2026 (continued — index.html base64 extraction)
 - [x] **Extracted 8 base64 images from index.html** — HTML file 1,152 KB → 84 KB (−1,043 KB, 93% reduction)
