@@ -8,14 +8,26 @@ _Last updated: March 23, 2026_
 ### Lighthouse — Remaining Performance Wins
 - [ ] **Resize restoration article images** — resize to ~2× their displayed width (currently full-camera-res); biggest gains on german-perfect-handle (ph-tools-arrival, ph-before-wood, ph-before-blade, ph-before-closeup) — ~4,600 KiB potential savings
 - [ ] **Resize product thumbnail images** — scotchbrite-pads.webp and many others served at 600–700px but displayed at 32–64px; regenerate at correct sizes
+- [ ] **Resize `shed-current-1.jpg` for index.html** — served at 2400×1800px but displayed at ~283×212px on mobile; needs a ~600px-wide variant specifically for index.html
 - [ ] **Fix color contrast** — `--amber` (#c8853a) fails WCAG AA (2.69:1 ratio, needs 4.5:1); affects ~60+ elements across site; needs design decision on new text color for small amber text
 - [ ] **Fix heading hierarchy** — audit and correct skipped heading levels across pages
 - [ ] **Add `height` attributes** to unsized `<img>` tags (work.html has 38; others TBD)
-- [ ] **Run Lighthouse on index.html** — not yet audited
+- [ ] **Resize `shed-current-1.jpg` for index.html** — served at 2400×1800px but displayed at ~283×212px on mobile; needs a ~600px-wide variant specifically for index.html
+- [ ] **Fix color contrast** — `--amber` (#c8853a) fails WCAG AA (2.69:1 ratio, needs 4.5:1); affects ~60+ elements across site; needs design decision on new text color for small amber text
+- [ ] **Fix heading hierarchy** — audit and correct skipped heading levels across pages
+- [ ] **Add `height` attributes** to unsized `<img>` tags (work.html has 38; others TBD)
 
 ---
 
 ## ✅ Completed Tasks
+
+### Session: March 23, 2026 (continued — index.html base64 extraction)
+- [x] **Extracted 8 base64 images from index.html** — HTML file 1,152 KB → 84 KB (−1,043 KB, 93% reduction)
+  - Hero logo: `data:image/jpeg;base64` → `images/index-hero.jpg` + `.webp`; wrapped in `<picture>`
+  - 7 Mac Tools lightbox photos: extracted as `images/index-mac-before1/2`, `index-mac-mid1/2`, `index-mac-after1/2/3` (jpg + webp)
+- [x] **Fixed hero image LCP** — removed `loading="lazy"` and `decoding="async"`; added `fetchpriority="high"` and `width`/`height` attributes
+- [x] **Added `<link rel="preload">` for hero image** in `<head>` — browser fetches it at parse time
+- [x] **Fixed malformed `lb-main-img` tag** in index.html — stray `/ loading="lazy"` removed (same fix previously done in work.html and products.html)
 
 ### Session: March 23, 2026 (continued — Lighthouse pass)
 - [x] **Removed `loading="lazy"` from `bpmt-gallery-img`** in work.html — was LCP element causing 18,410ms element render delay
