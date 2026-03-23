@@ -5,23 +5,18 @@ _Last updated: March 23, 2026_
 
 ## 🔲 Open Tasks
 
-### 🟡 Lower Priority
-
-#### 1. Compress cbd-planes.jpg (still large even as WebP)
-- `cbd-planes.webp` is 1.7 MB — consider resizing to max 2400px wide before re-converting
-- Other cbd-*.webp files are reasonable (294–582 KB)
-
-#### 2. Audit shed-current-*.jpg images for resize opportunity
-- These are 3–5 MB JPGs (1.2–2.4 MB as WebP) — likely far larger than needed for web display
-- Consider resizing to max 2400px wide to reduce file sizes further
-
-#### 3. Consider removing yt-avatars.json
-- File contains base64 avatar data for 8 creators but is not referenced by any HTML or JS
-- Either delete it or repurpose it — currently dead weight in the repo
+_No open tasks — backlog is clear._
 
 ---
 
 ## ✅ Completed Tasks
+
+### Session: March 23, 2026 (continued)
+- [x] **Fixed double-nested `<picture>` bug in products.html** — 4 product cards (Walrus Oil, Fiebing's, Renaissance Wax, Oxalic Acid) had broken outer `<picture>` wrapper with no `<img>`; removed duplicates
+- [x] **Fixed malformed `lb-main-img` tag in products.html** — stray `/ loading="lazy"` was self-closing the tag; same issue previously fixed in work.html
+- [x] **Resized cbd-planes.jpg to 2400px wide** — 4.2 MB → 1.2 MB JPG; WebP regenerated 1.6 MB → 680 KB
+- [x] **Resized shed-current-*.jpg to 2400px wide** — 3.8–5.5 MB → 811 KB–1.4 MB JPG; WebP regenerated 1.1–2.3 MB → 280–762 KB
+- [x] **Deleted yt-avatars.json** — confirmed no references anywhere; removed dead weight from repo
 
 ### Session: March 23, 2026
 - [x] **Organised stray root-level images** — moved cbd-*.jpg and mark-portrait.png into `images/`
