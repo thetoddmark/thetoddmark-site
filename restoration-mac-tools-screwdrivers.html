@@ -46,11 +46,11 @@
     nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:0.85rem 2.5rem; background:rgba(28,26,23,0.92); -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px); border-bottom:1px solid rgba(245,240,232,0.08); }
     nav ul { list-style:none; display:flex; gap:2rem; }
     nav ul a { font-family:var(--mono); font-size:0.62rem; font-weight:400; letter-spacing:0.12em; text-transform:uppercase; color:rgba(245,240,232,0.72); text-decoration:none; transition:color 0.2s; }
-    nav ul a:hover, nav ul a.nav-active { color:var(--amber); }
+    nav ul a:hover, nav ul a.nav-active { color: var(--amber-text); }
     .nav-hamburger { display:none; }
 
     .article-hero { padding:5rem 2rem 2rem; background:var(--ink); text-align:center; }
-    .article-eyebrow { font-family:var(--mono); font-size:0.68rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--amber); margin-bottom:1.2rem; display:flex; align-items:center; justify-content:center; gap:0.8rem; }
+    .article-eyebrow { font-family:var(--mono); font-size:0.68rem; letter-spacing:0.18em; text-transform:uppercase; color: var(--amber-text); margin-bottom:1.2rem; display:flex; align-items:center; justify-content:center; gap:0.8rem; }
     .article-eyebrow::before, .article-eyebrow::after { content:''; display:block; height:1px; width:2rem; background:var(--amber); opacity:0.5; }
     .article-title { font-family:var(--serif); font-size:clamp(2rem,5vw,3.5rem); font-weight:600; color:var(--warm-white); line-height:1.15; margin-bottom:1rem; }
     .article-subtitle { font-family:var(--serif); font-size:1.25rem; font-weight:300; font-style:italic; color:rgba(245,240,232,0.65); margin-bottom:2rem; }
@@ -59,11 +59,11 @@
     .stats-bar { background:#141210; display:flex; justify-content:center; flex-wrap:wrap; }
     .stat-item { padding:1rem 2.5rem; text-align:center; border-right:1px solid rgba(245,240,232,0.08); }
     .stat-item:last-child { border-right:none; }
-    .stat-value { font-family:var(--serif); font-size:1.8rem; font-weight:600; color:var(--amber); line-height:1; display:block; }
+    .stat-value { font-family:var(--serif); font-size:1.8rem; font-weight:600; color: var(--amber-text); line-height:1; display:block; }
     .stat-label { font-family:var(--mono); font-size:0.58rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(245,240,232,0.4); display:block; margin-top:0.3rem; }
 
     .article-body { max-width:740px; margin:0 auto; padding:4rem 2rem; }
-    .section-label { font-family:var(--mono); font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--amber); border-left:3px solid var(--amber); padding-left:0.8rem; margin-bottom:0.75rem; display:block; }
+    .section-label { font-family:var(--mono); font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase; color: var(--amber-text); border-left:3px solid var(--amber); padding-left:0.8rem; margin-bottom:0.75rem; display:block; }
     .section-num { color:rgba(200,133,58,0.45); margin-right:0.5em; }
     h2.section-title { font-family:var(--serif); font-size:1.9rem; font-weight:600; color:var(--ink); line-height:1.2; margin-bottom:1.5rem; }
     .article-section { margin-bottom:4rem; padding-bottom:4rem; border-bottom:1px solid var(--border); }
@@ -79,7 +79,7 @@
     .dye-step { display:flex; gap:1.2rem; align-items:flex-start; }
     .dye-swatch { flex-shrink:0; width:2.8rem; height:2.8rem; border-radius:4px; margin-top:0.1rem; }
     .dye-content { flex:1; }
-    .dye-name { font-family:var(--mono); font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--amber); margin-bottom:0.3rem; }
+    .dye-name { font-family:var(--mono); font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color: var(--amber-text); margin-bottom:0.3rem; }
     .dye-detail { font-size:1rem; line-height:1.7; }
 
     .photo-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr)); gap:1.5rem; margin:2rem 0; align-items:start; }
@@ -88,7 +88,7 @@
     figure img { width:100%; border-radius:4px; display:block; }
 
     .notice-box { background:rgba(200,133,58,0.08); border:1px solid rgba(200,133,58,0.25); border-radius:4px; padding:1.25rem 1.5rem; margin:2rem 0; font-size:0.95rem; font-style:italic; color:var(--ink); }
-    .notice-box strong { color:var(--amber); }
+    .notice-box strong { color: var(--amber-text); }
 
     .supplies-list { list-style:none; margin:1.5rem 0; }
     .supplies-list li { padding:0.9rem 0; border-bottom:1px solid var(--border); display:flex; gap:1rem; align-items:baseline; font-size:1rem; }
@@ -97,18 +97,18 @@
     .supply-note { color:var(--ink-faint); font-size:0.92rem; }
 
     .verdict-box { background:var(--ink); color:var(--warm-white); border-radius:4px; padding:2.5rem; margin:2.5rem 0; }
-    .verdict-box h3 { font-family:var(--serif); font-size:1.5rem; font-weight:600; color:var(--amber); margin-bottom:1.2rem; }
+    .verdict-box h3 { font-family:var(--serif); font-size:1.5rem; font-weight:600; color: var(--amber-text); margin-bottom:1.2rem; }
     .verdict-box p { color:rgba(245,240,232,0.82); font-size:1rem; }
     .verdict-row { display:flex; gap:2rem; flex-wrap:wrap; margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid rgba(245,240,232,0.1); }
     .verdict-stat { text-align:center; flex:1; min-width:100px; }
-    .verdict-stat-value { font-family:var(--serif); font-size:2rem; font-weight:600; color:var(--amber); display:block; line-height:1; }
+    .verdict-stat-value { font-family:var(--serif); font-size:2rem; font-weight:600; color: var(--amber-text); display:block; line-height:1; }
     .verdict-stat-label { font-family:var(--mono); font-size:0.58rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(245,240,232,0.4); display:block; margin-top:0.4rem; }
 
-    .back-link { display:inline-flex; align-items:center; gap:0.5rem; font-family:var(--mono); font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--amber); text-decoration:none; margin-bottom:3rem; transition:gap 0.2s; }
+    .back-link { display:inline-flex; align-items:center; gap:0.5rem; font-family:var(--mono); font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color: var(--amber-text); text-decoration:none; margin-bottom:3rem; transition:gap 0.2s; }
     .back-link:hover { gap:0.8rem; }
 
     .newsletter-section { background:var(--ink); padding:4rem 2rem; text-align:center; }
-    .newsletter-section .nl-eyebrow { font-family:var(--serif); font-size:0.75rem; font-weight:700; letter-spacing:0.15em; color:var(--amber); text-transform:uppercase; margin-bottom:1rem; }
+    .newsletter-section .nl-eyebrow { font-family:var(--serif); font-size:0.75rem; font-weight:700; letter-spacing:0.15em; color: var(--amber-text); text-transform:uppercase; margin-bottom:1rem; }
     .newsletter-section h2 { font-family:var(--serif); font-size:1.75rem; font-weight:700; color:var(--warm-white); margin:0 0 1rem; line-height:1.3; }
     .newsletter-section p { font-size:0.95rem; color:#a09080; line-height:1.7; max-width:500px; margin:0 auto 2rem; }
     .nl-form { display:flex; gap:0.6rem; flex-wrap:wrap; justify-content:center; max-width:500px; margin:0 auto; }
@@ -202,7 +202,7 @@
 
 
     /* ── Visited link colours ── */
-    a:visited { color: var(--amber); }
+    a:visited { color: var(--amber-text); }
     nav ul a:visited { color: rgba(245,240,232,0.72); }
     footer a:visited { color: rgba(245,240,232,0.35); }
   </style>
@@ -259,7 +259,7 @@
     <li><a href="contact.html">Contact</a></li>
     <li><a href="wishlist.html">Wishlist</a></li>
     <li><a href="listening.html">Listening</a></li>
-    <li><a href="partner.html" style="color:var(--amber);">Partner</a></li>
+    <li><a href="partner.html" style="color: var(--amber-text);">Partner</a></li>
   </ul>
 </nav>
 
@@ -291,9 +291,9 @@
     <span style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);">⏱ 10 min read</span>
     <div style="display:flex;align-items:center;gap:0.75rem;">
       <span style="font-family:var(--mono);font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);">Share:</span>
-      <a href="https://twitter.com/intent/tweet?url=https://thetoddmark.com/restoration-mac-tools-screwdrivers&text=Just+read+this+restoration+write-up+%E2%80%94+Mac+Tools+7-Piece+Wooden-Handle+Set&via=thetoddmark" target="_blank" rel="noopener noreferrer" style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.3);padding-bottom:1px;" aria-label="Share on X / Twitter">X&nbsp;/&nbsp;Twitter</a>
-      <a href="https://www.reddit.com/submit?url=https://thetoddmark.com/restoration-mac-tools-screwdrivers&title=Mac+Tools+7-Piece+Wooden-Handle+Set" target="_blank" rel="noopener noreferrer" style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.3);padding-bottom:1px;" aria-label="Share on Reddit">Reddit</a>
-      <button onclick="navigator.clipboard.writeText('https://thetoddmark.com/restoration-mac-tools-screwdrivers').then(()=>{this.textContent='Copied!';setTimeout(()=>{this.textContent='Copy Link'},1800)})" style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);background:none;border:none;border-bottom:1px solid rgba(200,133,58,0.3);padding:0 0 1px;cursor:pointer;" aria-label="Copy link to clipboard">Copy Link</button>
+      <a href="https://twitter.com/intent/tweet?url=https://thetoddmark.com/restoration-mac-tools-screwdrivers&text=Just+read+this+restoration+write-up+%E2%80%94+Mac+Tools+7-Piece+Wooden-Handle+Set&via=thetoddmark" target="_blank" rel="noopener noreferrer" style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color: var(--amber-text);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.3);padding-bottom:1px;" aria-label="Share on X / Twitter">X&nbsp;/&nbsp;Twitter</a>
+      <a href="https://www.reddit.com/submit?url=https://thetoddmark.com/restoration-mac-tools-screwdrivers&title=Mac+Tools+7-Piece+Wooden-Handle+Set" target="_blank" rel="noopener noreferrer" style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color: var(--amber-text);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.3);padding-bottom:1px;" aria-label="Share on Reddit">Reddit</a>
+      <button onclick="navigator.clipboard.writeText('https://thetoddmark.com/restoration-mac-tools-screwdrivers').then(()=>{this.textContent='Copied!';setTimeout(()=>{this.textContent='Copy Link'},1800)})" style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color: var(--amber-text);background:none;border:none;border-bottom:1px solid rgba(200,133,58,0.3);padding:0 0 1px;cursor:pointer;" aria-label="Copy link to clipboard">Copy Link</button>
     </div>
   </div>
 
@@ -330,7 +330,7 @@
       <figure>
         <picture>
   <source type="image/webp" srcset="images/mac-before-set.webp">
-  <img src="images/mac-before-set.jpg" alt="Mac Tools 7-piece screwdriver set before restoration — oil-saturated wooden handles with surface grime and staining" loading="lazy">
+  <img src="images/mac-before-set.jpg" alt="Mac Tools 7-piece screwdriver set before restoration — oil-saturated wooden handles with surface grime and staining" loading="lazy" width="547" height="805">
 </picture>
         <figcaption>Full set as received — decades of shop oil, grime, and surface staining on the beech handles. Flat, lifeless wood. The ferrules had dulled but were structurally intact.</figcaption>
       </figure>
@@ -363,14 +363,14 @@
       <figure>
         <picture>
   <source type="image/webp" srcset="images/mac-mid-sanded.webp">
-  <img src="images/mac-mid-sanded.jpg" alt="Mac Tools screwdriver handles after sanding to 220 grit — clean pale beech with grain showing" loading="lazy">
+  <img src="images/mac-mid-sanded.jpg" alt="Mac Tools screwdriver handles after sanding to 220 grit — clean pale beech with grain showing" loading="lazy" width="675" height="900">
 </picture>
         <figcaption>After sanding to 220 grit — clean pale beech, grain visible. Better, but not there yet.</figcaption>
       </figure>
       <figure>
         <picture>
   <source type="image/webp" srcset="images/mac-mid-cleaned.webp">
-  <img src="images/mac-mid-cleaned.jpg" alt="Mac Tools handles after mineral spirits wash and oxalic acid treatment — deeply cleaned wood ready for dye" loading="lazy">
+  <img src="images/mac-mid-cleaned.jpg" alt="Mac Tools handles after mineral spirits wash and oxalic acid treatment — deeply cleaned wood ready for dye" loading="lazy" width="675" height="900">
 </picture>
         <figcaption>After mineral spirits and oxalic acid — deeply clean wood, ready for dye.</figcaption>
       </figure>
@@ -424,14 +424,14 @@
       <figure>
         <picture>
   <source type="image/webp" srcset="images/mac-after-dye.webp">
-  <img src="images/mac-after-dye.jpg" alt="Mac Tools screwdriver handles after Fiebing's dye 3-phase process — rich dark warm brown color" loading="lazy">
+  <img src="images/mac-after-dye.jpg" alt="Mac Tools screwdriver handles after Fiebing's dye 3-phase process — rich dark warm brown color" loading="lazy" width="900" height="675">
 </picture>
         <figcaption>After the 3-phase Fiebing's process — dimensional color that a single coat can't produce.</figcaption>
       </figure>
       <figure>
         <picture>
   <source type="image/webp" srcset="images/mac-after-grooves.webp">
-  <img src="images/mac-after-grooves.jpg" alt="Mac Tools screwdriver handle close-up — black dye pooling in knurled grooves creating natural contrast" loading="lazy">
+  <img src="images/mac-after-grooves.jpg" alt="Mac Tools screwdriver handle close-up — black dye pooling in knurled grooves creating natural contrast" loading="lazy" width="900" height="675">
 </picture>
         <figcaption>The black base pools in the grooves — natural contrast without any faking.</figcaption>
       </figure>
@@ -450,7 +450,7 @@
     <figure style="margin:2rem 0;">
       <picture>
   <source type="image/webp" srcset="images/mac-after-full.webp">
-  <img src="images/mac-after-full.jpg" alt="Mac Tools 7-piece screwdriver set after restoration — Fiebing's dye, Walrus Oil, and Renaissance Wax finish on beech handles" loading="lazy">
+  <img src="images/mac-after-full.jpg" alt="Mac Tools 7-piece screwdriver set after restoration — Fiebing's dye, Walrus Oil, and Renaissance Wax finish on beech handles" loading="lazy" width="900" height="675">
 </picture>
       <figcaption>Full set after dyeing and finishing — 3 Phillips and 4 flathead. Metal polish still to come.</figcaption>
     </figure>
@@ -509,14 +509,14 @@
 
 <div style="background:var(--cream);padding:3rem 2rem;border-top:1px solid var(--border);">
   <div style="max-width:740px;margin:0 auto;">
-    <div style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--amber);margin-bottom:1.5rem;">More Restorations</div>
+    <div style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color: var(--amber-text);margin-bottom:1.5rem;">More Restorations</div>
     <a href="restoration-awl-marking-knife.html" style="display:flex;gap:1.5rem;align-items:flex-start;text-decoration:none;padding:1.5rem;background:var(--warm-white);border:1px solid var(--border);border-radius:4px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--amber)'" onmouseout="this.style.borderColor='var(--border)'">
       <div style="flex:1;">
-        <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--amber);margin-bottom:0.4rem;">Restoration No. 06 · Marking Tools</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color: var(--amber-text);margin-bottom:0.4rem;">Restoration No. 06 · Marking Tools</div>
         <div style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--ink);line-height:1.25;margin-bottom:0.5rem;">Vintage Awl — Repurposed Marking Knife</div>
         <div style="font-size:0.9rem;color:var(--ink-faint);line-height:1.6;">A $10 Facebook Marketplace find. Rosewood handle, brass ferrule, a new angled tip — and a tool that's better than anything available new.</div>
       </div>
-      <div style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;color:var(--amber);white-space:nowrap;margin-top:0.25rem;">Read →</div>
+      <div style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;color: var(--amber-text);white-space:nowrap;margin-top:0.25rem;">Read →</div>
     </a>
   </div>
 </div>

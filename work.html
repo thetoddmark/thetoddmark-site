@@ -271,6 +271,7 @@
     --ink-soft: #4a4540;
     --ink-faint: #6b6358;
     --amber: #c8853a;
+    --amber-text: #a0621a;
     --amber-light: #e8b878;
     --rust: #a0522d;
     --wood: #8b6340;
@@ -338,7 +339,7 @@
     transition: color 0.2s;
   }
 
-  nav a:hover { color: var(--amber); }
+  nav a:hover { color: var(--amber-text); }
   /* ── HAMBURGER ── */
   .nav-hamburger {
     display: none;
@@ -392,7 +393,7 @@
     font-size: 0.65rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--amber);
+    color: var(--amber-text);
     margin-bottom: 1.5rem;
     opacity: 0;
     animation: fadeUp 0.8s 0.2s forwards;
@@ -411,7 +412,7 @@
 
   .hero-title em {
     font-style: italic;
-    color: var(--amber);
+    color: var(--amber-text);
   }
 
   .hero-subtitle {
@@ -463,7 +464,7 @@
     transition: color 0.2s;
   }
 
-  .btn-ghost:hover { color: var(--amber); }
+  .btn-ghost:hover { color: var(--amber-text); }
 
   .hero-visual {
     background: var(--cream);
@@ -516,7 +517,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 2.8rem;
     font-weight: 300;
-    color: var(--amber);
+    color: var(--amber-text);
     line-height: 1;
   }
 
@@ -544,7 +545,7 @@
     font-family: 'DM Mono', monospace;
     font-size: 0.85rem;
     letter-spacing: 0.15em;
-    color: var(--amber);
+    color: var(--amber-text);
   }
 
   .section-title {
@@ -659,7 +660,7 @@
     font-size: 0.7rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--amber);
+    color: var(--amber-text);
     margin-bottom: 0.5rem;
   }
 
@@ -748,7 +749,7 @@
     font-size: 0.72rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--amber);
+    color: var(--amber-text);
     text-decoration: none;
     border-bottom: 1px solid var(--border-warm);
     padding-bottom: 1px;
@@ -809,7 +810,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.8rem;
     font-style: italic;
-    color: var(--amber);
+    color: var(--amber-text);
     margin-top: 2rem;
   }
 
@@ -834,7 +835,7 @@
     font-family: 'DM Mono', monospace;
     font-size: 0.7rem;
     letter-spacing: 0.2em;
-    color: var(--amber);
+    color: var(--amber-text);
     margin-bottom: 1rem;
   }
 
@@ -894,7 +895,7 @@
     border-bottom: 1px solid var(--border);
   }
 
-  .social-link:hover { color: var(--amber); }
+  .social-link:hover { color: var(--amber-text); }
 
   .social-link-icon {
     width: 36px;
@@ -978,7 +979,7 @@
     opacity: 0.7;
   }
 
-  .footer-logo span { color: var(--amber); }
+  .footer-logo span { color: var(--amber-text); }
 
   .footer-copy {
     font-family: 'DM Mono', monospace;
@@ -1045,7 +1046,7 @@
     font-size: 0.7rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--amber);
+    color: var(--amber-text);
     margin-bottom: 1rem;
   }
 
@@ -1112,7 +1113,7 @@
     footer { padding: 1rem 2.5rem; }
   }
 
-  .nav-active { color: var(--amber) !important; }
+  .nav-active { color: var(--amber-text) !important; }
 
 
   /* ═══ MOBILE RESPONSIVE (≤640px) ═══ */
@@ -1335,7 +1336,7 @@
     text-decoration: none;
     transition: color 0.2s;
   }
-  .footer-nav a:hover { color: var(--amber); }
+  .footer-nav a:hover { color: var(--amber-text); }
   .footer-divider {
     width: 100%;
     height: 1px;
@@ -1344,7 +1345,7 @@
   }
 
     /* ── Visited link colours ── */
-    a:visited { color: var(--amber); }
+    a:visited { color: var(--amber-text); }
     nav ul a:visited { color: rgba(245,240,232,0.72); }
     footer a:visited { color: rgba(245,240,232,0.35); }
   </style>
@@ -1572,7 +1573,7 @@
     <li><a href="contact.html">Contact</a></li>
     <li><a href="wishlist.html">Wishlist</a></li>
     <li><a href="listening.html">Listening</a></li>
-    <li><a href="partner.html" style="color:var(--amber);">Partner</a></li>
+    <li><a href="partner.html" style="color: var(--amber-text);">Partner</a></li>
   </ul>
 </nav>
 <main id="main-content">
@@ -1593,16 +1594,16 @@
 </picture>
         <div class="card-overlay"><span class="card-overlay-label">View Restoration</span></div>
       </div>
-      <img id="bpmtphoto-hero" src="images/bpmt-hero.webp" style="display:none;" loading="lazy" alt="Bridgeport H.M. Corp multitool hero image">
-      <img id="bpmtphoto-before" src="images/bpmt-before-2.webp" style="display:none;" loading="lazy" alt="Bridgeport multitool before restoration">
-      <img id="bpmtphoto-steel" src="images/bpmt-steel-1.webp" style="display:none;" loading="lazy" alt="Bridgeport multitool during steel work">
-      <img id="bpmtphoto-oiled" src="images/bpmt-oiled.webp" style="display:none;" loading="lazy" alt="Bridgeport multitool during oiling process">
-      <img id="bpmtphoto-after" src="images/bpmt-after-2.webp" style="display:none;" loading="lazy" alt="Bridgeport multitool after restoration">
+      <img id="bpmtphoto-hero" src="images/bpmt-hero.webp" style="display:none;" loading="lazy" alt="Bridgeport H.M. Corp multitool hero image" width="1430" height="1072">
+      <img id="bpmtphoto-before" src="images/bpmt-before-2.webp" style="display:none;" loading="lazy" alt="Bridgeport multitool before restoration" width="1432" height="573">
+      <img id="bpmtphoto-steel" src="images/bpmt-steel-1.webp" style="display:none;" loading="lazy" alt="Bridgeport multitool during steel work" width="1431" height="1073">
+      <img id="bpmtphoto-oiled" src="images/bpmt-oiled.webp" style="display:none;" loading="lazy" alt="Bridgeport multitool during oiling process" width="1431" height="1073">
+      <img id="bpmtphoto-after" src="images/bpmt-after-2.webp" style="display:none;" loading="lazy" alt="Bridgeport multitool after restoration" width="1600" height="1200">
       <div class="card-body">
         <div class="card-category">Multi-Tool</div>
-        <h3 class="card-title">Bridgeport H.M. Corp Interchangeable Tool Handle</h3>
+        <h2 class="card-title">Bridgeport H.M. Corp Interchangeable Tool Handle</h2>
         <div class="card-meta">A $34.95 eBay find — vintage American multi-tool with eight interchangeable bits and a rosewood handle.</div>
-        <p style="margin-top:1.25rem;"><a href="restoration-bridgeport-multitool.html" style="color:var(--amber);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>
+        <p style="margin-top:1.25rem;"><a href="restoration-bridgeport-multitool.html" style="color: var(--amber-text);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>
       </div>
     </div>
 
@@ -1611,16 +1612,16 @@
         <img id="mk-gallery-img" style="pointer-events:none;width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" src="" alt="Vintage Awl Repurposed as Marking Knife" loading="lazy" width="auto" height="auto">
         <div class="card-overlay"><span class="card-overlay-label">View Restoration</span></div>
       </div>
-      <img id="mkphoto-mk-hero" src="images/ph-mk-hero.webp" style="display:none;" loading="lazy" alt="Vintage awl marking knife hero image">
-      <img id="mkphoto-mk-before" src="images/work-mk-before.webp" style="display:none;" loading="lazy" alt="Vintage awl before restoration">
-      <img id="mkphoto-mk-blade" src="images/work-mk-blade.webp" style="display:none;" loading="lazy" alt="Marking knife blade during restoration">
-      <img id="mkphoto-mk-disassembled" src="images/work-mk-disassembled.webp" style="display:none;" loading="lazy" alt="Marking knife disassembled components">
-      <img id="mkphoto-mk-handle" src="images/work-mk-handle.webp" style="display:none;" loading="lazy" alt="Marking knife handle after restoration">
+      <img id="mkphoto-mk-hero" src="images/ph-mk-hero.webp" style="display:none;" loading="lazy" alt="Vintage awl marking knife hero image" width="3849" height="2285">
+      <img id="mkphoto-mk-before" src="images/work-mk-before.webp" style="display:none;" loading="lazy" alt="Vintage awl before restoration" width="1200" height="382">
+      <img id="mkphoto-mk-blade" src="images/work-mk-blade.webp" style="display:none;" loading="lazy" alt="Marking knife blade during restoration" width="1200" height="476">
+      <img id="mkphoto-mk-disassembled" src="images/work-mk-disassembled.webp" style="display:none;" loading="lazy" alt="Marking knife disassembled components" width="1200" height="272">
+      <img id="mkphoto-mk-handle" src="images/work-mk-handle.webp" style="display:none;" loading="lazy" alt="Marking knife handle after restoration" width="479" height="1200">
       <div class="card-body">
         <div class="card-category">Marking</div>
-        <h3 class="card-title">Vintage Awl — Repurposed Marking Knife</h3>
+        <h2 class="card-title">Vintage Awl — Repurposed Marking Knife</h2>
         <div class="card-meta">A $10 Facebook Marketplace find, given new purpose with diamond stones and patience.</div>
-        <p style="margin-top:1.25rem;"><a href="restoration-awl-marking-knife.html" style="color:var(--amber);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>
+        <p style="margin-top:1.25rem;"><a href="restoration-awl-marking-knife.html" style="color: var(--amber-text);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>
       </div>
     </div>
 
@@ -1640,9 +1641,9 @@
       </script>
       <div class="card-body">
         <div class="card-category">Build</div>
-        <h3 class="card-title">Dave Corinth's Chip Breaker Screwdriver</h3>
+        <h2 class="card-title">Dave Corinth's Chip Breaker Screwdriver</h2>
         <div class="card-meta">O1 steel blade, brass ferrule, Brazilian Rosewood donor knob. Built for one job — and it does it perfectly.</div>
-        <p style="margin-top:1.25rem;"><a href="build-chip-breaker-screwdriver.html" style="color:var(--amber);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>
+        <p style="margin-top:1.25rem;"><a href="build-chip-breaker-screwdriver.html" style="color: var(--amber-text);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>
       </div>
     </div>
 
@@ -1666,9 +1667,9 @@
       </script>
       <div class="card-body">
         <div class="card-category">Screwdrivers</div>
-        <h3 class="card-title">German "Perfect Handle" Set — Four Graduating Sizes</h3>
+        <h2 class="card-title">German "Perfect Handle" Set — Four Graduating Sizes</h2>
         <div class="card-meta">Vintage German cabinet screwdrivers restored from heavy oxidation. Walrus Oil finish in progress — Renaissance Wax topcoat to follow. First of many.</div>
-        <p style="margin-top:1.25rem;"><a href="restoration-german-perfect-handle.html" style="color:var(--amber);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>
+        <p style="margin-top:1.25rem;"><a href="restoration-german-perfect-handle.html" style="color: var(--amber-text);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>
       </div>
     </div>
 
@@ -1685,9 +1686,9 @@
       </div>
       <div class="card-body">
         <div class="card-category">Screwdrivers</div>
-        <h3 class="card-title">Mac Tools Wooden-Handled Set</h3>
+        <h2 class="card-title">Mac Tools Wooden-Handled Set</h2>
         <div class="card-meta">Fiebing's dye · polymerized tung oil · shellac · Renaissance Wax</div>
-        <p style="margin-top:1.25rem;"><a href="restoration-mac-tools-screwdrivers.html" style="color:var(--amber);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>
+        <p style="margin-top:1.25rem;"><a href="restoration-mac-tools-screwdrivers.html" style="color: var(--amber-text);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>
       </div>
     </div>
 
@@ -1700,18 +1701,18 @@
 </picture>
         <div class="card-overlay"><span class="card-overlay-label">View Restoration</span></div>
       </div>
-      <img id="skphoto-hero"    src="images/sk-hero.webp"        style="display:none;" loading="lazy" alt="Imperial steak knives hero image">
-      <img id="skphoto-before"  src="images/sk-before-set.webp"  style="display:none;" loading="lazy" alt="Imperial steak knife set before restoration">
-      <img id="skphoto-handles" src="images/sk-before-handles.webp" style="display:none;" loading="lazy" alt="Imperial steak knife handles detail before restoration">
-      <img id="skphoto-sanded"  src="images/sk-sanded-2.webp"    style="display:none;" loading="lazy" alt="Imperial steak knives during sanding process">
-      <img id="skphoto-oil"     src="images/sk-oil-3.webp"       style="display:none;" loading="lazy" alt="Imperial steak knives during oiling process">
-      <img id="skphoto-after6"  src="images/sk-after-six.webp"   style="display:none;" loading="lazy" alt="Imperial steak knives after restoration - six knives">
-      <img id="skphoto-after7"  src="images/sk-after-seven.webp" style="display:none;" loading="lazy" alt="Imperial steak knives after restoration - seven knives">
+      <img id="skphoto-hero"    src="images/sk-hero.webp"        style="display:none;" loading="lazy" alt="Imperial steak knives hero image" width="1430" height="1019">
+      <img id="skphoto-before"  src="images/sk-before-set.webp"  style="display:none;" loading="lazy" alt="Imperial steak knife set before restoration" width="1024" height="768">
+      <img id="skphoto-handles" src="images/sk-before-handles.webp" style="display:none;" loading="lazy" alt="Imperial steak knife handles detail before restoration" width="1024" height="768">
+      <img id="skphoto-sanded"  src="images/sk-sanded-2.webp"    style="display:none;" loading="lazy" alt="Imperial steak knives during sanding process" width="1024" height="768">
+      <img id="skphoto-oil"     src="images/sk-oil-3.webp"       style="display:none;" loading="lazy" alt="Imperial steak knives during oiling process" width="1431" height="1073">
+      <img id="skphoto-after6"  src="images/sk-after-six.webp"   style="display:none;" loading="lazy" alt="Imperial steak knives after restoration - six knives" width="1431" height="1000">
+      <img id="skphoto-after7"  src="images/sk-after-seven.webp" style="display:none;" loading="lazy" alt="Imperial steak knives after restoration - seven knives" width="1430" height="996">
       <div class="card-body">
         <div class="card-category">Knives</div>
-        <h3 class="card-title">Imperial Steak Knife Handle Refresh</h3>
+        <h2 class="card-title">Imperial Steak Knife Handle Refresh</h2>
         <div class="card-meta">CA glue fill · 80–220 grit sanding · three coats Walrus Oil · matched set of six</div>
-        <p style="margin-top:1.25rem;"><a href="restoration-imperial-steak-knives.html" style="color:var(--amber);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>
+        <p style="margin-top:1.25rem;"><a href="restoration-imperial-steak-knives.html" style="color: var(--amber-text);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>
       </div>
     </div>
 
@@ -1724,17 +1725,17 @@
 </picture>
         <div class="card-overlay"><span class="card-overlay-label">View Restoration</span></div>
       </div>
-      <img id="bulatphoto-hero"        src="images/bulat-hero.webp"            style="display:none;" loading="lazy" alt="Bulat Damascus chef knife hero image">
-      <img id="bulatphoto-handle-side" src="images/bulat-handle-side.webp"     style="display:none;" loading="lazy" alt="Bulat Damascus chef knife handle side detail">
-      <img id="bulatphoto-brand"       src="images/bulat-brand-handle.webp"    style="display:none;" loading="lazy" alt="Bulat Damascus chef knife brand marking">
-      <img id="bulatphoto-spine"       src="images/bulat-handle-spine.webp"    style="display:none;" loading="lazy" alt="Bulat Damascus chef knife spine detail">
-      <img id="bulatphoto-bolster"     src="images/bulat-damascus-bolster.webp" style="display:none;" loading="lazy" alt="Bulat Damascus chef knife damascus bolster">
-      <img id="bulatphoto-blade-tip"   src="images/bulat-blade-tip.webp"       style="display:none;" loading="lazy" alt="Bulat Damascus chef knife blade tip detail">
+      <img id="bulatphoto-hero"        src="images/bulat-hero.webp"            style="display:none;" loading="lazy" alt="Bulat Damascus chef knife hero image" width="1600" height="1200">
+      <img id="bulatphoto-handle-side" src="images/bulat-handle-side.webp"     style="display:none;" loading="lazy" alt="Bulat Damascus chef knife handle side detail" width="1600" height="1200">
+      <img id="bulatphoto-brand"       src="images/bulat-brand-handle.webp"    style="display:none;" loading="lazy" alt="Bulat Damascus chef knife brand marking" width="1600" height="800">
+      <img id="bulatphoto-spine"       src="images/bulat-handle-spine.webp"    style="display:none;" loading="lazy" alt="Bulat Damascus chef knife spine detail" width="1600" height="555">
+      <img id="bulatphoto-bolster"     src="images/bulat-damascus-bolster.webp" style="display:none;" loading="lazy" alt="Bulat Damascus chef knife damascus bolster" width="1600" height="737">
+      <img id="bulatphoto-blade-tip"   src="images/bulat-blade-tip.webp"       style="display:none;" loading="lazy" alt="Bulat Damascus chef knife blade tip detail" width="1600" height="528">
       <div class="card-body">
         <div class="card-category">Knives</div>
-        <h3 class="card-title">Bulat Damascus Chef's Knife Handle Refresh</h3>
+        <h2 class="card-title">Bulat Damascus Chef's Knife Handle Refresh</h2>
         <div class="card-meta">180–220 grit sanding · three coats Walrus Oil · Renaissance Wax topcoat</div>
-        <p style="margin-top:1.25rem;"><a href="restoration-bulat-chefs-knife.html" style="color:var(--amber);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>
+        <p style="margin-top:1.25rem;"><a href="restoration-bulat-chefs-knife.html" style="color: var(--amber-text);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>
       </div>
     </div>
 
@@ -1805,7 +1806,7 @@ const tools = {
     ],
     body: `<p>Here's a tool that solves a very specific problem — and once you know it exists, you can't imagine not having one. The chip breaker screw on a Stanley hand plane sits too deep for a standard screwdriver and is too important to strip. Dave Corinth designed his chip breaker screwdriver specifically for this job: a blade cut from O1 tool steel, fitted to a turned brass ferrule and a handle shaped for real torque. Small tool, very clear purpose.</p>
 <br>
-<p>I found Dave's kit <a href="https://www.ebay.com/itm/226820669048" target="_blank" rel="noopener noreferrer" style="color:var(--amber);text-decoration:none;border-bottom:1px solid var(--border-warm);">on eBay</a> — blade and brass ferrule included, cherry dowel for the handle. Before I built it I reached out via Facebook Messenger with a couple of questions. He responded quickly and generously: confirmed his preference for the tall knob style over the shorter version (better leverage, more comfortable in the palm), and gave me the exact drill bit size needed to seat the cherry dowel correctly. That kind of maker-to-user generosity is rare and worth acknowledging. His YouTube channel is worth your time too — <a href="https://www.youtube.com/watch?v=hdyZ9hNGfMY" target="_blank" rel="noopener noreferrer" style="color:var(--amber);text-decoration:none;border-bottom:1px solid var(--border-warm);">watch him walk through the design here</a>.</p>
+<p>I found Dave's kit <a href="https://www.ebay.com/itm/226820669048" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid var(--border-warm);">on eBay</a> — blade and brass ferrule included, cherry dowel for the handle. Before I built it I reached out via Facebook Messenger with a couple of questions. He responded quickly and generously: confirmed his preference for the tall knob style over the shorter version (better leverage, more comfortable in the palm), and gave me the exact drill bit size needed to seat the cherry dowel correctly. That kind of maker-to-user generosity is rare and worth acknowledging. His YouTube channel is worth your time too — <a href="https://www.youtube.com/watch?v=hdyZ9hNGfMY" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid var(--border-warm);">watch him walk through the design here</a>.</p>
 <br>
 <p><strong>The donor knob:</strong> Rather than use the cherry dowel from the kit, I took Dave's tip and reached for a salvaged tall knob pulled from a plane too far gone to save. It turned out to be Brazilian Rosewood — not exactly a common salvage find — and the figure on it is something else entirely. Hard to call that a compromise.</p>
 <br>
@@ -1814,10 +1815,10 @@ const tools = {
 <p><strong>Honest reflection:</strong> It works perfectly. Every time I need to adjust a chip breaker, this is what I reach for. If I built another one, the only change I'd make is to swap the BLO for polymerized tung oil — I know how Walrus Oil behaves now, and it would get there faster and more predictably. But this one came out beautifully and I have no complaints.</p>
 <br>
 <div style="border-top:1px solid var(--border);padding-top:1.25rem;margin-top:0.5rem;">
-  <div style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--amber);margin-bottom:0.85rem;">Get the Kit</div>
-  <p style="font-size:0.88rem;line-height:1.75;color:var(--ink-soft);">Dave sells the chip breaker screwdriver kit — blade, ferrule, and cherry dowel — <a href="https://www.ebay.com/itm/226820669048" target="_blank" rel="noopener noreferrer" style="color:var(--amber);text-decoration:none;border-bottom:1px solid var(--border-warm);">directly on eBay</a>. Highly recommended, and don't hesitate to reach out to him with questions.</p>
+  <div style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color: var(--amber-text);margin-bottom:0.85rem;">Get the Kit</div>
+  <p style="font-size:0.88rem;line-height:1.75;color:var(--ink-soft);">Dave sells the chip breaker screwdriver kit — blade, ferrule, and cherry dowel — <a href="https://www.ebay.com/itm/226820669048" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid var(--border-warm);">directly on eBay</a>. Highly recommended, and don't hesitate to reach out to him with questions.</p>
 </div>
-<p style="margin-top:1.25rem;"><a href="build-chip-breaker-screwdriver.html" style="color:var(--amber);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>`
+<p style="margin-top:1.25rem;"><a href="build-chip-breaker-screwdriver.html" style="color: var(--amber-text);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>`
   },
 
   germanscrewdrivers: {
@@ -1846,27 +1847,27 @@ const tools = {
 <br>
 <p><strong>Step 3 — CA glue for voids and checks:</strong> Used medium viscosity CA glue to stabilize small checks in the wood and fill voids near the rivets. Also used it to improve the shape and feel of a couple of handles where the wood had shrunk slightly away from the steel shell. Let each application cure fully before sanding back smooth. This worked well, but it's a technique that rewards patience — more on that below.</p>
 <br>
-<p><strong>Step 4 — Reshaping the metalwork:</strong> The end caps and ferrules had casting roughness and minor deformation from use. Used files and rasps to clean up the profiles, then a <a href="https://www.amazon.com/dp/B015JNEQN4/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color:var(--amber);text-decoration:none;border-bottom:1px solid var(--border-warm);">JTS 2oz ball peen hammer</a> for fine detail reshaping and a <a href="https://www.amazon.com/dp/B00AI2AV5E/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color:var(--amber);text-decoration:none;border-bottom:1px solid var(--border-warm);">Vaughan 4oz for heavier work</a>. Peening metal at this scale is surprisingly forgiving once you get a feel for it, and the right hammer weight makes a real difference.</p>
+<p><strong>Step 4 — Reshaping the metalwork:</strong> The end caps and ferrules had casting roughness and minor deformation from use. Used files and rasps to clean up the profiles, then a <a href="https://www.amazon.com/dp/B015JNEQN4/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid var(--border-warm);">JTS 2oz ball peen hammer</a> for fine detail reshaping and a <a href="https://www.amazon.com/dp/B00AI2AV5E/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid var(--border-warm);">Vaughan 4oz for heavier work</a>. Peening metal at this scale is surprisingly forgiving once you get a feel for it, and the right hammer weight makes a real difference.</p>
 <br>
-<p><strong>Step 5 — Finishing the wood:</strong> After a final mineral spirits wipe and a 2–4 hour dry time, applying three coats of <a href="https://www.amazon.com/s?k=walrus+oil+wood+finish&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color:var(--amber);text-decoration:none;border-bottom:1px solid var(--border-warm);">Walrus Oil polymerized tung oil</a> over three days — one coat per day, left to sit for 10–15 minutes, then every trace of excess wiped off before a 24-hour cure. Pooled oil gets tacky; the wipe-off step is not optional. Between coats, 0000 steel wool knocks down any raised grain, followed by the brown paper bag trick to burnish to a smooth satin feel. Final step will be a coat of <a href="https://www.amazon.com/s?k=renaissance+wax&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color:var(--amber);text-decoration:none;border-bottom:1px solid var(--border-warm);">Renaissance Wax</a> buffed with a lint-free cotton rag. <em>This process is still in progress — the full write-up has the latest.</em></p>
+<p><strong>Step 5 — Finishing the wood:</strong> After a final mineral spirits wipe and a 2–4 hour dry time, applying three coats of <a href="https://www.amazon.com/s?k=walrus+oil+wood+finish&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid var(--border-warm);">Walrus Oil polymerized tung oil</a> over three days — one coat per day, left to sit for 10–15 minutes, then every trace of excess wiped off before a 24-hour cure. Pooled oil gets tacky; the wipe-off step is not optional. Between coats, 0000 steel wool knocks down any raised grain, followed by the brown paper bag trick to burnish to a smooth satin feel. Final step will be a coat of <a href="https://www.amazon.com/s?k=renaissance+wax&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid var(--border-warm);">Renaissance Wax</a> buffed with a lint-free cotton rag. <em>This process is still in progress — the full write-up has the latest.</em></p>
 <br>
 <p><strong>What I learned:</strong> CA glue is useful, but medium viscosity can run if you're not deliberate. Next time I'll be more careful about application and masking areas I don't want it reaching. The metalwork is also where I left the most on the table — files and rasps got the ferrules respectable, but a properly polished shine requires a different approach. That's exactly what the next upgrade addresses.</p>
 <br>
-<p><strong>What's next:</strong> I've already sourced some Bolivian Rosewood for replacement scales on the next set — the contrast between that wood and polished steel is going to be something. I've also picked up a <a href="https://www.amazon.com/dp/B0BHXWZ4MW/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color:var(--amber);text-decoration:none;border-bottom:1px solid var(--border-warm);">Bucktool 1" × 30" belt sander</a> specifically to polish the metal to a high shine and remove the rough casting and divots properly. I've used it once so far and still have a lot to learn, but the potential is obvious. Stay tuned.</p>
+<p><strong>What's next:</strong> I've already sourced some Bolivian Rosewood for replacement scales on the next set — the contrast between that wood and polished steel is going to be something. I've also picked up a <a href="https://www.amazon.com/dp/B0BHXWZ4MW/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid var(--border-warm);">Bucktool 1" × 30" belt sander</a> specifically to polish the metal to a high shine and remove the rough casting and divots properly. I've used it once so far and still have a lot to learn, but the potential is obvious. Stay tuned.</p>
 <br>
 <div style="border-top:1px solid var(--border);padding-top:1.25rem;margin-top:0.5rem;">
-  <div style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--amber);margin-bottom:0.85rem;">What I Used</div>
+  <div style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color: var(--amber-text);margin-bottom:0.85rem;">What I Used</div>
   <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.5rem;font-size:0.88rem;color:var(--ink-soft);line-height:1.6;">
-    <li><a href="https://www.amazon.com/dp/B015JNEQN4/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color:var(--amber);text-decoration:none;border-bottom:1px solid var(--border-warm);">JTS 2oz Ball Peen Hammer</a> — fine metal reshaping on ferrules and end caps</li>
-    <li><a href="https://www.amazon.com/dp/B00AI2AV5E/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color:var(--amber);text-decoration:none;border-bottom:1px solid var(--border-warm);">Vaughan 4oz Ball Peen Hammer</a> — heavier ferrule work</li>
+    <li><a href="https://www.amazon.com/dp/B015JNEQN4/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid var(--border-warm);">JTS 2oz Ball Peen Hammer</a> — fine metal reshaping on ferrules and end caps</li>
+    <li><a href="https://www.amazon.com/dp/B00AI2AV5E/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid var(--border-warm);">Vaughan 4oz Ball Peen Hammer</a> — heavier ferrule work</li>
     <li>Medium viscosity CA glue — void fill and handle shaping</li>
-    <li><a href="https://www.amazon.com/s?k=walrus+oil+wood+finish&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color:var(--amber);text-decoration:none;border-bottom:1px solid var(--border-warm);">Walrus Oil polymerized tung oil</a> — 3-coat wood finish</li>
+    <li><a href="https://www.amazon.com/s?k=walrus+oil+wood+finish&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid var(--border-warm);">Walrus Oil polymerized tung oil</a> — 3-coat wood finish</li>
     <li>Dewaxed shellac — sealer coat</li>
-    <li><a href="https://www.amazon.com/s?k=renaissance+wax&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color:var(--amber);text-decoration:none;border-bottom:1px solid var(--border-warm);">Renaissance Wax</a> — final protective finish and buff</li>
-    <li><a href="https://www.amazon.com/dp/B0BHXWZ4MW/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color:var(--amber);text-decoration:none;border-bottom:1px solid var(--border-warm);">Bucktool 1" × 30" Belt Sander</a> — <em>new addition; metal polishing on future sets</em></li>
+    <li><a href="https://www.amazon.com/s?k=renaissance+wax&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid var(--border-warm);">Renaissance Wax</a> — final protective finish and buff</li>
+    <li><a href="https://www.amazon.com/dp/B0BHXWZ4MW/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid var(--border-warm);">Bucktool 1" × 30" Belt Sander</a> — <em>new addition; metal polishing on future sets</em></li>
   </ul>
 </div>
-<p style="margin-top:1.5rem;"><a href="restoration-german-perfect-handle.html" style="color:var(--amber);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>`
+<p style="margin-top:1.5rem;"><a href="restoration-german-perfect-handle.html" style="color: var(--amber-text);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>`
   },
     mactools: {
     category: 'Screwdrivers',
@@ -1882,13 +1883,13 @@ const tools = {
     ],
     body: `<p>Found on eBay — a 7-piece Mac Tools set with turned wooden handles, post-WWII American manufacture. Chrome-vanadium blades, original ferrules, and handles that had absorbed decades of shop oil and grime. Structurally sound; cosmetically rough.</p>
 <br>
-<p><strong>Step 1 — Strip and clean:</strong> Sanded back through 60→80→120→180→220 grit to bare wood. Mineral spirits wash with a soft brass brush to degrease. Multiple <a href="https://www.amazon.com/s?k=oxalic+acid+wood+bleach&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color:var(--amber);text-decoration:none;border-bottom:1px solid var(--amber-light);">oxalic acid</a> baths to lift tannin staining and surface rust from the wood.</p>
+<p><strong>Step 1 — Strip and clean:</strong> Sanded back through 60→80→120→180→220 grit to bare wood. Mineral spirits wash with a soft brass brush to degrease. Multiple <a href="https://www.amazon.com/s?k=oxalic+acid+wood+bleach&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid var(--amber-light);">oxalic acid</a> baths to lift tannin staining and surface rust from the wood.</p>
 <br>
-<p><strong>Step 2 — Color:</strong> <a href="https://www.amazon.com/s?k=fiebing+leather+dye&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color:var(--amber);text-decoration:none;border-bottom:1px solid var(--amber-light);">Fiebing's leather dye</a> applied sequentially — Black first, then Dark Brown, then Mahogany. The layered approach builds dimensional color that looks like it comes from inside the wood. The black base pools in the knurled grooves, giving natural contrast.</p>
+<p><strong>Step 2 — Color:</strong> <a href="https://www.amazon.com/s?k=fiebing+leather+dye&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid var(--amber-light);">Fiebing's leather dye</a> applied sequentially — Black first, then Dark Brown, then Mahogany. The layered approach builds dimensional color that looks like it comes from inside the wood. The black base pools in the knurled grooves, giving natural contrast.</p>
 <br>
-<p><strong>Step 3 — Finish:</strong> Three coats of <a href="https://walrusoil.com/products/polymerized-tung-oil" target="_blank" rel="noopener noreferrer" style="color:var(--amber);text-decoration:none;border-bottom:1px solid var(--amber-light);">polymerized tung oil (Walrus Oil)</a> over 48–72 hours. One wash coat of dewaxed shellac. Final coat of <a href="https://www.amazon.com/s?k=renaissance+wax&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color:var(--amber);text-decoration:none;border-bottom:1px solid var(--amber-light);">Renaissance Wax</a> buffed to a soft sheen.</p>
+<p><strong>Step 3 — Finish:</strong> Three coats of <a href="https://walrusoil.com/products/polymerized-tung-oil" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid var(--amber-light);">polymerized tung oil (Walrus Oil)</a> over 48–72 hours. One wash coat of dewaxed shellac. Final coat of <a href="https://www.amazon.com/s?k=renaissance+wax&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid var(--amber-light);">Renaissance Wax</a> buffed to a soft sheen.</p>
 <br>
-<p><em>The result: handles that look richer than they ever did new. The Fiebing's dye method is unconventional on tool handles — and completely worth it.</em></p><p style="margin-top:1.25rem;"><a href="restoration-mac-tools-screwdrivers.html" style="color:var(--amber);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>`
+<p><em>The result: handles that look richer than they ever did new. The Fiebing's dye method is unconventional on tool handles — and completely worth it.</em></p><p style="margin-top:1.25rem;"><a href="restoration-mac-tools-screwdrivers.html" style="color: var(--amber-text);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>`
   },
   bridgeport: {
     category: 'Multi-Tool',
@@ -1908,7 +1909,7 @@ const tools = {
 <br>
 <p><strong>The Handle</strong><br>Mineral spirits first to cut through the grime. What had looked nearly like black plastic gradually revealed hints of reddish-brown rosewood. Sanding grits 80–120–180–220, followed by several mineral spirits wipe-downs. Three coats of boiled linseed oil, wiped back at 10 minutes, dried between coats. Two coats of shellac after a 0000 steel wool scuff. Renaissance Wax to finish. The result is natural and period-appropriate — good hand feel, not sticky.</p>
 <br>
-<p><strong>If I Did It Again</strong><br>I love how it turned out. But if I were starting over, I'd skip the BLO and use Walrus Oil (polymerized tung oil) instead — cleaner cure, similar result.</p><p style="margin-top:1.25rem;"><a href="restoration-bridgeport-multitool.html" style="color:var(--amber);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>`
+<p><strong>If I Did It Again</strong><br>I love how it turned out. But if I were starting over, I'd skip the BLO and use Walrus Oil (polymerized tung oil) instead — cleaner cure, similar result.</p><p style="margin-top:1.25rem;"><a href="restoration-bridgeport-multitool.html" style="color: var(--amber-text);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>`
   },
   marking: {
     category: 'Marking',
@@ -1930,7 +1931,7 @@ const tools = {
 <br>
 <p><strong>The Conversion</strong><br>Reshaping an awl point into a marking knife edge is a different kind of challenge than sharpening an existing blade — the geometry has to be worked out from scratch. I used diamond stones at 400, 1200, and 2000 grits: slow, methodical, and still very much a learning process. The result is a blade that's sharp and does its job well.</p>
 <br>
-<p><strong>The Result</strong><br>What makes this knife especially satisfying is the cap. The threaded brass sheath screws on to protect the cutting edge, and the whole thing slips neatly into a pocket of my work apron — instantly accessible when I need it, fully protected when I don't. A $10 find that earned a permanent spot in daily rotation.</p><p style="margin-top:1.25rem;"><a href="restoration-awl-marking-knife.html" style="color:var(--amber);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>`
+<p><strong>The Result</strong><br>What makes this knife especially satisfying is the cap. The threaded brass sheath screws on to protect the cutting edge, and the whole thing slips neatly into a pocket of my work apron — instantly accessible when I need it, fully protected when I don't. A $10 find that earned a permanent spot in daily rotation.</p><p style="margin-top:1.25rem;"><a href="restoration-awl-marking-knife.html" style="color: var(--amber-text);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>`
   },
   steak: {
     category: 'Knives',
@@ -1948,7 +1949,7 @@ const tools = {
 <br>
 <p><strong>The Work</strong><br>CA glue wicked into the surface checks and locked them closed. Once cured, the handles were sanded through 80, 120, 180, and 220 grit — the grain came up clean and tight. Three coats of Walrus Oil (polymerized tung oil), wiped on and back at 10 minutes each, with 24 hours between coats.</p>
 <br>
-<p><strong>The Result</strong><br>Handles that feel and look the way beech should. The grain is warm and readable, the brass rivets were polished bright, and the seventh knife blends in as if it came with the set. These go on the table now.</p><p style="margin-top:1.25rem;"><a href="restoration-imperial-steak-knives.html" style="color:var(--amber);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>`
+<p><strong>The Result</strong><br>Handles that feel and look the way beech should. The grain is warm and readable, the brass rivets were polished bright, and the seventh knife blends in as if it came with the set. These go on the table now.</p><p style="margin-top:1.25rem;"><a href="restoration-imperial-steak-knives.html" style="color: var(--amber-text);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>`
   },
     bulat: {
     category: 'Knives',
@@ -1966,7 +1967,7 @@ const tools = {
 <p><strong>The Work</strong><br>No dramatic damage here — just dry, dull handles that needed a refresh. Sanded through 180 and 220 grit to even out the surface, then applied three coats of Walrus Oil (polymerized tung oil), wiping back each coat at 10 minutes and waiting 24 hours between passes. Finished with a coat of Renaissance Wax, buffed to a soft sheen.</p>
 <br>
 <p><strong>The Result</strong><br>The handles came up warm and smooth, the grain visible and even across both scales. The Damascus blade — untouched during the handle work — is the star of this knife, and the refreshed handles finally do it justice.</p>
-<p style="margin-top:1.25rem;"><a href="restoration-bulat-chefs-knife.html" style="color:var(--amber);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>`
+<p style="margin-top:1.25rem;"><a href="restoration-bulat-chefs-knife.html" style="color: var(--amber-text);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Read the full write-up →</a></p>`
   }
 };
 
@@ -2119,53 +2120,53 @@ document.addEventListener('keydown', e => {
 <div style="display:none">
   <picture>
   <source type="image/webp" srcset="images/products-restoration-before1.webp">
-  <img id="photo-before1" src="images/products-restoration-before1.jpg"  loading="lazy"/>
+  <img id="photo-before1" src="images/products-restoration-before1.jpg"  loading="lazy" width="547" height="805"/>
 </picture>
   <picture>
   <source type="image/webp" srcset="images/products-restoration-before2.webp">
-  <img id="photo-before2" src="images/products-restoration-before2.jpg"  loading="lazy"/>
+  <img id="photo-before2" src="images/products-restoration-before2.jpg"  loading="lazy" width="551" height="814"/>
 </picture>
   <picture>
   <source type="image/webp" srcset="images/products-restoration-mid1.webp">
-  <img id="photo-mid1" src="images/products-restoration-mid1.jpg"  loading="lazy"/>
+  <img id="photo-mid1" src="images/products-restoration-mid1.jpg"  loading="lazy" width="675" height="900"/>
 </picture>
   <picture>
   <source type="image/webp" srcset="images/products-restoration-mid2.webp">
-  <img id="photo-mid2" src="images/products-restoration-mid2.jpg"  loading="lazy"/>
+  <img id="photo-mid2" src="images/products-restoration-mid2.jpg"  loading="lazy" width="675" height="900"/>
 </picture>
   <picture>
   <source type="image/webp" srcset="images/products-restoration-after1.webp">
-  <img id="photo-after1" src="images/products-restoration-after1.jpg"  loading="lazy"/>
+  <img id="photo-after1" src="images/products-restoration-after1.jpg"  loading="lazy" width="900" height="675"/>
 </picture>
   <picture>
   <source type="image/webp" srcset="images/products-restoration-after2.webp">
-  <img id="photo-after2" src="images/products-restoration-after2.jpg"  loading="lazy"/>
+  <img id="photo-after2" src="images/products-restoration-after2.jpg"  loading="lazy" width="900" height="675"/>
 </picture>
   <picture>
   <source type="image/webp" srcset="images/products-restoration-after3.webp">
-  <img id="photo-after3" src="images/products-restoration-after3.jpg"  loading="lazy"/>
+  <img id="photo-after3" src="images/products-restoration-after3.jpg"  loading="lazy" width="900" height="675"/>
 </picture>
 </div>
 
 
 <!-- Screwdriver restoration photos -->
-<img id="sdphoto-sd-hero" src="images/ph-oil-set-1.webp" style="display:none" loading="lazy">
-<img id="sdphoto-sd-before-set" src="images/work-sd-before-set.webp" style="display:none" loading="lazy" />
-<img id="sdphoto-sd-before-handles" src="images/work-sd-before-handles.webp" style="display:none" loading="lazy" />
-<img id="sdphoto-sd-during-clean" src="images/work-sd-during-clean.webp" style="display:none" loading="lazy" />
-<img id="sdphoto-sd-stamp" src="images/work-sd-stamp.webp" style="display:none" loading="lazy" />
-<img id="sdphoto-sd-during-sand" src="images/work-sd-during-sand.webp" style="display:none" loading="lazy" />
+<img id="sdphoto-sd-hero" src="images/ph-oil-set-1.webp" style="display:none" loading="lazy" width="1600" height="1204">
+<img id="sdphoto-sd-before-set" src="images/work-sd-before-set.webp" style="display:none" loading="lazy" width="629" height="1200" />
+<img id="sdphoto-sd-before-handles" src="images/work-sd-before-handles.webp" style="display:none" loading="lazy" width="1200" height="900" />
+<img id="sdphoto-sd-during-clean" src="images/work-sd-during-clean.webp" style="display:none" loading="lazy" width="1200" height="344" />
+<img id="sdphoto-sd-stamp" src="images/work-sd-stamp.webp" style="display:none" loading="lazy" width="1200" height="748" />
+<img id="sdphoto-sd-during-sand" src="images/work-sd-during-sand.webp" style="display:none" loading="lazy" width="1200" height="842" />
 
-<img id="sdphoto-ph-ferrules"   src="images/ph-belt-ferrules.webp"  style="display:none" loading="lazy">
-<img id="sdphoto-ph-full-set"   src="images/ph-belt-full-set.webp"  style="display:none" loading="lazy">
-<img id="sdphoto-ph-handles"    src="images/ph-belt-handles.webp"   style="display:none" loading="lazy">
-<img id="sdphoto-ph-blades"     src="images/ph-belt-blades.webp"    style="display:none" loading="lazy">
-<img id="sdphoto-ph-horizontal" src="images/ph-belt-horizontal.webp" style="display:none" loading="lazy">
+<img id="sdphoto-ph-ferrules"   src="images/ph-belt-ferrules.webp"  style="display:none" loading="lazy" width="1600" height="1148">
+<img id="sdphoto-ph-full-set"   src="images/ph-belt-full-set.webp"  style="display:none" loading="lazy" width="1600" height="2430">
+<img id="sdphoto-ph-handles"    src="images/ph-belt-handles.webp"   style="display:none" loading="lazy" width="1600" height="1041">
+<img id="sdphoto-ph-blades"     src="images/ph-belt-blades.webp"    style="display:none" loading="lazy" width="1600" height="2066">
+<img id="sdphoto-ph-horizontal" src="images/ph-belt-horizontal.webp" style="display:none" loading="lazy" width="1600" height="677">
 <!-- Chip breaker screwdriver photos -->
-<img id="cbdphoto-cbd-hero" src="images/work-cbd-hero.webp" style="display:none" loading="lazy" />
-<img id="cbdphoto-cbd-planes" src="images/work-cbd-planes.webp" style="display:none" loading="lazy" />
-<img id="cbdphoto-cbd-grain" src="images/work-cbd-grain.webp" style="display:none" loading="lazy" />
-<img id="cbdphoto-cbd-inuse" src="images/work-cbd-inuse.webp" style="display:none" loading="lazy" />
+<img id="cbdphoto-cbd-hero" src="images/work-cbd-hero.webp" style="display:none" loading="lazy" width="979" height="1200" />
+<img id="cbdphoto-cbd-planes" src="images/work-cbd-planes.webp" style="display:none" loading="lazy" width="1200" height="873" />
+<img id="cbdphoto-cbd-grain" src="images/work-cbd-grain.webp" style="display:none" loading="lazy" width="756" height="1200" />
+<img id="cbdphoto-cbd-inuse" src="images/work-cbd-inuse.webp" style="display:none" loading="lazy" width="1155" height="1200" />
 
 <script>
 (function() {

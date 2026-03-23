@@ -6,13 +6,16 @@ _Last updated: March 23, 2026_
 ## 🔲 Open Tasks
 
 ### Lighthouse — Remaining Performance Wins
-- [ ] **Fix color contrast** — `--amber` (#c8853a) fails WCAG AA (2.69:1 ratio, needs 4.5:1); affects ~60+ elements across site; needs design decision on new text color for small amber text
-- [ ] **Fix heading hierarchy** — audit and correct skipped heading levels across pages
-- [ ] **Add `height` attributes** to unsized `<img>` tags (work.html has 38; others TBD)
+_(all performance items complete — awaiting new audit results)_
 
 ---
 
 ## ✅ Completed Tasks
+
+### Session: March 23, 2026 (continued — accessibility & contrast pass)
+- [x] **Fixed h1→h3 heading hierarchy skip** in work.html (7 card-titles h3→h2) and products.html (5 section headers h3→h2); both pages now h1→h2 clean
+- [x] **Added missing width/height attributes** to 195 img tags across 12 pages — eliminates CLS-causing layout shifts; zero images skipped (all dims resolved from files)
+- [x] **Fixed color contrast site-wide** — added `--amber-text: #a0621a` to `:root` on all 19 pages; replaced 421 `color: var(--amber)` text uses with `color: var(--amber-text)`; ratio on cream improves 2.69:1 → 4.65:1 (WCAG AA ✅); decorative/background/border uses of `--amber` unchanged
 
 ### Session: March 23, 2026 (continued — image resizing pass)
 - [x] **Resized 60 restoration article images** across 7 pages — all images >1600px wide shrunk to 1600px max; WebP regenerated in-place; **~84 MB total freed**

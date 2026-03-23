@@ -59,6 +59,7 @@
       --ink-faint: rgba(28,26,23,0.5);
       --cream: #f5f0e8;
       --amber: #c8853a;
+    --amber-text: #a0621a;
       --amber-light: rgba(200,133,58,0.35);
       --border: rgba(28,26,23,0.08);
       --border-warm: rgba(200,133,58,0.25);
@@ -71,7 +72,7 @@
       font-size: 0.62rem;
       letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: var(--amber);
+      color: var(--amber-text);
       margin-bottom: 1.2rem;
       display: flex;
       align-items: center;
@@ -122,7 +123,7 @@
     .stat-item:last-child { border-right:none; }
     .stat-value {
       font-family: var(--serif); font-size:1.8rem; font-weight:600;
-      color:var(--amber); line-height:1; display:block;
+      color: var(--amber-text); line-height:1; display:block;
     }
     .stat-label {
       font-family:var(--mono); font-size:0.58rem; letter-spacing:0.12em;
@@ -138,7 +139,7 @@
       font-size: 0.6rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--amber);
+      color: var(--amber-text);
       margin-bottom: 0.6rem;
     }
     .section-num { color: var(--ink-faint); }
@@ -196,7 +197,7 @@
       margin-bottom: 0.3rem;
     }
     .supply-name a {
-      color: var(--amber);
+      color: var(--amber-text);
       text-decoration: none;
       border-bottom: 1px solid var(--amber-light);
       font-size: 0.88rem;
@@ -213,7 +214,7 @@
       font-size: 0.6rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--amber);
+      color: var(--amber-text);
       margin-bottom: 0.75rem;
     }
 
@@ -221,7 +222,7 @@
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 2rem; background: rgba(28,26,23,0.96); backdrop-filter: blur(8px); }
     nav ul { display: flex; list-style: none; gap: 2rem; }
     nav a { color: rgba(245,240,232,0.78); text-decoration: none; font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.2s; }
-    nav a:hover, nav a.nav-active { color: var(--amber); }
+    nav a:hover, nav a.nav-active { color: var(--amber-text); }
     .nav-hamburger { display: none; }
     .skip-link { position: absolute; left: -9999px; top: 0.5rem; z-index: 9999; padding: 0.5rem 1rem; background: var(--amber); color: #fff; font-family: 'DM Mono', monospace; font-size: 0.8rem; border-radius: 0 0 4px 0; text-decoration: none; }
     .skip-link:focus { left: 0; }
@@ -241,7 +242,7 @@
     }
   
     /* ── Visited link colours ── */
-    a:visited { color: var(--amber); }
+    a:visited { color: var(--amber-text); }
     nav ul a:visited { color: rgba(245,240,232,0.72); }
     footer a:visited { color: rgba(245,240,232,0.35); }
   </style>
@@ -267,7 +268,7 @@
     <li><a href="contact.html">Contact</a></li>
     <li><a href="wishlist.html">Wishlist</a></li>
     <li><a href="listening.html">Listening</a></li>
-    <li><a href="partner.html" style="color:var(--amber);">Partner</a></li>
+    <li><a href="partner.html" style="color: var(--amber-text);">Partner</a></li>
   </ul>
   </nav>
 
@@ -302,7 +303,7 @@
     <div class="article-body" style="padding-top:0;">
       <picture>
   <source type="image/webp" srcset="images/bulat-hero.webp">
-  <img src="images/bulat-hero.jpg" class="article-hero-img" alt="Bulat Damascus chef's knife on white marble — refreshed walnut scales, beautiful Damascus blade pattern" style="width:100%;aspect-ratio:3/2;object-fit:cover;display:block;margin-bottom:3rem;">
+  <img src="images/bulat-hero.jpg" class="article-hero-img" alt="Bulat Damascus chef's knife on white marble — refreshed walnut scales, beautiful Damascus blade pattern" style="width:100%;aspect-ratio:3/2;object-fit:cover;display:block;margin-bottom:3rem;" height="1200">
 </picture>
 
       <!-- ── SECTION 1: THE KNIFE ── -->
@@ -317,14 +318,14 @@
           <figure>
             <picture>
   <source type="image/webp" srcset="images/bulat-handle-side.webp">
-  <img src="images/bulat-handle-side.jpg" alt="Bulat chef's knife handle close-up after refresh — warm walnut scales, three polished steel rivets" loading="lazy">
+  <img src="images/bulat-handle-side.jpg" alt="Bulat chef's knife handle close-up after refresh — warm walnut scales, three polished steel rivets" loading="lazy" width="1600" height="1200">
 </picture>
             <figcaption>After three coats of Walrus Oil — the grain came back to life.</figcaption>
           </figure>
           <figure>
             <picture>
   <source type="image/webp" srcset="images/bulat-brand-handle.webp">
-  <img src="images/bulat-brand-handle.jpg" alt="Bulat brand stamp etched on blade near bolster, with refreshed walnut handle visible" loading="lazy">
+  <img src="images/bulat-brand-handle.jpg" alt="Bulat brand stamp etched on blade near bolster, with refreshed walnut handle visible" loading="lazy" width="1600" height="800">
 </picture>
             <figcaption>The "Bulat" brand stamp etched near the bolster — a nice detail.</figcaption>
           </figure>
@@ -337,13 +338,13 @@
         <h2 class="section-title" id="s2-title">Quick, deliberate, done right.</h2>
         <p>No before photos — but the condition was easily described: dry scales with flat, faded grain. Nothing structural to address, no fills needed. Just wood that had been neglected for too long and needed to be brought back.</p>
         <p><strong>Step 1 — Light sanding.</strong> 180 grit to open up the surface and remove the oxidized outer layer. Light touch — these scales didn't need reshaping, just freshening. Then 220 grit to smooth things back out and raise the grain slightly before finishing.</p>
-        <p><strong>Step 2 — Walrus Oil.</strong> Three coats of <a href="https://walrusoil.com/products/polymerized-tung-oil" target="_blank" rel="noopener noreferrer" style="color:var(--amber);text-decoration:none;border-bottom:1px solid var(--amber-light);">Walrus Oil (polymerized tung oil)</a>, one per day. Apply a generous coat, let it soak in for 10–15 minutes, then wipe off every trace of excess. The wipe-off step is not optional — pooled oil gets tacky and gummy if left. Each coat cured for 24 hours before the next went on.</p>
-        <p><strong>Step 3 — Renaissance Wax.</strong> A light coat of <a href="https://www.amazon.com/s?k=renaissance+wax&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color:var(--amber);text-decoration:none;border-bottom:1px solid var(--amber-light);">Renaissance Wax</a> buffed out with a lint-free cloth. This seals everything in, adds a subtle sheen, and gives the handle a hand feel that oiled wood alone doesn't quite achieve.</p>
+        <p><strong>Step 2 — Walrus Oil.</strong> Three coats of <a href="https://walrusoil.com/products/polymerized-tung-oil" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid var(--amber-light);">Walrus Oil (polymerized tung oil)</a>, one per day. Apply a generous coat, let it soak in for 10–15 minutes, then wipe off every trace of excess. The wipe-off step is not optional — pooled oil gets tacky and gummy if left. Each coat cured for 24 hours before the next went on.</p>
+        <p><strong>Step 3 — Renaissance Wax.</strong> A light coat of <a href="https://www.amazon.com/s?k=renaissance+wax&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid var(--amber-light);">Renaissance Wax</a> buffed out with a lint-free cloth. This seals everything in, adds a subtle sheen, and gives the handle a hand feel that oiled wood alone doesn't quite achieve.</p>
 
         <figure>
           <picture>
   <source type="image/webp" srcset="images/bulat-handle-spine.webp">
-  <img src="images/bulat-handle-spine.jpg" alt="Bulat chef's knife spine view — showing both scales of the handle after Walrus Oil refresh" loading="lazy">
+  <img src="images/bulat-handle-spine.jpg" alt="Bulat chef's knife spine view — showing both scales of the handle after Walrus Oil refresh" loading="lazy" width="1600" height="555">
 </picture>
           <figcaption>Spine view showing both scales — the walnut color and grain depth came up beautifully.</figcaption>
         </figure>
@@ -378,7 +379,7 @@
         <figure>
           <picture>
   <source type="image/webp" srcset="images/bulat-damascus-bolster.webp">
-  <img src="images/bulat-damascus-bolster.jpg" alt="Bulat Damascus chef's knife blade close-up near bolster — scrollwork and flowing layers" loading="lazy">
+  <img src="images/bulat-damascus-bolster.jpg" alt="Bulat Damascus chef's knife blade close-up near bolster — scrollwork and flowing layers" loading="lazy" width="1600" height="737">
 </picture>
           <figcaption>The Damascus pattern near the bolster — tight scrollwork transitioning into flowing lines. The "Bulat" etch is just off-frame to the right.</figcaption>
         </figure>
@@ -387,14 +388,14 @@
           <figure>
             <picture>
   <source type="image/webp" srcset="images/bulat-blade-tip.webp">
-  <img src="images/bulat-blade-tip.jpg" alt="Bulat Damascus blade tip area — wide flowing layers and teardrop pattern" loading="lazy">
+  <img src="images/bulat-blade-tip.jpg" alt="Bulat Damascus blade tip area — wide flowing layers and teardrop pattern" loading="lazy" width="1600" height="528">
 </picture>
             <figcaption>The tip area — the pattern opens into wider, more dramatic flowing layers.</figcaption>
           </figure>
           <figure>
             <picture>
   <source type="image/webp" srcset="images/bulat-hero.webp">
-  <img src="images/bulat-hero.jpg" alt="Full Bulat chef's knife on white marble — Damascus blade and walnut handle after refresh" loading="lazy">
+  <img src="images/bulat-hero.jpg" alt="Full Bulat chef's knife on white marble — Damascus blade and walnut handle after refresh" loading="lazy" width="1600" height="1200">
 </picture>
             <figcaption>The complete knife. Damascus blade, refreshed walnut scales, steel pin rivets.</figcaption>
           </figure>
@@ -424,28 +425,28 @@
   <!-- MORE RESTORATIONS -->
   <div style="background:var(--cream);padding:3rem 2rem;border-top:1px solid var(--border);">
     <div style="max-width:740px;margin:0 auto;">
-      <div style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--amber);margin-bottom:1.5rem;">More Restorations &amp; Builds</div>
+      <div style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color: var(--amber-text);margin-bottom:1.5rem;">More Restorations &amp; Builds</div>
       <div style="display:flex;flex-direction:column;gap:1rem;">
         <a href="restoration-imperial-steak-knives.html" style="display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border:1px solid var(--border);border-radius:3px;text-decoration:none;color:var(--ink);transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--amber)'" onmouseout="this.style.borderColor='var(--border)'">
           <span>
-            <span style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;color:var(--amber);text-transform:uppercase;display:block;margin-bottom:0.2rem;">No. 08 · Knives</span>
+            <span style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;color: var(--amber-text);text-transform:uppercase;display:block;margin-bottom:0.2rem;">No. 08 · Knives</span>
             <span style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;">Imperial Steak Knife Handle Refresh</span>
           </span>
-          <span style="color:var(--amber);font-family:'DM Mono',monospace;font-size:0.8rem;">→</span>
+          <span style="color: var(--amber-text);font-family:'DM Mono',monospace;font-size:0.8rem;">→</span>
         </a>
         <a href="restoration-german-perfect-handle.html" style="display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border:1px solid var(--border);border-radius:3px;text-decoration:none;color:var(--ink);transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--amber)'" onmouseout="this.style.borderColor='var(--border)'">
           <span>
-            <span style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;color:var(--amber);text-transform:uppercase;display:block;margin-bottom:0.2rem;">No. 07 · Screwdrivers</span>
+            <span style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;color: var(--amber-text);text-transform:uppercase;display:block;margin-bottom:0.2rem;">No. 07 · Screwdrivers</span>
             <span style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;">German "Perfect Handle" Set — Four Sizes</span>
           </span>
-          <span style="color:var(--amber);font-family:'DM Mono',monospace;font-size:0.8rem;">→</span>
+          <span style="color: var(--amber-text);font-family:'DM Mono',monospace;font-size:0.8rem;">→</span>
         </a>
         <a href="work.html" style="display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border:1px solid var(--border);border-radius:3px;text-decoration:none;color:var(--ink);transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--amber)'" onmouseout="this.style.borderColor='var(--border)'">
           <span>
-            <span style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;color:var(--amber);text-transform:uppercase;display:block;margin-bottom:0.2rem;">Full Archive</span>
+            <span style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;color: var(--amber-text);text-transform:uppercase;display:block;margin-bottom:0.2rem;">Full Archive</span>
             <span style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;">View All Restorations &amp; Builds →</span>
           </span>
-          <span style="color:var(--amber);font-family:'DM Mono',monospace;font-size:0.8rem;">→</span>
+          <span style="color: var(--amber-text);font-family:'DM Mono',monospace;font-size:0.8rem;">→</span>
         </a>
       </div>
     </div>

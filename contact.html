@@ -270,6 +270,7 @@
     --ink-soft: #4a4540;
     --ink-faint: #6b6358;
     --amber: #c8853a;
+    --amber-text: #a0621a;
     --amber-light: #e8b878;
     --rust: #a0522d;
     --wood: #8b6340;
@@ -337,7 +338,7 @@
     transition: color 0.2s;
   }
 
-  nav a:hover { color: var(--amber); }
+  nav a:hover { color: var(--amber-text); }
   /* ── HAMBURGER ── */
   .nav-hamburger {
     display: none;
@@ -391,7 +392,7 @@
     font-size: 0.65rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--amber);
+    color: var(--amber-text);
     margin-bottom: 1.5rem;
     opacity: 0;
     animation: fadeUp 0.8s 0.2s forwards;
@@ -410,7 +411,7 @@
 
   .hero-title em {
     font-style: italic;
-    color: var(--amber);
+    color: var(--amber-text);
   }
 
   .hero-subtitle {
@@ -462,7 +463,7 @@
     transition: color 0.2s;
   }
 
-  .btn-ghost:hover { color: var(--amber); }
+  .btn-ghost:hover { color: var(--amber-text); }
 
   .hero-visual {
     background: var(--cream);
@@ -515,7 +516,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 2.8rem;
     font-weight: 300;
-    color: var(--amber);
+    color: var(--amber-text);
     line-height: 1;
   }
 
@@ -543,7 +544,7 @@
     font-family: 'DM Mono', monospace;
     font-size: 0.85rem;
     letter-spacing: 0.15em;
-    color: var(--amber);
+    color: var(--amber-text);
   }
 
   .section-title {
@@ -650,7 +651,7 @@
     font-size: 0.7rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--amber);
+    color: var(--amber-text);
     margin-bottom: 0.5rem;
   }
 
@@ -738,7 +739,7 @@
     font-size: 0.72rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--amber);
+    color: var(--amber-text);
     text-decoration: none;
     border-bottom: 1px solid var(--border-warm);
     padding-bottom: 1px;
@@ -799,7 +800,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.8rem;
     font-style: italic;
-    color: var(--amber);
+    color: var(--amber-text);
     margin-top: 2rem;
   }
 
@@ -824,7 +825,7 @@
     font-family: 'DM Mono', monospace;
     font-size: 0.7rem;
     letter-spacing: 0.2em;
-    color: var(--amber);
+    color: var(--amber-text);
     margin-bottom: 1rem;
   }
 
@@ -884,7 +885,7 @@
     border-bottom: 1px solid var(--border);
   }
 
-  .social-link:hover { color: var(--amber); }
+  .social-link:hover { color: var(--amber-text); }
 
   .social-link-icon {
     width: 36px;
@@ -968,7 +969,7 @@
     opacity: 0.7;
   }
 
-  .footer-logo span { color: var(--amber); }
+  .footer-logo span { color: var(--amber-text); }
 
   .footer-copy {
     font-family: 'DM Mono', monospace;
@@ -1037,7 +1038,7 @@
     font-size: 0.7rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--amber);
+    color: var(--amber-text);
     margin-bottom: 1rem;
   }
 
@@ -1150,7 +1151,7 @@
     }
   }
 
-  .nav-active { color: var(--amber) !important; }
+  .nav-active { color: var(--amber-text) !important; }
 
 
   /* ── STAGGER REVEAL DELAYS ── */
@@ -1244,7 +1245,7 @@
 
 
     /* ── Visited link colours ── */
-    a:visited { color: var(--amber); }
+    a:visited { color: var(--amber-text); }
     nav ul a:visited { color: rgba(245,240,232,0.72); }
     footer a:visited { color: rgba(245,240,232,0.35); }
   </style>
@@ -1340,7 +1341,7 @@
     <li><a href="contact.html" class="nav-active" aria-current="page">Contact</a></li>
     <li><a href="wishlist.html">Wishlist</a></li>
     <li><a href="listening.html">Listening</a></li>
-    <li><a href="partner.html" style="color:var(--amber);">Partner</a></li>
+    <li><a href="partner.html" style="color: var(--amber-text);">Partner</a></li>
   </ul>
 </nav>
 <main id="main-content">
@@ -1358,7 +1359,7 @@
     <!-- Name row -->
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
       <div>
-        <label for="first-name" style="display:block;font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.5rem;">First Name <span style="color:var(--amber);">*</span></label>
+        <label for="first-name" style="display:block;font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.5rem;">First Name <span style="color: var(--amber-text);">*</span></label>
         <input id="first-name" type="text" name="first-name" required autocomplete="given-name" placeholder="First name" style="width:100%;padding:0.75rem 1rem;background:var(--cream);border:1px solid var(--border);font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:300;color:var(--ink);outline:none;transition:border-color 0.2s;box-sizing:border-box;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='var(--border)'"  aria-required="true" />
       </div>
       <div>
@@ -1369,13 +1370,13 @@
 
     <!-- Email -->
     <div>
-      <label for="first-name" style="display:block;font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.5rem;">Email <span style="color:var(--amber);">*</span></label>
+      <label for="first-name" style="display:block;font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.5rem;">Email <span style="color: var(--amber-text);">*</span></label>
       <input id="email-field" type="email" name="email" required autocomplete="email" placeholder="your@email.com" style="width:100%;padding:0.75rem 1rem;background:var(--cream);border:1px solid var(--border);font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:300;color:var(--ink);outline:none;transition:border-color 0.2s;box-sizing:border-box;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='var(--border)'"  aria-required="true" />
     </div>
 
     <!-- Subject -->
     <div>
-      <label for="first-name" style="display:block;font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.5rem;">Subject <span style="color:var(--amber);">*</span></label>
+      <label for="first-name" style="display:block;font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.5rem;">Subject <span style="color: var(--amber-text);">*</span></label>
       <select id="subject" name="subject" required style="width:100%;padding:0.75rem 1rem;background:var(--cream);border:1px solid var(--border);font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:300;color:var(--ink);outline:none;transition:border-color 0.2s;box-sizing:border-box;appearance:none;cursor:pointer;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='var(--border)'" aria-required="true">
         <option value="" disabled selected>Select a topic</option>
         <option value="general">General / Just saying hello</option>
@@ -1389,7 +1390,7 @@
 
     <!-- Message -->
     <div>
-      <label for="first-name" style="display:block;font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.5rem;">Message <span style="color:var(--amber);">*</span></label>
+      <label for="first-name" style="display:block;font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.5rem;">Message <span style="color: var(--amber-text);">*</span></label>
       <textarea id="message" name="message" required rows="6" style="width:100%;padding:0.75rem 1rem;background:var(--cream);border:1px solid var(--border);font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:300;color:var(--ink);outline:none;transition:border-color 0.2s;box-sizing:border-box;resize:vertical;line-height:1.7;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='var(--border)'" aria-required="true"></textarea>
     </div>
 
@@ -1405,22 +1406,22 @@
 <!-- Partnerships & Vendor Section -->
 <section style="padding-top:0;padding-bottom:6rem;max-width:720px;margin:0 auto;padding-left:2rem;padding-right:2rem;">
   <div style="border-top:1px solid var(--border);padding-top:3rem;">
-    <div style="font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber);margin-bottom:1rem;">For Brands &amp; Vendors</div>
+    <div style="font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color: var(--amber-text);margin-bottom:1rem;">For Brands &amp; Vendors</div>
     <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:400;color:var(--ink);letter-spacing:0.01em;margin-bottom:1.25rem;line-height:1.25;">Partnerships &amp; Sponsorships</h2>
     <p style="font-size:0.95rem;line-height:1.9;color:var(--ink-soft);margin-bottom:1.5rem;">If you represent a tool brand, workshop supplier, finishing company, or any maker-focused business — I&rsquo;d genuinely love to hear from you. TheToddMark documents every restoration in detail, from the first pass with mineral spirits to the final coat of wax. Your products would be featured in the same careful, unhurried way.</p>
     <p style="font-size:0.95rem;line-height:1.9;color:var(--ink-soft);margin-bottom:1.5rem;">I&rsquo;m open to <strong style="color:var(--ink);font-weight:500;">tool loans</strong>, <strong style="color:var(--ink);font-weight:500;">product gifting</strong>, <strong style="color:var(--ink);font-weight:500;">sponsored restorations</strong>, and <strong style="color:var(--ink);font-weight:500;">affiliate arrangements</strong>. The audience is small but devoted — fellow craftspeople who read every word, follow every step, and buy quality tools when they&rsquo;re recommended by someone they trust.</p>
-    <p style="font-size:0.95rem;line-height:1.9;color:var(--ink-soft);margin-bottom:2rem;">Use the form above and select <em>&ldquo;Partnership / Brand Inquiry&rdquo;</em> as the subject — I&rsquo;ll get back to you promptly. You can also read the full <a href="partner.html" style="color:var(--amber);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Partner page</a> for details on what I offer and how coverage works.</p>
+    <p style="font-size:0.95rem;line-height:1.9;color:var(--ink-soft);margin-bottom:2rem;">Use the form above and select <em>&ldquo;Partnership / Brand Inquiry&rdquo;</em> as the subject — I&rsquo;ll get back to you promptly. You can also read the full <a href="partner.html" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Partner page</a> for details on what I offer and how coverage works.</p>
     <div style="display:flex;flex-wrap:wrap;gap:1rem;">
       <div style="flex:1;min-width:160px;padding:1.25rem 1.5rem;background:var(--cream);border:1px solid var(--border);">
-        <div style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--amber);margin-bottom:0.4rem;">Format</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color: var(--amber-text);margin-bottom:0.4rem;">Format</div>
         <div style="font-size:0.88rem;color:var(--ink-soft);line-height:1.6;">Detailed written restoration<br>write-ups with photography</div>
       </div>
       <div style="flex:1;min-width:160px;padding:1.25rem 1.5rem;background:var(--cream);border:1px solid var(--border);">
-        <div style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--amber);margin-bottom:0.4rem;">Audience</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color: var(--amber-text);margin-bottom:0.4rem;">Audience</div>
         <div style="font-size:0.88rem;color:var(--ink-soft);line-height:1.6;">Craftspeople, collectors,<br>and serious tool enthusiasts</div>
       </div>
       <div style="flex:1;min-width:160px;padding:1.25rem 1.5rem;background:var(--cream);border:1px solid var(--border);">
-        <div style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--amber);margin-bottom:0.4rem;">Open To</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color: var(--amber-text);margin-bottom:0.4rem;">Open To</div>
         <div style="font-size:0.88rem;color:var(--ink-soft);line-height:1.6;">Tool loans, gifted products,<br>sponsored content, affiliates</div>
       </div>
     </div>
@@ -1490,7 +1491,7 @@ const tools = {
 <br>
 <p><strong>Step 2 — Color:</strong> Fiebing's leather dye applied sequentially — Black first, then Dark Brown, then Mahogany. The layered approach builds dimensional color that looks like it comes from inside the wood. The black base pools in the knurled grooves, giving natural contrast.</p>
 <br>
-<p><strong>Step 3 — Finish:</strong> Three coats of <a href="https://walrusoil.com/products/polymerized-tung-oil" target="_blank" rel="noopener noreferrer" style="color:var(--amber);text-decoration:none;border-bottom:1px solid var(--amber-light);">polymerized tung oil (Walrus Oil)</a> over 48–72 hours. One wash coat of dewaxed shellac. Final coat of Renaissance Wax buffed to a soft sheen.</p>
+<p><strong>Step 3 — Finish:</strong> Three coats of <a href="https://walrusoil.com/products/polymerized-tung-oil" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid var(--amber-light);">polymerized tung oil (Walrus Oil)</a> over 48–72 hours. One wash coat of dewaxed shellac. Final coat of Renaissance Wax buffed to a soft sheen.</p>
 <br>
 <p><em>The result: handles that look richer than they ever did new. The Fiebing's dye method is unconventional on tool handles — and completely worth it.</em></p>`
   },

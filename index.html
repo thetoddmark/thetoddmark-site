@@ -270,6 +270,7 @@
     --ink-soft: #4a4540;
     --ink-faint: #6b6358;
     --amber: #c8853a;
+    --amber-text: #a0621a;
     --amber-light: #e8b878;
     --rust: #a0522d;
     --wood: #8b6340;
@@ -337,7 +338,7 @@
     transition: color 0.2s;
   }
 
-  nav a:hover { color: var(--amber); }
+  nav a:hover { color: var(--amber-text); }
   /* ── HAMBURGER ── */
   .nav-hamburger {
     display: none;
@@ -391,7 +392,7 @@
     font-size: 0.65rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--amber);
+    color: var(--amber-text);
     margin-bottom: 1.5rem;
     opacity: 0;
     animation: fadeUp 0.8s 0.2s forwards;
@@ -410,7 +411,7 @@
 
   .hero-title em {
     font-style: italic;
-    color: var(--amber);
+    color: var(--amber-text);
   }
 
   .hero-subtitle {
@@ -462,7 +463,7 @@
     transition: color 0.2s;
   }
 
-  .btn-ghost:hover { color: var(--amber); }
+  .btn-ghost:hover { color: var(--amber-text); }
 
   .hero-visual {
     background: var(--cream);
@@ -514,7 +515,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 2.8rem;
     font-weight: 300;
-    color: var(--amber);
+    color: var(--amber-text);
     line-height: 1;
   }
 
@@ -542,7 +543,7 @@
     font-family: 'DM Mono', monospace;
     font-size: 0.85rem;
     letter-spacing: 0.15em;
-    color: var(--amber);
+    color: var(--amber-text);
   }
 
   .section-title {
@@ -649,7 +650,7 @@
     font-size: 0.7rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--amber);
+    color: var(--amber-text);
     margin-bottom: 0.5rem;
   }
 
@@ -737,7 +738,7 @@
     font-size: 0.72rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--amber);
+    color: var(--amber-text);
     text-decoration: none;
     border-bottom: 1px solid var(--border-warm);
     padding-bottom: 1px;
@@ -798,7 +799,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.8rem;
     font-style: italic;
-    color: var(--amber);
+    color: var(--amber-text);
     margin-top: 2rem;
   }
 
@@ -823,7 +824,7 @@
     font-family: 'DM Mono', monospace;
     font-size: 0.7rem;
     letter-spacing: 0.2em;
-    color: var(--amber);
+    color: var(--amber-text);
     margin-bottom: 1rem;
   }
 
@@ -883,7 +884,7 @@
     border-bottom: 1px solid var(--border);
   }
 
-  .social-link:hover { color: var(--amber); }
+  .social-link:hover { color: var(--amber-text); }
 
   .social-link-icon {
     width: 36px;
@@ -967,7 +968,7 @@
     opacity: 0.7;
   }
 
-  .footer-logo span { color: var(--amber); }
+  .footer-logo span { color: var(--amber-text); }
 
   .footer-copy {
     font-family: 'DM Mono', monospace;
@@ -1036,7 +1037,7 @@
     font-size: 0.7rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--amber);
+    color: var(--amber-text);
     margin-bottom: 1rem;
   }
 
@@ -1134,7 +1135,7 @@
     font-size: 0.58rem;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--amber);
+    color: var(--amber-text);
     margin-bottom: 0.6rem;
   }
   .work-item-title {
@@ -1158,7 +1159,7 @@
     font-family: 'DM Mono', monospace;
     font-size: 0.65rem;
     letter-spacing: 0.12em;
-    color: var(--amber);
+    color: var(--amber-text);
     text-transform: uppercase;
   }
 
@@ -1177,7 +1178,7 @@
     font-size: 0.58rem;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--amber);
+    color: var(--amber-text);
     margin-bottom: 0.75rem;
   }
   .about-strip-title {
@@ -1224,7 +1225,7 @@
     display: block;
     margin-bottom: 0.4rem;
   }
-  .stat-num em { color: var(--amber); font-style: normal; }
+  .stat-num em { color: var(--amber-text); font-style: normal; }
   .stat-label {
     font-family: 'DM Mono', monospace;
     font-size: 0.6rem;
@@ -1304,7 +1305,7 @@
     footer { padding: 1rem 2.5rem; }
   }
 
-  .nav-active { color: var(--amber) !important; }
+  .nav-active { color: var(--amber-text) !important; }
 
   /* ═══ MOBILE RESPONSIVE (≤640px) ═══ */
   @media (max-width: 640px) {
@@ -1497,7 +1498,7 @@
     }
 
     /* ── Visited link colours ── */
-    a:visited { color: var(--amber); }
+    a:visited { color: var(--amber-text); }
     nav ul a:visited { color: rgba(245,240,232,0.72); }
     footer a:visited { color: rgba(245,240,232,0.35); }
   </style>
@@ -1619,7 +1620,7 @@
     <li><a href="contact.html">Contact</a></li>
     <li><a href="wishlist.html">Wishlist</a></li>
     <li><a href="listening.html">Listening</a></li>
-    <li><a href="partner.html" style="color:var(--amber);">Partner</a></li>
+    <li><a href="partner.html" style="color: var(--amber-text);">Partner</a></li>
   </ul>
 </nav>
 <main id="main-content">
@@ -1642,12 +1643,12 @@
     </div>
   </div>
   <div style="background:var(--ink);display:flex;flex-direction:column;justify-content:center;padding:2.5rem 3rem;border-left:1px solid rgba(245,240,232,0.08);">
-    <div style="font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber);margin-bottom:1.25rem;">Currently</div>
+    <div style="font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color: var(--amber-text);margin-bottom:1.25rem;">Currently</div>
     <p style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:#f5f0e8;line-height:1.45;margin-bottom:1.25rem;">Making plans to tear down the backyard shed and rebuild it into a proper — if still pretty small, but mighty — workshop. Documenting the whole thing.</p>
     <a href="shed-upgrade.html" style="display:block;margin-bottom:1rem;">
-      <picture><source srcset="images/shed-current-1-sm.webp" type="image/webp"><img src="images/shed-current-1-sm.jpg" alt="The current shed" loading="lazy" style="width:100%;height:auto;border-radius:3px;display:block;opacity:0.9;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.9'"></picture>
+      <picture><source srcset="images/shed-current-1-sm.webp" type="image/webp"><img src="images/shed-current-1-sm.jpg" alt="The current shed" loading="lazy" style="width:100%;height:auto;border-radius:3px;display:block;opacity:0.9;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.9'" height="450"></picture>
     </a>
-    <a href="shed-upgrade.html" style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--amber);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);padding-bottom:2px;display:inline-block;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Follow the build &#8594;</a>
+    <a href="shed-upgrade.html" style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color: var(--amber-text);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);padding-bottom:2px;display:inline-block;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Follow the build &#8594;</a>
   </div>
 </section>
 
@@ -1786,7 +1787,7 @@
   <!-- Featured Article -->
   <div style="background:var(--ink);padding:4rem 2rem;margin-top:0;">
     <div style="max-width:860px;margin:0 auto;">
-      <div style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--amber);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.8rem;">
+      <div style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color: var(--amber-text);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.8rem;">
         <span style="display:block;height:1px;width:2rem;background:var(--amber);opacity:0.5;"></span>
         Latest Write-Up
         <span style="display:block;height:1px;width:2rem;background:var(--amber);opacity:0.5;"></span>
@@ -1798,15 +1799,15 @@
           <p style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;color:rgba(245,240,232,0.55);line-height:1.65;margin-bottom:1.5rem;">A $40 eBay gamble, a 3-phase Fiebing's dye process, and the Phillips head screwdrivers that don't exist — until they do.</p>
           <div style="display:flex;gap:1.5rem;flex-wrap:wrap;margin-bottom:2rem;">
             <div style="text-align:center;">
-              <span style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:var(--amber);display:block;line-height:1;">7</span>
+              <span style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color: var(--amber-text);display:block;line-height:1;">7</span>
               <span style="font-family:'DM Mono',monospace;font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,240,232,0.35);display:block;margin-top:0.25rem;">Screwdrivers</span>
             </div>
             <div style="text-align:center;">
-              <span style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:var(--amber);display:block;line-height:1;">3</span>
+              <span style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color: var(--amber-text);display:block;line-height:1;">3</span>
               <span style="font-family:'DM Mono',monospace;font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,240,232,0.35);display:block;margin-top:0.25rem;">Dye Phases</span>
             </div>
             <div style="text-align:center;">
-              <span style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:var(--amber);display:block;line-height:1;">~$40</span>
+              <span style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color: var(--amber-text);display:block;line-height:1;">~$40</span>
               <span style="font-family:'DM Mono',monospace;font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,240,232,0.35);display:block;margin-top:0.25rem;">Purchase Price</span>
             </div>
           </div>
@@ -1815,7 +1816,7 @@
         <div class="featured-inline-border" style="border-left:1px solid rgba(245,240,232,0.08);padding-left:2.5rem;">
           <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(200,133,58,0.6);margin-bottom:0.75rem;">Also Published</div>
           <a href="restoration-awl-marking-knife.html" style="display:block;text-decoration:none;padding:1.25rem;background:rgba(245,240,232,0.04);border:1px solid rgba(245,240,232,0.08);border-radius:4px;transition:border-color 0.2s;margin-bottom:1rem;" onmouseover="this.style.borderColor='rgba(200,133,58,0.4)'" onmouseout="this.style.borderColor='rgba(245,240,232,0.08)'">
-            <div style="font-family:'DM Mono',monospace;font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--amber);margin-bottom:0.4rem;">Restoration No. 06 · Marking Tools</div>
+            <div style="font-family:'DM Mono',monospace;font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color: var(--amber-text);margin-bottom:0.4rem;">Restoration No. 06 · Marking Tools</div>
             <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--warm-white);line-height:1.3;margin-bottom:0.4rem;">Vintage Awl — Repurposed Marking Knife</div>
             <div style="font-size:0.88rem;color:rgba(245,240,232,0.4);line-height:1.6;">$10 find → precision marking knife. Full write-up.</div>
           </a>
@@ -1828,7 +1829,7 @@
 <!-- NEWSLETTER SIGNUP -->
 <div style="background:var(--ink);padding:4rem 2rem;">
   <div style="max-width:560px;margin:0 auto;text-align:center;">
-    <div style="font-family:'Georgia',serif;font-size:0.75rem;font-weight:700;letter-spacing:0.15em;color:var(--amber);text-transform:uppercase;margin-bottom:1rem;">The Newsletter</div>
+    <div style="font-family:'Georgia',serif;font-size:0.75rem;font-weight:700;letter-spacing:0.15em;color: var(--amber-text);text-transform:uppercase;margin-bottom:1rem;">The Newsletter</div>
     <h2 style="font-family:'Georgia',serif;font-size:1.75rem;font-weight:700;color:var(--warm-white);margin:0 0 1rem;line-height:1.3;">When a tool is done, I write it up.</h2>
     <p style="font-family:inherit;font-size:0.95rem;color:#a09080;line-height:1.7;margin:0 0 2rem;">No cadence, no schedule — just the occasional restoration story when I have something worth saying. Drop your email below and you'll get it when it lands.</p>
     <form action="https://buttondown.com/api/emails/embed-subscribe/TheToddMark" method="post" class="embeddable-buttondown-form" style="display:flex;gap:0.6rem;flex-wrap:wrap;justify-content:center;">
@@ -1904,7 +1905,7 @@ const tools = {
 <br>
 <p><strong>Step 2 — Color:</strong> Fiebing's leather dye applied sequentially — Black first, then Dark Brown, then Mahogany. The layered approach builds dimensional color that looks like it comes from inside the wood. The black base pools in the knurled grooves, giving natural contrast.</p>
 <br>
-<p><strong>Step 3 — Finish:</strong> Three coats of <a href="https://walrusoil.com/products/polymerized-tung-oil" target="_blank" rel="noopener noreferrer" style="color:var(--amber);text-decoration:none;border-bottom:1px solid var(--amber-light);">polymerized tung oil (Walrus Oil)</a> over 48–72 hours. One wash coat of dewaxed shellac. Final coat of Renaissance Wax buffed to a soft sheen.</p>
+<p><strong>Step 3 — Finish:</strong> Three coats of <a href="https://walrusoil.com/products/polymerized-tung-oil" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid var(--amber-light);">polymerized tung oil (Walrus Oil)</a> over 48–72 hours. One wash coat of dewaxed shellac. Final coat of Renaissance Wax buffed to a soft sheen.</p>
 <br>
 <p><em>The result: handles that look richer than they ever did new. The Fiebing's dye method is unconventional on tool handles — and completely worth it.</em></p>`
   },
@@ -2044,13 +2045,13 @@ document.addEventListener('keydown', e => {
 </script>
 <!-- Preloaded restoration photos -->
 <div style="display:none">
-  <img id="photo-before1" src="images/index-mac-before1.jpg" alt="Before restoration — full set on the cutting mat, decades of shop grime and oil-saturated handles" />
-  <img id="photo-before2" src="images/index-mac-before2.jpg" alt="Before restoration — angle view showing flat lifeless wood and surface rust on the ferrules" />
-  <img id="photo-mid1" src="images/index-mac-mid1.jpg" alt="Mid-process — sanded to bare wood, grain finally visible" />
-  <img id="photo-mid2" src="images/index-mac-mid2.jpg" alt="Mid-process — after mineral spirits wash and oxalic acid bath" />
-  <img id="photo-after1" src="images/index-mac-after1.jpg" alt="After restoration — Fiebing's dye and three coats of polymerized tung oil" />
-  <img id="photo-after2" src="images/index-mac-after2.jpg" alt="After restoration — black dye creating natural contrast in the grooves" />
-  <img id="photo-after3" src="images/index-mac-after3.jpg" alt="After restoration — full set with shellac and Renaissance Wax finish" />
+  <img id="photo-before1" src="images/index-mac-before1.jpg" alt="Before restoration — full set on the cutting mat, decades of shop grime and oil-saturated handles" width="547" height="805" />
+  <img id="photo-before2" src="images/index-mac-before2.jpg" alt="Before restoration — angle view showing flat lifeless wood and surface rust on the ferrules" width="551" height="814" />
+  <img id="photo-mid1" src="images/index-mac-mid1.jpg" alt="Mid-process — sanded to bare wood, grain finally visible" width="675" height="900" />
+  <img id="photo-mid2" src="images/index-mac-mid2.jpg" alt="Mid-process — after mineral spirits wash and oxalic acid bath" width="675" height="900" />
+  <img id="photo-after1" src="images/index-mac-after1.jpg" alt="After restoration — Fiebing's dye and three coats of polymerized tung oil" width="900" height="675" />
+  <img id="photo-after2" src="images/index-mac-after2.jpg" alt="After restoration — black dye creating natural contrast in the grooves" width="900" height="675" />
+  <img id="photo-after3" src="images/index-mac-after3.jpg" alt="After restoration — full set with shellac and Renaissance Wax finish" width="900" height="675" />
 </div>
 
 
