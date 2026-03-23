@@ -21,7 +21,7 @@
   <meta name="description" content="Every vintage hand tool restoration on TheToddMark — documented from first find to final finish. Before photos, process notes, supplies used, and an honest verdict on every piece.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Jost:wght@300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Jost:wght@300;400;500&display=swap"></noscript>
 <style>
 
   /* ══════════════════════════════════════════
@@ -1589,7 +1589,7 @@
       <div class="card-img-placeholder" style="position:relative;overflow:hidden;aspect-ratio:3/2;">
         <picture>
   <source type="image/webp" srcset="images/bpmt-hero.webp">
-  <img id="bpmt-gallery-img" style="pointer-events:none;width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" src="images/bpmt-hero.jpg" alt="Bridgeport H.M. Corp Interchangeable Tool Handle Restoration" loading="lazy" width="auto" height="auto">
+  <img id="bpmt-gallery-img" style="pointer-events:none;width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" src="images/bpmt-hero.jpg" alt="Bridgeport H.M. Corp Interchangeable Tool Handle Restoration" width="auto" height="auto">
 </picture>
         <div class="card-overlay"><span class="card-overlay-label">View Restoration</span></div>
       </div>
@@ -1627,7 +1627,7 @@
     <!-- Chip Breaker Screwdriver -->
     <div role="button" tabindex="0" id="chipbreaker" class="gallery-card small reveal" onclick="openLightbox('chipbreaker', this)">
       <div class="card-img-placeholder" style="position:relative;overflow:hidden;aspect-ratio:3/2;">
-        <img id="cbd-gallery-img" style="pointer-events:none;width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" src=""  loading="lazy" decoding="async" / width="auto" height="auto">
+        <img id="cbd-gallery-img" style="pointer-events:none;width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" src="" alt="Dave Corinth Chip Breaker Screwdriver Build" loading="lazy" decoding="async" width="auto" height="auto">
         <div class="card-overlay">
           <span class="card-overlay-label">View Build</span>
         </div>
@@ -1649,7 +1649,7 @@
     <!-- German Screwdrivers -->
     <div role="button" tabindex="0" id="germanscrewdrivers" class="gallery-card medium reveal" onclick="openLightbox('germanscrewdrivers', this)">
       <div class="card-img-placeholder" style="position:relative;overflow:hidden;aspect-ratio:3/2;">
-        <img id="sd-gallery-img" style="pointer-events:none;width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" src=""  loading="lazy" decoding="async" / width="auto" height="auto">
+        <img id="sd-gallery-img" style="pointer-events:none;width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" src="" alt="German Perfect Handle Screwdriver Set Restoration" loading="lazy" decoding="async" width="auto" height="auto">
         <div class="card-overlay">
           <span class="card-overlay-label">View Restoration</span>
         </div>
@@ -1677,7 +1677,7 @@
       <div class="card-img-placeholder" style="position:relative;overflow:hidden;aspect-ratio:3/2;">
         <picture>
   <source type="image/webp" srcset="images/work-mactools-thumb.webp">
-  <img id="mac-gallery-img" style="pointer-events:none;width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" src="images/work-mactools-thumb.jpg"  loading="lazy" decoding="async" />
+  <img id="mac-gallery-img" style="pointer-events:none;width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" src="images/work-mactools-thumb.jpg" alt="Mac Tools Wooden-Handle Screwdriver Set Restoration" loading="lazy" decoding="async">
 </picture>
         <div class="card-overlay">
           <span class="card-overlay-label">View Restoration</span>
@@ -1786,7 +1786,7 @@
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const tools = {
   chipbreaker: {
     category: 'Build',
