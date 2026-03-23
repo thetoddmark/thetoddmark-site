@@ -2107,13 +2107,34 @@ document.addEventListener('keydown', e => {
 </script>
 <!-- Preloaded restoration photos -->
 <div style="display:none">
-  <img id="photo-before1" src="images/resources-photo-before1.jpg" />
-  <img id="photo-before2" src="images/resources-photo-before2.jpg" />
-  <img id="photo-mid1" src="images/resources-photo-mid1.jpg" />
-  <img id="photo-mid2" src="images/resources-photo-mid2.jpg" />
-  <img id="photo-after1" src="images/resources-photo-after1.jpg" />
-  <img id="photo-after2" src="images/resources-photo-after2.jpg" />
-  <img id="photo-after3" src="images/resources-photo-after3.jpg" />
+  <picture>
+          <source type="image/webp" srcset="images/resources-photo-before1.webp">
+          <img id="photo-before1" src="images/resources-photo-before1.jpg" />
+        </picture>
+  <picture>
+          <source type="image/webp" srcset="images/resources-photo-before2.webp">
+          <img id="photo-before2" src="images/resources-photo-before2.jpg" />
+        </picture>
+  <picture>
+          <source type="image/webp" srcset="images/resources-photo-mid1.webp">
+          <img id="photo-mid1" src="images/resources-photo-mid1.jpg" />
+        </picture>
+  <picture>
+          <source type="image/webp" srcset="images/resources-photo-mid2.webp">
+          <img id="photo-mid2" src="images/resources-photo-mid2.jpg" />
+        </picture>
+  <picture>
+          <source type="image/webp" srcset="images/resources-photo-after1.webp">
+          <img id="photo-after1" src="images/resources-photo-after1.jpg" />
+        </picture>
+  <picture>
+          <source type="image/webp" srcset="images/resources-photo-after2.webp">
+          <img id="photo-after2" src="images/resources-photo-after2.jpg" />
+        </picture>
+  <picture>
+          <source type="image/webp" srcset="images/resources-photo-after3.webp">
+          <img id="photo-after3" src="images/resources-photo-after3.jpg" />
+        </picture>
 </div>
 
 

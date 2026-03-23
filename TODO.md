@@ -1,47 +1,41 @@
 # TheToddMark — To-Do List
-_Last updated: March 20, 2026_
+_Last updated: March 23, 2026_
 
 ---
 
 ## 🔲 Open Tasks
 
-### 🟠 Medium Priority
-
-#### 2. ~~Fix products.html base64 images~~ — Already clean
-- products.html only contains one tiny SVG noise texture (intentional); no JPEG base64 found
-
-#### 3. Organise stray root-level images
-- [ ] Move chip-breaker-screwdriver images from repo root into `images/`:
-  - `cbd-grain.jpg` (1.2 MB)
-  - `cbd-hero.jpg` (1.6 MB)
-  - `cbd-inuse.jpg` (2.5 MB)
-  - `cbd-planes.jpg` (4.2 MB)
-- [ ] Move `mark-portrait.png` (3.7 MB) into `images/` if not already referenced from there
-- [ ] Update all `src` references in `build-chip-breaker-screwdriver.html` and `about.html` accordingly
-- [ ] Confirm `og-image.jpg`, `favicon.jpg`, and `tm-logo.jpg` in root are intentionally there (some root placement may be required)
-
----
-
 ### 🟡 Lower Priority
 
-#### 5. Add WebP fallback to any remaining plain `<img>` JPEGs
-- [ ] Audit all HTML pages for `<img>` tags referencing `.jpg` files directly (not inside `<picture>`)
-- [ ] Wrap any found in `<picture><source type="image/webp" ...><img ...></picture>` elements
-- [ ] Confirm `.webp` counterparts exist in `images/` for each
+#### 1. Compress cbd-planes.jpg (still large even as WebP)
+- `cbd-planes.webp` is 1.7 MB — consider resizing to max 2400px wide before re-converting
+- Other cbd-*.webp files are reasonable (294–582 KB)
 
-#### 6. Remove .DS_Store from repo
-- [ ] Check if `.DS_Store` is tracked: `git ls-files --error-unmatch .DS_Store`
-- [ ] If tracked: `git rm --cached .DS_Store` then commit
-- [ ] Confirm `.gitignore` already includes `.DS_Store` (it does)
+#### 2. Audit shed-current-*.jpg images for resize opportunity
+- These are 3–5 MB JPGs (1.2–2.4 MB as WebP) — likely far larger than needed for web display
+- Consider resizing to max 2400px wide to reduce file sizes further
 
-#### 7. Sitemap audit
-- [ ] Review `sitemap.xml` — last modified dates are from March 2026; confirm all 19 pages are listed
-- [ ] Confirm no stale/removed pages remain in the sitemap
-- [ ] Update `<lastmod>` dates as needed after any major content changes
+#### 3. Consider removing yt-avatars.json
+- File contains base64 avatar data for 8 creators but is not referenced by any HTML or JS
+- Either delete it or repurpose it — currently dead weight in the repo
 
 ---
 
 ## ✅ Completed Tasks
+
+### Session: March 23, 2026
+- [x] **Organised stray root-level images** — moved cbd-*.jpg and mark-portrait.png into `images/`
+  - Updated `src` references in `build-chip-breaker-screwdriver.html` and `about.html`
+  - Updated og:image/twitter:image absolute URLs for cbd-planes.jpg
+  - Confirmed `favicon.jpg`, `og-image.jpg`, `tm-logo.jpg` intentionally remain in root
+  - `.DS_Store` removed from git tracking (already in .gitignore)
+- [x] **Generated WebP versions** for all 21 images that lacked `.webp` counterparts
+  - cbd-*.jpg, resources-photo-*.jpg, shed-*.jpg all now have WebP pairs
+  - HTML `<picture>` elements were already in place — WebP files just needed to exist
+- [x] **Sitemap updated** (`sitemap.xml`)
+  - Added 3 missing pages: `restoration-bulat-chefs-knife`, `restoration-imperial-steak-knives`, `shed-upgrade`
+  - Updated `<lastmod>` dates across all 17 pages to reflect recent sessions
+- [x] **WebP fallback audit complete** — all img tags already wrapped in `<picture>` elements
 
 ### Session: March 20, 2026
 - [x] **Replaced base64 images in resources.html** — 1.2 MB → 97 KB (92% reduction)
@@ -54,7 +48,7 @@ _Last updated: March 20, 2026_
   - DNS updated at Namecheap: 4 GitHub A records + www CNAME → thetoddmark.github.io
   - SSL cert issued, Enforce HTTPS enabled
   - Site confirmed live at https://thetoddmark.com
-  - Netlify project (gleeful-lily-f39b5c) deleted
+  - Netlify project (gleeful-lily-f39b5c) deleted; plan downgraded to free
   - PROJECT-NOTES.md updated to reflect GitHub Pages as deploy method
 - [x] **Fixed nav bar height inconsistency** on `partner.html` and `shed-upgrade.html`
   - Both pages used `padding: 0.85rem 2.5rem` without an explicit height
