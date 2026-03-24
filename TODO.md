@@ -12,6 +12,14 @@ _(all performance items complete — awaiting new audit results)_
 
 ## ✅ Completed Tasks
 
+### Session: March 23, 2026 (continued — SEO/meta pass + nav fix)
+- [x] **Fixed partner.html and shed-upgrade.html nav** — both used old `nav ul a` CSS (0.62rem/400wt, 2rem gap, mobile overlay at top:0); updated to canonical `nav a` (0.7rem/300wt, 2.5rem gap, overlay at top:56px); added missing `.nav-logo` and `.nav-hamburger span` styles; removed redundant mobile hamburger span rules
+- [x] **Added og:image + twitter:image to partner.html** — was the only page missing social preview image
+- [x] **Fixed JSON-LD broken string in restoration-german-perfect-handle.html** — curly-quote `"Perfect Handle"` inside JSON string was terminating the field early; fixed with Unicode escapes; description now complete
+- [x] **Fixed malformed JSON-LD in 404.html** — JS compatibility block was inside the `<script type="application/ld+json">` tag (missing closing `</script>`); split into two separate script tags
+- [x] **Fixed shed-upgrade.html meta description** — replaced `&times;` and `&prime;` HTML entities with plain text (entities don't render in social previews)
+- [x] **Validated all 24 JSON-LD blocks** across all pages — all pass JSON.parse
+
 ### Session: March 23, 2026 (continued — accessibility & contrast pass)
 - [x] **Fixed h1→h3 heading hierarchy skip** in work.html (7 card-titles h3→h2) and products.html (5 section headers h3→h2); both pages now h1→h2 clean
 - [x] **Added missing width/height attributes** to 195 img tags across 12 pages — eliminates CLS-causing layout shifts; zero images skipped (all dims resolved from files)
