@@ -1248,7 +1248,13 @@
     a:visited { color: var(--amber-text); }
     nav ul a:visited { color: rgba(245,240,232,0.72); }
     footer a:visited { color: rgba(245,240,232,0.35); }
-  </style>
+  
+  /* Amber text on dark (--ink) backgrounds: --amber-text (#a0621a) is 3.35:1 contrast on --ink, failing WCAG AA. --amber (#c8853a) is 5.46:1, passing. Override via CSS custom property cascade. */
+  [style*="background:var(--ink)"],
+  [style*="background: var(--ink)"],
+  nav,
+  footer { --amber-text: var(--amber); }
+</style>
 
   <meta name="description" content="Questions, tool tips, partnership inquiries, or want to talk shop? Reach out to TheToddMark — happy to connect with fellow craftspeople and potential collaborators.">
   <meta name="keywords" content="contact TheToddMark, tool restoration inquiry, woodworking partnership, tool sponsorship, workshop collaboration">
