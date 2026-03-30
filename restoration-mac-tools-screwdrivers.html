@@ -45,25 +45,25 @@
 
     nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:0.85rem 2.5rem; background:rgba(28,26,23,0.92); -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px); border-bottom:1px solid rgba(245,240,232,0.08); }
     nav ul { list-style:none; display:flex; gap:2rem; }
-    nav ul a { font-family:var(--mono); font-size:0.62rem; font-weight:400; letter-spacing:0.12em; text-transform:uppercase; color:rgba(245,240,232,0.72); text-decoration:none; transition:color 0.2s; }
+    nav ul a { font-family:var(--mono); font-size: 0.75rem; font-weight:400; letter-spacing:0.12em; text-transform:uppercase; color:rgba(245,240,232,0.72); text-decoration:none; transition:color 0.2s; }
     nav ul a:hover, nav ul a.nav-active { color: var(--amber-text); }
     .nav-hamburger { display:none; }
 
     .article-hero { padding:5rem 2rem 2rem; background:var(--ink); text-align:center; }
-    .article-eyebrow { font-family:var(--mono); font-size:0.68rem; letter-spacing:0.18em; text-transform:uppercase; color: var(--amber-text); margin-bottom:1.2rem; display:flex; align-items:center; justify-content:center; gap:0.8rem; }
+    .article-eyebrow { font-family:var(--mono); font-size: 0.75rem; letter-spacing:0.18em; text-transform:uppercase; color: var(--amber-text); margin-bottom:1.2rem; display:flex; align-items:center; justify-content:center; gap:0.8rem; }
     .article-eyebrow::before, .article-eyebrow::after { content:''; display:block; height:1px; width:2rem; background:var(--amber); opacity:0.5; }
     .article-title { font-family:var(--serif); font-size:clamp(2rem,5vw,3.5rem); font-weight:600; color:var(--warm-white); line-height:1.15; margin-bottom:1rem; }
     .article-subtitle { font-family:var(--serif); font-size:1.25rem; font-weight:300; font-style:italic; color:rgba(245,240,232,0.65); margin-bottom:2rem; }
-    .article-meta { display:flex; align-items:center; justify-content:center; gap:1.5rem; flex-wrap:wrap; font-family:var(--mono); font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(245,240,232,0.45); }
+    .article-meta { display:flex; align-items:center; justify-content:center; gap:1.5rem; flex-wrap:wrap; font-family:var(--mono); font-size: 0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(245,240,232,0.45); }
 
     .stats-bar { background:#141210; display:flex; justify-content:center; flex-wrap:wrap; }
     .stat-item { padding:1rem 2.5rem; text-align:center; border-right:1px solid rgba(245,240,232,0.08); }
     .stat-item:last-child { border-right:none; }
     .stat-value { font-family:var(--serif); font-size:1.8rem; font-weight:600; color: var(--amber-text); line-height:1; display:block; }
-    .stat-label { font-family:var(--mono); font-size:0.58rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(245,240,232,0.4); display:block; margin-top:0.3rem; }
+    .stat-label { font-family:var(--mono); font-size: 0.75rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(245,240,232,0.4); display:block; margin-top:0.3rem; }
 
     .article-body { max-width:740px; margin:0 auto; padding:4rem 2rem; }
-    .section-label { font-family:var(--mono); font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase; color: var(--amber-text); border-left:3px solid var(--amber); padding-left:0.8rem; margin-bottom:0.75rem; display:block; }
+    .section-label { font-family:var(--mono); font-size: 0.75rem; letter-spacing:0.2em; text-transform:uppercase; color: var(--amber-text); border-left:3px solid var(--amber); padding-left:0.8rem; margin-bottom:0.75rem; display:block; }
     .section-num { color:rgba(200,133,58,0.45); margin-right:0.5em; }
     h2.section-title { font-family:var(--serif); font-size:1.9rem; font-weight:600; color:var(--ink); line-height:1.2; margin-bottom:1.5rem; }
     .article-section { margin-bottom:4rem; padding-bottom:4rem; border-bottom:1px solid var(--border); }
@@ -79,12 +79,12 @@
     .dye-step { display:flex; gap:1.2rem; align-items:flex-start; }
     .dye-swatch { flex-shrink:0; width:2.8rem; height:2.8rem; border-radius:4px; margin-top:0.1rem; }
     .dye-content { flex:1; }
-    .dye-name { font-family:var(--mono); font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color: var(--amber-text); margin-bottom:0.3rem; }
+    .dye-name { font-family:var(--mono); font-size: 0.75rem; letter-spacing:0.12em; text-transform:uppercase; color: var(--amber-text); margin-bottom:0.3rem; }
     .dye-detail { font-size:1rem; line-height:1.7; }
 
     .photo-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr)); gap:1.5rem; margin:2rem 0; align-items:start; }
     figure { margin:0; }
-    figcaption { font-family:var(--mono); font-size:0.62rem; letter-spacing:0.09em; text-transform:uppercase; color:var(--ink-faint); margin-top:0.5rem; }
+    figcaption { font-family:var(--mono); font-size: 0.75rem; letter-spacing:0.09em; text-transform:uppercase; color:var(--ink-faint); margin-top:0.5rem; }
     figure img { width:100%; border-radius:4px; display:block; }
 
     .notice-box { background:rgba(200,133,58,0.08); border:1px solid rgba(200,133,58,0.25); border-radius:4px; padding:1.25rem 1.5rem; margin:2rem 0; font-size:0.95rem; font-style:italic; color:var(--ink); }
@@ -102,9 +102,9 @@
     .verdict-row { display:flex; gap:2rem; flex-wrap:wrap; margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid rgba(245,240,232,0.1); }
     .verdict-stat { text-align:center; flex:1; min-width:100px; }
     .verdict-stat-value { font-family:var(--serif); font-size:2rem; font-weight:600; color: var(--amber-text); display:block; line-height:1; }
-    .verdict-stat-label { font-family:var(--mono); font-size:0.58rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(245,240,232,0.4); display:block; margin-top:0.4rem; }
+    .verdict-stat-label { font-family:var(--mono); font-size: 0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(245,240,232,0.4); display:block; margin-top:0.4rem; }
 
-    .back-link { display:inline-flex; align-items:center; gap:0.5rem; font-family:var(--mono); font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color: var(--amber-text); text-decoration:none; margin-bottom:3rem; transition:gap 0.2s; }
+    .back-link { display:inline-flex; align-items:center; gap:0.5rem; font-family:var(--mono); font-size: 0.75rem; letter-spacing:0.12em; text-transform:uppercase; color: var(--amber-text); text-decoration:none; margin-bottom:3rem; transition:gap 0.2s; }
     .back-link:hover { gap:0.8rem; }
 
     .newsletter-section { background:var(--ink); padding:4rem 2rem; text-align:center; }
@@ -114,11 +114,11 @@
     .nl-form { display:flex; gap:0.6rem; flex-wrap:wrap; justify-content:center; max-width:500px; margin:0 auto; }
     .nl-form input[type=email] { flex:1; min-width:220px; padding:0.7rem 1rem; border-radius:2rem; border:1px solid rgba(245,240,232,0.15); background:rgba(245,240,232,0.07); color:var(--warm-white); font-family:var(--body-font); font-size:0.9rem; outline:none; -webkit-appearance:none; }
     .nl-form button { padding:0.7rem 1.6rem; border-radius:2rem; border:none; background:var(--amber); color:#1a1409; font-family:var(--body-font); font-size:0.9rem; font-weight:600; cursor:pointer; -webkit-appearance:none; }
-    .nl-fine { font-size:0.72rem; color:#6a6058; margin-top:1rem; }
+    .nl-fine { font-size: 0.75rem; color:#6a6058; margin-top:1rem; }
     .nl-fine a { color:#6a6058; }
 
     footer { background:var(--ink); padding:0.65rem 3rem; display:flex; justify-content:space-between; align-items:center; border-top:1px solid rgba(245,240,232,0.08); }
-    .footer-copy { font-family:var(--mono); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(245,240,232,0.35); }
+    .footer-copy { font-family:var(--mono); font-size: 0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(245,240,232,0.35); }
 
     @media (max-width:640px) {
       nav { padding:0.75rem 1.25rem; -webkit-backdrop-filter:none !important; backdrop-filter:none !important; background:rgba(28,26,23,0.97) !important; }
@@ -245,7 +245,7 @@
   <text x="50" y="36" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" fill="rgba(245,240,232,0.95)" text-anchor="middle" letter-spacing="2">THETODD</text>
   <text x="50" y="57" font-family="Arial Black,Arial,sans-serif" font-size="27" font-weight="900" fill="rgba(245,240,232,0.95)" text-anchor="middle" letter-spacing="-1">TM</text>
   <text x="50" y="73" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" fill="rgba(245,240,232,0.95)" text-anchor="middle" letter-spacing="3">MARK</text>
-  </svg><span style="font-family:'DM Mono',monospace;font-size:0.68rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:rgba(245,240,232,0.88);margin-left:0.75rem;white-space:nowrap;">The Todd<span style="color:#c8853a;margin:0 0.15em;">·</span>Mark</span></a>
+  </svg><span style="font-family:'DM Mono',monospace;font-size: 0.75rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:rgba(245,240,232,0.88);margin-left:0.75rem;white-space:nowrap;">The Todd<span style="color:#c8853a;margin:0 0.15em;">·</span>Mark</span></a>
   <button class="nav-hamburger" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
     <span></span><span></span><span></span>
   </button>
@@ -288,12 +288,12 @@
   <a href="work.html" class="back-link" aria-label="Back to all restorations">← All Restorations</a>
 
   <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--border);margin-bottom:2rem;">
-    <span style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);">⏱ 10 min read</span>
+    <span style="font-family:var(--mono);font-size: 0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);">⏱ 10 min read</span>
     <div style="display:flex;align-items:center;gap:0.75rem;">
-      <span style="font-family:var(--mono);font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);">Share:</span>
-      <a href="https://twitter.com/intent/tweet?url=https://thetoddmark.com/restoration-mac-tools-screwdrivers&text=Just+read+this+restoration+write-up+%E2%80%94+Mac+Tools+7-Piece+Wooden-Handle+Set&via=thetoddmark" target="_blank" rel="noopener noreferrer" style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color: var(--amber-text);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.3);padding-bottom:1px;" aria-label="Share on X / Twitter">X&nbsp;/&nbsp;Twitter</a>
-      <a href="https://www.reddit.com/submit?url=https://thetoddmark.com/restoration-mac-tools-screwdrivers&title=Mac+Tools+7-Piece+Wooden-Handle+Set" target="_blank" rel="noopener noreferrer" style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color: var(--amber-text);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.3);padding-bottom:1px;" aria-label="Share on Reddit">Reddit</a>
-      <button onclick="navigator.clipboard.writeText('https://thetoddmark.com/restoration-mac-tools-screwdrivers').then(()=>{this.textContent='Copied!';setTimeout(()=>{this.textContent='Copy Link'},1800)})" style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color: var(--amber-text);background:none;border:none;border-bottom:1px solid rgba(200,133,58,0.3);padding:0 0 1px;cursor:pointer;" aria-label="Copy link to clipboard">Copy Link</button>
+      <span style="font-family:var(--mono);font-size: 0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);">Share:</span>
+      <a href="https://twitter.com/intent/tweet?url=https://thetoddmark.com/restoration-mac-tools-screwdrivers&text=Just+read+this+restoration+write-up+%E2%80%94+Mac+Tools+7-Piece+Wooden-Handle+Set&via=thetoddmark" target="_blank" rel="noopener noreferrer" style="font-family:var(--mono);font-size: 0.75rem;letter-spacing:0.08em;text-transform:uppercase;color: var(--amber-text);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.3);padding-bottom:1px;" aria-label="Share on X / Twitter">X&nbsp;/&nbsp;Twitter</a>
+      <a href="https://www.reddit.com/submit?url=https://thetoddmark.com/restoration-mac-tools-screwdrivers&title=Mac+Tools+7-Piece+Wooden-Handle+Set" target="_blank" rel="noopener noreferrer" style="font-family:var(--mono);font-size: 0.75rem;letter-spacing:0.08em;text-transform:uppercase;color: var(--amber-text);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.3);padding-bottom:1px;" aria-label="Share on Reddit">Reddit</a>
+      <button onclick="navigator.clipboard.writeText('https://thetoddmark.com/restoration-mac-tools-screwdrivers').then(()=>{this.textContent='Copied!';setTimeout(()=>{this.textContent='Copy Link'},1800)})" style="font-family:var(--mono);font-size: 0.75rem;letter-spacing:0.08em;text-transform:uppercase;color: var(--amber-text);background:none;border:none;border-bottom:1px solid rgba(200,133,58,0.3);padding:0 0 1px;cursor:pointer;" aria-label="Copy link to clipboard">Copy Link</button>
     </div>
   </div>
 
@@ -486,7 +486,7 @@
   <section class="article-section" aria-labelledby="s9-title">
     <span class="section-label"><span class="section-num">09 /</span> Supplies Used</span>
     <h2 class="section-title" id="s9-title">Everything that touched these handles.</h2>
-    <p style="font-family:var(--mono);font-size:0.65rem;letter-spacing:0.06em;color:var(--ink-faint);margin-bottom:1.5rem;">Some links below are affiliate links — I earn a small commission if you buy through them, at no extra cost to you. I only list what I actually used.</p>
+    <p style="font-family:var(--mono);font-size: 0.75rem;letter-spacing:0.06em;color:var(--ink-faint);margin-bottom:1.5rem;">Some links below are affiliate links — I earn a small commission if you buy through them, at no extra cost to you. I only list what I actually used.</p>
     <ul class="supplies-list">
       <li><span class="supply-name"><a href="https://www.amazon.com/s?k=mineral+spirits&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(28,26,23,0.2);">Mineral Spirits</a></span><span class="supply-note">Two passes: rag wipe-down then a soft brass brush into the grooves. Gets the surface grime before sanding.</span></li>
       <li><span class="supply-name">Sandpaper — 60, 80, 120, 180, 220 grit</span><span class="supply-note">Full progression back to bare wood. The 60 cuts through hardened oil; 220 refines before dyeing.</span></li>
@@ -509,14 +509,14 @@
 
 <div style="background:var(--cream);padding:3rem 2rem;border-top:1px solid var(--border);">
   <div style="max-width:740px;margin:0 auto;">
-    <div style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color: var(--amber-text);margin-bottom:1.5rem;">More Restorations</div>
+    <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.18em;text-transform:uppercase;color: var(--amber-text);margin-bottom:1.5rem;">More Restorations</div>
     <a href="restoration-awl-marking-knife.html" style="display:flex;gap:1.5rem;align-items:flex-start;text-decoration:none;padding:1.5rem;background:var(--warm-white);border:1px solid var(--border);border-radius:4px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--amber)'" onmouseout="this.style.borderColor='var(--border)'">
       <div style="flex:1;">
-        <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color: var(--amber-text);margin-bottom:0.4rem;">Restoration No. 06 · Marking Tools</div>
+        <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.12em;text-transform:uppercase;color: var(--amber-text);margin-bottom:0.4rem;">Restoration No. 06 · Marking Tools</div>
         <div style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--ink);line-height:1.25;margin-bottom:0.5rem;">Vintage Awl — Repurposed Marking Knife</div>
         <div style="font-size:0.9rem;color:var(--ink-faint);line-height:1.6;">A $10 Facebook Marketplace find. Rosewood handle, brass ferrule, a new angled tip — and a tool that's better than anything available new.</div>
       </div>
-      <div style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;color: var(--amber-text);white-space:nowrap;margin-top:0.25rem;">Read →</div>
+      <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.1em;color: var(--amber-text);white-space:nowrap;margin-top:0.25rem;">Read →</div>
     </a>
   </div>
 </div>
@@ -637,7 +637,7 @@
   .lb-caption {
     margin-top: 0.75rem;
     font-family: 'DM Mono', monospace;
-    font-size: 0.68rem;
+    font-size: 0.75rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: rgba(245,240,232,0.55);
@@ -650,7 +650,7 @@
   /* Counter */
   .lb-counter {
     font-family: 'DM Mono', monospace;
-    font-size: 0.58rem;
+    font-size: 0.75rem;
     letter-spacing: 0.15em;
     color: rgba(200,133,58,0.65);
     margin-top: 0.35rem;
