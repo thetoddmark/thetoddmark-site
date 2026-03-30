@@ -1,12 +1,38 @@
 # TheToddMark — To-Do List
-_Last updated: March 23, 2026_
+_Last updated: March 30, 2026_
 
 ---
 
 ## 🔲 Open Tasks
 
-### Lighthouse — Remaining Performance Wins
-_(all performance items complete — awaiting new audit results)_
+### Infrastructure (Highest Priority)
+- [ ] **Set up Cloudflare** — DNS change at Namecheap; fixes 778 KiB cache lifetime issue flagged by PageSpeed; adds CDN (~15 min); do before re-running graders so results reflect caching
+
+### Validation (Quick Wins — Do After Cloudflare)
+- [ ] **Re-run WAVE** at wave.webaim.org/report#/thetoddmark.com — verify 0 contrast errors after rgba push
+- [ ] **Re-run HubSpot grader** — mobile score was 20/30; font size fix + contrast fix should move it significantly
+- [ ] **Re-run Google PageSpeed** (mobile + desktop) — get full picture after all March 30 fixes
+
+### Accessibility
+- [ ] **Fix device-dependent event handlers** — WAVE flagged 7 `onmouseover`/`onmouseout` inline JS events; replace with CSS `:hover` pseudo-classes
+
+### Performance
+- [ ] **Shed image mobile srcset** — 520×390 is still oversized for mobile display (~283×212); add `srcset` to serve smaller image on mobile
+- [ ] **Forced reflow at line ~2210 in index.html** — 33ms JS fix; line number shifted from 2204 after CSS injection added lines
+
+### SEO
+- [ ] **SEO audit** — run Seobility or SEOptimer (PageSpeed already shows SEO 100 so likely confirms good shape)
+
+---
+
+## ✅ Completed Tasks
+
+### Session: March 30, 2026
+- [x] **Fixed sub-12px font sizes site-wide** — replaced all 0.55–0.72rem values with 0.75rem across all 19 HTML files
+- [x] **Fixed amber-text contrast on dark backgrounds** — injected CSS cascade rule scoping `--amber-text: var(--amber)` to `nav`, `footer`, and `[style*="background:var(--ink)"]` elements; `--amber` (#c8853a) is 5.46:1 on `--ink`, passing WCAG AA
+- [x] **Fixed rgba transparent color contrast** — replaced low-opacity inline colors across 11 HTML files: `rgba(200,133,58,0.6)→0.9`, `rgba(245,240,232,0.35)→0.6`, `rgba(245,240,232,0.4)→0.6`, `#6a6058→#a09080`
+- [x] **Optimized shed LCP image** — resized shed-current-1-sm.jpg/webp from 600×450 to 520×390 (webp: 70→46 KiB, 34% savings); removed `loading="lazy"`, added `fetchpriority="high"`; LCP improved 3.9s → 1.7s; PageSpeed desktop 87 → 99
+- [x] **Installed Microsoft Clarity** (project ID: `w41lq1gqm2`) on all 19 HTML pages — session recording and heatmaps now active
 
 ---
 
