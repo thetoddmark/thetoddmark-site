@@ -441,21 +441,21 @@
     <div style="max-width:740px;margin:0 auto;">
       <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.18em;text-transform:uppercase;color: var(--amber-text);margin-bottom:1.5rem;">More Restorations &amp; Builds</div>
       <div style="display:flex;flex-direction:column;gap:1rem;">
-        <a href="restoration-imperial-steak-knives.html" style="display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border:1px solid var(--border);border-radius:3px;text-decoration:none;color:var(--ink);transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--amber)'" onmouseout="this.style.borderColor='var(--border)'">
+        <a class="next-work-card" href="restoration-imperial-steak-knives.html" style="display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border:1px solid var(--border);border-radius:3px;text-decoration:none;color:var(--ink);transition:border-color 0.2s;">
           <span>
             <span style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.15em;color: var(--amber-text);text-transform:uppercase;display:block;margin-bottom:0.2rem;">No. 08 · Knives</span>
             <span style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;">Imperial Steak Knife Handle Refresh</span>
           </span>
           <span style="color: var(--amber-text);font-family:'DM Mono',monospace;font-size:0.8rem;">→</span>
         </a>
-        <a href="restoration-german-perfect-handle.html" style="display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border:1px solid var(--border);border-radius:3px;text-decoration:none;color:var(--ink);transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--amber)'" onmouseout="this.style.borderColor='var(--border)'">
+        <a class="next-work-card" href="restoration-german-perfect-handle.html" style="display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border:1px solid var(--border);border-radius:3px;text-decoration:none;color:var(--ink);transition:border-color 0.2s;">
           <span>
             <span style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.15em;color: var(--amber-text);text-transform:uppercase;display:block;margin-bottom:0.2rem;">No. 07 · Screwdrivers</span>
             <span style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;">German "Perfect Handle" Set — Four Sizes</span>
           </span>
           <span style="color: var(--amber-text);font-family:'DM Mono',monospace;font-size:0.8rem;">→</span>
         </a>
-        <a href="work.html" style="display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border:1px solid var(--border);border-radius:3px;text-decoration:none;color:var(--ink);transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--amber)'" onmouseout="this.style.borderColor='var(--border)'">
+        <a class="next-work-card" href="work.html" style="display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border:1px solid var(--border);border-radius:3px;text-decoration:none;color:var(--ink);transition:border-color 0.2s;">
           <span>
             <span style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.15em;color: var(--amber-text);text-transform:uppercase;display:block;margin-bottom:0.2rem;">Full Archive</span>
             <span style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;">View All Restorations &amp; Builds →</span>
@@ -630,6 +630,7 @@
     .lb-close { top: 0.6rem; right: 0.6rem; }
     .lb-inner img { max-height: 70vh; }
   }
+  .next-work-card:hover { border-color: var(--amber) !important; }
 </style>
 
 <div class="lb-backdrop" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">

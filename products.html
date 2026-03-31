@@ -1473,6 +1473,8 @@
     img { max-width: 100% !important; page-break-inside: avoid; }
     .reveal { opacity: 1 !important; transform: none !important; }
   }
+  .lb-nav-btn:hover { background: rgba(28,26,23,0.85) !important; }
+  .cat-nav-link:hover { color: var(--amber-text) !important; }
   </style>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 <nav aria-label="Main navigation">
@@ -1514,12 +1516,12 @@
     <p style="font-size:0.9rem;line-height:1.8;color:var(--ink-soft);max-width:600px;margin-bottom:1rem;">Products I actually use in my restorations. No sponsorships — just things that work.</p>
     <p class="affiliate-note">Some links are Amazon affiliate links (thetoddmark-20) — I earn a small commission at no extra cost to you. I only list things I actually use.</p>
     <div role="navigation" aria-label="Page sections" style="display:flex;flex-wrap:wrap;gap:0.5rem 1.75rem;padding:0.75rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-top:1.25rem;">
-      <a href="#filming" style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-faint);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--amber-text)'" onmouseout="this.style.color='var(--ink-faint)'">Filming &amp; Photography</a>
-      <a href="#finishing" style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-faint);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--amber-text)'" onmouseout="this.style.color='var(--ink-faint)'">Finishing &amp; Restoration</a>
-      <a href="#stationary" style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-faint);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--amber-text)'" onmouseout="this.style.color='var(--ink-faint)'">Stationary &amp; Benchtop</a>
-      <a href="#handheld" style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-faint);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--amber-text)'" onmouseout="this.style.color='var(--ink-faint)'">Handheld Power</a>
-      <a href="#planes" style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-faint);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--amber-text)'" onmouseout="this.style.color='var(--ink-faint)'">Hand Planes</a>
-      <a href="#collection" style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-faint);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--amber-text)'" onmouseout="this.style.color='var(--ink-faint)'">Growing Collection</a>
+      <a class="cat-nav-link" href="#filming" style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-faint);text-decoration:none;transition:color 0.2s;">Filming &amp; Photography</a>
+      <a class="cat-nav-link" href="#finishing" style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-faint);text-decoration:none;transition:color 0.2s;">Finishing &amp; Restoration</a>
+      <a class="cat-nav-link" href="#stationary" style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-faint);text-decoration:none;transition:color 0.2s;">Stationary &amp; Benchtop</a>
+      <a class="cat-nav-link" href="#handheld" style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-faint);text-decoration:none;transition:color 0.2s;">Handheld Power</a>
+      <a class="cat-nav-link" href="#planes" style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-faint);text-decoration:none;transition:color 0.2s;">Hand Planes</a>
+      <a class="cat-nav-link" href="#collection" style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-faint);text-decoration:none;transition:color 0.2s;">Growing Collection</a>
     </div>
   </div>
 
@@ -1950,8 +1952,8 @@
   <div class="lightbox-inner">
     <div class="lightbox-img" id="lightbox-img" style="position:relative;">
       <img id="lb-main-img" src="" alt="" style="width:100%;height:auto;height:100%;object-fit:cover;" loading="lazy" width="auto" height="auto">
-      <button onclick="lbNav(-1)" aria-label="Previous photo" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(28,26,23,0.5);border:none;color:#f5f0e8;font-size:1.4rem;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;" onmouseover="this.style.background='rgba(28,26,23,0.85)'" onmouseout="this.style.background='rgba(28,26,23,0.5)'">‹</button>
-      <button onclick="lbNav(1)" aria-label="Next photo" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(28,26,23,0.5);border:none;color:#f5f0e8;font-size:1.4rem;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;" onmouseover="this.style.background='rgba(28,26,23,0.85)'" onmouseout="this.style.background='rgba(28,26,23,0.5)'">›</button>
+      <button onclick="lbNav(-1)" aria-label="Previous photo" class="lb-nav-btn" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(28,26,23,0.5);border:none;color:#f5f0e8;font-size:1.4rem;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;">‹</button>
+      <button onclick="lbNav(1)" aria-label="Next photo" class="lb-nav-btn" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(28,26,23,0.5);border:none;color:#f5f0e8;font-size:1.4rem;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;">›</button>
     </div>
     <div class="lightbox-content">
       <div class="lightbox-category" id="lb-category"></div>
