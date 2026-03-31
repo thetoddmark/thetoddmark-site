@@ -1,31 +1,28 @@
 # TheToddMark — To-Do List
-_Last updated: March 30, 2026_
+_Last updated: March 31, 2026_
 
 ---
 
 ## 🔲 Open Tasks
 
-### Infrastructure (Highest Priority)
-- [ ] **Set up Cloudflare** — DNS change at Namecheap; fixes 778 KiB cache lifetime issue flagged by PageSpeed; adds CDN (~15 min); do before re-running graders so results reflect caching
-
-### Validation (Quick Wins — Do After Cloudflare)
-- [ ] **Re-run WAVE** at wave.webaim.org/report#/thetoddmark.com — verify 0 contrast errors after rgba push
+### Validation
+- [ ] **Re-run WAVE** at wave.webaim.org/report#/thetoddmark.com — verify 0 contrast errors and 0 device-dependent event handler warnings after today's fixes
 - [ ] **Re-run HubSpot grader** — mobile score was 20/30; font size fix + contrast fix should move it significantly
-- [ ] **Re-run Google PageSpeed** (mobile + desktop) — get full picture after all March 30 fixes
-
-### Accessibility
-- [ ] **Fix device-dependent event handlers** — WAVE flagged 7 `onmouseover`/`onmouseout` inline JS events; replace with CSS `:hover` pseudo-classes
-
-### Performance
-- [ ] **Shed image mobile srcset** — 520×390 is still oversized for mobile display (~283×212); add `srcset` to serve smaller image on mobile
-- [ ] **Forced reflow at line ~2210 in index.html** — 33ms JS fix; line number shifted from 2204 after CSS injection added lines
 
 ### SEO
-- [ ] **SEO audit** — run Seobility or SEOptimer (PageSpeed already shows SEO 100 so likely confirms good shape)
+- [ ] **SEO audit** — run Seobility or SEOptimer (PageSpeed already shows SEO 92 so likely confirms good shape)
 
 ---
 
 ## ✅ Completed Tasks
+
+### Session: March 31, 2026
+- [x] **Set up Cloudflare** — DNS moved from Namecheap nameservers to Cloudflare; CDN active, Browser Cache TTL → 1 month, Crawler Hints on, Always use HTTPS on, 0-RTT + Early Hints enabled, SSL/TLS → Full
+- [x] **Shed image mobile srcset** — created `shed-current-1-xs.jpg/webp` at 320×240; added `srcset` + `sizes` to serve xs on ≤600px screens, sm on larger
+- [x] **Fixed forced reflow** — removed dead `setVh()` function from index.html (set `--vh` CSS var that was never used anywhere)
+- [x] **Fixed LCP preload fetchpriority** — added `fetchpriority="high"` to `<link rel="preload">` for index-hero.webp in index.html `<head>`
+- [x] **Fixed all onmouseover/onmouseout event handlers site-wide** — replaced inline JS hover handlers with CSS `:hover` classes across all 14 affected HTML files; zero remaining instances
+- [x] **Fixed rotated photo** — `shed-current-3.jpg/webp` was stored landscape (EXIF rotation stripped during prior resize); rotated 90° CW to correct portrait orientation; updated width/height in shed-upgrade.html
 
 ### Session: March 30, 2026
 - [x] **Fixed sub-12px font sizes site-wide** — replaced all 0.55–0.72rem values with 0.75rem across all 19 HTML files
