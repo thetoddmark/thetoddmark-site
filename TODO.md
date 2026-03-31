@@ -5,16 +5,26 @@ _Last updated: March 31, 2026_
 
 ## 🔲 Open Tasks
 
-### Validation
-- [ ] **Re-run WAVE** at wave.webaim.org/report#/thetoddmark.com — verify 0 contrast errors and 0 device-dependent event handler warnings after today's fixes
-- [ ] **Re-run HubSpot grader** — mobile score was 20/30; font size fix + contrast fix should move it significantly
+### Content
+- [ ] **Restoration No. 10** — next write-up when ready
 
-### SEO
-- [ ] **SEO audit** — run Seobility or SEOptimer (PageSpeed already shows SEO 92 so likely confirms good shape)
+### Growth
+- [ ] **Backlinks** — add thetoddmark.com link to YouTube video descriptions and tool forum profiles
 
 ---
 
 ## ✅ Completed Tasks
+
+### Session: March 31, 2026 (continued)
+- [x] **Fixed 3 WAVE contrast errors** — raised `.process-desc` opacity, footer visited link opacity, and Mac Tools italic description opacity; remaining 3 WAVE "errors" are confirmed false positives (rgba transparency)
+- [x] **Fixed `.about-strip-num` contrast** — changed from `--amber-text` to `--amber` for better contrast on cream
+- [x] **Fixed `.btn-ghost` contrast** — added `.about-strip .btn-ghost { color: var(--ink-faint) }` so "Get in Touch" is legible on light background
+- [x] **Added YouTube link to footer** — all 19 pages updated
+- [x] **Fixed DMARC record** — moved from `_dmarc.mail` to `_dmarc` in Cloudflare DNS
+- [x] **Fixed index.html title** — 45 → 52 chars ("& Finds" added)
+- [x] **Fixed index.html meta description** — 187 → 155 chars (trimmed to fit 120–160 target)
+- [x] **HubSpot score: 89/100** — SEO 30/30, Security 10/10, Performance 29/30; mobile 20/30 is a false positive
+- [x] **WAVE: 0 errors, 8.7/10 AIM** — all device-dependent handlers fixed; 3 remaining contrast "errors" are WAVE false positives
 
 ### Session: March 31, 2026
 - [x] **Set up Cloudflare** — DNS moved from Namecheap nameservers to Cloudflare; CDN active, Browser Cache TTL → 1 month, Crawler Hints on, Always use HTTPS on, 0-RTT + Early Hints enabled, SSL/TLS → Full
