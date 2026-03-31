@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Jost:wght@300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Jost:wght@300;400;500&display=swap"></noscript>
-<link rel="preload" as="image" href="images/index-hero.webp" type="image/webp">
+<link rel="preload" as="image" href="images/index-hero.webp" type="image/webp" fetchpriority="high">
 <style>
 
   /* ══════════════════════════════════════════
@@ -2212,20 +2212,7 @@ document.addEventListener('keydown', e => {
                    'Visual styles may degrade.');
     }
 
-    // 7. 100dvh / dynamic viewport fix for iOS Safari
-    //    Sets a --vh custom property that reflects the true visible viewport height
-    function setVh() {
-      var vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', vh + 'px');
-    }
-    setVh();
-    window.addEventListener('resize', setVh, passiveOpt);
-    // Also update on orientation change (iOS)
-    window.addEventListener('orientationchange', function() {
-      setTimeout(setVh, 100);
-    }, passiveOpt);
-
-    // 8. Body scroll: managed by nav open/close functions above
+    // 7. Body scroll: managed by nav open/close functions above
 
     // 9. Lightbox: trap focus inside when open (accessibility + all browsers)
     var lightbox = document.getElementById('lightbox');
