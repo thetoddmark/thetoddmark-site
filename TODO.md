@@ -1,5 +1,5 @@
 # TheToddMark — To-Do List
-_Last updated: March 31, 2026_
+_Last updated: April 2, 2026_
 
 ---
 
@@ -9,11 +9,15 @@ _Last updated: March 31, 2026_
 - [ ] **Restoration No. 10** — next write-up when ready
 
 ### Growth
-- [ ] **Backlinks** — add thetoddmark.com link to YouTube video descriptions and tool forum profiles
+- [ ] **Backlinks (forums)** — add thetoddmark.com link to tool forum profiles (Patrick's Blood and Gore, Sawmill Creek, etc.)
 
 ---
 
 ## ✅ Completed Tasks
+
+### Session: April 2, 2026
+- [x] **Buttondown sending domain verified** — added NS records in Cloudflare delegating `mail.thetoddmark.com` to Buttondown (ns1/ns2.onbuttondown.com); both records immediately verified; SPF/DKIM/DMARC/click tracking now managed by Buttondown
+- [x] **YouTube backlinks** — added thetoddmark.com link to both video descriptions (Butcher Block Countertop + Channel Trailer already had it)
 
 ### Session: March 31, 2026 (continued)
 - [x] **Fixed 3 WAVE contrast errors** — raised `.process-desc` opacity, footer visited link opacity, and Mac Tools italic description opacity; remaining 3 WAVE "errors" are confirmed false positives (rgba transparency)
