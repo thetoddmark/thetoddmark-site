@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
 
-# Prevent crawling of .html extension URLs — canonical (extensionless) versions are preferred
-# GitHub Pages serves both /page and /page.html; canonical tags handle deduplication
-Disallow: /*.html
-
 Sitemap: https://thetoddmark.com/sitemap.xml
