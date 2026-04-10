@@ -250,7 +250,7 @@
   [style*="background:var(--ink)"],
   [style*="background: var(--ink)"],
   nav,
-  footer { --amber-text: var(--amber); }
+  footer { --amber-text: var(--amber); }  }
 </style>
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -273,16 +273,9 @@
     </svg><span style="font-family:'DM Mono',monospace;font-size: 0.75rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:rgba(245,240,232,0.88);margin-left:0.75rem;white-space:nowrap;">The Todd<span style="color:#c8853a;margin:0 0.15em;">·</span>Mark</span></a>
     <button class="nav-hamburger" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
       <ul id="nav-menu">
-    <li><a href="/">Home</a></li>
     <li><a href="/work" class="nav-active" aria-current="page">The Work</a></li>
-    <li><a href="/shed-upgrade">Shed Upgrade</a></li>
     <li><a href="/products">My Kit</a></li>
-    <li><a href="/resources">Resources</a></li>
     <li><a href="/about">About</a></li>
-    <li><a href="/contact">Contact</a></li>
-    <li><a href="/wishlist">Wishlist</a></li>
-    <li><a href="/listening">Listening</a></li>
-    <li><a href="/partner" style="color: var(--amber-text);">Partner</a></li>
     <li><a href="https://www.youtube.com/@TheToddMark" target="_blank" rel="noopener noreferrer" aria-label="Watch on YouTube" style="display:flex;align-items:center;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></li>
   </ul>
   </nav>
@@ -609,7 +602,7 @@
     transform: translateY(-50%);
     background: none;
     border: none;
-    color: rgba(245,240,232,0.45);
+    color: rgba(245,240,232,0.60);
     font-size: 2.5rem;
     line-height: 1;
     cursor: pointer;
@@ -625,6 +618,30 @@
   .lb-prev:focus-visible, .lb-next:focus-visible { color: #c8853a; outline: 2px solid rgba(200,133,58,0.8); outline-offset: 4px; }
   .lb-nav-hidden { visibility: hidden; pointer-events: none; }
   .article-body img { cursor: zoom-in; }
+  /* ── FOOTER NAV (secondary links) ── */
+  .footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.75rem;
+    padding: 0.6rem 3rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: var(--ink);
+  }
+  .footer-nav a {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.60);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-nav a:visited { color: rgba(245,240,232,0.60); }
+  .footer-nav a:hover { color: rgba(245,240,232,0.8); }
+  @media (max-width: 600px) {
+    .footer-nav { padding: 0.75rem 1.5rem; gap: 0.4rem 1.25rem; }
+  }
+
   @media (max-width: 640px) {
     .lb-prev { left: 0.15rem; font-size: 1.8rem; }
     .lb-next { right: 0.15rem; font-size: 1.8rem; }
