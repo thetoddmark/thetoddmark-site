@@ -49,27 +49,26 @@
   /* 4 — Smooth scroll with prefers-reduced-motion guard
          Safari 12.1 added support; use @supports for older */
   /* ── FOOTER NAV (secondary links) ── */
-  .footer-nav {
+  .footer-links {
     display: flex;
     flex-wrap: wrap;
     gap: 0.25rem 1.75rem;
     padding: 0.6rem 3rem;
     border-bottom: 1px solid rgba(255,255,255,0.06);
-    background: var(--ink);
   }
-  .footer-nav a {
+  .footer-links a {
     font-family: 'DM Mono', monospace;
     font-size: 0.68rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: rgba(245,240,232,0.60);
+    color: rgba(245,240,232,0.90);
     text-decoration: none;
     transition: color 0.2s;
   }
-  .footer-nav a:visited { color: rgba(245,240,232,0.60); }
-  .footer-nav a:hover { color: rgba(245,240,232,0.8); }
+  .footer-links a:visited { color: rgba(245,240,232,0.90); }
+  .footer-links a:hover { color: rgba(245,240,232,1); }
   @media (max-width: 600px) {
-    .footer-nav { padding: 0.75rem 1.5rem; gap: 0.4rem 1.25rem; }
+    .footer-links { padding: 0.75rem 1.5rem; gap: 0.4rem 1.25rem; }
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -348,6 +347,7 @@
   nav ul {
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 2.5rem;
   }
 
@@ -357,7 +357,7 @@
     font-weight: 300;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: rgba(245,240,232,0.8);
+    color: rgba(245,240,232,1);
     text-decoration: none;
     transition: color 0.2s;
   }
@@ -480,7 +480,7 @@
     font-size: 0.75rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: rgba(245,240,232,0.8);
+    color: rgba(245,240,232,1);
     text-decoration: none;
     border-bottom: 1px solid var(--border-warm);
     padding-bottom: 2px;
@@ -981,11 +981,15 @@
   /* ── FOOTER ── */
   footer {
     background: var(--ink);
-    padding: 0.65rem 3rem;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .footer-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 0.65rem 3rem;
   }
 
   .footer-logo {
@@ -1001,7 +1005,7 @@
     font-family: 'DM Mono', monospace;
     font-size: 0.75rem;
     letter-spacing: 0.1em;
-    color: rgba(245,240,232,0.6);
+    color: rgba(245,240,232,0.80);
   }
 
   /* ── LIGHTBOX ── */
@@ -1128,7 +1132,7 @@
     #about, #contact { grid-template-columns: 1fr; gap: 3rem; }
     .process-strip { grid-template-columns: 1fr 1fr; padding: 3rem 2.5rem; }
     nav { padding: 0 1.5rem; }
-    footer { padding: 1rem 2.5rem; }
+    .footer-bottom { padding: 1rem 2.5rem; }
   }
 
   .nav-active { color: var(--amber-text) !important; }
@@ -1209,8 +1213,8 @@
       padding: 2rem 1.5rem 1rem !important;
     }  }
 
-    .footer-nav { gap: 1rem; }
-    .footer-nav a { font-size: 0.75rem; }
+    .footer-links { gap: 1rem; }
+    .footer-links a { font-size: 0.75rem; }
     .footer-copy {
       font-size: 0.75rem !important;
       letter-spacing: 0.06em;
@@ -1321,7 +1325,7 @@
 
     /* ── Visited link colours ── */
     a:visited { color: var(--amber-text); }
-    nav ul a:visited { color: rgba(245,240,232,0.72); }
+    nav ul a:visited { color: rgba(245,240,232,1); }
     footer a:visited { color: rgba(245,240,232,0.35); }
   
   /* Amber text on dark (--ink) backgrounds: --amber-text (#a0621a) is 3.35:1 contrast on --ink, failing WCAG AA. --amber (#c8853a) is 5.46:1, passing. Override via CSS custom property cascade. */
@@ -1430,7 +1434,7 @@
   .skip-link:focus { left: 0; }
 
   @media print {
-    nav, .back-to-top, .lightbox, .skip-link, footer .footer-nav { display: none !important; }
+    nav, .back-to-top, .lightbox, .skip-link, footer .footer-links { display: none !important; }
     body { background: #fff; color: #000; font-size: 12pt; }
     a { color: #000; text-decoration: underline; }
     a[href]::after { content: " (" attr(href) ")"; font-size: 0.75em; }
@@ -1461,7 +1465,7 @@
     <li><a href="/work">The Work</a></li>
     <li><a href="/products">My Kit</a></li>
     <li><a href="/about" class="nav-active" aria-current="page">About</a></li>
-    <li><a href="https://www.youtube.com/@TheToddMark" target="_blank" rel="noopener noreferrer" aria-label="Watch on YouTube" style="display:flex;align-items:center;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></li>
+    <li><a href="https://www.youtube.com/@TheToddMark" target="_blank" rel="noopener noreferrer" aria-label="Watch on YouTube" style="display:flex;align-items:center;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width:22px;height:22px;" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12z" fill="#fff"/></svg></a></li>
   </ul>
 </nav>
 <main id="main-content">
@@ -1507,32 +1511,33 @@
   </div>
 </div>
 
-<!-- NEWSLETTER SIGNUP -->
-<div style="background:var(--ink);padding:4rem 2rem;">
-  <div style="max-width:560px;margin:0 auto;text-align:center;">
-    <div style="font-family:'Georgia',serif;font-size:0.75rem;font-weight:700;letter-spacing:0.15em;color: var(--amber-text);text-transform:uppercase;margin-bottom:1rem;">The Newsletter</div>
-    <h2 style="font-family:'Georgia',serif;font-size:1.75rem;font-weight:700;color:var(--warm-white);margin:0 0 1rem;line-height:1.3;">When a tool is done, I write it up.</h2>
-    <p style="font-family:inherit;font-size:0.95rem;color:#a09080;line-height:1.7;margin:0 0 2rem;">No cadence, no schedule — just the occasional restoration story when I have something worth saying. Drop your email below and you'll get it when it lands.</p>
-    <form action="https://buttondown.com/api/emails/embed-subscribe/TheToddMark" method="post" class="embeddable-buttondown-form" style="display:flex;gap:0.6rem;flex-wrap:wrap;justify-content:center;">
+<!-- Newsletter bar -->
+<div style="background:var(--ink);border-top:1px solid rgba(245,240,232,0.06);">
+  <div style="max-width:860px;margin:0 auto;padding:1.75rem 2rem;display:flex;gap:2.5rem;align-items:center;flex-wrap:wrap;">
+    <div style="flex:1;min-width:200px;">
+      <div style="font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--amber-text);margin-bottom:0.3rem;">The Newsletter</div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:rgba(245,240,232,0.55);margin:0;line-height:1.4;">When a tool is done, I write it up. No schedule—just the story.</p>
+    </div>
+    <form action="https://buttondown.com/api/emails/embed-subscribe/TheToddMark" method="post" class="embeddable-buttondown-form" style="display:flex;gap:0.5rem;flex-wrap:wrap;flex-shrink:0;">
       <label for="bd-email-about" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Email address</label>
-      <input type="email" name="email" id="bd-email-about" placeholder="your@email.com" required style="flex:1;min-width:220px;padding:0.7rem 1rem;border-radius:2rem;border:1px solid rgba(245,240,232,0.15);background:rgba(245,240,232,0.07);color:var(--warm-white);font-family:inherit;font-size:0.9rem;outline:none;"  aria-required="true" />
-      <button type="submit" style="padding:0.7rem 1.6rem;border-radius:2rem;border:none;background:var(--amber);color:#1a1409;font-family:inherit;font-size:0.9rem;font-weight:600;cursor:pointer;white-space:nowrap;letter-spacing:0.03em;">Subscribe →</button>
+      <input type="email" name="email" id="bd-email-about" placeholder="your@email.com" required style="flex:1;min-width:180px;padding:0.6rem 1rem;border-radius:2rem;border:1px solid rgba(245,240,232,0.15);background:rgba(245,240,232,0.07);color:var(--warm-white);font-family:inherit;font-size:0.85rem;outline:none;" aria-required="true" />
+      <button type="submit" style="padding:0.6rem 1.25rem;border-radius:2rem;border:none;background:var(--amber);color:#1a1409;font-family:inherit;font-size:0.85rem;font-weight:600;cursor:pointer;white-space:nowrap;">Subscribe →</button>
     </form>
-    <p style="font-size: 0.75rem;color:#a09080;margin:1rem 0 0;"><a href="https://buttondown.com/TheToddMark" target="_blank" rel="noopener noreferrer" style="color:#a09080;">View past issues</a> · Powered by Buttondown</p>
   </div>
 </div>
 
 </main>
-<div class="footer-nav" role="navigation" aria-label="Secondary navigation">
-  <a href="/shed-upgrade">Shed Upgrade</a>
-  <a href="/resources">Resources</a>
-  <a href="/contact">Contact</a>
-  <a href="/listening">Listening</a>
-  <a href="/wishlist">Wishlist</a>
-  <a href="/partner">Partner</a>
-</div>
 <footer>
-  <div class="footer-copy">© 2026 · TheToddMark.com · Two first names. One workshop. · <a href="https://www.youtube.com/@TheToddMark" target="_blank" rel="noopener noreferrer" style="color:rgba(245,240,232,0.65);text-decoration:none;">YouTube</a></div>
+  <div class="footer-links" role="navigation" aria-label="Secondary navigation">
+    <a href="/shed-upgrade">Shed Upgrade</a>
+    <a href="/resources">Resources</a>
+    <a href="/contact">Contact</a>
+    <a href="/listening">Listening</a>
+    <a href="/wishlist">Wishlist</a>
+    <a href="/partner">Partner</a>
+  </div>
+  <div class="footer-bottom">
+  <div class="footer-copy">© 2026 · TheToddMark.com · Two first names. One workshop. · <a href="https://www.youtube.com/@TheToddMark" target="_blank" rel="noopener noreferrer" style="color:rgba(245,240,232,0.80);text-decoration:none;">YouTube</a></div>
   <a href="https://ko-fi.com/thetoddmark" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.4rem;background:var(--amber);color:#1a1409;font-family:inherit;font-size:0.78rem;font-weight:500;padding:0.45rem 1.1rem;border-radius:2rem;text-decoration:none;letter-spacing:0.05em;white-space:nowrap;">🪚 Want to support the shed upgrade?</a>
   <div class="footer-logo"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="height:60px;width:60px;flex-shrink:0;" aria-label="The Todd Mark logo" role="img">
   <circle cx="50" cy="50" r="47" fill="none" stroke="rgba(245,240,232,0.95)" stroke-width="3.5"/>
@@ -1542,6 +1547,7 @@
   <text x="50" y="57" font-family="Arial Black,Arial,sans-serif" font-size="27" font-weight="900" fill="rgba(245,240,232,0.95)" text-anchor="middle" letter-spacing="-1">TM</text>
   <text x="50" y="73" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" fill="rgba(245,240,232,0.95)" text-anchor="middle" letter-spacing="3">MARK</text>
 </svg></div>
+  </div>
 </footer>
 <div class="lightbox" id="lightbox" onclick="closeLightbox(event)" role="dialog" aria-modal="true" aria-labelledby="lb-title" aria-label="Photo lightbox">
   <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close lightbox" aria-controls="lightbox">✕</button>
