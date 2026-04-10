@@ -70,34 +70,38 @@
     .article-eyebrow {
       font-family: 'DM Mono', monospace;
       font-size: 0.75rem;
-      letter-spacing: 0.22em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--amber-text);
-      margin-bottom: 1.2rem;
+      margin-bottom: 0.65rem;
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      justify-content: center;
+      gap: 0.8rem;
     }
     .article-eyebrow::before, .article-eyebrow::after {
       content: '';
-      flex: 1;
+      display: block;
       height: 1px;
-      background: var(--amber-light);
+      width: 2rem;
+      background: var(--amber);
+      opacity: 0.5;
     }
     .article-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.2rem, 5vw, 3.6rem);
-      font-weight: 300;
-      line-height: 1.1;
-      color: rgba(245,240,232,0.95);
-      margin-bottom: 1.2rem;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 600;
+      line-height: 1.15;
+      color: var(--warm-white);
+      margin-bottom: 0.5rem;
     }
     .article-subtitle {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      color: rgba(245,240,232,0.55);
-      margin-bottom: 2rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(245,240,232,0.65);
+      margin-bottom: 0.9rem;
     }
     .article-hero {
       width: 100%;
@@ -123,11 +127,11 @@
     .stat-item:last-child { border-right:none; }
     .stat-value {
       font-family: var(--serif); font-size:1.8rem; font-weight:600;
-      color: var(--amber-text); line-height:1; display:block;
+      color: var(--amber); line-height:1; display:block;
     }
     .stat-label {
       font-family:var(--mono); font-size: 0.75rem; letter-spacing:0.12em;
-      text-transform:uppercase; color:rgba(245,240,232,0.6);
+      text-transform:uppercase; color:rgba(245,240,232,0.78);
       display:block; margin-top:0.3rem;
     }
     .article-section {
@@ -221,15 +225,15 @@
     /* Nav */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 2rem; background: rgba(28,26,23,0.96); backdrop-filter: blur(8px); }
     nav ul { display: flex; list-style: none; gap: 2rem; }
-    nav a { color: rgba(245,240,232,0.78); text-decoration: none; font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.2s; }
+    nav a { color: rgba(245,240,232,1); text-decoration: none; font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.2s; }
     nav a:hover, nav a.nav-active { color: var(--amber-text); }
     .nav-hamburger { display: none; }
     .skip-link { position: absolute; left: -9999px; top: 0.5rem; z-index: 9999; padding: 0.5rem 1rem; background: var(--amber); color: #fff; font-family: 'DM Mono', monospace; font-size: 0.8rem; border-radius: 0 0 4px 0; text-decoration: none; }
     .skip-link:focus { left: 0; }
 
     /* Hero area */
-    .article-hero-section { padding-top: 5rem; background: var(--ink); }
-    .article-hero-inner { max-width: 900px; margin: 0 auto; padding: 1.5rem 2rem 2rem; }
+    .article-hero-section { padding-top: 5rem; background: var(--ink); text-align: center; }
+    .article-hero-inner { max-width: 860px; margin: 0 auto; padding: 1rem 2rem 2rem; }
 
     footer { background: var(--ink); display: flex; flex-direction: column; border-top: 1px solid rgba(245,240,232,0.08); }
     .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding: 0.65rem 3rem; }
@@ -429,6 +433,35 @@
       </section>
 
     </div><!-- /article-body -->
+  <!-- More Restorations -->
+  <div style="background:var(--warm-white);border-top:1px solid rgba(28,26,23,0.1);">
+    <div style="max-width:740px;margin:0 auto;padding:2.5rem 2rem;">
+      <div style="font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--amber-text);margin-bottom:1.25rem;">More Restorations &amp; Builds</div>
+      <div style="display:flex;flex-direction:column;gap:0.75rem;">
+        <a href="/restoration-imperial-steak-knives" style="display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border:1px solid rgba(28,26,23,0.1);border-radius:3px;text-decoration:none;color:var(--ink);transition:border-color 0.2s;">
+          <span>
+            <span style="font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.15em;color:var(--amber-text);text-transform:uppercase;display:block;margin-bottom:0.2rem;">No. 08 · Knives</span>
+            <span style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;">Imperial Steak Knife Handle Refresh</span>
+          </span>
+          <span style="color:var(--amber-text);font-family:'DM Mono',monospace;font-size:0.8rem;">→</span>
+        </a>
+        <a href="/restoration-german-perfect-handle" style="display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border:1px solid rgba(28,26,23,0.1);border-radius:3px;text-decoration:none;color:var(--ink);transition:border-color 0.2s;">
+          <span>
+            <span style="font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.15em;color:var(--amber-text);text-transform:uppercase;display:block;margin-bottom:0.2rem;">No. 07 · Screwdrivers</span>
+            <span style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;">German "Perfect Handle" Set — Four Sizes</span>
+          </span>
+          <span style="color:var(--amber-text);font-family:'DM Mono',monospace;font-size:0.8rem;">→</span>
+        </a>
+        <a href="/work" style="display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border:1px solid rgba(28,26,23,0.1);border-radius:3px;text-decoration:none;color:var(--ink);transition:border-color 0.2s;">
+          <span>
+            <span style="font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.15em;color:var(--amber-text);text-transform:uppercase;display:block;margin-bottom:0.2rem;">Full Archive</span>
+            <span style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;">View All Restorations &amp; Builds →</span>
+          </span>
+          <span style="color:var(--amber-text);font-family:'DM Mono',monospace;font-size:0.8rem;">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
   <!-- Newsletter bar -->
 <div style="background:var(--ink);border-top:1px solid rgba(245,240,232,0.06);">
   <div style="max-width:860px;margin:0 auto;padding:1.75rem 2rem;display:flex;gap:2.5rem;align-items:center;flex-wrap:wrap;">
@@ -444,36 +477,6 @@
   </div>
 </div>
 </main>
-
-  <!-- MORE RESTORATIONS -->
-  <div style="background:var(--cream);padding:3rem 2rem;border-top:1px solid var(--border);">
-    <div style="max-width:740px;margin:0 auto;">
-      <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.18em;text-transform:uppercase;color: var(--amber-text);margin-bottom:1.5rem;">More Restorations &amp; Builds</div>
-      <div style="display:flex;flex-direction:column;gap:1rem;">
-        <a class="next-work-card" href="/restoration-imperial-steak-knives" style="display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border:1px solid var(--border);border-radius:3px;text-decoration:none;color:var(--ink);transition:border-color 0.2s;">
-          <span>
-            <span style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.15em;color: var(--amber-text);text-transform:uppercase;display:block;margin-bottom:0.2rem;">No. 08 · Knives</span>
-            <span style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;">Imperial Steak Knife Handle Refresh</span>
-          </span>
-          <span style="color: var(--amber-text);font-family:'DM Mono',monospace;font-size:0.8rem;">→</span>
-        </a>
-        <a class="next-work-card" href="/restoration-german-perfect-handle" style="display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border:1px solid var(--border);border-radius:3px;text-decoration:none;color:var(--ink);transition:border-color 0.2s;">
-          <span>
-            <span style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.15em;color: var(--amber-text);text-transform:uppercase;display:block;margin-bottom:0.2rem;">No. 07 · Screwdrivers</span>
-            <span style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;">German "Perfect Handle" Set — Four Sizes</span>
-          </span>
-          <span style="color: var(--amber-text);font-family:'DM Mono',monospace;font-size:0.8rem;">→</span>
-        </a>
-        <a class="next-work-card" href="/work" style="display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border:1px solid var(--border);border-radius:3px;text-decoration:none;color:var(--ink);transition:border-color 0.2s;">
-          <span>
-            <span style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.15em;color: var(--amber-text);text-transform:uppercase;display:block;margin-bottom:0.2rem;">Full Archive</span>
-            <span style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;">View All Restorations &amp; Builds →</span>
-          </span>
-          <span style="color: var(--amber-text);font-family:'DM Mono',monospace;font-size:0.8rem;">→</span>
-        </a>
-      </div>
-    </div>
-  </div>
 
   <footer>
   <div class="footer-links" role="navigation" aria-label="Secondary navigation">
