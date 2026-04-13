@@ -17,7 +17,7 @@
   gtag("js", new Date());
   gtag("config", "G-WF1PP02KM3");
 </script>
-<title>The Best Woodworking and Hand Tool YouTube Channels for Tool Lovers — The Todd·Mark</title>
+<title>My Kit | Tools & Products I Actually Use | The Todd·Mark</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Jost:wght@300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Jost:wght@300;400;500&display=swap"></noscript>
@@ -1134,27 +1134,86 @@
   }
 
   .nav-active { color: var(--amber-text) !important; }
-  .resource-card {
-    display:flex;
-    flex-direction:column;
+
+  .product-card {
+    display:grid;
+    grid-template-columns:80px 1fr;
+    gap:1.25rem;
+    padding:1.25rem;
     background:var(--cream);
     border:1px solid var(--border);
     text-decoration:none;
-    transition: border-color 0.2s, transform 0.25s, box-shadow 0.25s;
-    overflow:hidden;
+    transition:border-color 0.2s;
+    align-items:start;
   }
-  .resource-card:hover {
-    border-color:var(--amber);
-    transform:translateY(-2px);
-   transform: translateY(-2px); box-shadow: 0 6px 20px rgba(28,26,23,0.08); }
-  .resource-name {
+  .product-card:hover { border-color:var(--amber); box-shadow: 0 4px 16px rgba(200,133,58,0.12); transform: translateY(-1px); }
+  .product-card { transition:border-color 0.25s, box-shadow 0.25s, transform 0.25s; }
+  .product-img {
+    width:80px;
+    height:80px;
+    object-fit:contain;
+    background:var(--warm-white);
+    border:1px solid var(--border);
+  }
+  .product-brand {
+    font-family:'DM Mono',monospace;
+    font-size: 0.75rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color: var(--amber-text);
+    margin-bottom:0.25rem;
+  }
+  .product-name {
     font-family:'Cormorant Garamond',serif;
-    font-size:1.2rem;
+    font-size:1.1rem;
+    font-weight:600;
+    color:var(--ink);
+    margin-bottom:0.4rem;
+  }
+  .product-desc {
+    font-size:0.8rem;
+    line-height:1.7;
+    color:var(--ink-soft);
+  }
+  .product-note {
+    font-family:'DM Mono',monospace;
+    font-size: 0.75rem;
+    letter-spacing:0.1em;
+    color: var(--amber-text);
+    margin-top:0.5rem;
+  }
+  .affiliate-note {
+    font-size:0.82rem;
+    color:var(--ink-faint);
+    line-height:1.6;
+    margin-bottom:2.5rem;
+    font-style:italic;
+  }
+
+  .tool-card {
+    padding:1.4rem 1.5rem;
+    background:var(--cream);
+    border:1px solid var(--border);
+    transition:border-color 0.2s;
+  }
+  .tool-card:hover { border-color:var(--amber); }
+  .tool-category {
+    font-family:'DM Mono',monospace;
+    font-size: 0.75rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color: var(--amber-text);
+    margin-bottom:0.4rem;
+  }
+  .tool-name {
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.15rem;
     font-weight:600;
     color:var(--ink);
     margin-bottom:0.5rem;
+    line-height:1.3;
   }
-  .resource-desc {
+  .tool-note {
     font-size:0.82rem;
     line-height:1.7;
     color:var(--ink-soft);
@@ -1346,52 +1405,6 @@
   }
 
 
-  /* ── RESOURCES PAGE ENHANCEMENTS ── */
-  .resource-card {
-    display: block;
-    text-decoration: none;
-    background: var(--cream);
-    border: 1px solid var(--border);
-    overflow: hidden;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    color: inherit;
-  }
-  .resource-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(28,26,23,0.1);
-  }
-  .resource-desc {
-    font-size: 0.84rem;
-    line-height: 1.6;
-    color: var(--ink-soft);
-    margin-bottom: 0.75rem;
-  }
-  .resource-learned {
-    font-size: 0.79rem;
-    line-height: 1.55;
-    color: var(--ink-faint);
-    border-top: 1px solid var(--border);
-    padding-top: 0.65rem;
-    margin-top: 0.1rem;
-  }
-  .resource-learned-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.75rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--amber-text);
-    font-style: normal;
-    font-weight: 400;
-    margin-right: 0.35rem;
-  }
-  @media (max-width: 480px) {
-    .res-grid { grid-template-columns: 1fr !important; }
-  }
-  @media (min-width: 481px) and (max-width: 768px) {
-    .res-grid { grid-template-columns: repeat(2, 1fr) !important; }
-  }
-
-
     /* ── Visited link colours ── */
     a:visited { color: var(--amber-text); }
     nav ul a:visited { color: rgba(245,240,232,1); }
@@ -1404,28 +1417,33 @@
   footer { --amber-text: var(--amber); }
 </style>
 
-  <meta name="description" content="A curated list of the best YouTube channels for hand tool woodworking, vintage tool restoration, and traditional craftsmanship.">
-  <meta name="keywords" content="woodworking resources, tool restoration YouTube, hand tool channels, woodworking websites, tool restoration community, vintage tool forums">
+  <meta name="description" content="The actual tools, finishes, and supplies used in every restoration — no filler, no fluff. If it's on this list, it earned its place. Affiliate links disclosed.">
+  <meta name="keywords" content="woodworking tools, tool restoration supplies, hand tool supplies, workshop products, mineral spirits, shellac, Renaissance Wax, screwdriver restoration kit">
   <meta name="author" content="Mark Todd">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://thetoddmark.com/resources">
+  <link rel="canonical" href="https://thetoddmark.com/my-kit">
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Todd·Mark">
-  <meta property="og:url" content="https://thetoddmark.com/resources">
-  <meta property="og:title" content="The Best Woodworking and Hand Tool YouTube Channels — The Todd·Mark">
-  <meta property="og:description" content="A curated list of the best YouTube channels for hand tool woodworking, vintage tool restoration, and traditional craftsmanship.">
+  <meta property="og:url" content="https://thetoddmark.com/my-kit">
+  <meta property="og:title" content="My Kit | Tools & Products I Actually Use | The Todd·Mark">
+  <meta property="og:description" content="The actual tools, finishes, and supplies used in every restoration — no filler, no fluff. If it's on this list, it earned its place. Affiliate links disclosed.">
   <meta property="og:image" content="https://thetoddmark.com/images/og-image.jpg">
   <meta property="og:image:width" content="624">
   <meta property="og:image:height" content="869">
   <meta property="og:image:alt" content="Vintage tool restoration — TheToddMark">
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="My Kit | Tools & Products I Actually Use | The Todd·Mark">
+  <meta name="twitter:description" content="The actual tools, finishes, and supplies used in every restoration — no filler, no fluff. If it's on this list, it earned its place. Affiliate links disclosed.">
+  <meta name="twitter:image" content="https://thetoddmark.com/images/og-image.jpg">
   <script type="application/ld+json">
 {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Woodworking & Tool Restoration Resources",
-    "url": "https://thetoddmark.com/resources.html",
-    "description": "Curated YouTube channels, websites, and communities for vintage tool restoration and traditional woodworking.",
+    "name": "Workshop Tools & Supplies",
+    "url": "https://thetoddmark.com/products.html",
+    "description": "Personally recommended tools, supplies, and materials for vintage hand tool restoration and woodworking.",
     "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -1438,137 +1456,11 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Resources",
-                "item": "https://thetoddmark.com/resources.html"
+                "name": "My Kit",
+                "item": "https://thetoddmark.com/products.html"
             }
         ]
     }
-}
-  </script>
-  <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Woodworking & Tool Restoration Resources",
-    "description": "Curated YouTube channels, websites, and communities for vintage tool restoration and traditional woodworking — as recommended by Mark Todd of thetoddmark.com.",
-    "url": "https://thetoddmark.com/resources.html",
-    "numberOfItems": 19,
-    "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Hand Tool Rescue",
-                "url": "https://www.youtube.com/@HandToolRescue"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Antique & Vintage Restorations",
-                "url": "https://www.youtube.com/@AntiqueVintageRestorations"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Just Plane Fun",
-                "url": "https://www.youtube.com/@JustPlaneFun"
-            },
-            {
-                "@type": "ListItem",
-                "position": 4,
-                "name": "357magdad",
-                "url": "https://www.youtube.com/@357magdad"
-            },
-            {
-                "@type": "ListItem",
-                "position": 5,
-                "name": "Lost Art Press",
-                "url": "https://lostartpress.com"
-            },
-            {
-                "@type": "ListItem",
-                "position": 6,
-                "name": "Paul Sellers",
-                "url": "https://www.youtube.com/@Paul.Sellers"
-            },
-            {
-                "@type": "ListItem",
-                "position": 7,
-                "name": "Rob Cosman",
-                "url": "https://www.youtube.com/@RobCosmanWoodworking"
-            },
-            {
-                "@type": "ListItem",
-                "position": 8,
-                "name": "Rex Krueger",
-                "url": "https://www.youtube.com/@RexKrueger"
-            },
-            {
-                "@type": "ListItem",
-                "position": 9,
-                "name": "Wood By Wright",
-                "url": "https://www.youtube.com/@WoodByWrightHowTo"
-            },
-            {
-                "@type": "ListItem",
-                "position": 10,
-                "name": "The Wood Whisperer",
-                "url": "https://www.youtube.com/@woodwhisperer"
-            },
-            {
-                "@type": "ListItem",
-                "position": 11,
-                "name": "ENCurtis",
-                "url": "https://www.youtube.com/@ENCurtis"
-            },
-            {
-                "@type": "ListItem",
-                "position": 12,
-                "name": "Stumpy Nubs",
-                "url": "https://www.youtube.com/@StumpyNubs"
-            },
-            {
-                "@type": "ListItem",
-                "position": 13,
-                "name": "3×3 Custom",
-                "url": "https://www.youtube.com/@3x3CustomTamar"
-            },
-            {
-                "@type": "ListItem",
-                "position": 14,
-                "name": "Bourbon Moth Woodworking",
-                "url": "https://www.youtube.com/@Bourbonmoth"
-            },
-            {
-                "@type": "ListItem",
-                "position": 15,
-                "name": "Paoson Woodworking",
-                "url": "https://www.youtube.com/@Paoson_Woodworking"
-            },
-            {
-                "@type": "ListItem",
-                "position": 16,
-                "name": "Pedulla Studio",
-                "url": "https://www.youtube.com/@PedullaStudio"
-            },
-            {
-                "@type": "ListItem",
-                "position": 17,
-                "name": "A Plane Life",
-                "url": "https://www.youtube.com/@aplanelife688"
-            },
-            {
-                "@type": "ListItem",
-                "position": 18,
-                "name": "Dave Corinth",
-                "url": "https://www.youtube.com/@DaveCorinth"
-            },
-            {
-                "@type": "ListItem",
-                "position": 19,
-                "name": "Gordon Addison",
-                "url": "https://www.youtube.com/@gordonaddison444"
-            }
-    ]
 }
   </script>
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
@@ -1611,6 +1503,7 @@
     .reveal { opacity: 1 !important; transform: none !important; }
   }
   .lb-nav-btn:hover { background: rgba(28,26,23,0.85) !important; }
+  .cat-nav-link:hover { color: var(--amber-text) !important; }
   </style>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 <nav aria-label="Main navigation">
@@ -1629,319 +1522,453 @@
   </button>
     <ul id="nav-menu">
     <li><a href="/work">The Work</a></li>
-    <li><a href="/my-kit">My Kit</a></li>
+    <li><a href="/my-kit" class="nav-active" aria-current="page">My Kit</a></li>
     <li><a href="/about">About</a></li>
     <li><a href="https://www.youtube.com/@TheToddMark" target="_blank" rel="noopener noreferrer" aria-label="Watch on YouTube" style="display:flex;align-items:center;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width:22px;height:22px;" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12z" fill="#fff"/></svg></a></li>
   </ul>
 </nav>
 <main id="main-content">
-<section style="padding-top:8rem;padding-bottom:6rem;max-width:1240px;margin:0 auto;padding-left:2.5rem;padding-right:2.5rem;">
-  <div class="section-header reveal">    <h1 class="section-title">Resources &amp; Influences</h1>
+<section style="padding-top:6rem;padding-bottom:4rem;max-width:960px;margin:0 auto;padding-left:2rem;padding-right:2rem;">
+  <div class="section-header reveal">    <h1 class="section-title">My <em>Kit</em></h1>
   </div>
-  <p style="font-size:0.95rem;line-height:1.8;color:var(--ink-soft);max-width:600px;margin-bottom:3.5rem;">These are the creators, historians, and craftspeople who taught me most of what I know about hand tools, tool restoration, and working with wood. If you're new to this world, this is an excellent place to start.</p>
 
-  <div class="res-section-header reveal" style="margin-bottom:1.5rem;">
-    <div style="display:flex;align-items:baseline;gap:1rem;margin-bottom:0.5rem;">
-      <span style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.18em;color: var(--amber-text);">01</span>
-      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:300;color:var(--ink);margin:0;">Restoration &amp; Tool History</h2>
-      <span style="flex:1;height:1px;background:var(--border);margin-left:0.5rem;display:inline-block;"></span>
+  <!-- Divider -->
+  <div style="margin-bottom:2rem;">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--ink);margin-bottom:0.5rem;">What I Use</h2>
+    <div style="width:3rem;height:1px;background:var(--amber);margin-bottom:1.5rem;"></div>
+    <p style="font-size:0.9rem;line-height:1.8;color:var(--ink-soft);max-width:600px;margin-bottom:1rem;">Products I actually use in my restorations. No sponsorships — just things that work.</p>
+    <p class="affiliate-note">Some links are Amazon affiliate links (thetoddmark-20) — I earn a small commission at no extra cost to you. I only list things I actually use.</p>
+    <div role="navigation" aria-label="Page sections" style="display:flex;flex-wrap:wrap;gap:0.5rem 1.75rem;padding:0.75rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-top:1.25rem;">
+      <a class="cat-nav-link" href="#filming" style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-faint);text-decoration:none;transition:color 0.2s;">Filming &amp; Photography</a>
+      <a class="cat-nav-link" href="#finishing" style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-faint);text-decoration:none;transition:color 0.2s;">Finishing &amp; Restoration</a>
+      <a class="cat-nav-link" href="#stationary" style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-faint);text-decoration:none;transition:color 0.2s;">Stationary &amp; Benchtop</a>
+      <a class="cat-nav-link" href="#handheld" style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-faint);text-decoration:none;transition:color 0.2s;">Handheld Power</a>
+      <a class="cat-nav-link" href="#planes" style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-faint);text-decoration:none;transition:color 0.2s;">Hand Planes</a>
+      <a class="cat-nav-link" href="#collection" style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-faint);text-decoration:none;transition:color 0.2s;">Growing Collection</a>
     </div>
-    <p style="font-size:0.88rem;color:var(--ink-faint);margin:0 0 0 0;line-height:1.6;font-family:'Jost',sans-serif;max-width:60ch;">Creators focused on rescuing, restoring, and understanding vintage hand tools — and the history behind them.</p>
-  </div>
-  <div class="res-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.25rem;margin-bottom:3.5rem;">
-    <a href="https://www.youtube.com/@HandToolRescue" target="_blank" rel="noopener noreferrer" class="resource-card reveal">
-      <div style="width:100%;height:96px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
-        <img src="https://yt3.googleusercontent.com/ytc/AIdro_kNVtr2uU9ad3tMJyI7PPfw15XttI7NN4Ap4E1fhKKI2g=s160-c-k-c0x00ffffff-no-rj" width="48" height="48" style="border-radius:50%;flex-shrink:0;object-fit:cover;" alt="Hand Tool Rescue">
-        <div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">Hand Tool Rescue</div>
-          <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · @HandToolRescue</div>
-        </div>
-      </div>
-      <div style="padding:0.85rem 1.1rem;">
-        <div class="resource-desc">Highly detailed hand tool restorations — systematic, methodical, often funny, and very satisfying to watch.</div>
-        <div class="resource-learned"><span class="resource-learned-label">What I learned:</span> Even tools that look beyond saving often have years of life left if you're patient, creative, and really want to see the tool brought back to its former glory (often well beyond that too!)</div>
-      </div>
-    </a>
-    <a href="https://www.youtube.com/@AntiqueVintageRestorations" target="_blank" rel="noopener noreferrer" class="resource-card reveal">
-      <div style="width:100%;height:96px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
-        <img src="https://yt3.googleusercontent.com/Q3mXkV5uETUENoK2pwt2CgHVdW9SKB4zCnRcFD6eaB9bB3A2vigFH0HeaosD_dYbUhHlVYSHhw=s160-c-k-c0x00ffffff-no-rj" width="48" height="48" style="border-radius:50%;flex-shrink:0;object-fit:cover;" alt="Antique & Vintage Restorations">
-        <div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">Antique &amp; Vintage Restorations</div>
-          <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · @AntiqueVintageRestorations</div>
-        </div>
-      </div>
-      <div style="padding:0.85rem 1.1rem;">
-        <div class="resource-desc">Rescuing vintage and antique tools through careful cleaning, rust removal, and patient restoration work.</div>
-        <div class="resource-learned"><span class="resource-learned-label">What I learned:</span> Patience and chemical knowledge are more valuable than elbow grease. The right process, applied calmly, is everything.</div>
-      </div>
-    </a>
-    <a href="https://www.youtube.com/@JustPlaneFun" target="_blank" rel="noopener noreferrer" class="resource-card reveal">
-      <div style="width:100%;height:96px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
-        <img src="https://yt3.googleusercontent.com/rE94GTcRKvU5IYVMCYuEBvvOA-BMYKjS_lut2sjVfFizbyA-K0oobiUJQB38x2iwjdF4YJzOTw=s160-c-k-c0x00ffffff-no-rj" alt="Just Plane Fun" style="width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(255,255,255,0.2);" loading="lazy" decoding="async">
-        <div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">Just Plane Fun</div>
-          <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · @JustPlaneFun</div>
-        </div>
-      </div>
-      <div style="padding:0.85rem 1.1rem;">
-        <div class="resource-desc">Vintage tool restoration and hand plane deep dives. Exactly the kind of content that got me started on this path.</div>
-        <div class="resource-learned"><span class="resource-learned-label">What I learned:</span> Understanding Stanley type studies completely changed how I shop at flea markets and estate sales.</div>
-      </div>
-    </a>
-    <a href="https://www.youtube.com/@357magdad" target="_blank" rel="noopener noreferrer" class="resource-card reveal">
-      <div style="width:100%;height:96px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
-        <img src="https://yt3.googleusercontent.com/ytc/AIdro_liEwjI-q1opk1swpTNPwqclcC9B1rxpMXtEb2kqYHEr78=s160-c-k-c0x00ffffff-no-rj" width="48" height="48" style="border-radius:50%;flex-shrink:0;object-fit:cover;" alt="357magdad">
-        <div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">357magdad</div>
-          <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · @357magdad</div>
-        </div>
-      </div>
-      <div style="padding:0.85rem 1.1rem;">
-        <div class="resource-desc">Deep-dive vintage tool restorations as well as fun restorations of other vintage things like old toys — watch a few and get hooked… Chuck is a funny mascot too.</div>
-        <div class="resource-learned"><span class="resource-learned-label">What I learned:</span> There's always another level of quality hiding inside a beat-up old tool. Don't give up on the ugly ones.</div>
-      </div>
-    </a>
-    <a href="https://lostartpress.com" target="_blank" rel="noopener noreferrer" class="resource-card reveal">
-      <div style="width:100%;height:96px;background:linear-gradient(135deg,#0A1828 0%,#1A3858 100%);display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
-        <img src="https://lostartpress.com/cdn/shop/files/logo_647fff40-8ee2-42f2-8302-7c7009e79fe2_500x.png?v=1697939619" width="48" height="48" style="border-radius:50%;flex-shrink:0;object-fit:cover;" alt="Lost Art Press">
-        <div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">Lost Art Press</div>
-          <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">WEB · lostartpress.com</div>
-        </div>
-      </div>
-      <div style="padding:0.85rem 1.1rem;">
-        <div class="resource-desc">Publisher of some of the best hand tool woodworking books in print. Chris Schwarz and company — serious scholarship on craft, tools, and technique. The bookshelf standard.</div>
-        <div class="resource-learned"><span class="resource-learned-label">What I learned:</span> Reading the history behind your tools changes how you use them. Context is part of the craft.</div>
-      </div>
-    </a>
   </div>
 
-  <div class="res-section-header reveal" style="margin-bottom:1.5rem;">
-    <div style="display:flex;align-items:baseline;gap:1rem;margin-bottom:0.5rem;">
-      <span style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.18em;color: var(--amber-text);">02</span>
-      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:300;color:var(--ink);margin:0;">Hand Tool Masters / Education</h2>
-      <span style="flex:1;height:1px;background:var(--border);margin-left:0.5rem;display:inline-block;"></span>
+  <!-- Filming & Photography -->
+  <h2 id="filming" style="scroll-margin-top:80px;font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--ink);margin-bottom:0.5rem;">Filming &amp; Photography</h2>
+  <div style="width:3rem;height:1px;background:var(--amber);margin-bottom:1.5rem;"></div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(340px,100%),1fr));gap:1.25rem;margin-bottom:3rem;">
+
+<a href="https://www.amazon.com/dp/B0BF976MJY/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" class="product-card reveal">
+  <picture>
+    <source type="image/webp" srcset="images/product-niceveedi-led-light-kit.webp">
+    <img src="images/product-niceveedi-led-light-kit.jpg" alt="NiceVeedi 2-Pack LED Video Light Kit" style="width:80px;height:80px;object-fit:contain;background:var(--warm-white);border:1px solid var(--border);display:block;" loading="lazy" decoding="async">
+  </picture>
+  <div>
+    <div class="product-brand">NiceVeedi</div>
+    <div class="product-name">2-Pack LED Video Light Kit</div>
+    <div class="product-desc">Bi-color range from 2800K to 6500K covers everything from warm tungsten to daylight, which matters when you&rsquo;re mixing ambient with artificial light in a small shed. I set one as a key light and one as fill — the two-light setup kills the harsh shadows that make close-up blade and handle work impossible to read. One stand doubles as the camera mount, which keeps the footprint manageable in a tight space.</div>
+  </div>
+</a>
+
+<a href="https://www.amazon.com/dp/B0CRYFHVS5/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" class="product-card reveal">
+  <picture>
+    <source type="image/webp" srcset="images/product-famall-flexible-phone-tripod.webp">
+    <img src="images/product-famall-flexible-phone-tripod.jpg" alt="Famall Flexible Phone Tripod" style="width:80px;height:80px;object-fit:contain;background:var(--warm-white);border:1px solid var(--border);display:block;" loading="lazy" decoding="async">
+  </picture>
+  <div>
+    <div class="product-brand">Famall</div>
+    <div class="product-name">Flexible Phone Tripod with Remote</div>
+    <div class="product-desc">The main use is overhead flat-lay shots — before, during, and after, laid out on the cutting mat. The flexible legs wrap around a shelf bracket above the bench and hold the phone dead steady, and the remote shutter means I'm not reaching over and shaking the frame. The 1/4&Prime; thread takes a GoPro or small camera body when the phone isn't the right tool for the shot.</div>
+  </div>
+</a>
+
+<a href="https://www.amazon.com/dp/B0DDLCLFFX/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" class="product-card reveal" style="border-style:dashed;opacity:0.8;">
+  <picture>
+    <source type="image/webp" srcset="images/product-dji-mic-mini.webp">
+    <img src="images/product-dji-mic-mini.jpg" alt="DJI Mic Mini 1TX+1RX" style="width:80px;height:80px;object-fit:contain;background:var(--warm-white);border:1px solid var(--border);display:block;" loading="lazy" decoding="async">
+  </picture>
+  <div>
+    <div class="product-brand">DJI</div>
+    <div class="product-name">Mic Mini — 1TX + 1RX</div>
+    <div class="product-desc">Planned for shop narration — clips to a shirt, transmits wirelessly to a single receiver that connects directly to iPhone via USB-C. No adapter, no cable run, no mic in frame. Right now the built-in iPhone mic is handling narration, which means positioning the phone close enough to pick up voice and far enough to get the shot. It&rsquo;s a compromise. This solves it.</div>
+    <div class="product-note">Planned — not yet purchased · using built-in mic in the meantime</div>
+  </div>
+</a>
+
+  </div>
+
+  <!-- Finishing & Restoration -->
+  <h2 id="finishing" style="scroll-margin-top:80px;font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--ink);margin-bottom:0.5rem;">Finishing &amp; Restoration</h2>
+  <div style="width:3rem;height:1px;background:var(--amber);margin-bottom:1.5rem;"></div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(340px,100%),1fr));gap:1.25rem;">
+
+<a href="https://www.amazon.com/dp/B0DDPVDWPZ/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" class="product-card reveal">
+      <picture>
+  <source type="image/webp" srcset="images/product-jesverty-dc-power-supply.webp">
+  <img src="images/product-jesverty-dc-power-supply.jpg" alt="Jesverty DC Power Supply Variable" style="width:80px;height:80px;object-fit:contain;background:var(--warm-white);border:1px solid var(--border);display:block;"  loading="lazy" decoding="async" />
+</picture>
+      <div>
+        <div class="product-brand">Jesverty</div>
+        <div class="product-name">DC Power Supply Variable (0–32V, 0–10A)</div>
+        <div class="product-desc">The workhorse for electrolytic rust removal. Set it around 3V and let the process run overnight — iron oxide reverses itself without touching the metal. The 0–32V range and 10A ceiling cover everything from a small chisel to a full plane body, and the fine-adjustment encoder means you can dial in exactly what the setup needs.</div>
+      </div>
+    </a>
+
+<a href="https://www.amazon.com/dp/B0FPSRKBBC/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" class="product-card reveal">
+      <picture>
+  <source type="image/webp" srcset="images/product-walrus-oil-polymerized-tung-oil.webp">
+  <img src="images/product-walrus-oil-polymerized-tung-oil.jpg" alt="Walrus Oil Polymerized Tung Oil" style="width:80px;height:80px;object-fit:contain;background:var(--warm-white);border:1px solid var(--border);display:block;"  loading="lazy" decoding="async" />
+</picture>
+      <div>
+        <div class="product-brand">Walrus Oil</div>
+        <div class="product-name">Polymerized Tung Oil</div>
+        <div class="product-desc">My go-to finish for tool handles. Penetrates deep, cures hard, and gives a warm, natural sheen that doesn't look plastic. Three coats over 48–72 hours.</div>
+        <div class="product-note">Used on: <span style="color: var(--amber-text);">Mac Tools screwdriver set</span></div>
+      </div>
+    </a>
+
+<a href="https://www.amazon.com/s?k=fiebing+leather+dye&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" class="product-card reveal">
+      <picture>
+  <source type="image/webp" srcset="images/product-fiebing-s-leather-dye.webp">
+  <img src="images/product-fiebing-s-leather-dye.jpg" alt="Fiebing's Leather Dye" style="width:80px;height:80px;object-fit:contain;background:var(--warm-white);border:1px solid var(--border);display:block;"  loading="lazy" decoding="async" />
+</picture>
+      <div>
+        <div class="product-brand">Fiebing's</div>
+        <div class="product-name">Leather Dye</div>
+        <div class="product-desc">Unconventional on tool handles — but absolutely worth it. Apply Black first, then Dark Brown, then Mahogany for dimensional color that looks like it comes from inside the wood.</div>
+        <div class="product-note">Used on: <span style="color: var(--amber-text);">Mac Tools screwdriver set</span></div>
+      </div>
+    </a>
+
+<a href="https://www.amazon.com/s?k=renaissance+wax&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" class="product-card reveal">
+      <picture>
+  <source type="image/webp" srcset="images/product-renaissance-wax.webp">
+  <img src="images/product-renaissance-wax.jpg" alt="Renaissance Wax" style="width:80px;height:80px;object-fit:contain;background:var(--warm-white);border:1px solid var(--border);display:block;"  loading="lazy" decoding="async" />
+</picture>
+      <div>
+        <div class="product-brand">Picreator</div>
+        <div class="product-name">Renaissance Wax</div>
+        <div class="product-desc">Museum-grade microcrystalline wax. Final coat on all my restorations. Protects without changing the look — a soft, period-appropriate sheen.</div>
+        <div class="product-note">Used on: <span style="color: var(--amber-text);">All restorations</span></div>
+      </div>
+    </a>
+
+<a href="https://www.amazon.com/s?k=oxalic+acid+wood+bleach&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" class="product-card reveal">
+      <picture>
+  <source type="image/webp" srcset="images/product-oxalic-acid-wood-bleach.webp">
+  <img src="images/product-oxalic-acid-wood-bleach.jpg" alt="Oxalic Acid Wood Bleach" style="width:80px;height:80px;object-fit:contain;background:var(--warm-white);border:1px solid var(--border);display:block;"  loading="lazy" decoding="async" />
+</picture>
+      <div>
+        <div class="product-brand">Wood Bleach</div>
+        <div class="product-name">Oxalic Acid</div>
+        <div class="product-desc">Essential for lifting tannin staining from old tool handles. Mix with warm water, apply, let sit, neutralize. Takes wood from grey-brown back to near-original tone.</div>
+        <div class="product-note">Used on: <span style="color: var(--amber-text);">Mac Tools screwdriver set</span></div>
+      </div>
+    </a>
+
+<a href="https://www.amazon.com/Flitz-Multi-Purpose-Polish-Cleaner-Paste/dp/B000MUSOW4/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" class="product-card reveal">
+      <picture>
+  <source type="image/webp" srcset="images/product-flitz-polish.webp">
+  <img src="images/product-flitz-polish.jpg" alt="Flitz Metal Polish" style="width:80px;height:80px;object-fit:contain;background:var(--warm-white);border:1px solid var(--border);display:block;"  loading="lazy" decoding="async" />
+</picture>
+      <div>
+        <div class="product-brand">Flitz</div>
+        <div class="product-name">Multi-Purpose Metal Polish</div>
+        <div class="product-desc">My go-to for steel and brass on restorations. Cleans and polishes without overdoing it — a light touch goes a long way.</div>
+        <div class="product-note">Used on: <span style="color: var(--amber-text);">Bridgeport multitool</span></div>
+      </div>
+    </a>
+
+<a href="https://www.amazon.com/Klean-Strip-GKSP94214-Odorless-Mineral-1-Gallon/dp/B000QD7PIQ/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" class="product-card reveal">
+      <picture>
+  <source type="image/webp" srcset="images/product-mineral-spirits.webp">
+  <img src="images/product-mineral-spirits.jpg" alt="Mineral Spirits" style="width:80px;height:80px;object-fit:contain;background:var(--warm-white);border:1px solid var(--border);display:block;"  loading="lazy" decoding="async" />
+</picture>
+      <div>
+        <div class="product-brand">Klean-Strip</div>
+        <div class="product-name">Odorless Mineral Spirits</div>
+        <div class="product-desc">The first step on almost every restoration — cuts through decades of grime and oils, and gives you an honest preview of what the wood will look like finished.</div>
+        <div class="product-note">Used on: <span style="color: var(--amber-text);">Bridgeport multitool</span></div>
+      </div>
+    </a>
+
+<a href="https://www.amazon.com/46615-Hyde-Tools-Nylon-Brushes/dp/B07H7LCT52/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" class="product-card reveal">
+      <picture>
+  <source type="image/webp" srcset="images/product-nylon-brushes.webp">
+  <img src="images/product-nylon-brushes.jpg" alt="Nylon Brushes" style="width:80px;height:80px;object-fit:contain;background:var(--warm-white);border:1px solid var(--border);display:block;"  loading="lazy" decoding="async" />
+</picture>
+      <div>
+        <div class="product-brand">Hyde Tools</div>
+        <div class="product-name">Nylon Bristle Brushes</div>
+        <div class="product-desc">For scrubbing metal parts with mineral spirits. Soft enough to not scratch, stiff enough to get into knurling and tight spaces.</div>
+        <div class="product-note">Used on: <span style="color: var(--amber-text);">Bridgeport multitool</span></div>
+      </div>
+    </a>
+
+<a href="https://www.amazon.com/Tonmp-Superfine-Specifications-Assortment-Automotive/dp/B08KRVPMYB/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" class="product-card reveal">
+      <picture>
+  <source type="image/webp" srcset="images/product-scotchbrite-pads.webp">
+  <img src="images/product-scotchbrite-pads.jpg" alt="Scotch-Brite Fine Pads" style="width:80px;height:80px;object-fit:contain;background:var(--warm-white);border:1px solid var(--border);display:block;"  loading="lazy" decoding="async" />
+</picture>
+      <div>
+        <div class="product-brand">Scotch-Brite</div>
+        <div class="product-name">Fine Abrasive Pads (Superfine Assortment)</div>
+        <div class="product-desc">For addressing light surface oxidation on steel. Removes corrosion without altering the original surface finish — the right tool when restraint matters.</div>
+        <div class="product-note">Used on: <span style="color: var(--amber-text);">Bridgeport multitool</span></div>
+      </div>
+    </a>
+
+<a href="https://www.amazon.com/3-ONE-10038-Multi-Purpose-Pack/dp/B00065VGWK/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" class="product-card reveal">
+      <picture>
+  <source type="image/webp" srcset="images/product-3in1-oil.webp">
+  <img src="images/product-3in1-oil.jpg" alt="3-In-One Multi-Purpose Oil" style="width:80px;height:80px;object-fit:contain;background:var(--warm-white);border:1px solid var(--border);display:block;"  loading="lazy" decoding="async" />
+</picture>
+      <div>
+        <div class="product-brand">3-In-One</div>
+        <div class="product-name">Multi-Purpose Oil</div>
+        <div class="product-desc">Light machine oil for lubricating chuck mechanisms and collet jaws after cleaning. A small amount, applied carefully, keeps things moving smoothly.</div>
+        <div class="product-note">Used on: <span style="color: var(--amber-text);">Bridgeport multitool</span></div>
+      </div>
+    </a>
+
+<a href="https://www.amazon.com/dp/B072L14C7Q/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" class="product-card reveal">
+      <picture>
+  <source type="image/webp" srcset="images/3m_cubitron.webp">
+  <img loading="lazy" decoding="async" src="images/3m_cubitron.jpg" alt="3M Cubitron II Hookit Sanding Discs" style="width:80px;height:80px;object-fit:contain;background:var(--warm-white);border:1px solid var(--border);display:block;" width="auto" height="auto">
+</picture>
+      <div>
+        <div class="product-brand">3M Cubitron II</div>
+        <div class="product-name">Hookit Sanding Discs — 3" / 150+</div>
+        <div class="product-desc">Precision-shaped ceramic grain that cuts faster and lasts longer than conventional abrasives. The 3" size pairs perfectly with detail sanders. Pack of 50 with multi-hole dust extraction.</div>
+        <div class="product-note">For: detail sanding and finish work</div>
+      </div>
+    </a>
+
+<a href="https://www.amazon.com/dp/B072L1922W/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" class="product-card reveal">
+      <picture>
+  <source type="image/webp" srcset="images/3m_cubitron.webp">
+  <img loading="lazy" decoding="async" src="images/3m_cubitron.jpg" alt="3M Cubitron II Hookit Sanding Discs" style="width:80px;height:80px;object-fit:contain;background:var(--warm-white);border:1px solid var(--border);display:block;" width="auto" height="auto">
+</picture>
+      <div>
+        <div class="product-brand">3M Cubitron II</div>
+        <div class="product-name">Hookit Sanding Discs — 5" / 220+</div>
+        <div class="product-desc">Same Cubitron ceramic technology in a 5" format for random orbital sanders. 220+ grit is the sweet spot for finishing passes before applying dye or oil. Pack of 50.</div>
+        <div class="product-note">For: pre-finish sanding on larger surfaces</div>
+      </div>
+    </a>
+
+<a href="https://www.amazon.com/dp/B07DWX8PQ2/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" class="product-card reveal">
+      <picture>
+  <source type="image/webp" srcset="images/3m_cubitron.webp">
+  <img loading="lazy" decoding="async" src="images/3m_cubitron.jpg" alt="3M Cubitron II Hookit Sanding Discs Multi-Pack" style="width:80px;height:80px;object-fit:contain;background:var(--warm-white);border:1px solid var(--border);display:block;" width="auto" height="auto">
+</picture>
+      <div>
+        <div class="product-brand">3M Cubitron II</div>
+        <div class="product-name">Hookit Sanding Discs — 5" Multi-Pack</div>
+        <div class="product-desc">Three grits in one pack — 240+, 320+, and 400+ — for working through the final sanding stages without ordering separately. The multi-hole pattern keeps the disc clean and extends its life considerably.</div>
+        <div class="product-note">For: progressive finish sanding</div>
+      </div>
+    </a>
+
+<a href="https://www.amazon.com/dp/B00MYU23Y0/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" class="product-card reveal">
+      <picture>
+  <source type="image/webp" srcset="images/3m_cubitron.webp">
+  <img loading="lazy" decoding="async" src="images/3m_cubitron.jpg" alt="3M Cubitron II Hookit Sanding Discs" style="width:80px;height:80px;object-fit:contain;background:var(--warm-white);border:1px solid var(--border);display:block;" width="auto" height="auto">
+</picture>
+      <div>
+        <div class="product-brand">3M Cubitron II</div>
+        <div class="product-name">Hookit Sanding Discs — 5" / 80+</div>
+        <div class="product-desc">The aggressive grit for early-stage material removal — stripping old finish, flattening glue-ups, or cutting through rust and grime. Cubitron ceramic grain works faster and stays sharper than conventional abrasives at this grit. Pack of 50.</div>
+        <div class="product-note">For: aggressive material removal and surface prep</div>
+      </div>
+    </a>
+
+<a href="https://www.amazon.com/dp/B098RLZPS8/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" class="product-card reveal">
+      <picture>
+  <source type="image/webp" srcset="images/3m_xtract.webp">
+  <img loading="lazy" decoding="async" src="images/3m_xtract.jpg" alt="3M Xtract Net Disc 710W" style="width:80px;height:80px;object-fit:contain;background:var(--warm-white);border:1px solid var(--border);display:block;" width="auto" height="auto">
+</picture>
+      <div>
+        <div class="product-brand">3M Xtract</div>
+        <div class="product-name">Net Disc 710W — 5" / 120+</div>
+        <div class="product-desc">The net construction is the difference — virtually dust-free sanding across the entire disc surface, not just through a few holes. 120+ grit bridges the gap between aggressive removal and finish prep. A premium option when clean air matters. Pack of 50.</div>
+        <div class="product-note">For: stock removal, intermediate sanding, and fine finishing</div>
+      </div>
+    </a>
+
+  </div>
+
+
+  <!-- Workspace / Father's note — editorial block -->
+  <div style="border-top:1px solid var(--border);margin-top:2.5rem;margin-bottom:2.5rem;padding-top:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border);background:var(--cream);padding-left:1.75rem;padding-right:1.75rem;">
+    <p style="font-size:0.95rem;line-height:1.9;color:var(--ink-soft);margin-bottom:1.25rem;">Many of these tools were handed down to me by my father when he passed. Back then I didn't have the appreciation for them that I do now — I'm sure I let some real gems go that I would have loved to keep. Hindsight is 20/20.</p>
+    <p style="font-size:0.95rem;line-height:1.9;color:var(--ink-soft);margin-bottom:1.25rem;">My current workspace is a roughly 8&rsquo;&nbsp;&times;&nbsp;7&rsquo; shed. I run an extension cord for power. No heat. No installed lights. I often find myself sitting in the backyard hoping the notorious Seattle rain stays away while I plug away on a project.</p>
+    <p style="font-size:0.95rem;line-height:1.9;color:var(--ink-soft);">This spring (2026) I&rsquo;m tearing it down and building a real workshop — roughly 9&rsquo;&nbsp;&times;&nbsp;10&rsquo; with windows, proper power (including 220V), air filtration, insulation, and real tool storage. I&rsquo;m documenting the whole thing publicly. <a href="/shed-upgrade" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">Follow the shed upgrade →</a></p>
+  </div>
+
+  <!-- Stationary / Benchtop Tools -->
+  <h2 id="stationary" style="scroll-margin-top:80px;font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--ink);margin-bottom:0.5rem;">Stationary &amp; Benchtop</h2>
+  <div style="width:3rem;height:1px;background:var(--amber);margin-bottom:1.5rem;"></div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:1.2rem;margin-bottom:2.5rem;">
+
+    <div class="tool-card">
+      <div class="tool-category">Bandsaw</div>
+      <div class="tool-name">Pro Tech 3202</div>
+      <div class="tool-note">Incredibly old and not great — but it&rsquo;s what I have and it gets the job (mostly) done. Hence my interest in finding an Inca to add to the shop.</div>
+      <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);margin-top:0.6rem;opacity:0.7;">Not available new — no link</div>
     </div>
-    <p style="font-size:0.88rem;color:var(--ink-faint);margin:0 0 0 0;line-height:1.6;font-family:'Jost',sans-serif;max-width:60ch;">Master craftsmen and dedicated teachers whose instruction forms the backbone of a hand tool education.</p>
-  </div>
-  <div class="res-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.25rem;margin-bottom:3.5rem;">
-    <a href="https://www.youtube.com/@Paul.Sellers" target="_blank" rel="noopener noreferrer" class="resource-card reveal">
-      <div style="width:100%;height:96px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
-        <img src="https://yt3.googleusercontent.com/ytc/AIdro_l7iy_uIFmfjaM_YQxcLI_yENCdKX7ZrkOVb80odJ_DkwQ=s160-c-k-c0x00ffffff-no-rj" alt="Paul Sellers" style="width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(255,255,255,0.2);" loading="lazy" decoding="async">
-        <div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">Paul Sellers</div>
-          <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · @Paul.Sellers</div>
-        </div>
-      </div>
-      <div style="padding:0.85rem 1.1rem;">
-        <div class="resource-desc">Master craftsman and educator. Clean, precise hand tool work with a thoughtful, philosophical approach to the craft.</div>
-        <div class="resource-learned"><span class="resource-learned-label">What I learned:</span> The cut doesn't have to be perfect — it has to be intentional. Sellers made me slow down and think before I cut.</div>
-      </div>
-    </a>
-    <a href="https://www.youtube.com/@RobCosmanWoodworking" target="_blank" rel="noopener noreferrer" class="resource-card reveal">
-      <div style="width:100%;height:96px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
-        <img src="https://yt3.googleusercontent.com/ytc/AIdro_nD_7wSJHrJfktoVaKIkQhpSYU0T6-MQppJL1dP1EVC2gI=s160-c-k-c0x00ffffff-no-rj" width="48" height="48" style="border-radius:50%;flex-shrink:0;object-fit:cover;" alt="Rob Cosman">
-        <div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">Rob Cosman</div>
-          <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · @RobCosman</div>
-        </div>
-      </div>
-      <div style="padding:0.85rem 1.1rem;">
-        <div class="resource-desc">World-class hand tool craftsman best known for his dovetail instruction — precise, methodical, and deeply educational.</div>
-        <div class="resource-learned"><span class="resource-learned-label">What I learned:</span> I learn something new from Rob with every video. I also really admire his Purple Heart Project for wounded warriors — thepurpleheartproject.org</div>
-      </div>
-    </a>
-    <a href="https://www.youtube.com/@RexKrueger" target="_blank" rel="noopener noreferrer" class="resource-card reveal">
-      <div style="width:100%;height:96px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
-        <img src="https://yt3.googleusercontent.com/ytc/AIdro_kBY47C8Ojv1PeLDjrpSZ0nf6xQkTc6UjrY3vnW--6s3VA=s160-c-k-c0x00ffffff-no-rj" alt="Rex Krueger" style="width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(255,255,255,0.2);" loading="lazy" decoding="async">
-        <div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">Rex Krueger</div>
-          <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · @RexKrueger</div>
-        </div>
-      </div>
-      <div style="padding:0.85rem 1.1rem;">
-        <div class="resource-desc">Low-cost, high-skill woodworking. Rex makes the case that you don't need expensive tools to do excellent work.</div>
-        <div class="resource-learned"><span class="resource-learned-label">What I learned:</span> You don't need expensive tools to do excellent work. Rex taught me that skill and patience outweigh kit every time.</div>
-      </div>
-    </a>
-    <a href="https://www.youtube.com/@WoodByWrightHowTo" target="_blank" rel="noopener noreferrer" class="resource-card reveal">
-      <div style="width:100%;height:96px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
-        <img src="https://yt3.googleusercontent.com/s25y_aW2-xQ-ffM5pav2ymIyvgUF8BEt1NSKqE7Sjqi7iFEsehKeVb173cMQZYQVZ-h2Hui_aoQ=s160-c-k-c0x00ffffff-no-rj" alt="Wood By Wright" style="width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(255,255,255,0.2);" loading="lazy" decoding="async">
-        <div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">Wood By Wright</div>
-          <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · Wood By Wright</div>
-        </div>
-      </div>
-      <div style="padding:0.85rem 1.1rem;">
-        <div class="resource-desc">Hand tool focused, deeply knowledgeable. One of the best channels for understanding how and why hand tools work.</div>
-        <div class="resource-learned"><span class="resource-learned-label">What I learned:</span> Understanding why a hand tool works — the geometry, the physics — makes you a better craftsman than any technique video alone.</div>
-      </div>
-    </a>
-    <a href="https://www.youtube.com/@woodwhisperer" target="_blank" rel="noopener noreferrer" class="resource-card reveal">
-      <div style="width:100%;height:96px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
-        <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#3a5f3a,#5a8a5a);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M12 3c4.5 0 7 3 7 7s-2.5 7-7 7-7-3-7-7 2.5-7 7-7z"/><path d="M8 12c0-2.5 1.5-4 4-4s4 1.5 4 4-1.5 4-4 4-4-1.5-4-4z"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2"/>
-          </svg>
-        </div>
-        <div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">The Wood Whisperer</div>
-          <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · @woodwhisperer</div>
-        </div>
-      </div>
-      <div style="padding:1rem 1.25rem 1.25rem;">
-        <div class="resource-desc">Marc Spagnuolo brings a grounded, no-nonsense approach to furniture woodworking and shop craft. Excellent production, thoughtful instruction, and a genuine respect for both hand and power tools. One of the most trusted voices in the online woodworking community.</div>
-        <div class="resource-learned"><span class="resource-learned-label">What I learned:</span> That clean technique and good habits matter far more than expensive tools — and that you can build beautiful furniture in a modest shop.</div>
-      </div>
-    </a>
-    <a href="https://www.youtube.com/@ENCurtis" target="_blank" rel="noopener noreferrer" class="resource-card reveal">
-      <div style="width:100%;height:96px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
-        <img src="https://yt3.googleusercontent.com/pnSQIbHpr-mWs0WTB4LU4Mqqzw870OnO7fKLKu1wRVimQKzE_LN5GOVZBE-nlCg1sMRFJ27yXw=s160-c-k-c0x00ffffff-no-rj" width="48" height="48" style="border-radius:50%;flex-shrink:0;object-fit:cover;" alt="ENCurtis">
-        <div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">ENCurtis</div>
-          <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · @ENCurtis</div>
-        </div>
-      </div>
-      <div style="padding:0.85rem 1.1rem;">
-        <div class="resource-desc">Entertaining and informative woodworking projects.</div>
-        <div class="resource-learned"><span class="resource-learned-label">What I learned:</span> I'm wildly jealous of his workshop and tools — not to mention his skills. Oh, and I want his coffee mug!!</div>
-      </div>
-    </a>
-  </div>
 
-  <div class="res-section-header reveal" style="margin-bottom:1.5rem;">
-    <div style="display:flex;align-items:baseline;gap:1rem;margin-bottom:0.5rem;">
-      <span style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.18em;color: var(--amber-text);">03</span>
-      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:300;color:var(--ink);margin:0;">Modern Woodworking Creators</h2>
-      <span style="flex:1;height:1px;background:var(--border);margin-left:0.5rem;display:inline-block;"></span>
+    <div class="tool-card">
+      <div class="tool-category">Lathe</div>
+      <div class="tool-name">Shop Fox W1752 — 10"</div>
+      <div class="tool-note">This little guy is fun. I&rsquo;ve turned more pens than I can count for friends and family. Someday I&rsquo;d like a much larger and more capable machine — but for now, it does the trick.</div>
+      <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);margin-top:0.6rem;opacity:0.7;">Not available new — no link</div>
     </div>
-    <p style="font-size:0.88rem;color:var(--ink-faint);margin:0 0 0 0;line-height:1.6;font-family:'Jost',sans-serif;max-width:60ch;">Contemporary woodworkers blending hand tool sensibility with a modern approach to the craft.</p>
-  </div>
-  <div class="res-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.25rem;margin-bottom:3.5rem;">
-    <a href="https://www.youtube.com/@StumpyNubs" target="_blank" rel="noopener noreferrer" class="resource-card reveal">
-      <div style="width:100%;height:96px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
-        <img src="https://yt3.googleusercontent.com/mHgglxmQSkLM7KJvjtrUJVZwQd9RLSbLrAhvU-N5fOHm1pmURcSsX8fMVTiXYYBbi9px1Hjnehg=s160-c-k-c0x00ffffff-no-rj" alt="Stumpy Nubs" style="width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(255,255,255,0.2);" loading="lazy" decoding="async">
-        <div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">Stumpy Nubs</div>
-          <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · @StumpyNubs</div>
-        </div>
-      </div>
-      <div style="padding:0.85rem 1.1rem;">
-        <div class="resource-desc">Practical, approachable, wide-ranging. An excellent starting point for anyone interested in getting into hand and power tool woodworking.</div>
-        <div class="resource-learned"><span class="resource-learned-label">What I learned:</span> James's approachable style is thoroughly enjoyable and informative — my only issue is that I wish he'd post a new video every day, because I've yet to find one that didn't teach me something new.</div>
-      </div>
-    </a>
-    <a href="https://www.youtube.com/@3x3CustomTamar" target="_blank" rel="noopener noreferrer" class="resource-card reveal">
-      <div style="width:100%;height:96px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
-        <img src="https://yt3.googleusercontent.com/ytc/AIdro_k7cXzGOSRLSU2HKMHsAoMI5UqJy6UAVprmwJu4gV96x1wl=s160-c-k-c0x00ffffff-no-rj" alt="3×3 Custom" style="width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(255,255,255,0.2);" loading="lazy" decoding="async">
-        <div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">3×3 Custom</div>
-          <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · @3x3CustomTamar</div>
-        </div>
-      </div>
-      <div style="padding:0.85rem 1.1rem;">
-        <div class="resource-desc">Tamar Hannah — jigs, fixtures, and smart shop solutions. Brings a fresh perspective to woodworking content.</div>
-        <div class="resource-learned"><span class="resource-learned-label">What I learned:</span> A well-made jig isn't a shortcut — it's a sign you understand the problem deeply. Tamar's shop solutions changed how I think about setup time.</div>
-      </div>
-    </a>
-    <a href="https://www.youtube.com/@Bourbonmoth" target="_blank" rel="noopener noreferrer" class="resource-card reveal">
-      <div style="width:100%;height:96px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
-        <img src="https://yt3.googleusercontent.com/GhhntMiQ2ohnO8vIPTen-mcakbumVW4qTbO_k2GTyFZEiVUKAdP53csbA6UQLyhTarxQkbIdsQ=s160-c-k-c0x00ffffff-no-rj" width="48" height="48" style="border-radius:50%;flex-shrink:0;object-fit:cover;" alt="Bourbon Moth Woodworking">
-        <div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">Bourbon Moth Woodworking</div>
-          <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · Bourbon Moth Woodworking</div>
-        </div>
-      </div>
-      <div style="padding:0.85rem 1.1rem;">
-        <div class="resource-desc">Creative woodworking that blends hand tools and power tools without apology — focused on results and real-shop problem solving.</div>
-        <div class="resource-learned"><span class="resource-learned-label">What I learned:</span> Funny, creative, and deeply instructional — this hobby should be fun, and Bourbon Moth gets that.</div>
-      </div>
-    </a>
-    <a href="https://www.youtube.com/@Paoson_Woodworking" target="_blank" rel="noopener noreferrer" class="resource-card reveal">
-      <div style="width:100%;height:96px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
-        <img src="https://yt3.googleusercontent.com/ytc/AIdro_nINctPankCeScj41eBfDIOFIFvDdckfd8VoL789va3__zo=s160-c-k-c0x00ffffff-no-rj" alt="Paoson Woodworking" style="width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(255,255,255,0.2);" loading="lazy" decoding="async">
-        <div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">Paoson Woodworking</div>
-          <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · @Paoson_Woodworking</div>
-        </div>
-      </div>
-      <div style="padding:0.85rem 1.1rem;">
-        <div class="resource-desc">Woodworker known for creative shop tools, jigs, and ingenious builds — all made from scratch.</div>
-        <div class="resource-learned"><span class="resource-learned-label">What I learned:</span> I have so much to learn and so much to build — this channel opened my eyes to some really creative solutions I never would have thought of on my own.</div>
-      </div>
-    </a>
-  
-    <a href="https://www.youtube.com/@PedullaStudio" target="_blank" rel="noopener noreferrer" class="resource-card reveal">
-      <div style="width:100%;height:96px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
-        <img src="https://yt3.googleusercontent.com/ytc/AIdro_kBQMcVZy-BCZlWs5NXngDT11Z95IqAdi9tnSj0rnRZAiM=s160-c-k-c0x00ffffff-no-rj" alt="Pedulla Studio" style="width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(255,255,255,0.2);" loading="lazy" decoding="async">
-        <div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">Pedulla Studio</div>
-          <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · @PedullaStudio</div>
-        </div>
-      </div>
-      <div style="padding:0.85rem 1.1rem;">
-        <div class="resource-desc">Fine furniture and hand tool work at a high level. Inspiring if you want to see where this craft can go.</div>
-        <div class="resource-learned"><span class="resource-learned-label">What I learned:</span> Designing and building fine furniture truly is an art — I am not yet an artist, but hey, learning is a process!</div>
-      </div>
-    </a>
-    <a href="https://www.youtube.com/@aplanelife688" target="_blank" rel="noopener noreferrer" class="resource-card reveal">
-      <div style="width:100%;height:96px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
-        <img src="https://yt3.googleusercontent.com/ytc/AIdro_lBZpuavXOYam0U2D-Vad-oe38JPXstMYK16072ablqpsM=s160-c-k-c0x00ffffff-no-rj" alt="A Plane Life" style="width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(255,255,255,0.2);" loading="lazy" decoding="async">
-        <div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">A Plane Life</div>
-          <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · @aplanelife688</div>
-        </div>
-      </div>
-      <div style="padding:0.85rem 1.1rem;">
-        <div class="resource-desc">Hand plane focused content — type studies, restoration, and honest user reviews of vintage tools.</div>
-        <div class="resource-learned"><span class="resource-learned-label">What I learned:</span> Hand plane type studies completely changed how I buy and evaluate vintage planes. What used to look like 'a plane' is now a specific tool with a history.</div>
-      </div>
-    </a>
-    <a href="https://www.youtube.com/@DaveCorinth" target="_blank" rel="noopener noreferrer" class="resource-card reveal">
-      <div style="width:100%;height:96px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
-        <img src="https://yt3.googleusercontent.com/l3cYezBwUfWjCtvJ49dfBAp3TF71sd4kJ_ipjHBx3gipKHOzc1_gPw1oiHYH8Xw7f4zCXrA7=s160-c-k-c0x00ffffff-no-rj" width="48" height="48" style="border-radius:50%;flex-shrink:0;object-fit:cover;" alt="Dave Corinth">
-        <div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;">Dave Corinth</div>
-          <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;text-transform:uppercase;margin-top:0.25rem;">YouTube · Hand Tool Kits</div>
-        </div>
-      </div>
-      <div style="padding:0.85rem 1.1rem;">
-        <div class="resource-desc">Creator of the chip breaker screwdriver kit. Makes specialist hand tool components you didn't know you needed — until you do.</div>
-        <div class="resource-learned"><span class="resource-learned-label">What I learned:</span> Thoughtful specialty tools made by someone who actually uses them are worth every penny. His chip breaker screwdriver kit is now a permanent fixture in my restoration kit.</div>
-      </div>
-    </a>
-    <a href="https://www.youtube.com/@gordonaddison444" target="_blank" rel="noopener noreferrer" class="resource-card reveal">
-      <div style="width:100%;height:96px;background:#111;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;overflow:hidden;">
-        <img src="https://yt3.googleusercontent.com/ytc/AIdro_kB5K3yb6Knm2VsMV7IL4vTkI2lFKAc3AbFDZB5Vai1fFk=s160-c-k-c0x00ffffff-no-rj" alt="Gordon Addison" style="width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(255,255,255,0.2);" loading="lazy" decoding="async">
-        <div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;line-height:1.2;text-shadow:0 1px 4px rgba(0,0,0,0.35);">Gordon Addison</div>
-          <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;color:rgba(255,255,255,0.62);letter-spacing:0.14em;margin-top:0.35rem;">YOUTUBE · @GordonAddison</div>
-        </div>
-      </div>
-      <div style="padding:0.85rem 1.1rem;">
-        <div class="resource-desc">Thoughtful hand tool woodworking and antique knob and tote restorations.</div>
-        <div class="resource-learned"><span class="resource-learned-label">What I learned:</span> Calm, detailed, methodical technique is essential — worth watching Gordon's videos to see these beautiful pieces come back to life.</div>
-      </div>
-    </a>
-  </div>
 
-  
-
-
-  <div class="res-closing reveal" style="margin-top:4rem;padding-top:3rem;border-top:1px solid var(--border);">
-    <div style="max-width:640px;">
-      <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.2em;text-transform:uppercase;color: var(--amber-text);margin-bottom:0.75rem;">Why these creators?</div>
-      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:300;color:var(--ink);margin-bottom:1.25rem;line-height:1.2;">Why these creators?</h2>
-      <p style="font-size:0.95rem;line-height:1.8;color:var(--ink-soft);margin-bottom:2rem;">The woodworking and hand tool world is full of incredible teachers. The creators listed here consistently produce thoughtful, educational content and have helped shape my understanding of vintage tools, restoration techniques, and traditional craftsmanship.</p>
-
-      <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.2em;text-transform:uppercase;color: var(--amber-text);margin-bottom:0.75rem;">Missing someone?</div>
-      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2.2vw,1.7rem);font-weight:300;color:var(--ink);margin-bottom:1rem;line-height:1.2;">Missing someone?</h2>
-      <p style="font-size:0.95rem;line-height:1.8;color:var(--ink-soft);">If there's a creator you think belongs on this list, let me know. I'm always looking to discover new craftsmen and teachers in the hand tool world.</p>
-      <a href="/contact" style="display:inline-block;margin-top:1.25rem;font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.15em;text-transform:uppercase;color: var(--amber-text);text-decoration:none;border-bottom:1px solid var(--border-warm);padding-bottom:2px;">Get in touch →</a>
+    <div class="tool-card">
+      <div class="tool-category">Planer</div>
+      <div class="tool-name">Delta 22-540 Thickness Planer</div>
+      <div class="tool-note">Another tool from my Dad. It&rsquo;s old, LOUD, finicky, and barely usable — but it&rsquo;s what I&rsquo;m working with. Someday.</div>
+      <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);margin-top:0.6rem;opacity:0.7;">Not available new — no link</div>
     </div>
+
+    <a href="https://www.amazon.com/dp/B0842QDW95?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" class="tool-card" style="text-decoration:none;color:inherit;">
+      <div class="tool-category">Table Saw</div>
+      <div class="tool-name">DeWalt DWE7485 (Jobsite)</div>
+      <div class="tool-note">I'd love to get a SawStop someday — but the budget is a limiting factor. This DeWalt jobsite saw handles what the shop needs for now. <span style="color: var(--amber-text);font-size:0.75rem;">→ View on Amazon</span></div>
+    </a>
+
+    <a href="https://www.amazon.com/dp/B00540JS7C?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" class="tool-card" style="text-decoration:none;color:inherit;">
+      <div class="tool-category">Miter Saw</div>
+      <div class="tool-name">DeWalt DWS780 12" DBSCMS</div>
+      <div class="tool-note">No complaints here — I genuinely love this saw. Double bevel, sliding compound, 12 inches of capacity. It earns its footprint every single time. <span style="color: var(--amber-text);font-size:0.75rem;">→ View on Amazon</span></div>
+    </a>
+
+    <a href="https://www.amazon.com/dp/B0BHXWZ4MW?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" class="tool-card" style="text-decoration:none;color:inherit;">
+      <div class="tool-category">Belt &amp; Disc Sander</div>
+      <div class="tool-name">Buck Bucktool 1×30&Prime; Bench Belt Sander w/ 5&Prime; Disc</div>
+      <div class="tool-note">Picked this up specifically to polish the metalwork on vintage tool handles — and it delivered. Non-woven surface conditioning belts on this machine gave the ferrules a finish files simply can't match. <span style="color: var(--amber-text);font-size:0.75rem;">→ View on Amazon</span></div>
+    </a>
+
+    <a href="https://www.amazon.com/dp/B0F1TD4YJ7?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" class="tool-card" style="text-decoration:none;color:inherit;">
+      <div class="tool-category">Consumable</div>
+      <div class="tool-name">1×30&Prime; Non-Woven Surface Conditioning Belts — Coarse/Medium/Fine</div>
+      <div class="tool-note">The secret weapon for polishing steel. Conform to contours, cut consistently, and reveal the natural iridescence of polished carbon steel. <span style="color: var(--amber-text);font-size:0.75rem;">→ View on Amazon</span></div>
+    </a>
+
+  </div>
+
+  <!-- Handheld Power Tools -->
+  <h2 id="handheld" style="scroll-margin-top:80px;font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--ink);margin-bottom:0.5rem;">Handheld Power Tools</h2>
+  <div style="width:3rem;height:1px;background:var(--amber);margin-bottom:1.5rem;"></div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:1.2rem;margin-bottom:2.5rem;">
+
+    <div class="tool-card">
+      <div class="tool-category">Router</div>
+      <div class="tool-name">Ryobi RE180PL1G — 2HP Plunge/Fixed Base</div>
+      <div class="tool-note">Plenty of power, but the depth adjustment lock is borderline worthless. It has ruined more than one project that was nearing the finish line. Replacement is coming.</div>
+      <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);margin-top:0.6rem;opacity:0.7;">Discontinued — no link</div>
+    </div>
+
+    <a href="https://www.amazon.com/dp/B00BD5G9VA?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" class="tool-card" style="text-decoration:none;color:inherit;">
+      <div class="tool-category">Random Orbital Sander</div>
+      <div class="tool-name">Bosch ROS20VSC</div>
+      <div class="tool-note">While I dream of a fancy Festool, this does the job without complaint. Solid workhorse for everyday sanding. <span style="color: var(--amber-text);font-size:0.75rem;">→ View on Amazon</span></div>
+    </a>
+
+    <a href="https://www.amazon.com/dp/B0FPSGDFJ4?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" class="tool-card" style="text-decoration:none;color:inherit;border-color:var(--border-warm);">
+      <div class="tool-category" style="color:var(--rust);">Dust Extraction ⚠︎</div>
+      <div class="tool-name">Festool CT 15 E HEPA</div>
+      <div class="tool-note">My dust collection and air quality is genuinely a serious problem. I&rsquo;ll need to address this for the sake of my lungs. And if I&rsquo;m being honest — more often than not I have nothing running and rely on an old shop vac for cleanup afterward. Yeah. It&rsquo;s an issue. <span style="color: var(--amber-text);font-size:0.75rem;">→ View on Amazon</span></div>
+    </a>
+
+  </div>
+
+  <!-- Hand Planes -->
+  <h2 id="planes" style="scroll-margin-top:80px;font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--ink);margin-bottom:0.5rem;">Hand Planes — Vintage Stanley Bailey</h2>
+  <div style="width:3rem;height:1px;background:var(--amber);margin-bottom:1.5rem;"></div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:1.2rem;margin-bottom:2.5rem;">
+
+    <div class="tool-card">
+      <div class="tool-category">Jack Plane</div>
+      <div class="tool-name">No. 5 — Type 18 <span style="font-family:'DM Mono',monospace;font-size: 0.75rem;color:var(--ink-faint);font-weight:300;">~1946–47</span></div>
+      <div class="tool-note">Black painted hardwood tote and knob. Brass adjuster wheel. A proper workhorse — the jack plane every shop should have.</div>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-category">Jack Plane</div>
+      <div class="tool-name">No. 5½ — Type 16 <span style="font-family:'DM Mono',monospace;font-size: 0.75rem;color:var(--ink-faint);font-weight:300;">~1933–41</span></div>
+      <div class="tool-note">Corrugated sole. Rosewood tote and knob. The corrugations reduce friction on wide boards — a nice touch on this one.</div>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-category">Smoothing Plane</div>
+      <div class="tool-name">No. 4 — Type 18/19 <span style="font-family:'DM Mono',monospace;font-size: 0.75rem;color:var(--ink-faint);font-weight:300;">~late 1940s–50s</span></div>
+      <div class="tool-note">Black painted hardwood tote and knob. The finish plane — takes shavings thin enough to read through. Still one of the best tools in the shop.</div>
+    </div>
+
+  </div>
+
+  <!-- Growing Collection -->
+  <h2 id="collection" style="scroll-margin-top:80px;font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--ink);margin-bottom:0.5rem;">The Growing Collection</h2>
+  <div style="width:3rem;height:1px;background:var(--amber);margin-bottom:1.5rem;"></div>
+
+  <p style="font-size:0.9rem;line-height:1.9;color:var(--ink-soft);max-width:640px;margin-bottom:1rem;">Beyond the big tools, the collection keeps growing — marking gauges, chisels, saws (Disston and others), sharpening equipment, clamps, and layout tools (squares, bevel gauges).</p>
+  <p style="font-size:0.9rem;line-height:1.9;color:var(--ink-soft);max-width:640px;margin-bottom:1.5rem;">And screwdrivers — Perfect Handle style, specifically. I love them. The <a href="/restoration-german-perfect-handle" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.4);">German Perfect Handle restoration</a> is a good place to start if you&rsquo;re curious what the fuss is about.</p>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:1.2rem;margin-bottom:2rem;">
+
+    <div class="tool-card">
+      <div class="tool-category">Marking Gauges</div>
+      <div class="tool-name">Various — vintage mixed lot</div>
+      <div class="tool-note">Have several — a couple of wooden beam gauges and one with a brass fence. No favorite yet. Still working through what I have and haven't found one I reach for every time.</div>
+      <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);margin-top:0.6rem;opacity:0.7;">No link — write-up coming</div>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-category">Chisels</div>
+      <div class="tool-name">Vintage mixed set — various makers</div>
+      <div class="tool-note">A loose collection that came from my Dad and a few estate finds. Buck Bros., Irwin, and a couple of unknowns. All need sharpening work. The collection is growing — proper write-up coming once I&rsquo;ve worked through them.</div>
+      <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);margin-top:0.6rem;opacity:0.7;">No link — write-up coming</div>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-category">Layout Tools</div>
+      <div class="tool-name">Squares &amp; Bevel Gauges</div>
+      <div class="tool-note">A mix of vintage and modern — a couple of Stanley combination squares, a sliding bevel, and a small try square. Nothing I&rsquo;d call a favorite yet. I keep meaning to get a proper Starrett but haven&rsquo;t pulled the trigger.</div>
+      <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);margin-top:0.6rem;opacity:0.7;">No link — still evaluating</div>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-category">Handsaws</div>
+      <div class="tool-name">Disston — various models</div>
+      <div class="tool-note">A few Disstons in the mix — at least one D-8 and a couple I haven&rsquo;t fully identified yet. Classic American crosscut teeth, original handles. All need sharpening and handle work. The Disston rabbit hole is deep and I&rsquo;m only getting started.</div>
+      <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);margin-top:0.6rem;opacity:0.7;">No link — restoration pending</div>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-category">Screwdrivers</div>
+      <div class="tool-name">Perfect Handle style — German &amp; American</div>
+      <div class="tool-note">This is becoming a thing. The German set is already restored. More are coming in. The fluted octagonal handles are practical and beautiful — they don&rsquo;t roll off the bench and they feel right in the hand. Hard to stop collecting them.</div>
+      <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);margin-top:0.6rem;opacity:0.7;">See: <a href="/restoration-german-perfect-handle" style="color:var(--amber-text);text-decoration:none;">German Perfect Handle restoration</a></div>
+    </div>
+
   </div>
 
 </section>
+
+<!-- Vendor CTA -->
+<div style="background:var(--ink);padding:3.5rem 2rem;margin-top:0;">
+  <div style="max-width:720px;margin:0 auto;display:flex;gap:2.5rem;align-items:center;flex-wrap:wrap;">
+    <div style="flex:1;min-width:240px;">
+      <div style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.18em;text-transform:uppercase;color: var(--amber-text);margin-bottom:0.6rem;">Make or sell workshop supplies?</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--warm-white);line-height:1.25;margin-bottom:0.5rem;">Get your product in a write-up.</div>
+      <p style="font-size:0.92rem;color:rgba(245,240,232,0.55);line-height:1.7;margin:0;">Every supply on this page was earned its spot through actual use in a restoration. If you make something that belongs here, let's talk.</p>
+    </div>
+    <a href="/partner" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--amber);color:#1a1409;font-family:'DM Mono',monospace;font-size: 0.75rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;padding:0.85rem 1.75rem;border-radius:2px;white-space:nowrap;flex-shrink:0;">See how it works →</a>
+  </div>
+</div>
+
 <!-- Newsletter bar -->
 <div style="background:var(--ink);border-top:1px solid rgba(245,240,232,0.06);">
   <div style="max-width:860px;margin:0 auto;padding:1.75rem 2rem;display:flex;gap:2.5rem;align-items:center;flex-wrap:wrap;">
@@ -1983,7 +2010,7 @@
   <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close lightbox" aria-controls="lightbox">✕</button>
   <div class="lightbox-inner">
     <div class="lightbox-img" id="lightbox-img" style="position:relative;">
-      <img id="lb-main-img" src="" alt="" style="width:100%;height:auto;height:100%;object-fit:cover;" / loading="lazy" width="auto" height="auto">
+      <img id="lb-main-img" src="" alt="" style="width:100%;height:auto;height:100%;object-fit:cover;" loading="lazy" width="auto" height="auto">
       <button onclick="lbNav(-1)" aria-label="Previous photo" class="lb-nav-btn" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(28,26,23,0.5);border:none;color:#f5f0e8;font-size:1.4rem;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;">‹</button>
       <button onclick="lbNav(1)" aria-label="Next photo" class="lb-nav-btn" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(28,26,23,0.5);border:none;color:#f5f0e8;font-size:1.4rem;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;">›</button>
     </div>
@@ -2030,7 +2057,7 @@ const tools = {
 <br>
 <p><strong>Step 2 — Color:</strong> Fiebing's leather dye applied sequentially — Black first, then Dark Brown, then Mahogany. The layered approach builds dimensional color that looks like it comes from inside the wood. The black base pools in the knurled grooves, giving natural contrast.</p>
 <br>
-<p><strong>Step 3 — Finish:</strong> Three coats of <a href="https://walrusoil.com/products/polymerized-tung-oil" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid var(--amber-light);">polymerized tung oil (Walrus Oil)</a> over 48–72 hours. One wash coat of dewaxed shellac. Final coat of Renaissance Wax buffed to a soft sheen.</p>
+<p><strong>Step 3 — Finish:</strong> Three coats of <a href="https://www.amazon.com/dp/B0FPSRKBBC/?tag=thetoddmark-20" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid var(--amber-light);">polymerized tung oil (Walrus Oil)</a> over 48–72 hours. One wash coat of dewaxed shellac. Final coat of Renaissance Wax buffed to a soft sheen.</p>
 <br>
 <p><em>The result: handles that look richer than they ever did new. The Fiebing's dye method is unconventional on tool handles — and completely worth it.</em></p>`
   },
@@ -2170,34 +2197,13 @@ document.addEventListener('keydown', e => {
 </script>
 <!-- Preloaded restoration photos -->
 <div style="display:none">
-  <picture>
-          <source type="image/webp" srcset="images/resources-photo-before1.webp">
-          <img id="photo-before1" src="images/resources-photo-before1.jpg" width="547" height="805" style="max-width:100%;height:auto;display:block;" />
-        </picture>
-  <picture>
-          <source type="image/webp" srcset="images/resources-photo-before2.webp">
-          <img id="photo-before2" src="images/resources-photo-before2.jpg" width="551" height="814" style="max-width:100%;height:auto;display:block;" />
-        </picture>
-  <picture>
-          <source type="image/webp" srcset="images/resources-photo-mid1.webp">
-          <img id="photo-mid1" src="images/resources-photo-mid1.jpg" width="675" height="900" style="max-width:100%;height:auto;display:block;" />
-        </picture>
-  <picture>
-          <source type="image/webp" srcset="images/resources-photo-mid2.webp">
-          <img id="photo-mid2" src="images/resources-photo-mid2.jpg" width="675" height="900" style="max-width:100%;height:auto;display:block;" />
-        </picture>
-  <picture>
-          <source type="image/webp" srcset="images/resources-photo-after1.webp">
-          <img id="photo-after1" src="images/resources-photo-after1.jpg" width="900" height="675" style="max-width:100%;height:auto;display:block;" />
-        </picture>
-  <picture>
-          <source type="image/webp" srcset="images/resources-photo-after2.webp">
-          <img id="photo-after2" src="images/resources-photo-after2.jpg" width="900" height="675" style="max-width:100%;height:auto;display:block;" />
-        </picture>
-  <picture>
-          <source type="image/webp" srcset="images/resources-photo-after3.webp">
-          <img id="photo-after3" src="images/resources-photo-after3.jpg" width="900" height="675" style="max-width:100%;height:auto;display:block;" />
-        </picture>
+  <img id="photo-before1" src="images/products-restoration-before1.webp" loading="lazy" alt="Product set before restoration" width="547" height="805" style="max-width:100%;height:auto;display:block;" />
+  <img id="photo-before2" src="images/products-restoration-before2.webp" loading="lazy" alt="Product set before restoration angle view" width="551" height="814" style="max-width:100%;height:auto;display:block;" />
+  <img id="photo-mid1" src="images/products-restoration-mid1.webp" loading="lazy" alt="Product set mid-process sanded to bare wood" width="675" height="900" style="max-width:100%;height:auto;display:block;" />
+  <img id="photo-mid2" src="images/products-restoration-mid2.webp" loading="lazy" alt="Product set mid-process after mineral spirits and oxalic acid" width="675" height="900" style="max-width:100%;height:auto;display:block;" />
+  <img id="photo-after1" src="images/products-restoration-after1.webp" loading="lazy" alt="Product set after restoration with dark finish" width="900" height="675" style="max-width:100%;height:auto;display:block;" />
+  <img id="photo-after2" src="images/products-restoration-after2.webp" loading="lazy" alt="Product set after restoration showing dye detail" width="900" height="675" style="max-width:100%;height:auto;display:block;" />
+  <img id="photo-after3" src="images/products-restoration-after3.webp" loading="lazy" alt="Product set after restoration full view" width="900" height="675" style="max-width:100%;height:auto;display:block;" />
 </div>
 
 
