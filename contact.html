@@ -6,7 +6,7 @@
   <link rel="apple-touch-icon" href="/favicon.jpg">
 
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' www.googletagmanager.com www.google-analytics.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: https:; frame-src ko-fi.com; connect-src 'self' formspree.io www.google-analytics.com buttondown.com buttondown.email; form-action 'self' formspree.io buttondown.com buttondown.email;">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' www.googletagmanager.com www.google-analytics.com www.clarity.ms; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: https:; frame-src ko-fi.com; connect-src 'self' formspree.io www.google-analytics.com buttondown.com buttondown.email www.clarity.ms; form-action 'self' formspree.io buttondown.com buttondown.email;">
 <meta name="color-scheme" content="light">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <!-- Google tag (gtag.js) -->
@@ -1305,7 +1305,7 @@
     "@context": "https://schema.org",
     "@type": "ContactPage",
     "name": "Contact",
-    "url": "https://thetoddmark.com/contact.html",
+    "url": "https://thetoddmark.com/contact",
     "description": "Contact Mark Todd of TheToddMark for questions, partnerships, or tool restoration inquiries.",
     "mainEntity": {
         "@type": "Person",
@@ -1397,20 +1397,20 @@
         <input id="first-name" type="text" name="first-name" required autocomplete="given-name" placeholder="First name" style="width:100%;padding:0.75rem 1rem;background:var(--cream);border:1px solid var(--border);font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:300;color:var(--ink);outline:none;transition:border-color 0.2s;box-sizing:border-box;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='var(--border)'"  aria-required="true" />
       </div>
       <div>
-        <label for="first-name" style="display:block;font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.5rem;">Last Name</label>
+        <label for="last-name" style="display:block;font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.5rem;">Last Name</label>
         <input id="last-name" type="text" name="last-name" autocomplete="family-name" placeholder="Last name (optional)" style="width:100%;padding:0.75rem 1rem;background:var(--cream);border:1px solid var(--border);font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:300;color:var(--ink);outline:none;transition:border-color 0.2s;box-sizing:border-box;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='var(--border)'" />
       </div>
     </div>
 
     <!-- Email -->
     <div>
-      <label for="first-name" style="display:block;font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.5rem;">Email <span style="color: var(--amber-text);">*</span></label>
+      <label for="email-field" style="display:block;font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.5rem;">Email <span style="color: var(--amber-text);">*</span></label>
       <input id="email-field" type="email" name="email" required autocomplete="email" placeholder="your@email.com" style="width:100%;padding:0.75rem 1rem;background:var(--cream);border:1px solid var(--border);font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:300;color:var(--ink);outline:none;transition:border-color 0.2s;box-sizing:border-box;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='var(--border)'"  aria-required="true" />
     </div>
 
     <!-- Subject -->
     <div>
-      <label for="first-name" style="display:block;font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.5rem;">Subject <span style="color: var(--amber-text);">*</span></label>
+      <label for="subject" style="display:block;font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.5rem;">Subject <span style="color: var(--amber-text);">*</span></label>
       <select id="subject" name="subject" required style="width:100%;padding:0.75rem 1rem;background:var(--cream);border:1px solid var(--border);font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:300;color:var(--ink);outline:none;transition:border-color 0.2s;box-sizing:border-box;appearance:none;cursor:pointer;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='var(--border)'" aria-required="true">
         <option value="" disabled selected>Select a topic</option>
         <option value="general">General / Just saying hello</option>
@@ -1424,7 +1424,7 @@
 
     <!-- Message -->
     <div>
-      <label for="first-name" style="display:block;font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.5rem;">Message <span style="color: var(--amber-text);">*</span></label>
+      <label for="message" style="display:block;font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.5rem;">Message <span style="color: var(--amber-text);">*</span></label>
       <textarea id="message" name="message" required rows="6" style="width:100%;padding:0.75rem 1rem;background:var(--cream);border:1px solid var(--border);font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:300;color:var(--ink);outline:none;transition:border-color 0.2s;box-sizing:border-box;resize:vertical;line-height:1.7;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='var(--border)'" aria-required="true"></textarea>
     </div>
 

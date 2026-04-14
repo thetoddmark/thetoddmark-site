@@ -6,7 +6,7 @@
   <link rel="apple-touch-icon" href="/favicon.jpg">
 
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' www.googletagmanager.com www.google-analytics.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: https:; frame-src ko-fi.com; connect-src 'self' formspree.io www.google-analytics.com buttondown.com buttondown.email; form-action 'self' formspree.io buttondown.com buttondown.email;">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' www.googletagmanager.com www.google-analytics.com www.clarity.ms; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: https:; frame-src ko-fi.com; connect-src 'self' formspree.io www.google-analytics.com buttondown.com buttondown.email www.clarity.ms; form-action 'self' formspree.io buttondown.com buttondown.email;">
 <meta name="color-scheme" content="light">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <!-- Google tag (gtag.js) -->
@@ -1413,8 +1413,7 @@
   
     footer {
       padding: 2rem 1.5rem 1rem !important;
-    }  }
-
+    }
     .footer-links { gap: 1rem; }
     .footer-links a { font-size: 0.75rem; }
     .footer-copy {
@@ -1569,14 +1568,9 @@
     "name": "The Todd·Mark",
     "url": "https://thetoddmark.com",
     "description": "Vintage hand tool restorations documented in detail — screwdrivers, hand planes, and workshop finds given a second life.",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://thetoddmark.com/work.html?q={search_term_string}"
-      },
-      "query-input": "required name=search_term_string"
-    }
+    "sameAs": [
+      "https://www.youtube.com/@TheToddMark"
+    ]
 }
   </script>
   <script type="application/ld+json">
@@ -1814,7 +1808,7 @@
         <p class="work-item-desc">A $10 Facebook Marketplace find converted into a precision marking knife. Rosewood handle, brass ferrules, flat bevel reground on diamond stones.</p>
         <span class="work-item-arrow">Read the full write-up →</span>
       </a>
-      <a href="work.html#chipbreaker" class="recent-work-item reveal">
+      <a href="/build-chip-breaker-screwdriver" class="recent-work-item reveal">
         <div class="work-item-category">Build · Screwdriver</div>
         <h3 class="work-item-title">Dave Corinth's Chip Breaker Screwdriver</h3>
         <p class="work-item-desc">O1 steel blade, brass ferrule, Brazilian Rosewood donor knob. Built from Dave's kit — one tool, one job, done perfectly.</p>
