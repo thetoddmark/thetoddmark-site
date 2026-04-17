@@ -16,17 +16,17 @@
     gtag("js", new Date());
     gtag("config", "G-WF1PP02KM3");
   </script>
-  <title>Dave Corinth's Chip Breaker Screwdriver — The Todd·Mark Build</title>
-  <meta name="description" content="A $24.95 eBay kit from Dave Corinth Toolworks, assembled with a salvaged Brazilian Rosewood knob. Built for one job: adjusting the chip breaker screw on Stanley hand planes. Full build documented.">
-  <meta property="og:title" content="Dave Corinth's Chip Breaker Screwdriver | The Todd·Mark">
-  <meta property="og:description" content="A $24.95 eBay kit, a salvaged Brazilian Rosewood knob, and the screwdriver built for exactly one job. Full build documented.">
+  <title>Chip Breaker Screwdriver Build — Design by Dave Corinth, Kit by Kurt Gish | The Todd·Mark</title>
+  <meta name="description" content="A $24.95 kit designed by Dave Corinth and sold by Kurt Gish on eBay, assembled with a salvaged Brazilian Rosewood knob. Built for one job: adjusting the chip breaker screw on Stanley hand planes. Full build documented.">
+  <meta property="og:title" content="Chip Breaker Screwdriver — Dave Corinth &amp; Kurt Gish | The Todd·Mark">
+  <meta property="og:description" content="A $24.95 kit designed by Dave Corinth and sold by Kurt Gish on eBay, a salvaged Brazilian Rosewood knob, and the screwdriver built for exactly one job. Full build documented.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://thetoddmark.com/build-chip-breaker-screwdriver">
   <meta property="og:site_name" content="The Todd·Mark">
   <meta property="og:image" content="https://thetoddmark.com/images/cbd-planes.jpg">
   <meta property="og:image:width" content="4920">
   <meta property="og:image:height" content="3579">
-  <meta property="og:image:alt" content="Dave Corinth's chip breaker screwdriver alongside a row of Stanley hand planes">
+  <meta property="og:image:alt" content="Chip breaker screwdriver — design by Dave Corinth, kit by Kurt Gish — alongside a row of Stanley hand planes">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://thetoddmark.com/images/cbd-planes.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -396,8 +396,8 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Dave Corinth's Chip Breaker Screwdriver",
-    "description": "A $24.95 eBay kit from Dave Corinth Toolworks, assembled with a salvaged Brazilian Rosewood knob. Built for one job: adjusting the chip breaker screw on Stanley hand planes. Full build documented.",
+    "headline": "Chip Breaker Screwdriver — Design by Dave Corinth, Kit by Kurt Gish",
+    "description": "A $24.95 kit designed by Dave Corinth and sold by Kurt Gish on eBay, assembled with a salvaged Brazilian Rosewood knob. Built for one job: adjusting the chip breaker screw on Stanley hand planes. Full build documented.",
     "author": {"@type": "Person", "name": "Mark Todd", "url": "https://thetoddmark.com/about"},
     "publisher": {"@type": "Organization", "name": "The Todd·Mark", "url": "https://thetoddmark.com"},
     "url": "https://thetoddmark.com/build-chip-breaker-screwdriver",
@@ -423,6 +423,183 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "w41lq1gqm2");
 </script>
+  <style>
+
+  /* ── NAV v2: dropdown redesign ── */
+
+  /* Override old nav ul gap/alignment via ID */
+  #nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+  }
+  #nav-menu > li { list-style: none; }
+
+  /* Dropdown parent */
+  .nav-has-dropdown { position: relative; }
+
+  /* Toggle button mimics nav link styling */
+  .nav-dropdown-toggle {
+    background: none;
+    border: none;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(245,240,232,1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.35em;
+    padding: 0;
+    line-height: 1;
+    transition: color 0.2s;
+    white-space: nowrap;
+  }
+  .nav-dropdown-toggle:hover,
+  .nav-has-dropdown:hover > .nav-dropdown-toggle { color: var(--amber-text); }
+
+  /* Active state for dropdown parents and direct links */
+  li.nav-active > a { color: var(--amber-text) !important; }
+  li.nav-active > .nav-dropdown-toggle { color: var(--amber-text) !important; }
+
+  /* Chevron: CSS triangle */
+  .nav-chevron {
+    display: inline-block;
+    width: 0; height: 0;
+    border-left: 3.5px solid transparent;
+    border-right: 3.5px solid transparent;
+    border-top: 4.5px solid currentColor;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .nav-dropdown-toggle[aria-expanded="true"] .nav-chevron {
+    transform: rotate(180deg);
+  }
+
+  /* Desktop dropdown panel (hover + JS open) */
+  @media (min-width: 641px) {
+    .nav-dropdown {
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(26,20,9,0.98);
+      border: 1px solid rgba(200,133,58,0.18);
+      border-radius: 3px;
+      padding: 0.4rem 0;
+      min-width: 190px;
+      list-style: none;
+      margin: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.15s;
+      z-index: 200;
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+    }
+    /* Invisible bridge: keeps :hover active over the gap between nav item and panel */
+    .nav-has-dropdown::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: -8px;
+      right: -8px;
+      height: 12px;
+    }
+
+    .nav-has-dropdown:hover .nav-dropdown,
+    .nav-has-dropdown.is-open .nav-dropdown {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .nav-dropdown li { list-style: none; }
+    .nav-dropdown a {
+      display: block;
+      padding: 0.45rem 1.2rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.7);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.15s, background 0.15s;
+    }
+    .nav-dropdown a:hover {
+      color: rgba(245,240,232,1);
+      background: rgba(200,133,58,0.08);
+    }
+    .nav-dropdown a.nav-placeholder {
+      color: rgba(245,240,232,0.28);
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+
+  /* Mobile: full-screen overlay with inline expanding dropdowns */
+  @media (max-width: 640px) {
+    #nav-menu {
+      display: none;
+      position: fixed;
+      top: 56px;
+      left: 0; right: 0; bottom: 0;
+      background: rgba(28,26,23,1);
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      gap: 0;
+      z-index: 300;
+      overflow-y: auto;
+      padding: 0.75rem 0 2.5rem;
+    }
+    #nav-menu.nav-open { display: flex; }
+    #nav-menu > li { width: 100%; text-align: center; }
+
+    #nav-menu > li > a {
+      display: block;
+      padding: 0.9rem 2rem;
+      font-size: 1.1rem !important;
+      letter-spacing: 0.12em;
+      color: rgba(245,240,232,1) !important;
+      font-weight: 400 !important;
+    }
+    .nav-dropdown-toggle {
+      font-size: 1.1rem !important;
+      letter-spacing: 0.12em !important;
+      color: rgba(245,240,232,1) !important;
+      font-weight: 400 !important;
+      padding: 0.9rem 2rem !important;
+      width: 100%;
+      justify-content: center;
+    }
+    .nav-dropdown {
+      display: none;
+      list-style: none;
+      margin: 0;
+      padding: 0.1rem 0 0.5rem;
+      background: rgba(255,255,255,0.04);
+    }
+    .nav-has-dropdown.is-open .nav-dropdown { display: block; }
+    .nav-dropdown a {
+      display: block;
+      padding: 0.6rem 2rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.6);
+      text-decoration: none;
+    }
+    .nav-dropdown a:hover,
+    .nav-dropdown a:focus { color: rgba(245,240,232,0.95); }
+    .nav-dropdown a.nav-placeholder { color: rgba(245,240,232,0.25); pointer-events: none; }
+  }
+
+  </style>
 </head>
 <body>
 
@@ -438,12 +615,39 @@
   <text x="50" y="73" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" fill="rgba(245,240,232,0.95)" text-anchor="middle" letter-spacing="3">MARK</text>
 </svg><span style="font-family:'DM Mono',monospace;font-size: 0.75rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:rgba(245,240,232,0.88);margin-left:0.75rem;white-space:nowrap;">The Todd<span style="color:#c8853a;margin:0 0.15em;">·</span>Mark</span></a>
   <button class="nav-hamburger" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
-    <span></span><span></span><span></span>
+    <span></span>
+    <span></span>
+    <span></span>
   </button>
-    <ul id="nav-menu">
-    <li><a href="/work" class="nav-active" aria-current="page">The Work</a></li>
-    <li><a href="/my-kit">My Kit</a></li>
-    <li><a href="/about">About</a></li>
+  <ul id="nav-menu">
+    <li><a href="/start-here">Start Here</a></li>
+    <li class="nav-has-dropdown nav-active">
+      <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">The Bench <span class="nav-chevron" aria-hidden="true"></span></button>
+      <ul class="nav-dropdown">
+        <li><a href="/work">All Projects</a></li>
+        <li><a href="/restorations">Restorations</a></li>
+        <li><a href="/builds">Builds</a></li>
+        <li><a href="/oddities">Oddities</a></li>
+      </ul>
+    </li>
+    <li class="nav-has-dropdown">
+      <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Toolbox <span class="nav-chevron" aria-hidden="true"></span></button>
+      <ul class="nav-dropdown">
+        <li><a href="/my-kit">What I Use</a></li>
+        <li><a href="/resources">Resources</a></li>
+        <li><a href="/wishlist">Wishlist</a></li>
+      </ul>
+    </li>
+    <li class="nav-has-dropdown">
+      <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">About <span class="nav-chevron" aria-hidden="true"></span></button>
+      <ul class="nav-dropdown">
+        <li><a href="/about">Mark Todd</a></li>
+        <li><a href="/shed-upgrade">The Workshop</a></li>
+        <li><a href="/listening">What I&#8217;m Listening To</a></li>
+      </ul>
+    </li>
+    <li><a href="/contact">Contact</a></li>
+    <li><a href="/partner">Partner</a></li>
     <li><a href="https://www.youtube.com/@TheToddMark" target="_blank" rel="noopener noreferrer" aria-label="Watch on YouTube" style="display:flex;align-items:center;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width:22px;height:22px;" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12z" fill="#fff"/></svg></a></li>
   </ul>
 </nav>
@@ -451,8 +655,8 @@
 <!-- HERO -->
 <header class="article-hero">
   <div class="article-eyebrow">Build No. 03</div>
-  <h1 class="article-title">Dave Corinth's Chip<br>Breaker Screwdriver</h1>
-  <p class="article-subtitle">A $24.95 eBay kit, a salvaged Brazilian Rosewood knob, and the screwdriver built for exactly one job</p>
+  <h1 class="article-title">The Chip<br>Breaker Screwdriver</h1>
+  <p class="article-subtitle">A $24.95 kit designed by Dave Corinth, sold by Kurt Gish on eBay, built with a salvaged Brazilian Rosewood knob</p>
   <div class="article-meta">
     <span>📍 Seattle, WA</span>
     <span>📅 March 2026</span>
@@ -511,11 +715,11 @@
 
   <!-- ── SECTION 2: DAVE CORINTH & THE KIT ── -->
   <section class="article-section" aria-labelledby="s2-title">
-    <span class="section-label"><span class="section-num">02 /</span> Dave Corinth &amp; the Kit</span>
-    <h2 class="section-title" id="s2-title">The right person solving the right problem.</h2>
+    <span class="section-label"><span class="section-num">02 /</span> Dave Corinth, Kurt Gish &amp; the Kit</span>
+    <h2 class="section-title" id="s2-title">The right people solving the right problem.</h2>
     <p>Dave Corinth is a woodworker, tool creator, teacher, and restorer. His <a href="https://www.youtube.com/watch?v=hdyZ9hNGfMY" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.3);">chip breaker screwdriver video</a> is exactly what his channel does at its best: a methodical walk-through of a problem worth solving, a design that addresses that problem precisely, and enough detail about the why that you actually understand the tool you're building. Worth your time even if you never build one.</p>
     <p>The design is straightforward and elegant: a blade cut from O1 tool steel, ground to a precise flat tip sized for the chip breaker slot, fitted through a turned brass ferrule into a handle shaped for real downward pressure and torque. Nothing unnecessary. Everything intentional.</p>
-    <p>Dave sells <a href="https://www.ebay.com/itm/226820669048" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.3);">a kit on eBay</a> — the machined O1 blade, the brass ferrule, and a cherry dowel for the handle — for $24.95. It's a good deal. The hard parts, the parts that require tooling most people don't have, are already done. You supply a handle and the time to put it together properly.</p>
+    <p><a href="https://www.ebay.com/usr/kgish" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.3);">Kurt Gish</a> sells <a href="https://www.ebay.com/itm/226820669048" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.3);">the kit on eBay</a> — the machined O1 blade, the brass ferrule, and a cherry dowel for the handle — for $24.95. It's a good deal. The hard parts, the parts that require tooling most people don't have, are already done. You supply a handle and the time to put it together properly.</p>
     <p>Before I built it, I reached out to Dave directly via Facebook Messenger with a couple of questions. He responded quickly and generously: confirmed his preference for the tall knob style over the shorter version (better leverage and more comfortable in the palm), and gave me the exact drill bit size needed to seat the cherry dowel correctly. That kind of maker-to-user generosity isn't something you take for granted.</p>
 
     <div class="pull-quote">
@@ -537,7 +741,7 @@
   <section class="article-section" aria-labelledby="s4-title">
     <span class="section-label"><span class="section-num">04 /</span> Kit Components</span>
     <h2 class="section-title" id="s4-title">Everything Dave machines, you assemble.</h2>
-    <p>The three kit components as they arrive from <a href="https://www.ebay.com/itm/226820669048" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.3);">Dave's eBay listing</a>. The machining precision is immediately obvious — the blade tip is ground exactly right, the ferrule dimensions are tight, and the dowel slot is centered and clean.</p>
+    <p>The three kit components as they arrive from <a href="https://www.ebay.com/itm/226820669048" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.3);">Kurt Gish's eBay listing</a>. The machining precision is immediately obvious — the blade tip is ground exactly right, the ferrule dimensions are tight, and the dowel slot is centered and clean.</p>
     <figure style="margin:2rem 0;">
       <picture>
   <source type="image/webp" srcset="images/cbd-kit-tip.webp">
@@ -758,14 +962,6 @@
 </div>
 
 <footer>
-  <div class="footer-links" role="navigation" aria-label="Secondary navigation">
-    <a href="/shed-upgrade">Shed Upgrade</a>
-    <a href="/resources">Resources</a>
-    <a href="/contact">Contact</a>
-    <a href="/listening">Listening</a>
-    <a href="/wishlist">Wishlist</a>
-    <a href="/partner">Partner</a>
-  </div>
   <div class="footer-bottom">
   <div class="footer-copy">© 2026 · TheToddMark.com · Two first names. One workshop. · <a href="https://www.youtube.com/@TheToddMark" target="_blank" rel="noopener noreferrer" style="color:rgba(245,240,232,0.80);text-decoration:none;">YouTube</a></div>
   <a href="https://ko-fi.com/thetoddmark" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.4rem;background:var(--amber);color:#1a1409;font-family:inherit;font-size:0.78rem;font-weight:500;padding:0.45rem 1.1rem;border-radius:2rem;text-decoration:none;letter-spacing:0.05em;white-space:nowrap;">🪚 Want to support the shed upgrade?</a>
@@ -781,50 +977,75 @@
 </footer>
 
 <script>
-  const toggle = document.getElementById('nav-toggle');
-  const menu = document.getElementById('nav-menu');
-  if (toggle && menu) {
-    function openNavMenu() {
-      toggle.setAttribute('aria-expanded', 'true');
-      toggle.setAttribute('aria-label', 'Close menu');
-      toggle.classList.add('is-open');
-      menu.classList.add('nav-open');
-      document.body.style.overflow = 'hidden';
-      const firstLink = menu.querySelector('a');
-      if (firstLink) firstLink.focus();
-    }
-    function closeNavMenu() {
-      toggle.setAttribute('aria-expanded', 'false');
-      toggle.setAttribute('aria-label', 'Open menu');
-      toggle.classList.remove('is-open');
-      menu.classList.remove('nav-open');
-      document.body.style.overflow = '';
-    }
-    toggle.addEventListener('click', () => {
-      toggle.getAttribute('aria-expanded') === 'true' ? closeNavMenu() : openNavMenu();
-    });
-    menu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => closeNavMenu());
-    });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && menu.classList.contains('nav-open')) {
-        closeNavMenu();
-        toggle.focus();
-      }
-    });
-    menu.addEventListener('keydown', (e) => {
-      if (!menu.classList.contains('nav-open')) return;
-      if (e.key !== 'Tab') return;
-      const links = menu.querySelectorAll('a');
-      const first = links[0];
-      const last = links[links.length - 1];
-      if (e.shiftKey) {
-        if (document.activeElement === first) { e.preventDefault(); toggle.focus(); }
-      } else {
-        if (document.activeElement === last) { e.preventDefault(); first.focus(); }
-      }
+(function() {
+  var toggle = document.getElementById('nav-toggle');
+  var navUl = document.getElementById('nav-menu');
+  if (!toggle || !navUl) return;
+
+  function openMenu() {
+    navUl.classList.add('nav-open');
+    toggle.classList.add('is-open');
+    toggle.setAttribute('aria-label', 'Close menu');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    var first = navUl.querySelector('a, button');
+    if (first) first.focus();
+  }
+  function closeMenu() {
+    navUl.classList.remove('nav-open');
+    toggle.classList.remove('is-open');
+    toggle.setAttribute('aria-label', 'Open menu');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    closeAllDropdowns();
+  }
+  function closeAllDropdowns() {
+    navUl.querySelectorAll('.nav-has-dropdown.is-open').forEach(function(el) {
+      el.classList.remove('is-open');
+      var btn = el.querySelector('.nav-dropdown-toggle');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
     });
   }
+
+  toggle.addEventListener('click', function() {
+    navUl.classList.contains('nav-open') ? closeMenu() : openMenu();
+  });
+
+  navUl.querySelectorAll('.nav-dropdown-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var li = btn.closest('.nav-has-dropdown');
+      var opening = !li.classList.contains('is-open');
+      closeAllDropdowns();
+      if (opening) {
+        li.classList.add('is-open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  navUl.querySelectorAll('li:not(.nav-has-dropdown) > a').forEach(function(link) {
+    link.addEventListener('click', function() { closeMenu(); });
+  });
+  navUl.querySelectorAll('.nav-dropdown a').forEach(function(link) {
+    link.addEventListener('click', function() { closeMenu(); });
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' || e.keyCode === 27) {
+      if (navUl.classList.contains('nav-open')) { closeMenu(); toggle.focus(); return; }
+      var openDd = navUl.querySelector('.nav-has-dropdown.is-open');
+      if (openDd) {
+        openDd.classList.remove('is-open');
+        var btn = openDd.querySelector('.nav-dropdown-toggle');
+        if (btn) { btn.setAttribute('aria-expanded', 'false'); btn.focus(); }
+      }
+    }
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-has-dropdown')) closeAllDropdowns();
+  });
+})();
 </script>
 
 <!-- ── ARTICLE LIGHTBOX ── -->
