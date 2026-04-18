@@ -21,6 +21,10 @@
   <meta property="og:description" content="A 1949 RCA Victor radio reborn as a Raspberry Pi NAS TimeMachine. In progress.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://thetoddmark.com/oddities">
+  <meta property="og:image" content="https://thetoddmark.com/images/rca-victor-before.png">
+  <meta property="og:image:width" content="1103">
+  <meta property="og:image:height" content="707">
+  <meta property="og:image:alt" content="1949 RCA Victor radio — as found, being restored as a Raspberry Pi NAS">
   <meta property="og:site_name" content="The Todd·Mark">
   <link rel="canonical" href="https://thetoddmark.com/oddities">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,7 +51,7 @@
   :root {
     --ink: #1c1a17;
     --ink-soft: #4a4540;
-    --ink-faint: rgba(28,26,23,0.5);
+    --ink-faint: #6b6358;
     --warm-white: #faf8f4;
     --cream: #f5f0e8;
     --amber: #c8853a;
@@ -356,13 +360,13 @@
       <div class="feature-images">
         <!-- Image 1: actual before photo of the radio -->
         <div class="feature-img-wrap">
-          <img src="images/rca-victor-before.png" alt="1949 RCA Victor radio — as found, worn dark bakelite casing and plain knobs" loading="lazy" width="800" height="600">
+          <img src="images/rca-victor-before.png" alt="1949 RCA Victor radio — as found, worn dark bakelite casing and plain knobs" loading="lazy" width="1103" height="707">
           <div class="feature-img-caption">As found — 1949 RCA Victor</div>
         </div>
         <div class="feature-img-divider" aria-hidden="true"></div>
         <!-- Image 2: AI-generated render of target look -->
         <div class="feature-img-wrap">
-          <img src="images/rca-victor-render.png" alt="AI-generated target render — 1949 RCA Victor in chocolate brown bakelite with cream grille and brass knobs, housing a Raspberry Pi NAS" loading="lazy" width="800" height="600">
+          <img src="images/rca-victor-render.png" alt="AI-generated target render — 1949 RCA Victor in chocolate brown bakelite with cream grille and brass knobs, housing a Raspberry Pi NAS" loading="lazy" width="519" height="339">
           <div class="feature-img-caption">Target — AI render</div>
         </div>
       </div>
@@ -385,6 +389,21 @@
     </div>
   </section>
 </main>
+
+<!-- Newsletter -->
+<div style="background:var(--ink);border-top:1px solid rgba(245,240,232,0.06);">
+  <div style="max-width:860px;margin:0 auto;padding:1.75rem 2rem;display:flex;gap:2.5rem;align-items:center;flex-wrap:wrap;">
+    <div style="flex:1;min-width:200px;">
+      <div style="font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--amber-text);margin-bottom:0.3rem;">The Newsletter</div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:rgba(245,240,232,0.55);margin:0;line-height:1.4;">When something interesting happens in the workshop, I write it up. No schedule—just the story.</p>
+    </div>
+    <form action="https://buttondown.com/api/emails/embed-subscribe/TheToddMark" method="post" class="embeddable-buttondown-form" style="display:flex;gap:0.5rem;flex-wrap:wrap;flex-shrink:0;">
+      <label for="bd-email-odd" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Email address</label>
+      <input type="email" name="email" id="bd-email-odd" placeholder="your@email.com" required style="flex:1;min-width:180px;padding:0.6rem 1rem;border-radius:2rem;border:1px solid rgba(245,240,232,0.15);background:rgba(245,240,232,0.07);color:var(--warm-white);font-family:inherit;font-size:0.85rem;outline:none;" aria-required="true" />
+      <button type="submit" style="padding:0.6rem 1.25rem;border-radius:2rem;border:none;background:var(--amber);color:#1a1409;font-family:inherit;font-size:0.85rem;font-weight:600;cursor:pointer;white-space:nowrap;">Subscribe →</button>
+    </form>
+  </div>
+</div>
 
 <footer>
   <div class="footer-bottom">
