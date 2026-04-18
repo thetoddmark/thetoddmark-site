@@ -1588,10 +1588,10 @@
   <p style="font-size:0.95rem;line-height:1.9;color:var(--ink-soft);max-width:560px;margin-bottom:1.5rem;">I&rsquo;m just a person with some old tools, a growing pile of furniture, and a small shed — but I&rsquo;m always happy to hear from fellow enthusiasts, people with tools on the wishlist, or anyone who just wants to say hello. No agents, no assistants. Just me.</p>
   <p style="font-size:0.85rem;font-family:'DM Mono',monospace;letter-spacing:0.05em;color:var(--ink-soft);max-width:560px;margin-bottom:3rem;">Or email me directly: <a href="mailto:mark@thetoddmark.com" style="color:var(--amber-text);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.35);">mark@thetoddmark.com</a></p>
 
-  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact-success.html" style="display:flex;flex-direction:column;gap:1.5rem;">
+  <form action="https://formspree.io/f/mwvrywan" method="POST" style="display:flex;flex-direction:column;gap:1.5rem;">
 
-    <input type="hidden" name="form-name" value="contact" />
-    <p style="display:none;"><label>Don&rsquo;t fill this out: <input name="bot-field" /></label></p>
+    <input type="hidden" name="_next" value="https://thetoddmark.com/contact-success.html" />
+    <input type="hidden" name="_subject" value="New contact message — The Todd·Mark" />
 
     <!-- Name row -->
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
