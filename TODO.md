@@ -1,5 +1,5 @@
 # TheToddMark — To-Do List
-_Last updated: April 2, 2026_
+_Last updated: April 20, 2026_
 
 ---
 
@@ -10,6 +10,7 @@ _Last updated: April 2, 2026_
 
 ### Growth
 - [ ] **Backlinks (forums)** — add thetoddmark.com link to tool forum profiles (Patrick's Blood and Gore, Sawmill Creek, etc.)
+- [ ] **Forum thread replies (Claude legwork)** — Claude to find 8–10 relevant threads on Patrick's Blood and Gore and Sawmill Creek where the site's content adds genuine value (Fiebing's dye on handles, German screwdriver ID, etc.), draft a helpful reply for each with the link naturally included, and hand over a ready-to-post list. Time investment: ~15 min to review and post.
 
 ---
 
