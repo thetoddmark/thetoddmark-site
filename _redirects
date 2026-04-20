@@ -1,3 +1,6 @@
+# Page-level redirects
+/products /my-kit 301
+
 # Redirect www to non-www (canonical URL enforcement)
 https://www.thetoddmark.com/* https://thetoddmark.com/:splat 301!
 
