@@ -8,6 +8,11 @@ _Last updated: April 20, 2026_
 ### Content
 - [ ] **Restoration No. 10** — next write-up when ready
 
+### Analytics & Email
+- [ ] **Fix Buttondown SPF/DKIM** — Go to Buttondown → Settings → Sending domain; SPF and DKIM are missing for mail.thetoddmark.com, causing confirmation emails to be silently dropped. Re-verify/reconfigure there. (Reminder set for 8:30 AM April 21.)
+- [ ] **Link Search Console to GA4** — GA4 → Admin → Product links → Search Console links. Enables keyword/query data inside GA4 so you can track whether the SEO title changes are driving organic traffic.
+- [ ] **Mark `newsletter_signup` as GA4 key event** — Can only be done after Buttondown is fixed and a real signup fires. Go to GA4 → Admin → Data display → Events → Recent events → click the star next to `newsletter_signup`.
+
 ### Growth
 - [ ] **Backlinks (forums)** — add thetoddmark.com link to tool forum profiles (Patrick's Blood and Gore, Sawmill Creek, etc.)
 - [ ] **Forum thread replies (Claude legwork)** — Claude to find 8–10 relevant threads on Patrick's Blood and Gore and Sawmill Creek where the site's content adds genuine value (Fiebing's dye on handles, German screwdriver ID, etc.), draft a helpful reply for each with the link naturally included, and hand over a ready-to-post list. Time investment: ~15 min to review and post.
