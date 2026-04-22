@@ -1,5 +1,10 @@
 # Internal project notes — keep local, don't deploy to live site
 PROJECT-NOTES.md
+TODO.md
+hero-mockups.html
+
+# Claude Code
+.claude/
 
 # macOS
 .DS_Store
