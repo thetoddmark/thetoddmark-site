@@ -1,5 +1,5 @@
 # TheToddMark — To-Do List
-_Last updated: April 20, 2026_
+_Last updated: April 23, 2026_
 
 ---
 
@@ -9,13 +9,20 @@ _Last updated: April 20, 2026_
 - [ ] **Restoration No. 10** — next write-up when ready
 
 ### Analytics & Email
-- [ ] **Fix Buttondown SPF/DKIM** — Go to Buttondown → Settings → Sending domain; SPF and DKIM are missing for mail.thetoddmark.com, causing confirmation emails to be silently dropped. Re-verify/reconfigure there. (Reminder set for 8:30 AM April 21.)
-- [ ] **Link Search Console to GA4** — GA4 → Admin → Product links → Search Console links. Enables keyword/query data inside GA4 so you can track whether the SEO title changes are driving organic traffic.
-- [ ] **Mark `newsletter_signup` as GA4 key event** — Can only be done after Buttondown is fixed and a real signup fires. Go to GA4 → Admin → Data display → Events → Recent events → click the star next to `newsletter_signup`.
+- [ ] **Mark `newsletter_signup` as GA4 key event** — Reminder set for 7:45 AM April 24. Go to GA4 → Admin → Data display → Events → Recent events → click the star next to `newsletter_signup`.
 
 ### Growth
-- [ ] **Backlinks (forums)** — add thetoddmark.com link to tool forum profiles (Patrick's Blood and Gore, Sawmill Creek, etc.)
-- [ ] **Forum thread replies (Claude legwork)** — Claude to find 8–10 relevant threads on Patrick's Blood and Gore and Sawmill Creek where the site's content adds genuine value (Fiebing's dye on handles, German screwdriver ID, etc.), draft a helpful reply for each with the link naturally included, and hand over a ready-to-post list. Time investment: ~15 min to review and post.
+- [ ] **Forum thread replies** — 9 Sawmill Creek threads researched and ready to post. Reminder set for Monday April 27. Account pending approval as of April 23 — check email for approval notice before posting.
+- [ ] **Additional forum posts (WoodNet + Patriot Woodworker)** — 8 threads found across two forums. Patriot Woodworker account pending approval as of April 23 (same as Sawmill Creek). Check email for approval before posting. Threads:
+  - **WoodNet** — [Tool handle finish](https://forums.woodnet.net/showthread.php?tid=7303127) → /restoration-mac-tools-screwdrivers
+  - **WoodNet** — [Camellia oil](https://forums.woodnet.net/showthread.php?tid=7336059) → /restoration-stanley-no5half
+  - **WoodNet** — [Removing rust from old plane](https://forums.woodnet.net/showthread.php?tid=7342602) → /restoration-stanley-no5half
+  - **WoodNet** — [Soak tanks for tool cleanup](https://forums.woodnet.net/showthread.php?tid=7326089) → /restoration-stanley-no5half
+  - **WoodNet** — [Marking Knives](https://forums.woodnet.net/showthread.php?tid=7175318) → /restoration-awl-marking-knife
+  - **Patriot Woodworker** — [Perfect Handle Screwdriver](https://thepatriotwoodworker.com/forums/topic/23721-perfect-handle-straight-slot-screwdriver/) → /restoration-german-perfect-handle
+  - **Patriot Woodworker** — [Electrolysis rust removal](https://thepatriotwoodworker.com/forums/topic/7511-electrolysis-rust-removal/) → /restoration-stanley-no5half
+  - **Patriot Woodworker** — [Refurb old Irwin Screwdriver](https://thepatriotwoodworker.com/forums/topic/29345-refurb-old-irwin-screwdriver/) → /restoration-mac-tools-screwdrivers
+  - Ask Claude to generate draft replies when ready to post.
 
 ---
 
