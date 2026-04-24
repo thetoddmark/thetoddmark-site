@@ -1,5 +1,5 @@
 # TheToddMark — To-Do List
-_Last updated: April 23, 2026_
+_Last updated: April 24, 2026_
 
 ---
 
@@ -9,7 +9,7 @@ _Last updated: April 23, 2026_
 - [ ] **Restoration No. 10** — next write-up when ready
 
 ### Analytics & Email
-- [ ] **Mark `newsletter_signup` as GA4 key event** — Reminder set for 7:45 AM April 24. Go to GA4 → Admin → Data display → Events → Recent events → click the star next to `newsletter_signup`.
+- [ ] **Mark `newsletter_signup` as GA4 key event** — Go to GA4 → Admin → Data display → Events → Recent events → click the star next to `newsletter_signup`.
 
 ### Growth
 - [ ] **Forum thread replies** — 9 Sawmill Creek threads researched and ready to post. Reminder set for Monday April 27. Account pending approval as of April 23 — check email for approval notice before posting.
@@ -27,7 +27,25 @@ _Last updated: April 23, 2026_
 
 ---
 
+### Future (lower priority)
+- [ ] **Responsive `srcset` for hero images** — serve smaller images on mobile for faster load
+- [ ] **Extract repeated inline styles to CSS classes** — minor code cleanup
+- [ ] **Content-Security-Policy header** — requires careful per-page tuning; skip until needed
+
+---
+
 ## ✅ Completed Tasks
+
+### Session: April 24, 2026
+- [x] **6-agent site audit** — structure, performance, mobile, UX/content, SEO, security
+- [x] **Title tags shortened** to ≤60 chars across 14 pages
+- [x] **Meta descriptions trimmed** to ≤155 chars across 16 pages
+- [x] **FTC affiliate disclosure** added to wishlist.html
+- [x] **OG/Twitter tags** — fixed duplicate stale block on index.html (old site name "Rust, Sandpaper..."); added og:image + canonical to start-here.html and builds.html
+- [x] **Image compression** — 12 images compressed with sips (~30 MB saved)
+- [x] **Security headers** — added via Cloudflare Response Header Transform Rule (X-Content-Type-Options, X-Frame-Options, Referrer-Policy, Strict-Transport-Security); securityheaders.com grade F → B
+- [x] **`_headers` file** — added to repo root (effective if hosting ever moves to Cloudflare Pages or Netlify)
+- [x] **Confirmed GitHub Pages hosting** — site is on GitHub Pages proxied through Cloudflare DNS
 
 ### Session: April 2, 2026
 - [x] **Buttondown sending domain verified** — added NS records in Cloudflare delegating `mail.thetoddmark.com` to Buttondown (ns1/ns2.onbuttondown.com); both records immediately verified; SPF/DKIM/DMARC/click tracking now managed by Buttondown
