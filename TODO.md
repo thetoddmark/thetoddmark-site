@@ -12,7 +12,13 @@ _Last updated: April 24, 2026_
 - [ ] **Mark `newsletter_signup` as GA4 key event** — Go to GA4 → Admin → Data display → Events → Recent events → click the star next to `newsletter_signup`.
 
 ### Growth
-- [ ] **Forum thread replies** — 9 Sawmill Creek threads researched and ready to post. Reminder set for Monday April 27. Account pending approval as of April 23 — check email for approval notice before posting.
+- [ ] **Forum thread replies** — 6 Sawmill Creek threads remaining. Reminder set for Monday April 27 at 7:30 AM. Do 1-2 per day. Threads:
+  - ✅ #2 Quick Rehab of an Irwin Perfect Handle — posted April 24
+  - [ ] [Fiebing's Leather Dye](https://sawmillcreek.org/threads/fiebings-leather-dye.198843/) → /restoration-mac-tools-screwdrivers
+  - [ ] [Flat Screwdriver for Lie-Nielsen Planes](https://sawmillcreek.org/threads/flat-screwdriver-set-for-my-lie-nielsen-hand-planes.290231/) → /build-chip-breaker-screwdriver
+  - [ ] [Restoring an Old Hand Plane](https://sawmillcreek.org/threads/restoring-an-old-hand-plane.296135/) → /restoration-stanley-no5half
+  - [ ] [Rust Removal Using Electrolysis](https://sawmillcreek.org/threads/rust-removal-using-electrolysis.160109/) → /restoration-stanley-no5half
+  - [ ] [Shop-Made Marking Knife](https://sawmillcreek.org/threads/shop-made-marking-knife.311403/) → /restoration-awl-marking-knife
 - [ ] **Additional forum posts (WoodNet + Patriot Woodworker)** — Patriot Woodworker account active (approved April 23). Space posts out over a few days. Threads remaining:
   - **WoodNet** — [Tool handle finish](https://forums.woodnet.net/showthread.php?tid=7303127) → /restoration-mac-tools-screwdrivers
   - **WoodNet** — [Camellia oil](https://forums.woodnet.net/showthread.php?tid=7336059) → /restoration-stanley-no5half
