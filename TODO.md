@@ -15,6 +15,8 @@ _Last updated: April 24, 2026_
 - [ ] **Forum thread replies** — 6 Sawmill Creek threads remaining. Reminder set for Monday April 27 at 7:30 AM. Do 1-2 per day. Threads:
   - ✅ #2 Quick Rehab of an Irwin Perfect Handle — posted April 24
   - [ ] [Fiebing's Leather Dye](https://sawmillcreek.org/threads/fiebings-leather-dye.198843/) → /restoration-mac-tools-screwdrivers
+  - [ ] [Wooden Handle Screwdrivers](https://sawmillcreek.org/threads/wooden-handle-screwdrivers.312193/) → /restoration-mac-tools-screwdrivers
+  - [ ] [Refinishing a Tool Handle](https://sawmillcreek.org/threads/refinishing-a-tool-handle.256770/) → /restoration-mac-tools-screwdrivers + /restoration-german-perfect-handle
   - [ ] [Flat Screwdriver for Lie-Nielsen Planes](https://sawmillcreek.org/threads/flat-screwdriver-set-for-my-lie-nielsen-hand-planes.290231/) → /build-chip-breaker-screwdriver
   - [ ] [Restoring an Old Hand Plane](https://sawmillcreek.org/threads/restoring-an-old-hand-plane.296135/) → /restoration-stanley-no5half
   - [ ] [Rust Removal Using Electrolysis](https://sawmillcreek.org/threads/rust-removal-using-electrolysis.160109/) → /restoration-stanley-no5half
