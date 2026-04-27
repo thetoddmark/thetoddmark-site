@@ -1,5 +1,5 @@
 # TheToddMark — To-Do List
-_Last updated: April 24, 2026_
+_Last updated: April 27, 2026_
 
 ---
 
@@ -9,18 +9,18 @@ _Last updated: April 24, 2026_
 - [ ] **Restoration No. 10** — next write-up when ready
 
 ### Analytics & Email
-- [ ] **Mark `newsletter_signup` as GA4 key event** — Go to GA4 → Admin → Data display → Events → Recent events → click the star next to `newsletter_signup`.
+- [x] **Mark `newsletter_signup` as GA4 key event** — already marked, confirmed April 27.
 
 ### Growth
 - [ ] **Forum thread replies** — 6 Sawmill Creek threads remaining. Reminder set for Monday April 27 at 7:30 AM. Do 1-2 per day. Threads:
   - ✅ #2 Quick Rehab of an Irwin Perfect Handle — posted April 24
-  - [ ] [Fiebing's Leather Dye](https://sawmillcreek.org/threads/fiebings-leather-dye.198843/) → /restoration-mac-tools-screwdrivers
-  - [ ] [Wooden Handle Screwdrivers](https://sawmillcreek.org/threads/wooden-handle-screwdrivers.312193/) → /restoration-mac-tools-screwdrivers
-  - [ ] [Refinishing a Tool Handle](https://sawmillcreek.org/threads/refinishing-a-tool-handle.256770/) → /restoration-mac-tools-screwdrivers + /restoration-german-perfect-handle
+  - ✅ [Fiebing's Leather Dye](https://sawmillcreek.org/threads/fiebings-leather-dye.198843/) → /restoration-mac-tools-screwdrivers — posted (date unconfirmed)
+  - ✅ [Wooden Handle Screwdrivers](https://sawmillcreek.org/threads/wooden-handle-screwdrivers.312193/) → skip (for-sale thread, already closed)
+  - ✅ [Refinishing a Tool Handle](https://sawmillcreek.org/threads/refinishing-a-tool-handle.256770/) → /restoration-mac-tools-screwdrivers — posted April 27
   - [ ] [Flat Screwdriver for Lie-Nielsen Planes](https://sawmillcreek.org/threads/flat-screwdriver-set-for-my-lie-nielsen-hand-planes.290231/) → /build-chip-breaker-screwdriver
   - [ ] [Restoring an Old Hand Plane](https://sawmillcreek.org/threads/restoring-an-old-hand-plane.296135/) → /restoration-stanley-no5half
   - [ ] [Rust Removal Using Electrolysis](https://sawmillcreek.org/threads/rust-removal-using-electrolysis.160109/) → /restoration-stanley-no5half
-  - [ ] [Shop-Made Marking Knife](https://sawmillcreek.org/threads/shop-made-marking-knife.311403/) → /restoration-awl-marking-knife
+  - ✅ [Shop-Made Marking Knife](https://sawmillcreek.org/threads/shop-made-marking-knife.311403/) → /restoration-awl-marking-knife — posted April 27
 - [ ] **Additional forum posts (WoodNet + Patriot Woodworker)** — Patriot Woodworker account active (approved April 23). Space posts out over a few days. Threads remaining:
   - **WoodNet** — [Tool handle finish](https://forums.woodnet.net/showthread.php?tid=7303127) → /restoration-mac-tools-screwdrivers
   - **WoodNet** — [Camellia oil](https://forums.woodnet.net/showthread.php?tid=7336059) → /restoration-stanley-no5half
