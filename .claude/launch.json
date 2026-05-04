@@ -4,7 +4,7 @@
     {
       "name": "thetoddmark-site",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8888"],
+      "runtimeArgs": ["-m", "http.server", "7474"],
       "port": 7474
     }
   ]
