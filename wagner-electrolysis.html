@@ -5,7 +5,7 @@
   <link rel="icon" href="/favicon.jpg" type="image/jpeg">
   <link rel="apple-touch-icon" href="/favicon.jpg">
   <meta charset="UTF-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' www.googletagmanager.com www.google-analytics.com *.clarity.ms; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: https:; frame-src ko-fi.com; connect-src 'self' formspree.io www.google-analytics.com buttondown.com buttondown.email *.clarity.ms; form-action 'self' formspree.io buttondown.com buttondown.email;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' www.googletagmanager.com www.google-analytics.com *.clarity.ms; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: https:; frame-src ko-fi.com www.youtube.com; connect-src 'self' formspree.io www.google-analytics.com buttondown.com buttondown.email *.clarity.ms; form-action 'self' formspree.io buttondown.com buttondown.email;">
   <meta name="color-scheme" content="light">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WF1PP02KM3"></script>
@@ -126,6 +126,26 @@
     .footer-bottom { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; padding:1.25rem 2.5rem; border-top:1px solid rgba(245,240,232,0.06); }
     .footer-copy { font-family:var(--mono); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(245,240,232,0.80); }
 
+    .video-embed {
+      margin: 2.5rem 0;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
     @media (max-width:520px) {
       .photo-grid { grid-template-columns:1fr; }
       .article-hero { padding:5rem 1.25rem 1.25rem; }
@@ -200,6 +220,25 @@
   <div class="stat-item"><span class="stat-value">$45</span><span class="stat-label">Total Cost</span></div>
   <div class="stat-item"><span class="stat-value">24 hrs</span><span class="stat-label">Electrolysis</span></div>
   <div class="stat-item"><span class="stat-value">6</span><span class="stat-label">Seasoning Sessions</span></div>
+</div>
+
+<div class="post-body" style="padding-top:0;padding-bottom:0;">
+<section class="video-embed">
+  <h2>Watch the Restoration</h2>
+  <p>The full restoration on video — from junk fair find to the first cook.</p>
+  <div class="video-wrapper">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/tDBPIQQ5DGI?si=tJRZNLm40TWdmAJ5"
+      title="Wagner Ware Sidney-O Electrolysis Restoration — The Todd·Mark"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
 </div>
 
 <main id="main-content">
