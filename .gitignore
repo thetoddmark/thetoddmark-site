@@ -6,6 +6,11 @@ hero-mockups.html
 # Claude Code
 .claude/
 
+# Video files — large binaries, host on YouTube/Vimeo instead
+*.mov
+*.mp4
+*.m4v
+
 # macOS
 .DS_Store
 .DS_Store?

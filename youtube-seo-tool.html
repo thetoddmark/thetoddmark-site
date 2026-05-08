@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube SEO Tool — Tool & Woodworking Restorations</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #1a1a1a;
+      color: #e8e8e8;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.25rem;
+    }
+
+    header p {
+      font-size: 0.875rem;
+      color: #888;
+    }
+
+    /* API Key bar */
+    .api-bar {
+      background: #242424;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .api-bar label {
+      font-size: 0.8rem;
+      color: #aaa;
+      white-space: nowrap;
+      font-weight: 500;
+    }
+
+    .api-bar input {
+      flex: 1;
+      min-width: 200px;
+      background: #1a1a1a;
+      border: 1px solid #3a3a3a;
+      border-radius: 6px;
+      padding: 0.45rem 0.75rem;
+      color: #e8e8e8;
+      font-size: 0.85rem;
+      font-family: monospace;
+    }
+
+    .api-bar input:focus { outline: none; border-color: #c17f24; }
+
+    .api-status {
+      font-size: 0.75rem;
+      padding: 0.3rem 0.65rem;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    .api-status.saved { background: #1a3a1a; color: #5a9e5a; }
+    .api-status.unsaved { background: #3a2a1a; color: #c17f24; }
+
+    /* Card */
+    .card {
+      background: #242424;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .card h2 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .field-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 560px) {
+      .field-grid { grid-template-columns: 1fr; }
+    }
+
+    .field { display: flex; flex-direction: column; gap: 0.35rem; }
+    .field.full { grid-column: 1 / -1; }
+
+    label {
+      font-size: 0.8rem;
+      color: #aaa;
+      font-weight: 500;
+    }
+
+    label span {
+      color: #666;
+      font-weight: 400;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea {
+      background: #1a1a1a;
+      border: 1px solid #3a3a3a;
+      border-radius: 6px;
+      padding: 0.55rem 0.75rem;
+      color: #e8e8e8;
+      font-size: 0.875rem;
+      font-family: inherit;
+      transition: border-color 0.15s;
+      width: 100%;
+    }
+
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #c17f24;
+    }
+
+    textarea { resize: vertical; line-height: 1.5; }
+    select option { background: #242424; }
+
+    /* Generate button */
+    .btn-generate {
+      width: 100%;
+      padding: 0.85rem;
+      background: #c17f24;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.15s, opacity 0.15s;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-generate:hover { background: #d4922e; }
+    .btn-generate:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    /* Loading */
+    .loading {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    .spinner {
+      width: 28px;
+      height: 28px;
+      border: 3px solid #333;
+      border-top-color: #c17f24;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      margin: 0 auto 0.75rem;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Output */
+    .output { display: none; }
+
+    .output-section {
+      background: #242424;
+      border: 1px solid #333;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    .output-section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 1.25rem;
+      background: #2a2a2a;
+      border-bottom: 1px solid #333;
+    }
+
+    .output-section-header h3 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #ccc;
+    }
+
+    .btn-copy {
+      font-size: 0.75rem;
+      background: #333;
+      color: #aaa;
+      border: none;
+      border-radius: 5px;
+      padding: 0.3rem 0.65rem;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .btn-copy:hover { background: #444; color: #fff; }
+    .btn-copy.copied { background: #1a3a1a; color: #5a9e5a; }
+
+    .output-content {
+      padding: 1.25rem;
+      font-size: 0.875rem;
+      line-height: 1.7;
+      color: #ddd;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .title-option {
+      background: #1a1a1a;
+      border: 1px solid #3a3a3a;
+      border-radius: 6px;
+      padding: 0.65rem 0.9rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .title-option:last-child { margin-bottom: 0; }
+
+    .title-option span {
+      flex: 1;
+      font-size: 0.9rem;
+      color: #e8e8e8;
+      line-height: 1.4;
+    }
+
+    .title-option .btn-copy {
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .error {
+      background: #3a1a1a;
+      border: 1px solid #6a2a2a;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      color: #e57373;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+      display: none;
+    }
+
+    .tip {
+      font-size: 0.78rem;
+      color: #666;
+      margin-top: 0;
+      padding: 0 1.25rem 1rem;
+      line-height: 1.5;
+      border-top: 1px solid #2e2e2e;
+      padding-top: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <h1>YouTube SEO Tool</h1>
+      <p>Generate optimized titles, descriptions, tags, and chapters for your restoration &amp; woodworking videos.</p>
+    </header>
+
+    <!-- API Key -->
+    <div class="api-bar">
+      <label for="apiKey">Anthropic API Key</label>
+      <input type="password" id="apiKey" placeholder="sk-ant-..." autocomplete="off">
+      <span class="api-status unsaved" id="apiStatus">Not saved</span>
+    </div>
+
+    <!-- Form -->
+    <div class="card">
+      <h2>About Your Video</h2>
+      <div class="field-grid">
+
+        <div class="field">
+          <label for="videoType">Video type</label>
+          <select id="videoType">
+            <option value="restoration">Tool restoration</option>
+            <option value="woodworking">New woodworking project</option>
+            <option value="both">Restoration + woodworking project</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="toolName">Tool or project name <span>(be specific)</span></label>
+          <input type="text" id="toolName" placeholder="e.g. Stanley No. 4 hand plane, dovetail box">
+        </div>
+
+        <div class="field">
+          <label for="era">Era / age <span>(if known)</span></label>
+          <input type="text" id="era" placeholder="e.g. 1940s, pre-WWII, unknown">
+        </div>
+
+        <div class="field">
+          <label for="brand">Brand or maker <span>(if known)</span></label>
+          <input type="text" id="brand" placeholder="e.g. Stanley, Disston, handmade">
+        </div>
+
+        <div class="field full">
+          <label for="condition">Starting condition <span>(what did it look like before?)</span></label>
+          <textarea id="condition" rows="2" placeholder="e.g. Heavy rust, broken tote, missing chipbreaker screw, frog was frozen"></textarea>
+        </div>
+
+        <div class="field full">
+          <label for="steps">Key steps / techniques used</label>
+          <textarea id="steps" rows="3" placeholder="e.g. Electrolysis rust removal, lapping the sole, sharpening the iron, shellac on the tote, testing on pine"></textarea>
+        </div>
+
+        <div class="field full">
+          <label for="result">Result / outcome</label>
+          <textarea id="result" rows="2" placeholder="e.g. Fully functional, shaves end grain clean, cost me $12 at a flea market"></textarea>
+        </div>
+
+        <div class="field">
+          <label for="videoLength">Approximate video length <span>(minutes)</span></label>
+          <input type="number" id="videoLength" min="1" max="120" placeholder="e.g. 15">
+        </div>
+
+        <div class="field">
+          <label for="audience">Target audience</label>
+          <select id="audience">
+            <option value="beginners">Beginners learning restoration</option>
+            <option value="collectors">Collectors &amp; tool hunters</option>
+            <option value="woodworkers">Practicing woodworkers</option>
+            <option value="all">All of the above</option>
+          </select>
+        </div>
+
+        <div class="field full">
+          <label for="extras">Anything else worth mentioning <span>(optional)</span></label>
+          <textarea id="extras" rows="2" placeholder="e.g. Found it at a barn sale, show a sharpening trick, made a custom replacement part"></textarea>
+        </div>
+
+      </div>
+    </div>
+
+    <button class="btn-generate" id="generateBtn" onclick="generate()">Generate YouTube Content</button>
+
+    <div class="error" id="errorBox"></div>
+    <div class="loading" id="loading">
+      <div class="spinner"></div>
+      Generating your YouTube content…
+    </div>
+
+    <!-- Output -->
+    <div class="output" id="output">
+
+      <div class="output-section">
+        <div class="output-section-header">
+          <h3>Title Options <span style="color:#666;font-weight:400;font-size:0.75rem;">— pick one, test different ones over time</span></h3>
+        </div>
+        <div class="output-content" id="outTitles"></div>
+      </div>
+
+      <div class="output-section">
+        <div class="output-section-header">
+          <h3>Description</h3>
+          <button class="btn-copy" onclick="copySection('outDescription', this)">Copy</button>
+        </div>
+        <div class="output-content" id="outDescription"></div>
+      </div>
+
+      <div class="output-section">
+        <div class="output-section-header">
+          <h3>Tags</h3>
+          <button class="btn-copy" onclick="copySection('outTags', this)">Copy</button>
+        </div>
+        <div class="output-content" id="outTags"></div>
+      </div>
+
+      <div class="output-section">
+        <div class="output-section-header">
+          <h3>Chapter Markers</h3>
+          <button class="btn-copy" onclick="copySection('outChapters', this)">Copy</button>
+        </div>
+        <div class="output-content" id="outChapters"></div>
+        <div class="tip">
+          <strong style="color:#aaa;">How to use chapters:</strong> Paste these into your YouTube description exactly as shown. Adjust the timestamps to match where those moments actually happen in your video before publishing. YouTube will automatically turn them into clickable chapter markers.
+        </div>
+      </div>
+
+      <div class="output-section">
+        <div class="output-section-header">
+          <h3>Thumbnail Text Suggestion</h3>
+          <button class="btn-copy" onclick="copySection('outThumbnail', this)">Copy</button>
+        </div>
+        <div class="output-content" id="outThumbnail"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    // --- API Key persistence ---
+    const keyInput = document.getElementById('apiKey');
+    const keyStatus = document.getElementById('apiStatus');
+
+    const saved = localStorage.getItem('yt_seo_api_key');
+    if (saved) {
+      keyInput.value = saved;
+      keyStatus.textContent = 'Saved locally';
+      keyStatus.className = 'api-status saved';
+    }
+
+    keyInput.addEventListener('input', () => {
+      const val = keyInput.value.trim();
+      if (val.startsWith('sk-ant-')) {
+        localStorage.setItem('yt_seo_api_key', val);
+        keyStatus.textContent = 'Saved locally';
+        keyStatus.className = 'api-status saved';
+      } else {
+        localStorage.removeItem('yt_seo_api_key');
+        keyStatus.textContent = 'Not saved';
+        keyStatus.className = 'api-status unsaved';
+      }
+    });
+
+    // --- Copy helpers ---
+    function copySection(id, btn) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
+      });
+    }
+
+    function copyTitle(btn, text) {
+      navigator.clipboard.writeText(text).then(() => {
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
+      });
+    }
+
+    // --- Generate ---
+    async function generate() {
+      const apiKey = keyInput.value.trim();
+      if (!apiKey.startsWith('sk-ant-')) {
+        showError('Please enter your Anthropic API key above (starts with sk-ant-).');
+        return;
+      }
+
+      const toolName = document.getElementById('toolName').value.trim();
+      if (!toolName) {
+        showError('Please enter the tool or project name.');
+        return;
+      }
+
+      const videoType   = document.getElementById('videoType').value;
+      const era         = document.getElementById('era').value.trim();
+      const brand       = document.getElementById('brand').value.trim();
+      const condition   = document.getElementById('condition').value.trim();
+      const steps       = document.getElementById('steps').value.trim();
+      const result      = document.getElementById('result').value.trim();
+      const videoLength = document.getElementById('videoLength').value.trim();
+      const audience    = document.getElementById('audience').value;
+      const extras      = document.getElementById('extras').value.trim();
+
+      hideError();
+      setLoading(true);
+
+      const audienceMap = {
+        beginners:   'beginners who are new to tool restoration',
+        collectors:  'vintage tool collectors and flea market hunters',
+        woodworkers: 'practicing woodworkers who want functional tools',
+        all:         'a broad audience of beginners, collectors, and woodworkers'
+      };
+
+      const videoTypeMap = {
+        restoration:  'vintage/antique tool restoration',
+        woodworking:  'a new woodworking build project',
+        both:         'a tool restoration followed by using the restored tool on a woodworking project'
+      };
+
+      const prompt = `You are an expert YouTube SEO specialist for woodworking and tool restoration channels. Generate optimized YouTube content for the following video.
+
+VIDEO DETAILS:
+- Type: ${videoTypeMap[videoType]}
+- Tool/Project: ${toolName}
+${era    ? `- Era/Age: ${era}`               : ''}
+${brand  ? `- Brand/Maker: ${brand}`         : ''}
+${condition ? `- Starting condition: ${condition}` : ''}
+${steps  ? `- Key steps/techniques: ${steps}` : ''}
+${result ? `- Result/outcome: ${result}`     : ''}
+${videoLength ? `- Approximate length: ${videoLength} minutes` : ''}
+- Target audience: ${audienceMap[audience]}
+${extras ? `- Additional notes: ${extras}`   : ''}
+
+Generate the following, formatted EXACTLY as shown with these exact section headers:
+
+---TITLES---
+Provide exactly 3 YouTube title options. Each on its own line, numbered 1. 2. 3. Titles should be 60-70 characters, keyword-rich, and compelling. Use natural language that real people search for.
+
+---DESCRIPTION---
+Write a full YouTube description (400-500 words). Structure:
+- First 2 sentences: hook with primary keywords (these show before "read more")
+- What the video covers
+- Step-by-step overview of the restoration/project
+- Tools and materials used (great for search)
+- Call to action (subscribe, comment)
+- Relevant hashtags at the end (10-15, starting with #)
+
+---TAGS---
+Provide 25-30 tags as a single comma-separated list. Mix broad and specific terms. Include tool name variations, techniques, and audience search terms.
+
+---CHAPTERS---
+Generate chapter markers assuming a ${videoLength || '15'}-minute video. Use this exact format:
+0:00 Introduction
+[timestamp] [chapter name]
+...
+Keep chapter names short (3-5 words). Distribute logically based on a typical restoration video flow. Note that the user will need to adjust the timestamps to match their actual video.
+
+---THUMBNAIL---
+Suggest 2-3 short text overlays for a before/after thumbnail. These are the bold words that appear on top of the thumbnail image. Keep each option to 3-6 words total.`;
+
+      try {
+        const response = await fetch('https://api.anthropic.com/v1/messages', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'x-api-key': apiKey,
+            'anthropic-version': '2023-06-01',
+            'anthropic-dangerous-direct-browser-access': 'true'
+          },
+          body: JSON.stringify({
+            model: 'claude-haiku-4-5-20251001',
+            max_tokens: 2000,
+            messages: [{ role: 'user', content: prompt }]
+          })
+        });
+
+        if (!response.ok) {
+          const err = await response.json().catch(() => ({}));
+          throw new Error(err.error?.message || `API error ${response.status}`);
+        }
+
+        const data = await response.json();
+        const text = data.content[0].text;
+        parseAndRender(text);
+
+      } catch (err) {
+        showError('Error: ' + err.message);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    function parseAndRender(text) {
+      const keys = ['TITLES','DESCRIPTION','TAGS','CHAPTERS','THUMBNAIL'];
+      const sections = {};
+
+      for (let i = 0; i < keys.length; i++) {
+        const key     = keys[i];
+        const nextKey = keys[i + 1];
+        const start   = text.indexOf(`---${key}---`);
+        if (start === -1) continue;
+        const contentStart = start + `---${key}---`.length;
+        const end = nextKey ? text.indexOf(`---${nextKey}---`) : text.length;
+        sections[key] = text.slice(contentStart, end === -1 ? text.length : end).trim();
+      }
+
+      // Titles
+      const titlesEl = document.getElementById('outTitles');
+      titlesEl.innerHTML = '';
+      const titleLines = (sections['TITLES'] || '').split('\n').filter(l => l.trim().match(/^\d\./));
+      if (titleLines.length) {
+        titleLines.forEach(line => {
+          const titleText = line.replace(/^\d\.\s*/, '').trim();
+          const div = document.createElement('div');
+          div.className = 'title-option';
+          div.innerHTML = `<span>${escHtml(titleText)}</span><button class="btn-copy" onclick="copyTitle(this, ${JSON.stringify(titleText)})">Copy</button>`;
+          titlesEl.appendChild(div);
+        });
+      } else {
+        titlesEl.textContent = sections['TITLES'] || '';
+      }
+
+      document.getElementById('outDescription').textContent = sections['DESCRIPTION'] || '';
+      document.getElementById('outTags').textContent        = sections['TAGS']        || '';
+      document.getElementById('outChapters').textContent    = sections['CHAPTERS']    || '';
+      document.getElementById('outThumbnail').textContent   = sections['THUMBNAIL']   || '';
+
+      document.getElementById('output').style.display = 'block';
+      document.getElementById('output').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function escHtml(str) {
+      return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    function setLoading(on) {
+      document.getElementById('loading').style.display    = on ? 'block' : 'none';
+      document.getElementById('generateBtn').disabled      = on;
+      document.getElementById('generateBtn').textContent   = on ? 'Generating…' : 'Generate YouTube Content';
+      if (on) document.getElementById('output').style.display = 'none';
+    }
+
+    function showError(msg) {
+      const el = document.getElementById('errorBox');
+      el.textContent    = msg;
+      el.style.display  = 'block';
+    }
+
+    function hideError() {
+      document.getElementById('errorBox').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
