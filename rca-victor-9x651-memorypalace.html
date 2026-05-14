@@ -15,15 +15,15 @@
     gtag("js", new Date());
     gtag("config", "G-WF1PP02KM3");
   </script>
-  <title>Restoring an RCA Victor 9-X-651 Table Radio | The Todd·Mark</title>
-  <meta name="description" content="An RCA Victor 9-X-651 tabletop radio rescued from beneath a coat of overspray. Cabinet stripped back, electronics rebuilt, back on the air. Full restoration write-up.">
-  <meta property="og:title" content="RCA Victor 9-X-651 Radio Restoration | The Todd·Mark">
-  <meta property="og:description" content="A 1950s RCA Victor 9-X-651 pulled from the past. Oversprayed cabinet, gutted interior, and a full rebuild. The radio that became the Memory Palace.">
+  <title>RCA Victor 9-X-651 — The Radio That Became a Computer | The Todd·Mark</title>
+  <meta name="description" content="A 1950 RCA Victor 9-X-651 Bakelite table radio — Flitz polish, Heirloom White grille slats, gold knobs, and a Raspberry Pi 5 NAS running inside. Full transformation write-up.">
+  <meta property="og:title" content="RCA Victor 9-X-651 — The Radio That Became a Computer | The Todd·Mark">
+  <meta property="og:description" content="A 1950 Bakelite table radio transformed: Flitz-polished cabinet, ivory grille slats, gold knobs — and a Raspberry Pi 5 NAS living inside. Not a restoration. A second opinion.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://thetoddmark.com/rca-victor-9x651-memorypalace">
   <meta property="og:site_name" content="The Todd·Mark">
   <meta property="og:image" content="https://thetoddmark.com/images/rca-victor-9x651/01_after_hero.jpeg">
-  <meta property="og:image:alt" content="RCA Victor 9-X-651 after restoration — The Todd·Mark">
+  <meta property="og:image:alt" content="RCA Victor 9-X-651 after transformation — The Todd·Mark">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://thetoddmark.com/images/rca-victor-9x651/01_after_hero.jpeg">
   <link rel="canonical" href="https://thetoddmark.com/rca-victor-9x651-memorypalace">
@@ -36,8 +36,8 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "RCA Victor 9-X-651 Table Radio — The Memory Palace Restoration",
-    "description": "A 1950s RCA Victor 9-X-651 tabletop radio restored from beneath a coat of overspray — cabinet stripped back, electronics rebuilt, back on the air.",
+    "headline": "RCA Victor 9-X-651 — The Radio That Became a Computer",
+    "description": "A 1950 RCA Victor 9-X-651 Bakelite table radio transformed: Flitz-polished cabinet, Heirloom White grille slats, gold knobs, and a Raspberry Pi 5 NAS running inside.",
     "author": {"@type": "Person", "name": "Mark Todd", "url": "https://thetoddmark.com/about"},
     "publisher": {"@type": "Organization", "name": "The Todd·Mark", "url": "https://thetoddmark.com"},
     "url": "https://thetoddmark.com/rca-victor-9x651-memorypalace",
@@ -136,6 +136,9 @@
     .back-link { display:inline-flex; align-items:center; gap:0.5rem; font-family:var(--mono); font-size:0.75rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--amber-text); text-decoration:none; margin-bottom:3rem; transition:gap 0.2s; }
     .back-link:hover { gap:0.8rem; }
 
+    ul.process-list { margin:1rem 0 1.5rem 1.5rem; line-height:1.9; font-size:1.05rem; }
+    ul.process-list li { margin-bottom:0.35rem; }
+
     footer { background:var(--ink); display:flex; flex-direction:column; border-top:1px solid rgba(245,240,232,0.08); }
     .footer-bottom { display:flex; justify-content:space-between; align-items:center; padding:0.65rem 3rem; }
     .footer-copy { font-family:var(--mono); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(245,240,232,0.80); }
@@ -152,25 +155,11 @@
       .supply-name { min-width:unset; }
       .supplies-list li { flex-direction:column; gap:0.25rem; }
       nav ul.nav-open {
-        display: flex;
-        position: fixed;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background: rgba(28,26,23,1);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2.5rem;
-        z-index: 300;
+        display: flex; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(28,26,23,1); flex-direction: column; align-items: center;
+        justify-content: center; gap: 2.5rem; z-index: 300;
       }
-      nav ul.nav-open a {
-        font-size: 1.3rem;
-        letter-spacing: 0.14em;
-        color: rgba(245,240,232,1);
-        font-family: var(--mono, 'DM Mono', monospace);
-        text-transform: uppercase;
-        text-decoration: none;
-        font-weight: 500;
-      }
+      nav ul.nav-open a { font-size: 1.3rem; letter-spacing: 0.14em; color: rgba(245,240,232,1); font-family: var(--mono, 'DM Mono', monospace); text-transform: uppercase; text-decoration: none; font-weight: 500; }
       .nav-hamburger.is-open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
       .nav-hamburger.is-open span:nth-child(2) { opacity: 0; }
       .nav-hamburger.is-open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
@@ -178,7 +167,7 @@
     }
 
     @media print {
-      nav, .newsletter-section, footer, .back-link { display:none !important; }
+      nav, footer, .back-link { display:none !important; }
       body { background:#fff; color:#000; font-size:11pt; line-height:1.6; }
       .article-hero { background:#fff !important; color:#000 !important; padding:1rem 0 1.5rem; text-align:left; }
       .article-title { color:#000 !important; font-size:22pt !important; }
@@ -206,15 +195,10 @@
     :focus-visible { outline:2px solid var(--amber); outline-offset:3px; }
     a:focus-visible { outline:2px solid var(--amber); outline-offset:2px; border-radius:1px; }
     .nav-hamburger:focus-visible { outline:2px solid var(--amber); outline-offset:3px; }
-
     a:visited { color:var(--amber-text); }
     nav ul a:visited { color:rgba(245,240,232,1); }
     footer a:visited { color:rgba(245,240,232,0.35); }
-
-    [style*="background:var(--ink)"],
-    [style*="background: var(--ink)"],
-    nav,
-    footer { --amber-text: var(--amber); }
+    [style*="background:var(--ink)"], [style*="background: var(--ink)"], nav, footer { --amber-text: var(--amber); }
   </style>
 
   <!-- ── NAV v2: dropdown redesign ── -->
@@ -222,47 +206,24 @@
   #nav-menu { list-style:none; display:flex; align-items:center; gap:1.75rem; }
   #nav-menu > li { list-style:none; }
   .nav-has-dropdown { position:relative; }
-  .nav-dropdown-toggle {
-    background:none; border:none; font-family:'DM Mono',monospace; font-size:0.75rem;
-    font-weight:300; letter-spacing:0.12em; text-transform:uppercase;
-    color:rgba(245,240,232,1); cursor:pointer; display:flex; align-items:center;
-    gap:0.35em; padding:0; line-height:1; transition:color 0.2s; white-space:nowrap;
-  }
+  .nav-dropdown-toggle { background:none; border:none; font-family:'DM Mono',monospace; font-size:0.75rem; font-weight:300; letter-spacing:0.12em; text-transform:uppercase; color:rgba(245,240,232,1); cursor:pointer; display:flex; align-items:center; gap:0.35em; padding:0; line-height:1; transition:color 0.2s; white-space:nowrap; }
   .nav-dropdown-toggle:hover, .nav-has-dropdown:hover > .nav-dropdown-toggle { color:var(--amber-text); }
   li.nav-active > a { color:var(--amber-text) !important; }
   li.nav-active > .nav-dropdown-toggle { color:var(--amber-text) !important; }
-  .nav-chevron {
-    display:inline-block; width:0; height:0;
-    border-left:3.5px solid transparent; border-right:3.5px solid transparent;
-    border-top:4.5px solid currentColor; transition:transform 0.2s; flex-shrink:0; margin-top:1px;
-  }
+  .nav-chevron { display:inline-block; width:0; height:0; border-left:3.5px solid transparent; border-right:3.5px solid transparent; border-top:4.5px solid currentColor; transition:transform 0.2s; flex-shrink:0; margin-top:1px; }
   .nav-dropdown-toggle[aria-expanded="true"] .nav-chevron { transform:rotate(180deg); }
 
   @media (min-width:641px) {
-    .nav-dropdown {
-      position:absolute; top:calc(100% + 10px); left:50%; transform:translateX(-50%);
-      background:rgba(26,20,9,0.98); border:1px solid rgba(200,133,58,0.18); border-radius:3px;
-      padding:0.4rem 0; min-width:190px; list-style:none; margin:0;
-      opacity:0; pointer-events:none; transition:opacity 0.15s; z-index:200;
-      -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
-    }
+    .nav-dropdown { position:absolute; top:calc(100% + 10px); left:50%; transform:translateX(-50%); background:rgba(26,20,9,0.98); border:1px solid rgba(200,133,58,0.18); border-radius:3px; padding:0.4rem 0; min-width:190px; list-style:none; margin:0; opacity:0; pointer-events:none; transition:opacity 0.15s; z-index:200; -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px); }
     .nav-has-dropdown::after { content:''; position:absolute; top:100%; left:-8px; right:-8px; height:12px; }
     .nav-has-dropdown:hover .nav-dropdown, .nav-has-dropdown.is-open .nav-dropdown { opacity:1; pointer-events:auto; }
     .nav-dropdown li { list-style:none; }
-    .nav-dropdown a {
-      display:block; padding:0.45rem 1.2rem; font-family:'DM Mono',monospace; font-size:0.7rem;
-      letter-spacing:0.1em; text-transform:uppercase; color:rgba(245,240,232,0.7);
-      text-decoration:none; white-space:nowrap; transition:color 0.15s, background 0.15s;
-    }
+    .nav-dropdown a { display:block; padding:0.45rem 1.2rem; font-family:'DM Mono',monospace; font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(245,240,232,0.7); text-decoration:none; white-space:nowrap; transition:color 0.15s, background 0.15s; }
     .nav-dropdown a:hover { color:rgba(245,240,232,1); background:rgba(200,133,58,0.08); }
   }
 
   @media (max-width:640px) {
-    #nav-menu {
-      display:none; position:fixed; top:56px; left:0; right:0; bottom:0;
-      background:rgba(28,26,23,1); flex-direction:column; align-items:stretch;
-      justify-content:flex-start; gap:0; z-index:300; overflow-y:auto; padding:0.75rem 0 2.5rem;
-    }
+    #nav-menu { display:none; position:fixed; top:56px; left:0; right:0; bottom:0; background:rgba(28,26,23,1); flex-direction:column; align-items:stretch; justify-content:flex-start; gap:0; z-index:300; overflow-y:auto; padding:0.75rem 0 2.5rem; }
     #nav-menu.nav-open { display:flex; }
     #nav-menu > li { width:100%; text-align:center; }
     #nav-menu > li > a { display:block; padding:0.9rem 2rem; font-size:1.1rem !important; letter-spacing:0.12em; color:rgba(245,240,232,1) !important; font-weight:400 !important; }
@@ -326,20 +287,20 @@
 <header class="article-hero">
   <div class="article-eyebrow">Restoration No. 12</div>
   <h1 class="article-title">RCA Victor<br>9-X-651</h1>
-  <p class="article-subtitle">The radio that became the Memory Palace</p>
+  <p class="article-subtitle">The radio that became a computer</p>
   <div class="article-meta">
-    <span>&#128205; Seattle, WA</span>
-    <span>&#128197; May 2026</span>
-    <span>&#128247; Full Documentation</span>
-    <span>&#128266; Now Playing</span>
+    <span>&#128205; West Seattle</span>
+    <span>&#128197; 1950</span>
+    <span>&#129695; Bakelite</span>
+    <span>&#128187; Silicon Heart</span>
   </div>
 </header>
 
 <div class="stats-bar" role="region" aria-label="Project at a glance">
-  <div class="stat-item"><span class="stat-value">~1950</span><span class="stat-label">Vintage</span></div>
-  <div class="stat-item"><span class="stat-value">AM</span><span class="stat-label">Receives</span></div>
-  <div class="stat-item"><span class="stat-value">Gutted</span><span class="stat-label">Interior</span></div>
-  <div class="stat-item"><span class="stat-value">Works</span><span class="stat-label">Status</span></div>
+  <div class="stat-item"><span class="stat-value">1950</span><span class="stat-label">Vintage</span></div>
+  <div class="stat-item"><span class="stat-value">Bakelite</span><span class="stat-label">Cabinet</span></div>
+  <div class="stat-item"><span class="stat-value">RPi&nbsp;5</span><span class="stat-label">New Heart</span></div>
+  <div class="stat-item"><span class="stat-value">20TB</span><span class="stat-label">NAS Storage</span></div>
 </div>
 
 <main id="main-content">
@@ -351,8 +312,8 @@
     <span style="font-family:var(--mono);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);">&#9203; 10 min read</span>
     <div style="display:flex;align-items:center;gap:0.75rem;">
       <span style="font-family:var(--mono);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);">Share:</span>
-      <a href="https://twitter.com/intent/tweet?url=https://thetoddmark.com/rca-victor-9x651-memorypalace&text=RCA+Victor+9-X-651+Radio+Restoration+%7C+The+Todd%C2%B7Mark&via=thetoddmark" target="_blank" rel="noopener noreferrer" style="font-family:var(--mono);font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber-text);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.3);padding-bottom:1px;" aria-label="Share on X / Twitter">X&nbsp;/&nbsp;Twitter</a>
-      <a href="https://www.reddit.com/submit?url=https://thetoddmark.com/rca-victor-9x651-memorypalace&title=RCA+Victor+9-X-651+Radio+Restoration" target="_blank" rel="noopener noreferrer" style="font-family:var(--mono);font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber-text);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.3);padding-bottom:1px;" aria-label="Share on Reddit">Reddit</a>
+      <a href="https://twitter.com/intent/tweet?url=https://thetoddmark.com/rca-victor-9x651-memorypalace&text=RCA+Victor+9-X-651+%E2%80%94+The+Radio+That+Became+a+Computer+%7C+The+Todd%C2%B7Mark&via=thetoddmark" target="_blank" rel="noopener noreferrer" style="font-family:var(--mono);font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber-text);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.3);padding-bottom:1px;" aria-label="Share on X / Twitter">X&nbsp;/&nbsp;Twitter</a>
+      <a href="https://www.reddit.com/submit?url=https://thetoddmark.com/rca-victor-9x651-memorypalace&title=RCA+Victor+9-X-651+%E2%80%94+The+Radio+That+Became+a+Computer" target="_blank" rel="noopener noreferrer" style="font-family:var(--mono);font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber-text);text-decoration:none;border-bottom:1px solid rgba(200,133,58,0.3);padding-bottom:1px;" aria-label="Share on Reddit">Reddit</a>
       <button onclick="navigator.clipboard.writeText('https://thetoddmark.com/rca-victor-9x651-memorypalace').then(()=>{this.textContent='Copied!';setTimeout(()=>{this.textContent='Copy Link'},1800)})" style="font-family:var(--mono);font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber-text);background:none;border:none;border-bottom:1px solid rgba(200,133,58,0.3);padding:0 0 1px;cursor:pointer;" aria-label="Copy link to clipboard">Copy Link</button>
     </div>
   </div>
@@ -360,106 +321,141 @@
   <!-- 01 THE OBJECT -->
   <section class="article-section" aria-labelledby="s1-title">
     <span class="section-label"><span class="section-num">01 /</span> The Object</span>
-    <h2 class="section-title" id="s1-title">A tabletop radio from 1950. It used to pull in broadcasts from across the continent.</h2>
+    <h2 class="section-title" id="s1-title">A 1950 RCA Victor 9-X-651. Brown Bakelite cabinet, three knobs, AM and shortwave bands.</h2>
 
-    <p>The RCA Victor 9-X-651 is a five-tube AM superheterodyne table radio produced in the early 1950s. It's a small set by the standards of the era — compact enough to sit on a nightstand or kitchen shelf, big enough that the speaker actually has something to say. The cabinet is dark phenolic plastic, molded into that rounded postwar shape that looks halfway between Streamline Moderne and a loaf of bread. The dial is a half-moon of amber and ivory, lit from behind, with the station frequencies arranged around the arc in that particular mid-century font that somehow still feels current.</p>
+    <p>Serial number B 003994. Roughly the size of a shoebox. Built by the Radio Corporation of America at the height of their postwar consumer electronics dominance, when RCA was the kind of company that made you feel like the future was already here.</p>
 
-    <p>RCA knew what they were doing in 1950. The brand was at its peak — they made the televisions, the record players, the radios. The 9-X-651 wasn't their flagship model. It was the one that sold to everyone else. The one that ended up in the kitchen. The one that played the game on Sunday and the news at six. The one that got handed down and eventually forgotten in a box in someone's garage, waiting.</p>
+    <p>It came to me via Spade and Archer &#8212; a Portland prop house and antique dealer &#8212; with their sticker still on the bottom. Before that: unknown. Seventy-five years of kitchens, living rooms, garages. Whoever owned it last put felt pads on the feet and kept it around long enough that someone thought it was worth selling.</p>
+
+    <p>I thought it was worth something too. Just not what it used to be.</p>
 
     <figure style="margin:2rem 0;">
-      <img src="/images/rca-victor-9x651/02_before_hero.jpeg" alt="RCA Victor 9-X-651 table radio before restoration - dark phenolic cabinet with oversprayed finish" loading="eager" fetchpriority="high" style="width:100%;height:auto;border-radius:4px;display:block;">
-      <figcaption>Before — the cabinet had been oversprayed at some point, muting the original finish. The dial still legible. The body still solid.</figcaption>
+      <img src="/images/rca-victor-9x651/02_before_hero.jpeg" alt="RCA Victor 9-X-651 table radio before restoration - brown Bakelite cabinet with Spade and Archer sticker on base" loading="eager" fetchpriority="high" style="width:100%;height:auto;border-radius:4px;display:block;">
+      <figcaption>Before &#8212; the Spade and Archer sticker still on the bottom. Seventy-five years of kitchens and living rooms.</figcaption>
     </figure>
 
     <div class="photo-row">
       <figure>
-        <img src="/images/rca-victor-9x651/03_before_dial_detail.jpeg" alt="RCA Victor 9-X-651 dial detail before restoration - amber and ivory station frequency arc" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;">
-        <figcaption>The dial — station frequencies in that particular mid-century font. Lit from behind, it still had presence under the grime.</figcaption>
+        <img src="/images/rca-victor-9x651/03_before_dial_detail.jpeg" alt="RCA Victor 9-X-651 dial detail before restoration - original AM and shortwave frequency markings" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;">
+        <figcaption>The dial &#8212; AM and shortwave bands, original RCA Victor graphics. Still legible. Still intact.</figcaption>
       </figure>
       <figure>
-        <img src="/images/rca-victor-9x651/04_before_interior.jpeg" alt="RCA Victor 9-X-651 interior before restoration - original tube chassis and components" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;">
-        <figcaption>Inside — the original tube chassis. Decades of dust, dried capacitors, and wiring that had seen better years.</figcaption>
+        <img src="/images/rca-victor-9x651/04_before_interior.jpeg" alt="RCA Victor 9-X-651 interior before restoration - original tube chassis" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;">
+        <figcaption>Inside &#8212; the original tube chassis. Old capacitors, older wiring. Not coming back.</figcaption>
       </figure>
     </div>
   </section>
 
-  <!-- 02 THE FIND -->
+  <!-- 02 THE STORY -->
   <section class="article-section" aria-labelledby="s2-title">
-    <span class="section-label"><span class="section-num">02 /</span> The Find</span>
-    <h2 class="section-title" id="s2-title">It had been painted. Someone, at some point, decided that was a good idea.</h2>
+    <span class="section-label"><span class="section-num">02 /</span> The Story</span>
+    <h2 class="section-title" id="s2-title">The 9-X-651 is one of the most common Bakelite radios ever produced. Collectors will tell you that with a slight wince.</h2>
 
-    <p>The cabinet had been oversprayed — not badly, not dramatically, but enough that you could tell immediately something was off. The original phenolic had a depth to it, a warmth in the dark plastic that overspray flattens into something dull and uneven. From a distance the radio looked fine. Up close, you could see the texture was wrong, the color too uniform, the surface too matte where it should have had that particular mid-century sheen.</p>
+    <p>It means low desirability, modest value, abundant supply. You can find them at every estate sale in America.</p>
 
-    <p>Inside was the more interesting story. The original tube chassis was intact — all five positions occupied — but the capacitors were the kind that made you want to replace them on principle alone. Vintage paper and electrolytic caps don't age gracefully. They dry out, shift value, fail in ways that can take a speaker with them. The kind of thing that works fine until it absolutely doesn't.</p>
+    <p>I find that comforting rather than discouraging. It means this radio was in a lot of homes. It meant something to a lot of people. The shortwave band alone tells you something &#8212; in 1950, being able to pull in a signal from across the world felt like a miracle. This little brown box sat on a counter somewhere and made the world feel smaller.</p>
+
+    <p>It doesn&#8217;t do that anymore. The capacitors are shot, the tubes are old, and I&#8217;m not an electronics restorer. What I am is someone who thinks old objects deserve a second life that matches what they actually are &#8212; not a museum piece, not a prop, not a conversation starter that sits gathering dust.</p>
 
     <div class="pull-quote">
-      <p>"The cabinet had been painted. The electronics had been left alone. Someone cared about how it looked but not what it did."</p>
+      <p>&#8220;Not a museum piece, not a prop, not a conversation starter that sits gathering dust. So I gave it a job.&#8221;</p>
     </div>
 
-    <p>The dial was the saving grace. It had survived the overspray largely intact — the original escutcheon still crisp, the frequency markings legible, the amber tint of the lens still doing its job. In a restoration like this, that matters. The dial is the face of the radio. If it's gone, it's a different project entirely.</p>
+    <p>So I gave it a job.</p>
   </section>
 
   <!-- 03 THE PROCESS -->
   <section class="article-section" aria-labelledby="s3-title">
     <span class="section-label"><span class="section-num">03 /</span> The Process</span>
-    <h2 class="section-title" id="s3-title">Cabinet first. Then the guts. In that order, for good reason.</h2>
+    <h2 class="section-title" id="s3-title">Not restoration. Transformation.</h2>
 
-    <p>The overspray came off with patience and the right solvent. The original phenolic underneath was in solid shape — the surface had been protected by whatever they'd put over it, which is one of the few things in this project's favor. Working methodically around the cabinet, taking care around the dial escutcheon and the speaker grille cloth, the original finish came back.</p>
+    <p>I had a reference image in mind before I started &#8212; a period-correct RCA Victor in a similar cabinet with ivory grille slats and brass knobs. Not original. Not historically accurate. But a considered, intentional aesthetic that honors the object&#8217;s design language while making it clearly something new.</p>
 
-    <p>Then the interior.</p>
+    <p>That&#8217;s the line I try to walk.</p>
 
-    <figure style="margin:2rem 0;">
-      <img src="/images/rca-victor-9x651/06_during_gutted.jpeg" alt="RCA Victor 9-X-651 interior gutted during restoration - empty chassis ready for new components" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;">
-      <figcaption>Gutted — the old chassis cleared out and ready. The speaker baffle and cabinet structure sound, which was the important thing.</figcaption>
-    </figure>
+    <h2 class="section-title" style="font-size:1.4rem;margin-top:0;margin-bottom:1rem;">Disassembly</h2>
 
-    <p>The old components came out. All of them. When you're dealing with a radio this age, doing a partial recap is a gamble — you fix what you can see and leave problems waiting. The right call is to go all the way: clear the chassis, document what was there, and rebuild with modern equivalents that will actually hold their values for another generation.</p>
+    <p>Chassis out, knobs pulled, back panel off. The Bakelite cabinet is what I was after &#8212; the electronics were never coming back. Photographed everything before touching it: the grimy front face, the original label on the bottom, the Spade and Archer sticker. Those before shots matter.</p>
 
     <figure style="margin:2rem 0;">
-      <img src="/images/rca-victor-9x651/07_during_new_guts.jpeg" alt="RCA Victor 9-X-651 new components installed during restoration - rebuilt chassis with modern capacitors" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;">
-      <figcaption>New guts in — modern capacitors to spec, wiring cleaned up. The chassis ready to go back into the cabinet.</figcaption>
+      <img src="/images/rca-victor-9x651/06_during_gutted.jpeg" alt="RCA Victor 9-X-651 gutted during transformation - empty Bakelite cabinet ready for new electronics" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;">
+      <figcaption>Gutted &#8212; the original chassis out, the cabinet empty. The Bakelite structure is what we&#8217;re working with now.</figcaption>
     </figure>
+
+    <h2 class="section-title" style="font-size:1.4rem;margin-top:2.5rem;margin-bottom:1rem;">Bakelite Cleaning and Polish</h2>
+
+    <p>The cabinet was oxidized, hazy, and carrying decades of grime in every groove. The process here is straightforward but requires patience:</p>
+
+    <ul class="process-list">
+      <li><strong>Wash first.</strong> Warm water, mild dish soap, soft cloth. Get the surface grime off before you do anything else. Let it dry completely.</li>
+      <li><strong>Polish.</strong> Flitz &#8212; a metal and plastic polish that&#8217;s gentle enough for Bakelite&#8217;s thin surface layer. Applied with a soft cloth, worked in sections, buffed off. The brown residue that comes off on the rag is tobacco tar and oxidation. It&#8217;s satisfying in a gross way.</li>
+      <li><strong>Protect.</strong> Renaissance Wax as the final step on anything I want to stay polished without attracting dust. Thin coat, buff to a shine. Done.</li>
+    </ul>
+
+    <p>The Bakelite came back. Deep chocolate brown, light catching the chamfered edges. Worth the time.</p>
+
+    <h2 class="section-title" style="font-size:1.4rem;margin-top:2.5rem;margin-bottom:1rem;">Grille Slats &#8212; Heirloom White</h2>
+
+    <p>This is the transformation step. The original grille slats are the same dark brown as the rest of the cabinet. The reference aesthetic called for ivory &#8212; warm, not stark white &#8212; against that dark Bakelite.</p>
 
     <div class="photo-row">
       <figure>
-        <img src="/images/rca-victor-9x651/08_during_oversprayed.jpeg" alt="RCA Victor 9-X-651 cabinet during overspray removal process" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;">
-        <figcaption>The overspray — you can see where it sits on the surface, the texture wrong against the original plastic underneath.</figcaption>
+        <img src="/images/rca-victor-9x651/08_during_oversprayed.jpeg" alt="RCA Victor 9-X-651 grille slats being painted Heirloom White during transformation" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;">
+        <figcaption>Masking done, Heirloom White going on &#8212; three coats, satin finish.</figcaption>
       </figure>
       <figure>
-        <img src="/images/rca-victor-9x651/09_during_cleaned.jpeg" alt="RCA Victor 9-X-651 cabinet after cleaning - original phenolic finish restored" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;">
-        <figcaption>Cleaned back — the original phenolic surface coming through. Warmer, deeper, the way it was supposed to look.</figcaption>
+        <img src="/images/rca-victor-9x651/09_during_cleaned.jpeg" alt="RCA Victor 9-X-651 during cleanup after painting grille slats" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;">
+        <figcaption>Post-paint cleanup &#8212; toothpick along the gap floors, cotton swab with mineral spirits for the stubborn spots.</figcaption>
       </figure>
     </div>
+
+    <p>Blue painter&#8217;s tape over every surface except the slat faces &#8212; pressed firmly into edges, especially around the knob openings at the bottom. Rust-Oleum Painter&#8217;s Touch 2X in Heirloom White, Satin. Satin because the polished Bakelite body has a natural semi-gloss &#8212; flat paint would look chalky against it, gloss would look cheap. Satin reads as intentional.</p>
+
+    <p>Three coats: a dust coat first, then two light coats with 10 minutes between each. Tape pulled at 25 minutes while still slightly tacky &#8212; pulling fully cured paint tears the edge. Some bleed into the gaps between slats. Toothpick along the gap floors once fully cured, then a cotton swab with mineral spirits for stubborn spots. The Flitz pass on the Bakelite body handled the rest.</p>
+
+    <h2 class="section-title" style="font-size:1.4rem;margin-top:2.5rem;margin-bottom:1rem;">Knobs</h2>
+
+    <p>The original brown Bakelite knobs were replaced with gold aluminum knurled knobs &#8212; the kind you&#8217;d find on audio equipment or guitar amplifiers. Three of them, same size, set-screw fit over the original D-shafts.</p>
+
+    <p>The effect is exactly right. Warm gold against ivory against dark chocolate. It reads as mid-century without pretending to be something it isn&#8217;t.</p>
+
+    <h2 class="section-title" style="font-size:1.4rem;margin-top:2.5rem;margin-bottom:1rem;">The New Life &#8212; MemoryPalace</h2>
+
+    <p>The chassis that came out was replaced with something different: my MemoryPalace NAS &#8212; a Raspberry Pi 5 with a 20TB hard drive and 500GB SSD, running as my home Time Machine backup system.</p>
+
+    <p>The radio that once pulled shortwave signals from across the world now quietly backs up every photo, document, and project file on the network. It runs a FastAPI dashboard and sends alerts via ntfy when something needs attention.</p>
+
+    <p>The dial face &#8212; original RCA Victor graphics, AM and shortwave bands still legible &#8212; sits behind the original glass. The knobs don&#8217;t do anything. The whole thing is a shell around a small computer doing useful work.</p>
+
+    <div class="pull-quote">
+      <p>&#8220;The radio that once pulled shortwave signals from across the world now quietly backs up every photo on the network.&#8221;</p>
+    </div>
+
+    <p>I like that. A lot.</p>
   </section>
 
   <!-- 04 AFTER PHOTOS -->
   <section class="article-section" aria-labelledby="s4-title">
     <span class="section-label"><span class="section-num">04 /</span> After Photos</span>
-    <h2 class="section-title" id="s4-title">The dial glows the way it should. The speaker sounds the way it should.</h2>
+    <h2 class="section-title" id="s4-title">Deep Bakelite. Ivory slats. Gold knobs. A Raspberry Pi behind the glass.</h2>
 
     <figure style="margin:2rem 0;">
-      <img src="/images/rca-victor-9x651/01_after_hero.jpeg" alt="RCA Victor 9-X-651 after restoration - dark phenolic cabinet with restored finish and glowing amber dial" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;">
-      <figcaption>After — the cabinet surface restored, the dial lit. The radio sitting where it belongs.</figcaption>
+      <img src="/images/rca-victor-9x651/01_after_hero.jpeg" alt="RCA Victor 9-X-651 after transformation - polished dark Bakelite cabinet, ivory grille slats, gold aluminum knobs" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;">
+      <figcaption>After &#8212; the Bakelite deep and glossy, the slats clean, the knobs catching the light. The original dial still visible behind the glass.</figcaption>
     </figure>
 
     <figure style="margin:2rem 0;">
-      <img src="/images/rca-victor-9x651/12_after_detail.jpeg" alt="RCA Victor 9-X-651 detail shot after restoration - cabinet surface texture and dial escutcheon" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;">
-      <figcaption>Detail — the phenolic surface with its original depth back. This is what it was supposed to look like when it left the factory in 1950.</figcaption>
+      <img src="/images/rca-victor-9x651/12_after_detail.jpeg" alt="RCA Victor 9-X-651 detail after transformation - gold knurled knobs against ivory slats and dark Bakelite" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;">
+      <figcaption>Detail &#8212; warm gold against ivory against dark chocolate. Reads as mid-century without pretending to be original.</figcaption>
     </figure>
 
-    <!-- YouTube video embed -->
-    <!-- ============================================================
-         YOUTUBE EMBED — add the video URL here when ready
-         Replace the src below with your YouTube embed URL, e.g.:
-           src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-         ============================================================ -->
-    <!--
+    <!-- YouTube video -->
     <div style="margin:2.5rem 0;">
       <div style="font-family:var(--mono);font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--amber-text);margin-bottom:0.75rem;">Video</div>
       <div style="position:relative;padding-top:56.25%;border-radius:4px;overflow:hidden;background:#141210;">
         <iframe
-          src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE"
-          title="RCA Victor 9-X-651 Radio Restoration"
+          src="https://www.youtube.com/embed/oGUxhAfUX6k"
+          title="RCA Victor 9-X-651 — The Radio That Became a Computer"
           style="position:absolute;inset:0;width:100%;height:100%;border:0;"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
@@ -467,30 +463,32 @@
         </iframe>
       </div>
     </div>
-    -->
   </section>
 
   <!-- 05 THE VERDICT -->
   <section class="article-section" aria-labelledby="s5-title">
     <span class="section-label"><span class="section-num">05 /</span> The Outcome</span>
-    <h2 class="section-title" id="s5-title">Seventy-five years old. Still pulling stations. Still worth listening to.</h2>
+    <h2 class="section-title" id="s5-title">Seventy-five years old. Bakelite shell. Silicon heart. Still doing its job.</h2>
 
-    <p>The 9-X-651 is sitting in the house now. It's not hidden away as a display piece — it's plugged in, the dial lit, the speaker doing what speakers are for. When I turn it on, it warms up in that tube-radio way where the sound comes in gradually, which is either charming or inconvenient depending on how patient you are. I find it charming.</p>
+    <p>The 9-X-651 is sitting on a shelf in my home office. It looks like what it is: an old radio that got a second opinion.</p>
 
-    <p>I called it the Memory Palace because that's what these radios are. Every station it can pull in was also being pulled in somewhere in 1950 — the same frequencies, different broadcasts, different listeners. There's something worth thinking about in that. Not in a precious way. Just in the way that good objects make you consider the distance between then and now.</p>
+    <p>The Bakelite is deep and glossy. The slats are clean. The knobs catch the light. Behind the glass, the original dial still says RCA Victor, still shows 55 through 160 on the AM band and the shortwave frequencies nobody tunes to anymore.</p>
+
+    <p>Nobody has to know there&#8217;s a Raspberry Pi inside. But I know.</p>
 
     <div class="verdict-box">
       <h3>The Honest Take</h3>
-      <p>The cabinet work was the part that required the most care. The overspray removal needed patience and the right approach — too aggressive and you risk the original surface, too timid and you don't actually fix it. Taking it slow and working in sections paid off. The original phenolic underneath was worth recovering.</p>
-      <p style="margin-top:1rem;">Going all the way on the electronics was the right call. A partial recap on a radio this age is a deferred problem. The new components will hold spec for decades. The tubes test well and they're staying — they're part of what makes this thing sound the way it sounds. A solid-state swap would have been faster, but that's a different radio.</p>
+      <p>The Bakelite cleaning is the most satisfying part of a project like this &#8212; the transformation from dull, grime-covered plastic to something with actual depth and warmth is immediate and dramatic. Flitz does the work. Patience does the rest.</p>
+      <p style="margin-top:1rem;">The grille slat paint is the detail that makes this. Satin Heirloom White against polished dark Bakelite is a combination that looks considered without looking precious. The tape work and cleanup add time but the edge quality is the difference between something that looks intentional and something that looks like a project.</p>
+      <p style="margin-top:1rem;">The Raspberry Pi installation is the part people ask about. The short answer: it fits, it runs cool, and it&#8217;s been solid. The longer answer is its own write-up.</p>
       <div class="verdict-row">
         <div class="verdict-stat">
-          <span class="verdict-stat-value">~75</span>
-          <span class="verdict-stat-label">Years Old</span>
+          <span class="verdict-stat-value">&#8217;50</span>
+          <span class="verdict-stat-label">Vintage</span>
         </div>
         <div class="verdict-stat">
-          <span class="verdict-stat-value">Full</span>
-          <span class="verdict-stat-label">Recap</span>
+          <span class="verdict-stat-value">20TB</span>
+          <span class="verdict-stat-label">NAS Storage</span>
         </div>
         <div class="verdict-stat">
           <span class="verdict-stat-value">Yes</span>
@@ -504,35 +502,35 @@
   <section class="article-section" aria-labelledby="s6-title">
     <span class="section-label"><span class="section-num">06 /</span> Supplies Used</span>
     <h2 class="section-title" id="s6-title">What I Used</h2>
-    <p style="font-family:var(--mono);font-size:0.75rem;letter-spacing:0.06em;color:var(--ink-faint);margin-bottom:0.5rem;">As an Amazon Associate I earn from qualifying purchases. Some links below are affiliate links — I earn a small commission if you buy through them, at no extra cost to you. I only list what I actually used.</p>
+    <p style="font-family:var(--mono);font-size:0.75rem;letter-spacing:0.06em;color:var(--ink-faint);margin-bottom:0.5rem;">As an Amazon Associate I earn from qualifying purchases. Some links below are affiliate links &#8212; I earn a small commission if you buy through them, at no extra cost to you. I only list what I actually used.</p>
     <ul class="supplies-list" aria-label="Supplies used in this restoration">
       <li>
-        <span class="supply-name"><a href="https://www.amazon.com/s?k=deoxit+d5+contact+cleaner&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(28,26,23,0.2);">DeoxIT D5 Contact Cleaner</a></span>
-        <span class="supply-note">For the tube sockets and switch contacts. Apply, work it in, wipe back. Standard first step on any vintage electronic restoration.</span>
-      </li>
-      <li>
-        <span class="supply-name">Electrolytic Capacitors (to spec)</span>
-        <span class="supply-note">Full recap — all original electrolytics replaced with modern equivalents matched to the original values. Not a shortcut, but the right call on a radio this age.</span>
-      </li>
-      <li>
-        <span class="supply-name">Film Capacitors (coupling and bypass)</span>
-        <span class="supply-note">Original paper caps replaced with modern polyester film equivalents. Better stability, no moisture absorption, will outlast the chassis.</span>
-      </li>
-      <li>
-        <span class="supply-name"><a href="https://www.amazon.com/s?k=novus+plastic+polish&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(28,26,23,0.2);">Novus Plastic Polish</a></span>
-        <span class="supply-note">For the phenolic cabinet after the overspray was removed. Works on most vintage plastics without hazing — this is my go-to for Bakelite and similar materials.</span>
-      </li>
-      <li>
-        <span class="supply-name">Isopropyl Alcohol (90%+)</span>
-        <span class="supply-note">For cleaning the chassis and components before work started. Get the highest percentage you can find — anything below 90% has too much water content for electronics work.</span>
+        <span class="supply-name"><a href="https://www.amazon.com/s?k=flitz+metal+plastic+polish&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(28,26,23,0.2);">Flitz Metal &amp; Plastic Polish</a></span>
+        <span class="supply-note">For the entire Bakelite cabinet. Applied with a soft cloth, worked in sections, buffed off. The brown residue that comes off on the rag is tobacco tar and oxidation. Satisfying in a gross way.</span>
       </li>
       <li>
         <span class="supply-name"><a href="https://www.amazon.com/s?k=renaissance+wax&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(28,26,23,0.2);">Renaissance Wax</a></span>
-        <span class="supply-note">Thin coat over the cabinet as a final seal. Protects the restored phenolic surface without looking artificial. Same product, same result as on every other piece I've used it on.</span>
+        <span class="supply-note">Final step on the Bakelite body. Thin coat, buff to a shine. Protects the polish without attracting dust or looking artificial. Same product, same result, every time.</span>
       </li>
       <li>
-        <span class="supply-name">Solder + Rosin Flux</span>
-        <span class="supply-note">60/40 for the component work. Fresh solder on old joints makes a measurable difference — the cold joints on a radio this age are worth reflowing even where they're not failing yet.</span>
+        <span class="supply-name"><a href="https://www.amazon.com/s?k=rust+oleum+painter%27s+touch+heirloom+white+satin&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(28,26,23,0.2);">Rust-Oleum Painter&#8217;s Touch 2X &#8212; Heirloom White, Satin</a></span>
+        <span class="supply-note">For the grille slats. Satin specifically &#8212; flat would look chalky against the polished Bakelite, gloss would look cheap. Three coats: dust coat, then two light coats 10 minutes apart.</span>
+      </li>
+      <li>
+        <span class="supply-name">Blue Painter&#8217;s Tape</span>
+        <span class="supply-note">Mask every surface except the slat faces. Press firmly into edges and around knob openings. Pull at 25 minutes while still slightly tacky &#8212; fully cured paint tears the edge.</span>
+      </li>
+      <li>
+        <span class="supply-name">Toothpick (yes, really)</span>
+        <span class="supply-note">Along the gap floors between slats once the paint is fully cured. Followed by a cotton swab with mineral spirits for stubborn bleed spots. The detail work that makes the difference.</span>
+      </li>
+      <li>
+        <span class="supply-name"><a href="https://www.amazon.com/s?k=gold+aluminum+knurled+knobs+D+shaft&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(28,26,23,0.2);">Gold Aluminum Knurled Knobs</a></span>
+        <span class="supply-note">Set-screw fit over the original D-shafts. Three of them, same size. Warm gold against ivory against dark chocolate &#8212; the combination that makes the whole thing work.</span>
+      </li>
+      <li>
+        <span class="supply-name"><a href="https://www.amazon.com/s?k=raspberry+pi+5&tag=thetoddmark-20" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(28,26,23,0.2);">Raspberry Pi 5</a></span>
+        <span class="supply-note">The new heart. Running a 20TB hard drive and 500GB SSD as a home NAS and Time Machine backup server. FastAPI dashboard, ntfy alerts. The radio that once pulled shortwave signals now backs up the network.</span>
       </li>
     </ul>
   </section>
@@ -540,7 +538,7 @@
   <!-- inline newsletter -->
   <div style="margin-top:3rem;padding:2rem;background:var(--warm-white);border:1px solid var(--border);border-radius:4px;">
     <div style="font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--amber-text);margin-bottom:0.6rem;">The Newsletter</div>
-    <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--ink);margin:0 0 1.25rem;line-height:1.5;">When the next one's done, I'll write that up too. Subscribe and it lands in your inbox — no schedule, just the story.</p>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--ink);margin:0 0 1.25rem;line-height:1.5;">When the next one&#8217;s done, I&#8217;ll write that up too. Subscribe and it lands in your inbox &#8212; no schedule, just the story.</p>
     <form action="https://buttondown.com/api/emails/embed-subscribe/TheToddMark" method="post" class="embeddable-buttondown-form" style="display:flex;gap:0.5rem;flex-wrap:wrap;">
       <label for="inline-nl-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Email address</label>
       <input type="email" name="email" id="inline-nl-email" placeholder="your@email.com" required aria-required="true" style="flex:1;min-width:160px;padding:0.6rem 1rem;border-radius:2rem;border:1px solid var(--border);background:var(--cream);color:var(--ink);font-family:inherit;font-size:0.85rem;outline:none;" />
@@ -567,7 +565,7 @@
       <a class="next-work-card" href="/restoration-homart-brass-flashlight" style="display:flex;gap:1.5rem;align-items:flex-start;text-decoration:none;padding:1.5rem;background:var(--warm-white);border:1px solid var(--border);border-radius:4px;transition:border-color 0.2s;">
         <div style="flex:1;">
           <div style="font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--amber-text);margin-bottom:0.4rem;">Restoration No. 11 &middot; Brass Flashlight</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--ink);line-height:1.25;margin-bottom:0.5rem;">HOMART Brass Flashlight — 1930s Sears Relic</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--ink);line-height:1.25;margin-bottom:0.5rem;">HOMART Brass Flashlight &#8212; 1930s Sears Relic</div>
           <div style="font-size:0.9rem;color:var(--ink-faint);line-height:1.6;">A patent-stamped Sears brass flashlight from 1930. Flitz, DeoxIT, and a Cree LED drop-in. 90 years old and still throwing light.</div>
         </div>
         <div style="font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.1em;color:var(--amber-text);white-space:nowrap;margin-top:0.25rem;">Read &#8594;</div>
@@ -575,7 +573,7 @@
       <a class="next-work-card" href="/wagner-electrolysis" style="display:flex;gap:1.5rem;align-items:flex-start;text-decoration:none;padding:1.5rem;background:var(--warm-white);border:1px solid var(--border);border-radius:4px;transition:border-color 0.2s;">
         <div style="flex:1;">
           <div style="font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--amber-text);margin-bottom:0.4rem;">Restoration No. 10 &middot; Cast Iron</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--ink);line-height:1.25;margin-bottom:0.5rem;">Wagner Ware Sidney-O — Electrolysis Restoration</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--ink);line-height:1.25;margin-bottom:0.5rem;">Wagner Ware Sidney-O &#8212; Electrolysis Restoration</div>
           <div style="font-size:0.9rem;color:var(--ink-faint);line-height:1.6;">A #8 skillet and #9 round griddle rescued from a Puyallup junk fair for $45. Electrolysis, Easy-Off, and six seasoning sessions.</div>
         </div>
         <div style="font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.1em;color:var(--amber-text);white-space:nowrap;margin-top:0.25rem;">Read &#8594;</div>
@@ -695,12 +693,12 @@
   .lb-caption { margin-top:0.75rem; font-family:'DM Mono',monospace; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(245,240,232,0.55); text-align:center; max-width:640px; line-height:1.6; min-height:1.2em; }
   .lb-counter { font-family:'DM Mono',monospace; font-size:0.75rem; letter-spacing:0.15em; color:rgba(200,133,58,0.65); margin-top:0.35rem; text-align:center; }
   .lb-close { position:fixed; top:1.25rem; right:1.5rem; background:none; border:none; color:rgba(245,240,232,0.5); font-size:1.5rem; line-height:1; cursor:pointer; padding:0.35rem 0.6rem; transition:color 0.2s; z-index:1001; font-family:sans-serif; }
-  .lb-close:hover { color:#c8853a; outline:none; }
+  .lb-close:hover { color:#c8853a; }
   .lb-close:focus-visible { color:#c8853a; outline:2px solid rgba(200,133,58,0.8); outline-offset:4px; }
   .lb-prev, .lb-next { position:fixed; top:50%; transform:translateY(-50%); background:none; border:none; color:rgba(245,240,232,0.60); font-size:2.5rem; line-height:1; cursor:pointer; padding:1rem 0.9rem; transition:color 0.2s; z-index:1001; user-select:none; font-family:sans-serif; }
   .lb-prev { left:0.75rem; }
   .lb-next { right:0.75rem; }
-  .lb-prev:hover, .lb-next:hover { color:#c8853a; outline:none; }
+  .lb-prev:hover, .lb-next:hover { color:#c8853a; }
   .lb-prev:focus-visible, .lb-next:focus-visible { color:#c8853a; outline:2px solid rgba(200,133,58,0.8); outline-offset:4px; }
   .lb-nav-hidden { visibility:hidden; pointer-events:none; }
   .article-body img { cursor:zoom-in; }
