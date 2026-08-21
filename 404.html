@@ -80,16 +80,14 @@
     .footer-links { padding: 0.75rem 1.5rem; gap: 0.4rem 1.25rem; }
   }
 
-  @media (prefers-reduced-motion: no-preference) {
-  }
+  
 
   /* 5 — position: -webkit-sticky; position: sticky vendor prefix (older WebKit) */
-  .lightbox-content::after {
-    position: -webkit-sticky; position: sticky;
-  }
+
+
+
 
   /* 6 — -webkit-overflow-scrolling for iOS momentum scroll */
-  .lightbox-content,
   [style*="overflow-y: auto"],
   [style*="overflow: auto"] {
     -webkit-overflow-scrolling: touch;
@@ -177,9 +175,9 @@
     min-height: calc(var(--vh, 1vh) * 100);                       /* baseline */
     min-height: 100dvh;                      /* dynamic viewport height (Chrome 108+, Safari 15.4+, FF 101+) */
   }
-  .lightbox {
-    inset: 0;                                /* already uses inset — see below */
-  }
+
+
+
 
   /* 13 — inset shorthand fallback (Safari < 14.1, Firefox < 87) */
   /* inset:0 = top:0;right:0;bottom:0;left:0 */
@@ -188,10 +186,10 @@
     top: 0; right: 0; bottom: 0; left: 0;   /* fallback */
     inset: 0;                                /* modern */
   }
-  .lightbox {
-    top: 0; right: 0; bottom: 0; left: 0;   /* fallback */
-    inset: 0;                                /* modern */
-  }
+
+
+
+
   .card-overlay {
     top: 0; right: 0; bottom: 0; left: 0;   /* fallback */
     inset: 0;                                /* modern */
@@ -250,8 +248,7 @@
   [role="button"],
   .nav-hamburger,
   .gallery-card,
-  .back-to-top,
-  .lightbox-close {
+  .back-to-top{
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
@@ -285,8 +282,7 @@
 
   /* 24 — Samsung Internet / older Android: ensure border-radius on overflow */
   .hero-visual,
-  .about-img-frame,
-  .lightbox-inner {
+  .about-img-frame{
     -webkit-mask-image: -webkit-radial-gradient(white, black);
     isolation: isolate;
   }
@@ -637,35 +633,6 @@
 
     // 8. Body scroll: managed by nav open/close functions above
 
-    // 9. Lightbox: trap focus inside when open (accessibility + all browsers)
-    var lightbox = document.getElementById('lightbox');
-    if (lightbox) {
-      lightbox.addEventListener('keydown', function(e) {
-        if (!lightbox.classList.contains('open')) return;
-        if (e.key === 'Escape' || e.keyCode === 27) {
-          if (typeof closeLightbox === 'function') closeLightbox();
-        }
-        // Focus trap
-        var focusable = lightbox.querySelectorAll(
-          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-        );
-        var first = focusable[0];
-        var last  = focusable[focusable.length - 1];
-        if (e.key === 'Tab' || e.keyCode === 9) {
-          if (e.shiftKey) {
-            if (document.activeElement === first) {
-              e.preventDefault();
-              last.focus();
-            }
-          } else {
-            if (document.activeElement === last) {
-              e.preventDefault();
-              first.focus();
-            }
-          }
-        }
-      });
-    }
 
   })();
 </script>

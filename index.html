@@ -80,16 +80,14 @@
     .footer-links { padding: 0.75rem 1.5rem; gap: 0.4rem 1.25rem; }
   }
 
-  @media (prefers-reduced-motion: no-preference) {
-  }
+  
 
   /* 5 — position: -webkit-sticky; position: sticky vendor prefix (older WebKit) */
-  .lightbox-content::after {
-    position: -webkit-sticky; position: sticky;
-  }
+
+
+
 
   /* 6 — -webkit-overflow-scrolling for iOS momentum scroll */
-  .lightbox-content,
   [style*="overflow-y: auto"],
   [style*="overflow: auto"] {
     -webkit-overflow-scrolling: touch;
@@ -176,9 +174,9 @@
     min-height: 60vh;
     min-height: 60dvh;
   }
-  .lightbox {
-    inset: 0;                                /* already uses inset — see below */
-  }
+
+
+
 
   /* 13 — inset shorthand fallback (Safari < 14.1, Firefox < 87) */
   /* inset:0 = top:0;right:0;bottom:0;left:0 */
@@ -187,10 +185,10 @@
     top: 0; right: 0; bottom: 0; left: 0;   /* fallback */
     inset: 0;                                /* modern */
   }
-  .lightbox {
-    top: 0; right: 0; bottom: 0; left: 0;   /* fallback */
-    inset: 0;                                /* modern */
-  }
+
+
+
+
   .card-overlay {
     top: 0; right: 0; bottom: 0; left: 0;   /* fallback */
     inset: 0;                                /* modern */
@@ -247,8 +245,7 @@
   [role="button"],
   .nav-hamburger,
   .gallery-card,
-  .back-to-top,
-  .lightbox-close {
+  .back-to-top{
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
@@ -282,8 +279,7 @@
 
   /* 24 — Samsung Internet / older Android: ensure border-radius on overflow */
   .hero-visual,
-  .about-img-frame,
-  .lightbox-inner {
+  .about-img-frame{
     -webkit-mask-image: -webkit-radial-gradient(white, black);
     isolation: isolate;
   }
@@ -1006,103 +1002,103 @@
   }
 
   /* ── LIGHTBOX ── */
-  .lightbox {
-    position: fixed;
-    inset: 0;
-    z-index: 1000;
-    background: rgba(28,26,23,0.96);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem;
-  }
 
-  .lightbox.open { display: flex; }
 
-  .lightbox-inner {
-    max-width: 900px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    background: var(--warm-white);
-    max-height: 80vh;
-    overflow: hidden;
-  }
 
-  .lightbox-img {
-    background: var(--cream);
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    min-height: 400px;
-    overflow: hidden;
-  }
 
-  .lightbox-content {
-    padding: 3rem;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
 
-.lightbox-content::after {
-    content: '';
-    position: -webkit-sticky; position: sticky;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    background: linear-gradient(to bottom, transparent, var(--warm-white));
-    pointer-events: none;
-    display: block;
-    margin-top: -60px;
-  }
 
-  .lightbox-category {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.75rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--amber-text);
-    margin-bottom: 1rem;
-  }
 
-  .lightbox-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
-    font-weight: 300;
-    color: var(--ink);
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-  }
 
-  .lightbox-body {
-    font-size: 0.88rem;
-    line-height: 1.75;
-    color: var(--ink-soft);
-    flex: 1;
-  }
 
-  .lightbox-close {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    width: 44px;
-    height: 44px;
-    background: none;
-    border: 1px solid rgba(245,240,232,0.2);
-    color: var(--cream);
-    font-size: 1.1rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.2s;
-  }
 
-  .lightbox-close:hover { background: rgba(245,240,232,0.1); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   /* ── ANIMATIONS ── */
   @keyframes fadeUp {
@@ -1396,13 +1392,13 @@
     .product-card { grid-template-columns: 64px 1fr !important; gap: 0.9rem !important; }
 
     /* Lightbox */
-    .lightbox-inner {
-      flex-direction: column !important;
-      max-height: 95vh;
-      overflow-y: auto;
-    }
-    .lightbox-img { max-height: 45vh !important; }
-    #lbImgPanel { max-height: 45vh !important; }
+
+
+
+
+
+
+
 
     /* Section heading sizes */
     .section-title { font-size: 2rem !important; }
@@ -1462,10 +1458,10 @@
     outline: 2px solid var(--amber);
     outline-offset: 3px;
   }
-  .lightbox-close:focus-visible {
-    outline: 2px solid var(--cream);
-    outline-offset: 2px;
-  }
+
+
+
+
   a:focus-visible {
     outline: 2px solid var(--amber);
     outline-offset: 2px;
@@ -1804,7 +1800,7 @@
   .skip-link:focus { left: 0; }
 
   @media print {
-    nav, .back-to-top, .lightbox, .skip-link, footer .footer-links { display: none !important; }
+    nav, .back-to-top, .skip-link, footer .footer-links { display: none !important; }
     body { background: #fff; color: #000; font-size: 12pt; }
     a { color: #000; text-decoration: underline; }
     a[href]::after { content: " (" attr(href) ")"; font-size: 0.75em; }
@@ -2178,205 +2174,7 @@
 </svg></div>
   </div>
 </footer>
-<div class="lightbox" id="lightbox" onclick="closeLightbox(event)" role="dialog" aria-modal="true" aria-labelledby="lb-title" aria-label="Photo lightbox">
-  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close lightbox" aria-controls="lightbox">✕</button>
-  <div class="lightbox-inner">
-    <div class="lightbox-img" id="lightbox-img" style="position:relative;">
-      <img id="lb-main-img" src="" alt="" style="width:100%;height:auto;height:100%;object-fit:cover;" width="auto" height="auto">
-      <button onclick="lbNav(-1)" aria-label="Previous photo" class="lb-nav-btn" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(28,26,23,0.5);border:none;color:#f5f0e8;font-size:1.4rem;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;">‹</button>
-      <button onclick="lbNav(1)" aria-label="Next photo" class="lb-nav-btn" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(28,26,23,0.5);border:none;color:#f5f0e8;font-size:1.4rem;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;">›</button>
-    </div>
-    <div class="lightbox-content">
-      <div class="lightbox-category" id="lb-category"></div>
-      <div class="lightbox-title" id="lb-title"></div>
-      <div id="lb-thumbs" style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:1rem;"></div>
-      <div id="lb-caption" style="font-family:'DM Mono',monospace;font-size: 0.75rem;letter-spacing:0.08em;color:var(--ink-faint);margin-bottom:1rem;min-height:2em;line-height:1.6;"></div>
-      <div class="lightbox-body" id="lb-body"></div>
-    </div>
-  </div>
-</div>
 
-<script>
-const tools = {
-  stanley4: {
-    category: 'Hand Plane',
-    title: 'Stanley Bailey No. 4 — Type 11, c. 1910',
-    body: `<p>This No. 4 came from an estate sale with a classic story: decades in a coffee can, surface rust on everything, and a tote that had been cracked and badly re-glued at some point.</p>
-<br>
-<p><strong>Condition on arrival:</strong> Heavy surface rust on frog and blade, active pitting on the sole's leading edge, tote crack re-glued with contact cement (removed with acetone), japanning at roughly 40%.</p>
-<br>
-<p><strong>Restoration sequence:</strong> Naval jelly soak followed by wire brush, then flattening the sole on 120/220 paper over glass. Frog mating surface lapped until light passed uniformly. Tote reset with hide glue and clamped overnight. Blade back flattened, then worked through waterstones to a 30° primary bevel.</p>
-<br>
-<p><strong>Finish:</strong> Three coats of BLO on the tote and knob, wiped back, followed by a single wash coat of dewaxed shellac and Renaissance Wax to finish.</p>
-<br>
-<p><em>Now one of the best users in the shop.</em></p>`
-  },
-    mactools: {
-    category: 'Screwdrivers',
-    title: 'Mac Tools Wooden-Handled Set (7-piece)',
-    photos: [
-      { id: "photo-before1", caption: "Before — full set on the cutting mat. Decades of shop grime, oil-saturated handles." },
-      { id: "photo-before2", caption: "Before — angle view. Flat, lifeless wood and surface rust on the ferrules." },
-      { id: "photo-mid1", caption: "Mid-process — sanded to bare wood, 60→220 grit. The grain finally shows itself." },
-      { id: "photo-mid2", caption: "Mid-process — after mineral spirits wash and oxalic acid bath." },
-      { id: "photo-after1", caption: "After — Fiebing's Black → Dark Brown → Mahogany plus three coats polymerized tung oil." },
-      { id: "photo-after2", caption: "After — black dye pools in the grooves, creating natural contrast." },
-      { id: "photo-after3", caption: "After — full set. Shellac and Renaissance Wax give a soft, period-appropriate sheen." }
-    ],
-    body: `<p>Found on eBay — a 7-piece Mac Tools set with turned wooden handles, post-WWII American manufacture. Chrome-vanadium blades, original ferrules, and handles that had absorbed decades of shop oil and grime. Structurally sound; cosmetically rough.</p>
-<br>
-<p><strong>Step 1 — Strip and clean:</strong> Sanded back through 60→80→120→180→220 grit to bare wood. Mineral spirits wash with a soft brass brush to degrease. Multiple oxalic acid baths to lift tannin staining and surface rust from the wood.</p>
-<br>
-<p><strong>Step 2 — Color:</strong> Fiebing's leather dye applied sequentially — Black first, then Dark Brown, then Mahogany. The layered approach builds dimensional color that looks like it comes from inside the wood. The black base pools in the knurled grooves, giving natural contrast.</p>
-<br>
-<p><strong>Step 3 — Finish:</strong> Three coats of <a href="https://walrusoil.com/products/polymerized-tung-oil" target="_blank" rel="noopener noreferrer" style="color: var(--amber-text);text-decoration:none;border-bottom:1px solid var(--amber-light);">polymerized tung oil (Walrus Oil)</a> over 48–72 hours. One wash coat of dewaxed shellac. Final coat of Renaissance Wax buffed to a soft sheen.</p>
-<br>
-<p><em>The result: handles that look richer than they ever did new. The Fiebing's dye method is unconventional on tool handles — and completely worth it.</em></p>`
-  },
-    stanley5: {
-    category: 'Hand Plane',
-    title: 'Stanley Bailey No. 5 — Jack Plane, c. 1940s',
-    body: `<p>The No. 5 is the workhorse. Longer than a smoother, it's used for the heavy work of flattening rough lumber — and this one had earned its rest before I found it.</p>
-<br>
-<p><strong>Condition on arrival:</strong> Deep active rust across the entire sole and frog, seized depth adjuster, missing lateral lever. Tote intact but filthy.</p>
-<br>
-<p><strong>Process notes:</strong> Used electrolysis to lift the active rust rather than abrasives — the pitting was too deep for paper to be practical. Freed the adjuster with penetrating oil and heat cycles. Sourced a period-correct lateral lever from a parts plane.</p>
-<br>
-<p><strong>Sole flatness:</strong> Required significant work — 0.004" hollow lengthwise, corrected with 80-grit on reference glass before moving to 120 and 220.</p>
-<br>
-<p><em>Now set up with a cambered iron for aggressive stock removal. It earns its keep every weekend.</em></p>`
-  },
-  eggbeater: {
-    category: 'Drill',
-    title: 'Millers Falls No. 2 Eggbeater Drill, c. 1920s',
-    body: `<p>Pre-cordless, pre-electric — the eggbeater drill is a marvel of mechanical efficiency. This No. 2 is a compact model, well-suited for joinery work and small brads.</p>
-<br>
-<p><strong>Restoration notes:</strong> Complete disassembly of the gear train, chuck, and handle. Cleaned all bearing surfaces, repacked the side handle with fresh grease. The main gear and pinions were in excellent shape — just dry.</p>
-<br>
-<p><strong>Finish:</strong> Rosewood side handle treated with tung oil. Main handle (beech, I believe) got the full sequence. Chuck mechanism freed and lubricated with light machine oil.</p>
-<br>
-<p><em>Spins like new. Quieter than power tools and far more satisfying to use.</em></p>`
-  },
-  brace: {
-    category: 'Brace',
-    title: 'North Brothers Yankee Brace, c. 1910–1920',
-    body: `<p>The Yankee name on a brace means quality — North Brothers was producing some of the finest hand tools in America before Stanley acquired them in 1946.</p>
-<br>
-<p><strong>What I found:</strong> Two sweeping arms of turned rosewood, deeply stained but with structure completely intact. The chuck jaws were seized; the ratchet mechanism stiff but functional.</p>
-<br>
-<p><strong>Process:</strong> Penetrating oil in the chuck jaws, repeated cycling until free. Ratchet disassembled, cleaned, and relubricated. Rosewood handles stripped back with light oxalic wash and sanded through 400 grit.</p>
-<br>
-<p><strong>The reveal:</strong> The grain under the grime was extraordinary — deep chocolate tones with a slight curl. Three coats of polymerized tung oil and a wax finish. It looks like it belongs in a display case, but it goes in the tool cabinet.</p>`
-  },
-  marking: {
-    category: 'Layout',
-    title: 'Stanley No. 61½ Marking Gauge, c. 1900s',
-    body: `<p>A marking gauge is one of those tools that rewards patience and precision more than effort. This No. 61½ came with its original rosewood beam — a feature Stanley moved away from in later production.</p>
-<br>
-<p><strong>Condition:</strong> Excellent. Minor surface rust on the spur, beam slightly swollen from moisture exposure (long since stabilized), thumbscrew functioned but was stiff.</p>
-<br>
-<p><strong>Treatment:</strong> Light work only — no aggressive cleaning warranted. Mineral spirits wash, spur polished and resharpened, thumbscrew mechanism cleaned and lubricated. Rosewood beam needed only a single coat of tung oil to come alive.</p>
-<br>
-<p><em>This is what I call a 'gift condition' tool — the original finish and patina were worth preserving, not replacing.</em></p>`
-  }
-};
-
-// Pre-resolve photo srcs from hidden img elements
-document.addEventListener('DOMContentLoaded', () => {
-  Object.values(tools).forEach(t => {
-    if (t.photos) t.photos.forEach(p => {
-      if (p.id) { const el = document.getElementById(p.id); if (el) p.src = el.src; }
-    });
-  });
-});
-
-let lbCurrentIndex = 0;
-let lbCurrentPhotos = [];
-
-function lbNav(dir) {
-  if (!lbCurrentPhotos.length) return;
-  lbCurrentIndex = (lbCurrentIndex + dir + lbCurrentPhotos.length) % lbCurrentPhotos.length;
-  const photo = lbCurrentPhotos[lbCurrentIndex];
-  const getSrc = (p) => p.src && p.src.length > 10 ? p.src : (p.id && document.getElementById(p.id) ? document.getElementById(p.id).getAttribute('src') : '');
-  document.getElementById('lb-main-img').src = getSrc(photo);
-  document.getElementById('lb-caption').textContent = photo.caption || '';
-  const thumbs = document.getElementById('lb-thumbs').querySelectorAll('img');
-  thumbs.forEach((t, i) => { t.style.opacity = i === lbCurrentIndex ? '1' : '0.55'; t.style.border = i === lbCurrentIndex ? '2px solid var(--amber)' : '2px solid transparent'; });
-}
-
-function openLightbox(id) {
-  const t = tools[id];
-  if (!t) return;
-  document.getElementById('lb-category').textContent = t.category;
-  document.getElementById('lb-title').textContent = t.title;
-  document.getElementById('lb-body').innerHTML = t.body;
-
-  const mainImg = document.getElementById('lb-main-img');
-  const thumbs = document.getElementById('lb-thumbs');
-  const caption = document.getElementById('lb-caption');
-  thumbs.innerHTML = '';
-  caption.textContent = '';
-
-  if (t.photos && t.photos.length > 0) {
-    lbCurrentPhotos = t.photos;
-    lbCurrentIndex = 0;
-    const getSrc = (photo) => {
-      if (photo.src && photo.src.length > 10) return photo.src;
-      if (photo.id) {
-        const el = document.getElementById(photo.id);
-        if (el && el.src && el.src.length > 10) { photo.src = el.src; return photo.src; }
-        if (el && el.getAttribute('src')) { photo.src = el.getAttribute('src'); return photo.src; }
-      }
-      return '';
-    };
-    mainImg.src = getSrc(t.photos[0]);
-    caption.textContent = t.photos[0].caption || '';
-    t.photos.forEach((photo, i) => {
-      const thumb = document.createElement('img');
-      thumb.src = getSrc(photo);
-      thumb.title = photo.caption || '';
-      thumb.style.cssText = 'width:54px;height:46px;object-fit:cover;cursor:pointer;opacity:' + (i===0?'1':'0.55') + ';border:2px solid ' + (i===0?'var(--amber)':'transparent') + ';transition:all 0.2s;flex-shrink:0;';
-      thumb.addEventListener('click', (e) => {
-        e.stopPropagation();
-        lbCurrentIndex = i;
-        mainImg.src = getSrc(photo);
-        caption.textContent = photo.caption || '';
-        thumbs.querySelectorAll('img').forEach((th, j) => { th.style.opacity = j===i?'1':'0.55'; th.style.border = j===i?'2px solid var(--amber)':'2px solid transparent'; });
-      });
-      thumbs.appendChild(thumb);
-    });
-  } else {
-    const card = document.querySelector('[onclick="openLightbox(\''+id+'\')"]');
-    const cardImg = card ? card.querySelector('img') : null;
-    mainImg.src = cardImg ? cardImg.src : '';
-    thumbs.style.display = 'none';
-  }
-
-  document.getElementById('lightbox').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-
-function closeLightbox(e) {
-  if (e && e.target !== document.getElementById('lightbox') && !e.target.classList.contains('lightbox-close')) return;
-  document.getElementById('lightbox').classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeLightbox();
-});
-</script>
-<!-- Preloaded restoration photos -->
-<div style="display:none">
-  <img id="photo-before1" src="images/index-mac-before1.jpg" alt="Before restoration — full set on the cutting mat, decades of shop grime and oil-saturated handles" width="547" height="805" style="max-width:100%;height:auto;display:block;" />
-  <img id="photo-before2" src="images/index-mac-before2.jpg" alt="Before restoration — angle view showing flat lifeless wood and surface rust on the ferrules" width="551" height="814" style="max-width:100%;height:auto;display:block;" />
-  <img id="photo-mid1" src="images/index-mac-mid1.jpg" alt="Mid-process — sanded to bare wood, grain finally visible" width="675" height="900" style="max-width:100%;height:auto;display:block;" />
-  <img id="photo-mid2" src="images/index-mac-mid2.jpg" alt="Mid-process — after mineral spirits wash and oxalic acid bath" width="675" height="900" style="max-width:100%;height:auto;display:block;" />
-  <img id="photo-after1" src="images/index-mac-after1.jpg" alt="After restoration — Fiebing's dye and three coats of polymerized tung oil" width="900" height="675" style="max-width:100%;height:auto;display:block;" />
-  <img id="photo-after2" src="images/index-mac-after2.jpg" alt="After restoration — black dye creating natural contrast in the grooves" width="900" height="675" style="max-width:100%;height:auto;display:block;" />
-  <img id="photo-after3" src="images/index-mac-after3.jpg" alt="After restoration — full set with shellac and Renaissance Wax finish" width="900" height="675" style="max-width:100%;height:auto;display:block;" />
-</div>
 
 
 <script>
@@ -2548,35 +2346,6 @@ document.addEventListener('keydown', e => {
 
     // 7. Body scroll: managed by nav open/close functions above
 
-    // 9. Lightbox: trap focus inside when open (accessibility + all browsers)
-    var lightbox = document.getElementById('lightbox');
-    if (lightbox) {
-      lightbox.addEventListener('keydown', function(e) {
-        if (!lightbox.classList.contains('open')) return;
-        if (e.key === 'Escape' || e.keyCode === 27) {
-          if (typeof closeLightbox === 'function') closeLightbox();
-        }
-        // Focus trap
-        var focusable = lightbox.querySelectorAll(
-          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-        );
-        var first = focusable[0];
-        var last  = focusable[focusable.length - 1];
-        if (e.key === 'Tab' || e.keyCode === 9) {
-          if (e.shiftKey) {
-            if (document.activeElement === first) {
-              e.preventDefault();
-              last.focus();
-            }
-          } else {
-            if (document.activeElement === last) {
-              e.preventDefault();
-              first.focus();
-            }
-          }
-        }
-      });
-    }
 
   })();
 </script>

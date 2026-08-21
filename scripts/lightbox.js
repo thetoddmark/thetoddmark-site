@@ -1,8 +1,11 @@
-/* Shared photo lightbox — click any content photo to view it large.
+/* Shared photo lightbox - click any content photo to view it large.
    Binds to images inside .article-body / .post-body (and anything marked
    [data-lightbox]). Skips images that are already links or buttons, and any
    image marked [data-nozoom]. Injects its own CSS and markup, so a page only
-   needs: <script src="/scripts/lightbox.js" defer></script> */
+   needs: <script src="/scripts/lightbox.js" defer></script>
+
+   Kept deliberately ASCII-only: this file is served without a charset, so
+   literal glyphs would be decoded as Latin-1 and render as mojibake. */
 (function () {
   var CONTAINERS = '.article-body, .post-body, [data-lightbox]';
   var imgs = [], cur = 0, lb;
@@ -31,14 +34,14 @@
   ].join('\n');
 
   var MARKUP =
-    '<button class="lb-close" id="lb-close" aria-label="Close image viewer">✕</button>' +
-    '<button class="lb-prev" id="lb-prev" aria-label="Previous image">‹</button>' +
+    '<button class="lb-close" id="lb-close" aria-label="Close image viewer">\u2715</button>' +
+    '<button class="lb-prev" id="lb-prev" aria-label="Previous image">\u2039</button>' +
     '<div class="lb-inner" id="lb-inner">' +
       '<img id="lb-img" src="" alt="" tabindex="0" />' +
       '<div class="lb-caption" id="lb-caption" aria-live="polite"></div>' +
       '<div class="lb-counter" id="lb-counter" aria-live="polite"></div>' +
     '</div>' +
-    '<button class="lb-next" id="lb-next" aria-label="Next image">›</button>';
+    '<button class="lb-next" id="lb-next" aria-label="Next image">\u203a</button>';
 
   /* Caption lookup covers both markup conventions used on the site:
      <figure><figcaption> on article pages, .photo-caption on post pages. */
@@ -72,7 +75,8 @@
     full.src = img.currentSrc || img.src;
     full.alt = img.alt || '';
     document.getElementById('lb-caption').textContent = captionFor(img);
-    document.getElementById('lb-counter').textContent = imgs.length > 1 ? (i + 1) + ' / ' + imgs.length : '';
+    document.getElementById('lb-counter').textContent =
+      imgs.length > 1 ? (i + 1) + ' \u2013 ' + imgs.length : '';
     document.getElementById('lb-prev').classList.toggle('lb-nav-hidden', i === 0);
     document.getElementById('lb-next').classList.toggle('lb-nav-hidden', i === imgs.length - 1);
     lb.classList.add('lb-open');
@@ -92,12 +96,12 @@
   }
 
   function init() {
-    /* A page that still carries its own inline lightbox keeps it — don't double-bind. */
+    /* A page that still carries its own inline lightbox keeps it - don't double-bind. */
     if (document.getElementById('lb')) return;
 
     var scopes = document.querySelectorAll(CONTAINERS);
     if (!scopes.length) return;
-    scopes.forEach(function (scope) {
+    Array.prototype.forEach.call(scopes, function (scope) {
       Array.prototype.forEach.call(scope.querySelectorAll('img'), function (img) {
         if (eligible(img)) imgs.push(img);
       });
