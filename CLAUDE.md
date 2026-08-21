@@ -1,8 +1,10 @@
 # thetoddmark.com — Claude Instructions
 
 ## Site Overview
-Static HTML/CSS/JS site deployed on Cloudflare Pages. Auto-deploys on push to `main`.
+Static HTML/CSS/JS site deployed on **GitHub Pages** (repo `thetoddmark/thetoddmark-site`, source: `main` branch, root path). Auto-deploys on push to `main`.
 All pages are hand-coded HTML files. No build step, no framework.
+
+`_redirects` and `_headers` are Netlify-era leftovers with **no effect** on GitHub Pages — don't edit them expecting a behaviour change. `CNAME` (thetoddmark.com) is live and does matter.
 
 ## Git Rules
 - NEVER use `git add -A` or `git add .` — add files by name only
@@ -14,13 +16,14 @@ All internal links and canonical/og:url values use **clean URLs without `.html`*
 - Correct: `/wagner-electrolysis`, `/restoration-stanley-no5half`
 - Wrong: `/wagner-electrolysis.html`, `/restoration-stanley-no5half.html`
 
-Cloudflare Pages serves `foo.html` at `/foo` automatically.
+GitHub Pages serves `foo.html` at `/foo` automatically.
 
 ## Project Numbering
 Projects are numbered sequentially across **all types** (restorations + builds):
-- Current highest: **No. 10** (Wagner Ware Sidney-O — wagner-electrolysis)
-- Restorations: 01, 02, 04, 05, 06, 07, 09, 10
-- Builds: 03 (Chip Breaker), 08 (MCM Dresser)
+- Current highest: **No. 12** (RCA Victor 9-X-651 — rca-victor-9x651-memorypalace)
+- Restorations: 01, 02, 04, 05, 06, 07, 08, 09, 10, 11, 12
+- Builds: 03 (Chip Breaker)
+- Discrepancy to resolve: No. 08 (MCM dresser — `restoration-dresser-refresh.html`) was tracked here as a build, but the page's own `article-eyebrow` reads `Restoration No. 08`. The page is the source of truth above; change the page if it should be a build.
 - Before assigning a number to a new post, grep all HTML files for the current highest `article-eyebrow` number
 
 ## CSS Variables (defined in each page's `<style>` block)
@@ -85,9 +88,15 @@ Run through **every item** when adding a new post. Do not skip steps.
 | `restorations.html` | Restorations-only grid |
 | `sitemap.xml` | SEO sitemap — update with every new post |
 | `my-kit.html` | Gear/supply list — add product cards when a new post introduces new supplies |
+| `scripts/lightbox.js` | Shared photo lightbox. Auto-binds to `<img>` inside `.article-body` / `.post-body`; skips images already wrapped in links/buttons and anything marked `data-nozoom`. A page opts in with `<script src="/scripts/lightbox.js" defer></script>` — nothing else. |
 
 ## Product Cards (my-kit.html)
 - Use `<picture>` with `.webp` source + `.jpg` fallback when webp is available
 - Image size: `width:80px;height:80px;object-fit:contain`
 - Grid wrapper uses inline style — there is **no** `.products-grid` CSS class
 - Required classes: `product-brand`, `product-name`, `product-desc`, `product-note`
+
+## Shared Scripts
+Files in `scripts/` are served as external assets, **without a charset declaration**, so their contents are decoded as Latin-1. Keep them ASCII-only and write non-ASCII glyphs as `\u` escapes (`\u2039`, not `‹`) — literal characters render as mojibake. `scripts/lightbox.js` follows this rule.
+
+When moving inline code into `scripts/`, verify against the **live site** after deploying, not just locally. Two classes of bug are invisible to a local check: charset handling (above), and anything timing-dependent — e.g. `loading="lazy"` images have zero width until they load, so measuring their size at init works locally (instant from disk) and fails over a real network.
