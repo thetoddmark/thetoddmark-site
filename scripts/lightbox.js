@@ -63,8 +63,10 @@
     if (img.hasAttribute('data-nozoom')) return false;
     if (img.closest('a, button, [role="button"], [onclick]')) return false;
     if (img.id && img.id.indexOf('lb-') === 0) return false;
-    /* Several pages keep hidden <img> elements purely as lightbox data sources. */
-    if (img.offsetParent === null || !img.getBoundingClientRect().width) return false;
+    /* Several pages keep hidden <img> elements purely as lightbox data sources.
+       Test offsetParent only: a lazy image below the fold has zero width until
+       it loads, and testing width would exclude it permanently. */
+    if (img.offsetParent === null) return false;
     return true;
   }
 
