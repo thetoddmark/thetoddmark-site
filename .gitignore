@@ -19,3 +19,5 @@ hero-mockups.html
 .vscode/
 *.swp
 *.swo
+# Cowork session outputs dropped here by the desktop app
+Claude outputs/
